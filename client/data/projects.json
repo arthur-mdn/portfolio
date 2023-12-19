@@ -2,6 +2,7 @@
   {
     "id": 16,
     "name": "Jeu Vidéo Interactif Mural",
+    "slug": "jeu-video-interactif-mural",
     "description": "Développement d'un jeu vidéo interactif projeté au mur, avec détection de joueur en temps réel utilisant Python (Yolo V8) et Unity.",
     "image": "projects/interactive-wall-game.png",
     "link": "",
@@ -15,9 +16,10 @@
   {
     "id": 1,
     "name": "Du Kart à la F1",
+    "slug": "du-kart-a-la-f1",
     "description": "Création d’un site vitrine moderne et réactif en React pour promouvoir un évènement de karting en F1.",
     "image": "projects/dukartalaf1.png",
-    "link": "https://dukartalaf1.com",
+    "link": "https://noctivibe.site",
     "github": "https://github.com/arthur-mdn/kartf1",
     "technos": [101,102,103,105,105, 106, 401],
     "tags": ["HTML", "CSS", "JavaScript", "JS" ,"React"],
@@ -28,6 +30,7 @@
   {
     "id": 2,
     "name": "Buzzer-App",
+    "slug": "buzzer-app",
     "description": "Une appli de buzzer pour animer vos soirées ! PWA en React, MongoDB et Socket.io pour un buzzer interactif en temps réel",
     "image": "projects/buzzer-app.png",
     "link": "https://buzzer-app.fr",
@@ -41,6 +44,7 @@
   {
     "id": 3,
     "name": "Noctivibe",
+    "slug": "noctivibe",
     "description": "PWA en PHP/Mysql pour organiser vos soirées.",
     "image": "projects/noctivibe.png",
     "link": "https://demo.noctivibe.fr",
@@ -55,6 +59,7 @@
   {
     "id": 6,
     "name": "PWA Factures et Dépenses",
+    "slug": "factures-et-depenses",
     "description": "PWA pour la gestion de facturations et dépenses entre un enfant et ses parents.",
     "image": "projects/facture.png",
     "link": "https://factures.mondon.pro/",
@@ -68,12 +73,13 @@
   {
     "id": 13,
     "name": "Générateur de Signatures Email",
+    "slug": "generateur-de-signatures-email",
     "description": "Développement d'un générateur de signatures email personnalisées pour une utilisation en entreprise.",
     "image": "projects/mailgenerator.png",
     "link": "",
     "github": "",
     "technos": [101,102,103,107],
-    "tags": ["Custom Development"],
+    "tags": ["HTML", "CSS", "JavaScript", "JS"],
     "date": "2023-01-16",
     "status": "online",
     "type": "Outil"
@@ -81,6 +87,7 @@
   {
     "id": 15,
     "name": "Cinephony",
+    "slug": "cinephony",
     "description": "Site web catalogue de films et de livres, développé avec PHP, MySQL et GIT pour la gestion de version.",
     "image": "projects/cinephony.png",
     "link": "",
@@ -94,6 +101,7 @@
   {
     "id": 7,
     "name": "EDT - PWA Emploi du Temps Université",
+    "slug": "edt-pwa-emploi-du-temps-universite",
     "description": "PWA pour la gestion de l'emploi du temps à l'université de Toulon, incluant la gestion des groupes et des tâches.",
     "image": "projects/edt.png",
     "link": "",
@@ -107,6 +115,7 @@
   {
     "id": 17,
     "name": "Création de Visites Virtuelles",
+    "slug": "visites-virtuelles",
     "description": "Développement et mise en ligne de visites virtuelles interactives.",
     "image": "projects/visites_virtuelles.png",
     "link": "https://visites.eradion.fr",
@@ -120,6 +129,7 @@
   {
     "id": 8,
     "name": "Écran d'Aide à la Navigation",
+    "slug": "ecran-d-aide-a-la-navigation",
     "description": "Système d'orientation interactif pour un établissement, développé avec PHP et MySQL.",
     "image": "projects/navigation-help-screen.png",
     "link": "",
@@ -133,6 +143,7 @@
   {
     "id": 9,
     "name": "Funkylike",
+    "slug": "funkylike",
     "description": "Un compteur en temps réel d’abonnés Facebook et Instagram avec une interface d'administration, développé en PHP et MySQL.",
     "image": "projects/funkylike.png",
     "link": "https://app.funkylike.com",
@@ -146,6 +157,7 @@
   {
     "id": 10,
     "name": "Calendry",
+    "slug": "calendry",
     "description": "Site web de réservation pour un barbershop avec interface d'administration, développé en PHP et MySQL.",
     "image": "projects/calendry.png",
     "link": "",
@@ -161,6 +173,7 @@
   {
     "id": 12,
     "name": "Refonte du Site Web sous Wordpress",
+    "slug": "edissyum-wordpress",
     "description": "Refonte complète du site web d'entreprise sous Wordpress, avec une approche moderne et responsive.",
     "image": "projects/edissyum.png",
     "link": "https://edissyum.com",
@@ -174,6 +187,7 @@
   {
     "id": 14,
     "name": "Atmosph'air - PWA Qualité de l'Air",
+    "slug": "atmosphair-pwa-qualite-de-l-air",
     "description": "PWA pour consulter la qualité de l'air dans différentes villes, en utilisant l'API d'Atmosud.",
     "image": "projects/atmosphair.png",
     "link": "https://atmosphair.mondon.pro/",
@@ -188,6 +202,7 @@
   {
     "id": 4,
     "name": "Seamless Réseau Mistral Toulon",
+    "slug": "seamless-reseau-mistral-toulon",
     "description": "PWA pour valider les titres de transport des bus du réseau Mistral à Toulon.",
     "image": "projects/seamless.png",
     "link": "https://seamless.mondon.pro/",
@@ -202,6 +217,7 @@
   {
     "id": 18,
     "name": "Site interactif style MacOS",
+    "slug": "site-interactif-style-macos",
     "description": "Développement d'un site portfolio inspiré de l'univers MacOS.",
     "image": "projects/oldsite.png",
     "link": "https://projets.mondon.pro/oldsite",
@@ -215,6 +231,7 @@
   {
     "id": 19,
     "name": "GlucideCheck",
+    "slug": "glucidecheck",
     "description": "PWA pour aider les diabétiques à gérer leur insuline.",
     "image": "projects/glucidecheck.png",
     "link": "https://projets.mondon.pro/glucidecheck",

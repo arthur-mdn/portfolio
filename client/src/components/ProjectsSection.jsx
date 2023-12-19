@@ -1,8 +1,9 @@
 import React from "react";
 import projectsData from "/data/projects.json";
 import {FaExternalLinkAlt} from "react-icons/fa";
-import {FaArrowRightLong, FaEye} from "react-icons/fa6";
+import {FaArrowRightLong, FaEye, FaListCheck} from "react-icons/fa6";
 import Carousel from 'better-react-carousel'
+import {Link} from "react-router-dom";
 
 function ProjectsSection() {
     // Trier les projets par date dans l'ordre décroissant
@@ -38,21 +39,22 @@ function ProjectsSection() {
                     {sortedProjects.map(project => (
                         // on click, redirect to page /projects/:id
                         <Carousel.Item key={project.id} >
-                            <a href={`/projects/${project.id}`} className="PS_card">
-                                <img src={project.image} alt={project.name} />
+                            <Link to={`/projects/${project.slug}`} className="PS_card">
+                                <img src={`/${project.image}`} alt={project.name} />
                                 <div className={"content"}>
                                     <p>{project.type}</p>
                                     <span>{project.date}</span>
                                     <h3>{project.name}</h3>
                                     <button type={"button"} className={"button"}><FaArrowRightLong/></button>
                                 </div>
-                            </a>
+                            </Link>
                         </Carousel.Item>
                     ))}
                 </Carousel>
-                <button type={"button"} className={"button"} style={{width:'fit-content',margin:'0.8rem auto 0'}} onClick={
-                    () => window.location.href = '/projects'
-                }><FaEye/>Voir tous les projets</button>
+                <Link to="/projets" className={"button c-white"} style={{width:"fit-content",margin:'0.8rem auto'}}>
+                    <FaEye/>Voir tous les projets
+                </Link>
+
             </section>
         </>
     );

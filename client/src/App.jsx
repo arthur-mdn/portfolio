@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Menu from "./components/menu.jsx";
 import SkillsSection from "./components/SkillsSection.jsx";
-import ProjectsSection from "./components/ProjectsSection.jsx";
 import HomePage from "./components/HomePage.jsx";
-import ContactPage from "./components/ContactPage.jsx"; // Supposons que vous ayez un composant pour la section Contact
+import ContactPage from "./components/ContactPage.jsx";
+import ProjectsPage from "./components/ProjectsPage.jsx";
+import ProjectPage from "./components/ProjectPage.jsx"; // Supposons que vous ayez un composant pour la section Contact
 
 function App() {
     return (
@@ -16,7 +17,8 @@ function App() {
                    <HomePage />
                 } />
                 <Route path="/competences" element={<SkillsSection />} />
-                <Route path="/projets" element={<ProjectsSection />} />
+                <Route path="/projets" element={<ProjectsPage />} />
+                <Route path="/projects/:slug" element={<ProjectPage />} />
                 <Route path="/contact" element={<ContactPage />} />
             </Routes>
         </Router>

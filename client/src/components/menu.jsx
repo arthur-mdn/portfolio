@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import {
     FaHouse,
     FaClock,
@@ -12,33 +13,34 @@ import {
 
 
 function Menu() {
+    // ...
     return (
         <>
             <nav style={styles.navbar}>
                 <ul style={styles.menu}>
                     <li style={styles.menuItem}>
-                        <a style={styles.menuLink} href="/">
+                        <Link style={styles.menuLink} to="/">
                             <FaHouse style={{fontSize:'1.2rem'}}/>
                             <span style={styles.menuLinkSpan} >Accueil</span>
-                        </a>
+                        </Link>
                     </li>
                     <li style={styles.menuItem}>
-                        <a style={styles.menuLink} href="/competences" >
+                        <Link style={styles.menuLink} to="/competences">
                             <FaPuzzlePiece style={{fontSize:'1.2rem'}}/>
                             <span style={styles.menuLinkSpan}>Compétences</span>
-                        </a>
+                        </Link>
                     </li>
                     <li style={styles.menuItem}>
-                        <a style={styles.menuLink} href="/projets">
+                        <Link style={styles.menuLink} to="/projets">
                             <FaListCheck style={{fontSize:'1.2rem'}}/>
                             <span style={styles.menuLinkSpan}>Projets</span>
-                        </a>
+                        </Link>
                     </li>
                     <li style={styles.menuItem}>
-                        <a style={styles.menuLink} href="/contact">
+                        <Link style={styles.menuLink} to="/contact">
                             <FaComment style={{fontSize:'1.2rem'}}/>
                             <span style={styles.menuLinkSpan}>Contact</span>
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </nav>
