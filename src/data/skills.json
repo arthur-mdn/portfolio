@@ -11,7 +11,7 @@
         "links": [
           {
             "alt": "HTML5 logo",
-            "url": "icons/html.svg"
+            "url": "logos/html.svg"
           }
         ]
       },
@@ -23,7 +23,7 @@
         "links": [
           {
             "alt": "CSS3 logo",
-            "url": "icons/css.svg"
+            "url": "logos/css.svg"
           }
         ]
       },
@@ -35,7 +35,7 @@
         "links": [
           {
             "alt": "JavaScript logo",
-            "url": "icons/js.svg"
+            "url": "logos/js.svg"
           }
         ]
       },
@@ -47,7 +47,7 @@
         "links": [
           {
             "alt": "Angular logo",
-            "url": "icons/angular.svg"
+            "url": "logos/angular.svg"
           }
         ]
       },
@@ -59,7 +59,7 @@
         "links": [
           {
             "alt": "React logo",
-            "url": "icons/react.png"
+            "url": "logos/react.png"
           }
         ]
       },
@@ -71,7 +71,7 @@
         "links": [
           {
             "alt": "Vite logo",
-            "url": "icons/vite.svg"
+            "url": "logos/vite.svg"
           }
         ]
       },
@@ -83,7 +83,7 @@
         "links": [
           {
             "alt": "jQuery logo",
-            "url": "icons/jquery.svg"
+            "url": "logos/jquery.svg"
           }
         ]
       },
@@ -95,7 +95,7 @@
         "links": [
           {
             "alt": "socket.io logo",
-            "url": "icons/socketio.svg"
+            "url": "logos/socketio.svg"
           }
         ]
       }
@@ -113,7 +113,7 @@
         "links": [
           {
             "alt": "NodeJS logo",
-            "url": "icons/nodejs.svg"
+            "url": "logos/nodejs.svg"
           }
         ]
       },
@@ -125,7 +125,7 @@
         "links": [
           {
             "alt": "PHP logo",
-            "url": "icons/php.svg"
+            "url": "logos/php.svg"
           }
         ]
       },
@@ -137,7 +137,7 @@
         "links": [
           {
             "alt": "C# logo",
-            "url": "icons/csharp.svg"
+            "url": "logos/csharp.svg"
           }
         ]
       },
@@ -149,7 +149,7 @@
         "links": [
           {
             "alt": "Python logo",
-            "url": "icons/python.svg"
+            "url": "logos/python.svg"
           }
         ]
       }
@@ -167,7 +167,7 @@
         "links": [
           {
             "alt": "MySQL logo",
-            "url": "icons/mysql.svg"
+            "url": "logos/mysql.svg"
           }
         ]
       },
@@ -179,7 +179,7 @@
         "links": [
           {
             "alt": "MongoDB logo",
-            "url": "icons/mongodb.svg"
+            "url": "logos/mongodb.svg"
           }
         ]
       },
@@ -191,7 +191,7 @@
         "links": [
           {
             "alt": "PostgreSQL logo",
-            "url": "icons/postgresql.svg"
+            "url": "logos/postgresql.svg"
           }
         ]
       }
@@ -209,7 +209,7 @@
         "links": [
           {
             "alt": "Git logo",
-            "url": "icons/git.svg"
+            "url": "logos/git.svg"
           }
         ]
       },
@@ -221,7 +221,7 @@
         "links": [
           {
             "alt": "Docker logo",
-            "url": "icons/docker.svg"
+            "url": "logos/docker.svg"
           }
         ]
       },
@@ -233,7 +233,7 @@
         "links": [
           {
             "alt": "Wordpress logo",
-            "url": "icons/wordpress.svg"
+            "url": "logos/wordpress.svg"
           }
         ]
       },
@@ -245,7 +245,7 @@
         "links": [
           {
             "alt": "Unity logo",
-            "url": "icons/unity.svg"
+            "url": "logos/unity.svg"
           }
         ]
       }
