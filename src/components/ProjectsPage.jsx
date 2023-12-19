@@ -6,7 +6,7 @@ function ProjectsPage() {
     return (
         <>
             <>
-                <ProjectsSection />
+                {/*<ProjectsSection />*/}
             </>
         </>
     );

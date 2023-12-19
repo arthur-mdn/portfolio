@@ -12,7 +12,7 @@ function HomePage() {
                 <HeroSection />
                 <AboutSection />
                 <SkillsSection />
-                <ProjectsSection />
+                {/*<ProjectsSection />*/}
                 <LinksSection />
             </>
         </>
