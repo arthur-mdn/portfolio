@@ -10,7 +10,7 @@
     "tags": ["Python", "Unity"],
     "date": "2023-12-12",
     "status": "draft",
-    "type": "game"
+    "type": "Jeu vidéo"
   },
   {
     "id": 1,
@@ -23,7 +23,7 @@
     "tags": ["HTML", "CSS", "JavaScript", "JS" ,"React"],
     "date": "2023-12-19",
     "status": "online",
-    "type": "website"
+    "type": "Site web"
   },
   {
     "id": 2,
@@ -36,7 +36,7 @@
     "tags": ["HTML", "CSS", "JavaScript", "JS" ,"React", "NodeJS", "Socket.io", "MongoDB", "GIT"],
     "date": "2023-11-26",
     "status": "online",
-    "type": "webapp"
+    "type": "WebApp"
   },
   {
     "id": 3,
@@ -49,7 +49,7 @@
     "tags": ["HTML", "CSS", "JavaScript", "JS","PHP", "MySQL"],
     "date": "2023-08-07",
     "status": "online",
-    "type": "webapp"
+    "type": "WebApp"
   },
 
   {
@@ -63,7 +63,7 @@
     "tags": ["HTML", "CSS", "JavaScript", "JS" ,"React", "MySQL"],
     "date": "2023-07-19",
     "status": "online",
-    "type": "webapp"
+    "type": "WebApp"
   },
   {
     "id": 13,
@@ -76,7 +76,7 @@
     "tags": ["Custom Development"],
     "date": "2023-01-16",
     "status": "online",
-    "type": "tool"
+    "type": "Outil"
   },
   {
     "id": 15,
@@ -89,7 +89,7 @@
     "tags": ["PHP", "MySQL", "Git"],
     "date": "2023-05-28",
     "status": "online",
-    "type": "website"
+    "type": "Site web"
   },
   {
     "id": 7,
@@ -102,7 +102,7 @@
     "tags": ["HTML", "CSS", "JavaScript", "JS" , "PHP","MySQL"],
     "date": "2021-09-22",
     "status": "online",
-    "type": "webapp"
+    "type": "WebApp"
   },
   {
     "id": 17,
@@ -115,7 +115,7 @@
     "tags": ["3D Modeling", "Web Development"],
     "date": "2023-04-18",
     "status": "online",
-    "type": "interactive"
+    "type": "Visite virtuelle"
   },
   {
     "id": 8,
@@ -128,7 +128,7 @@
     "tags": ["HTML", "CSS", "JavaScript", "JS" ,"PHP", "MySQL"],
     "date": "2023-01-05",
     "status": "online",
-    "type": "interactive display"
+    "type": "Écran interactif"
   },
   {
     "id": 9,
@@ -141,7 +141,7 @@
     "tags": ["HTML", "CSS", "JavaScript", "JS" ,"PHP", "MySQL"],
     "date": "2022-09-25",
     "status": "online",
-    "type": "webapp"
+    "type": "Écran interactif"
   },
   {
     "id": 10,
@@ -154,7 +154,7 @@
     "tags": ["HTML", "CSS", "JavaScript", "JS" ,"PHP", "MySQL"],
     "date": "2022-10-19",
     "status": "online",
-    "type": "website"
+    "type": "Site web"
   },
 
 
@@ -169,7 +169,7 @@
     "tags": ["Wordpress"],
     "date": "2022-09-10",
     "status": "online",
-    "type": "website"
+    "type": "Site web"
   },
   {
     "id": 14,
@@ -182,7 +182,7 @@
     "tags": [],
     "date": "2023-01-10",
     "status": "online",
-    "type": "webapp"
+    "type": "WebApp"
   },
 
   {
@@ -196,7 +196,7 @@
     "tags": ["HTML", "CSS", "JavaScript", "JS" ,"React", "MySQL", "Git"],
     "date": "2021-09-20",
     "status": "development",
-    "type": "webapp"
+    "type": "WebApp"
   },
 
   {
@@ -210,7 +210,7 @@
     "tags": ["Web Development", "portfolio"],
     "date": "2020-02-18",
     "status": "online",
-    "type": "interactive"
+    "type": "Site web"
   },
   {
     "id": 19,
@@ -223,6 +223,6 @@
     "tags": ["HTML", "CSS", "JavaScript", "JS"],
     "date": "2019-12-18",
     "status": "development",
-    "type": "webapp"
+    "type": "WebApp"
   }
 ]

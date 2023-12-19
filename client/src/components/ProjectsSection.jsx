@@ -1,5 +1,8 @@
 import React from "react";
 import projectsData from "/data/projects.json";
+import {FaExternalLinkAlt} from "react-icons/fa";
+import {FaArrowRightLong, FaEye} from "react-icons/fa6";
+import Carousel from 'better-react-carousel'
 
 function ProjectsSection() {
     // Trier les projets par date dans l'ordre décroissant
@@ -9,22 +12,47 @@ function ProjectsSection() {
         <>
             <section className="PS fc g1">
                 <h2>Projets</h2>
-                <ul>
+                <Carousel showDots scrollSnap gap={10} rows={1} autoplay={3000} loop responsiveLayout={[
+                    {
+                        breakpoint: 2000,
+                        cols: 5
+                    },
+                    {
+                        breakpoint: 1000,
+                        cols: 4
+                    },
+                    {
+                        breakpoint: 800,
+                        cols: 3
+                    },
+                    {
+                        breakpoint: 500,
+                        cols: 4
+                    },
+                    {
+                        breakpoint: 150,
+                        cols: 4
+                    }
+
+                ]} >
                     {sortedProjects.map(project => (
                         // on click, redirect to page /projects/:id
-                        <li key={project.id} className="PS_card" >
-                            <a href={`/projects/${project.id}`}>
+                        <Carousel.Item key={project.id} >
+                            <a href={`/projects/${project.id}`} className="PS_card">
                                 <img src={project.image} alt={project.name} />
                                 <div className={"content"}>
-                                    <h3>{project.name}</h3>
+                                    <p>{project.type}</p>
                                     <span>{project.date}</span>
-                                    <p>{project.description}</p>
+                                    <h3>{project.name}</h3>
+                                    <button type={"button"} className={"button"}><FaArrowRightLong/></button>
                                 </div>
                             </a>
-
-                        </li>
+                        </Carousel.Item>
                     ))}
-                </ul>
+                </Carousel>
+                <button type={"button"} className={"button"} style={{width:'fit-content',margin:'0.8rem auto 0'}} onClick={
+                    () => window.location.href = '/projects'
+                }><FaEye/>Voir tous les projets</button>
             </section>
         </>
     );

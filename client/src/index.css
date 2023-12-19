@@ -127,17 +127,22 @@ button:focus-visible , .button:focus-visible, .button:focus {
   border-radius: 1rem;
   position: relative;
 }
+
+section{
+  max-width: 1700px;
+  margin: auto;
+  padding: 0 2rem 2rem 2rem;
+}
 /* END - General styles */
 
 
 /* START - HeroSection */
 
-.HS{
+.HS .HS_container{
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 4rem;
-  margin:0 2rem 2rem 2rem;
   background-image: radial-gradient(circle at center center, #29cdf5, #89cf79), repeating-radial-gradient(circle at center center, #29cdf5, #29cdf5, 3rem, transparent 6rem, transparent 3rem);
   background-blend-mode: multiply;
   background-color: #89cf79;
@@ -145,7 +150,7 @@ button:focus-visible , .button:focus-visible, .button:focus {
   gap: 2rem;
   position: relative;
 }
-.HS:before{
+.HS .HS_container:before{
   position: absolute;
   left: 0;
   top: 0;
@@ -238,10 +243,13 @@ button:focus-visible , .button:focus-visible, .button:focus {
 
 /* END - HeroSection */
 
+
+
+
+
 /* START - AboutSection */
 .AS {
   justify-content: space-between;
-  margin:0 2rem 2rem 2rem;
   border-radius: 1rem;
   position: relative;
 }
@@ -267,7 +275,6 @@ button:focus-visible , .button:focus-visible, .button:focus {
 /* START - SkillsSection */
 .SS {
   justify-content: space-between;
-  margin:0 2rem 2rem 2rem;
   border-radius: 1rem;
   position: relative;
 }
@@ -310,10 +317,13 @@ button:focus-visible , .button:focus-visible, .button:focus {
 }
 /* END - SkillsSection */
 
+
+
+
+
 /* START - ProjectsSection */
 .PS {
   justify-content: space-between;
-  margin:0 2rem 2rem 2rem;
   border-radius: 1rem;
   position: relative;
 }
@@ -322,32 +332,107 @@ button:focus-visible , .button:focus-visible, .button:focus {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 1rem;
 }
 .PS_card{
-  width: 300px ;
+  display: flex;
+  /*width: 300px ;*/
   border-radius: 1rem;
   overflow: hidden;
   background-color: #e7e7e7;
   position: relative;
   aspect-ratio: 1/1;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
 .PS_card .content{
   position: absolute;
-  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0,0,0,0.5);
+  /*background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.8) 100%);*/
+  background-position: bottom 100px ;
   color: white;
+  transition: all 0.2s;
+z-index: 0;
 }
 .PS_card .content span{
-  color: grey;
+  color: #92ff78;
+}
+.PS_card .content p{
+  padding-left: 0.8rem;
+  width: fit-content;
+  font-weight: bold;
+  background-color: red;
+  text-transform: capitalize;
+  background-image: linear-gradient(97deg, rgb(164 199 30) 0%, rgb(255, 118, 5) 100%);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  position: relative;
+  font-family: 'Cardium A', sans-serif;
+}
+
+.PS_card .content:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  transition: all 0.2s;
+  z-index: -1;
+}
+
+.PS_card .content h3{
+  font-family: 'Cardium A', sans-serif;
+}
+.PS_card .content p:before{
+  content: '';
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: rgb(164 199 30);
 }
 .PS_card img{
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
+.PS_card .content button{
+  transition: all 0.2s;
+  opacity: 0;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.7rem;
+  border-radius: 4rem;
+  background-color: white;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+.PS_card .content:hover button{
+  opacity: 1;
+}
+.PS_card .content:hover:before{
+ top: 50px;
+}
+
+
+
+
