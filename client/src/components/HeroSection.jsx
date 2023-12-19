@@ -8,6 +8,7 @@ function HeroSection() {
                 <div className={"HS_container"}>
                     <div className={"HS_content"}>
                         <h1 className={"HS_title"}>Transformez vos idées en solutions web.</h1>
+                        <img src={"illustrations/memoji2.png"} alt={"avatar"} className={"hide_desktop"} style={{margin:"auto"}}/>
                         <p className={"HS_txt"}>
                             Exploitez le plein potentiel du web avec des solutions sur mesure, conçues pour réussir.
                         </p>
@@ -22,7 +23,7 @@ function HeroSection() {
                             </button>
                         </div>
                     </div>
-                    <img src={"illustrations/memoji2.png"} alt={"avatar"}/>
+                    <img src={"illustrations/memoji2.png"} alt={"avatar"} className={"hide_mobile"}/>
                     <ul className={"HS_extra"}>
                         <li>
                             <p>Projets terminés</p>

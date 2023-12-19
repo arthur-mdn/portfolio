@@ -140,6 +140,23 @@ section{
   margin: auto;
   padding: 0 2rem 2rem 2rem;
 }
+
+/* Hide .hide_mobile on mobile, make .fc_on_mobile clas flex-direciton column on mobile */
+@media (max-width: 768px) {
+  .hide_mobile{
+    display: none;
+  }
+  .fc_on_mobile{
+    flex-direction: column;
+  }
+}
+/* Hide .hide_desktop on desktop */
+@media (min-width: 768px) {
+  .hide_desktop{
+    display: none;
+  }
+}
+
 /* END - General styles */
 
 

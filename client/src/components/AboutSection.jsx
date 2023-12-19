@@ -12,7 +12,7 @@ function AboutSection() {
                         Je vais au-delà du simple codage, en fusionnant compétences techniques, créativité artistique et acuité commerciale. Pour des résultats qui surpassent les attentes.
                     </h4>
                 </div>
-                <div className={"fr g1"}>
+                <div className={"fr g1 fc_on_mobile"}>
                     <div className={"AS_card"}>
                         <img src={"illustrations/memoji2.png"} alt={"avatar"}/>
                         <div>
