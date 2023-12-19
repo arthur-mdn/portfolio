@@ -37,6 +37,7 @@ body {
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
+  padding-top: calc(80px + 2rem);
 }
 
 h1 {
