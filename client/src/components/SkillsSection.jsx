@@ -39,7 +39,7 @@ function SkillsSection() {
                             <div key={skill.name} title={skill.description}>
                                 <img src={skill.links[0].url} alt={skill.links[0].alt} />
                                 <p>{skill.name}</p>
-                                <p>{skill.id}</p>
+                                {/*<p>{skill.id}</p>*/}
                             </div>
                         ))
                     )}

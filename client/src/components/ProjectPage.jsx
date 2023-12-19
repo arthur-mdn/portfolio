@@ -1,7 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import projectsData from "/data/projects.json";
-import {FaBan, FaGithub, FaLink} from "react-icons/fa6";
+import skillsData from "/data/skills.json"; // Importez les données de compétences
+import { FaBan, FaGithub, FaLink } from "react-icons/fa6";
+
 
 function ProjectPage() {
 
@@ -12,13 +14,17 @@ function ProjectPage() {
         return <div>Projet introuvable</div>;
     }
 
+    const projectSkills = project.technos.map(techId =>
+        skillsData.flatMap(category => category.skills).find(skill => skill.id === techId)
+    ).filter(Boolean); // Filtrer les undefined
 
+    console.log(projectSkills)
     const hasLinks = project.github || project.link;
 
     return (
         <section className="PP fr g2">
 
-            <img src={`/${project.image}`} alt={project.name} />
+            <img src={`/${project.image}`} alt={project.name} className={"PP_img"}/>
             <div className={"PP_content"}>
                 <div className={"PP_title_date_type"}>
                     <h1>{project.name}</h1>
@@ -33,9 +39,12 @@ function ProjectPage() {
                 </div>
                 <div>
                     <h4>Technologies utilisées</h4>
-                    <div className={"fr g0-5"}>
-                        {project.tags.map((tag, index) => (
-                            <span key={index}>{tag}</span>
+                    <div className={"fr g0-5 PP_technos"} >
+                        {projectSkills.map((skill, index) => (
+                            <div key={index}>
+                                <img src={`/${skill.links[0].url}`} alt={skill.name} />
+                                <span key={index}>{skill.name}</span>
+                            </div>
                         ))}
                     </div>
                 </div>
