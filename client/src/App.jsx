@@ -13,9 +13,7 @@ function App() {
         <Router>
             <Menu />
             <Routes>
-                <Route path="/" element={
-                   <HomePage />
-                } />
+                <Route path="/" element={<HomePage />} />
                 <Route path="/competences" element={<SkillsSection />} />
                 <Route path="/projets" element={<ProjectsPage />} />
                 <Route path="/projects/:slug" element={<ProjectPage />} />
