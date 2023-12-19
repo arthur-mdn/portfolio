@@ -11,7 +11,7 @@ function AboutSection() {
                 </div>
                 <div className={"fr g1 fc_on_mobile"}>
                     <div className={"AS_card"}>
-                        <img src={"illustrations/memoji2.png"} alt={"avatar"}/>
+                        <img src={"/illustrations/memoji2.png"} alt={"avatar"}/>
                         <div>
                             <h2 className={"HS_title"}>Expertise en Développement Web</h2>
                             <p className={"HS_txt"}>

@@ -37,7 +37,7 @@ function SkillsSection() {
                     {filteredSkills.map(category =>
                         category.skills.map(skill => (
                             <div key={skill.name} title={skill.description}>
-                                <img src={skill.links[0].url} alt={skill.links[0].alt} />
+                                <img src={"/"+skill.links[0].url} alt={skill.links[0].alt} />
                                 <p>{skill.name}</p>
                                 {/*<p>{skill.id}</p>*/}
                             </div>
