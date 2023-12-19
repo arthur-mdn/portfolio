@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import skillsData from "/data/skills.json"; // Chemin relatif à votre composant
+import { useState } from "react";
+import skillsData from "../data/skills.json"; // Chemin relatif à votre composant
 
 function SkillsSection() {
     // État pour suivre la catégorie actuelle

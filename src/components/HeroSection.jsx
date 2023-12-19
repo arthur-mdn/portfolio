@@ -1,4 +1,3 @@
-import React from "react";
 import {FaDownload, FaEye} from "react-icons/fa6";
 
 function HeroSection() {

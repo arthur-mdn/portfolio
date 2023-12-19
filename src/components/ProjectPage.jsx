@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import projectsData from "/data/projects.json";
-import skillsData from "/data/skills.json"; // Importez les données de compétences
+import projectsData from "../data/projects.json";
+import skillsData from "../data/skills.json"; // Importez les données de compétences
 import { FaBan, FaGithub, FaLink } from "react-icons/fa6";
 
 

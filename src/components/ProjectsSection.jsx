@@ -1,5 +1,5 @@
 import React from "react";
-import projectsData from "/data/projects.json";
+import projectsData from "../data/projects.json";
 import {FaExternalLinkAlt} from "react-icons/fa";
 import {FaArrowRightLong, FaEye, FaListCheck} from "react-icons/fa6";
 import Carousel from 'better-react-carousel'
