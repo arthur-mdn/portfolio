@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.cdnfonts.com/css/cardium-a');
+
+*{
+  box-sizing: border-box;
+}
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2.8rem;
+  line-height: 1.1;
+}
+
+button , .button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+    justify-content: center;
+  gap: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover, .button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible , .button:focus-visible, .button:focus {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.button.linkedin{
+  background-color: #0077B5;
+  color: white;
+}
+.button.github{
+  background-color: #333;
+  color: white;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* START - General styles */
+.fc{
+  display: flex;
+  flex-direction: column;
+}
+.fr{
+  display: flex;
+  flex-direction: row;
+}
+.g0-5{
+    gap: 0.5rem;
+}
+.g1{
+    gap: 1rem;
+}
+.g2{
+    gap: 2rem;
+}
+.g3{
+    gap: 3rem;
+}
+
+.button.special_button{
+  background: rgb(56,255,167);
+  background: linear-gradient(97deg, rgb(164 199 30) 0%, rgb(191 88 0) 100%);
+  background-origin: border-box;
+}
+
+.sms{
+  background-color: #008334;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  position: relative;
+}
+/* END - General styles */
+
+
+/* START - HeroSection */
+
+.HS{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem;
+  margin:0 2rem 2rem 2rem;
+  background-image: radial-gradient(circle at center center, #29cdf5, #89cf79), repeating-radial-gradient(circle at center center, #29cdf5, #29cdf5, 3rem, transparent 6rem, transparent 3rem);
+  background-blend-mode: multiply;
+  background-color: #89cf79;
+  border-radius: 1rem;
+  gap: 2rem;
+  position: relative;
+}
+.HS:before{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: black;
+  opacity: 0.3;
+  z-index: 0;
+  border-radius: 1rem;
+}
+.HS img{
+  filter: drop-shadow(0 0 4rem rgba(255,255,255,0.6));
+  width: 200px;
+}
+.HS .HS_content{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 1;
+}
+.HS .HS_title{
+  color:white;
+  text-shadow: 0 0 16px BLACK;
+  font-family: 'Cardium A', sans-serif;
+}
+.HS .HS_txt{
+    color:white;
+    text-shadow: 0 0 16px BLACK;
+  font-family: 'Cardium A', sans-serif;
+    font-size: 1.2rem;
+}
+.HS .HS_btns{
+  display: flex;
+  gap: 1rem;
+}
+.HS .button{
+  font-Size:1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+
+.HS .HS_extra{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  padding: 1rem 2rem;
+  z-index: 1;
+  background: rgba(255,255,255,0.5);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  margin: 0;
+  width: fit-content;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.HS .HS_extra li{
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.HS .HS_extra li p{
+  text-align: center;
+  padding: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  text-wrap: nowrap;
+}
+.HS .HS_extra li h4{
+  font-size: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  padding: 0;
+  text-wrap: nowrap;
+  color: green;
+
+}
+
+/* END - HeroSection */
+
+/* START - AboutSection */
+.AS {
+  justify-content: space-between;
+  margin:0 2rem 2rem 2rem;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.AS .AS_card{
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: #94dfa9;
+}
+.AS .AS_card.grey{
+  background-color: #e7e7e7;
+}
+
+.AS .AS_card img{
+    width: 120px;
+}
+
+/* END - AboutSection */
+
+
+
+
+/* START - SkillsSection */
+.SS {
+  justify-content: space-between;
+  margin:0 2rem 2rem 2rem;
+  border-radius: 1rem;
+  position: relative;
+}
+.SS_btns button{
+  background-color: #ffeaba;
+  color: #1a1a1a;
+  border: 1px solid #ffaf5e;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s;
+
+}
+.SS_btns button.active{
+  background-color: #ffb219;
+}
+.skills-icons{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin:0 2rem 2rem 2rem;
+}
+.skills-icons div{
+  background-color: #e7e7e7;
+  width: 90px;
+  height: 90px;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+}
+.skills-icons img{
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+/* END - SkillsSection */
+
+/* START - ProjectsSection */
+.PS {
+  justify-content: space-between;
+  margin:0 2rem 2rem 2rem;
+  border-radius: 1rem;
+  position: relative;
+}
+.PS ul{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.PS_card{
+  width: 300px ;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #e7e7e7;
+  position: relative;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+.PS_card .content{
+  position: absolute;
+  padding: 1.5rem;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+}
+.PS_card .content span{
+  color: grey;
+}
+.PS_card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
