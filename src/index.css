@@ -183,19 +183,7 @@ button:focus-visible , .button:focus-visible, .button:focus {
   gap: 2rem;
   position: relative;
 }
-@media (max-width: 768px) {
 
-  .HS{
-    margin-bottom: 3rem;
-  }
-  .HS .HS_container{
-    padding: 2rem;
-  }
-  .HS .HS_btns{
-    flex-direction: column;
-    margin-bottom: 2rem;
-  }
-}
 .HS .HS_container:before{
   position: absolute;
   left: 0;
@@ -288,6 +276,29 @@ button:focus-visible , .button:focus-visible, .button:focus {
 
 }
 
+@media (max-width: 768px) {
+
+  .HS{
+    margin-bottom: 3rem;
+  }
+  .HS .HS_container{
+    padding: 2rem;
+  }
+  .HS .HS_btns{
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  .HS .HS_extra {
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+  }
+  .HS .HS_extra li p{
+    font-size: 1.1rem;
+  }
+  .HS .HS_extra li h4{
+    font-size: 1.8rem;
+  }
+}
 /* END - HeroSection */
 
 
