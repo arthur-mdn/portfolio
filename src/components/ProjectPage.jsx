@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import { useParams } from "react-router-dom";
 import projectsData from "../data/projects.json";
-import skillsData from "../data/skills.json"; // Importez les données de compétences
-import { FaBan, FaGithub, FaLink } from "react-icons/fa6";
+import skillsData from "../data/skills.json";
+import { FaBan, FaGithub, FaLink, FaArrowUp, FaArrowDown } from "react-icons/fa6";
 
 
 function ProjectPage() {
@@ -15,12 +15,16 @@ function ProjectPage() {
     }
 
     const [showFullDescription, setShowFullDescription] = useState(false);
-
     const truncateDescription = (description) => {
         if (description.length > 300 && !showFullDescription) {
             return description.substring(0, 300) + '...';
         }
         return description;
+    };
+
+    const [isImageExpanded, setIsImageExpanded] = useState(false);
+    const handleImageClick = () => {
+        setIsImageExpanded(!isImageExpanded);
     };
 
     const projectSkills = project.technos.map(techId =>
@@ -32,8 +36,13 @@ function ProjectPage() {
 
     return (
         <section className="PP fc g2">
+            <div className={"PP_img"}>
 
-            <img src={`/${project.image}`} alt={project.name} className={"PP_img"}/>
+                <img src={`/${project.image}`} alt={project.name}  onClick={handleImageClick} className={isImageExpanded ? " expanded" : "PP_img"}/>
+                <div className={"indicator"}>
+                    {isImageExpanded ? <FaArrowUp /> : <FaArrowDown />}
+                </div>
+            </div>
             <div className={"PP_content"}>
                 <div className={"PP_title_date_type"}>
                     <h1>{project.name}</h1>
