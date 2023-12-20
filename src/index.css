@@ -351,24 +351,20 @@ section{
   border-radius: 1rem;
   position: relative;
 }
-.PS ul{
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
-}
+
 .PS_card{
-  display: flex;
+  display: flex!important;
+  width: auto!important;
+  height: -webkit-fill-available;
   /*width: 300px ;*/
   border-radius: 1rem;
   overflow: hidden;
   background-color: #e7e7e7;
   position: relative;
-  aspect-ratio: 1/1;
+
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+
 }
 .PS_card .content{
   position: absolute;
@@ -458,6 +454,37 @@ section{
 }
 
 
+/* Styles personnalisés pour les boutons précédent/suivant */
+.slick-prev, .slick-next {
+  z-index: 1;
+  margin:15px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.slick-prev:before, .slick-next:before {
+  font-size: 2rem;
+  color: black
+}
+
+.slick-prev { left: -35px; }
+.slick-next { right: -35px; }
+.PS_card {
+  margin: 15px; /* Ajoutez une marge à gauche et à droite */
+}
+
+.slick-slide{
+  aspect-ratio: 1/1;
+}
+.slick-slide >div , .slick-slide > div > div.PS_card{
+  height: -webkit-fill-available;
+}
+.slick-track{
+  display: flex;
+  align-items: center;
+}
 /* END - ProjectsSection */
 
 /* START - ContactSection */
