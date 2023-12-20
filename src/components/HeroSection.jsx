@@ -12,10 +12,14 @@ function HeroSection() {
                             Exploitez le plein potentiel du web avec des solutions sur mesure, conçues pour réussir.
                         </p>
                         <div className={'HS_btns'}>
-                            <button className={"button special_button s-font lh1"}>
+                            <a
+                                href="/others/CV_Mondon_Arthur.pdf"
+                                download
+                                className={"button special_button s-font lh1"}
+                            >
                                 <FaDownload/>
                                 Télécharger le CV
-                            </button>
+                            </a>
                             <button className={"button contact s-font lh1"}>
                                 <FaEye/>
                                 Projets récents
