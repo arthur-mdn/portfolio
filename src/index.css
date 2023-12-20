@@ -323,6 +323,7 @@ button:focus-visible , .button:focus-visible, .button:focus {
   justify-content: space-between;
   border-radius: 1rem;
   position: relative;
+  margin-bottom: 2rem;
 }
 .SS_btns button{
   background-color: #ffeaba;
@@ -336,6 +337,13 @@ button:focus-visible , .button:focus-visible, .button:focus {
   transition: all 0.25s;
 
 }
+@media (max-width: 768px) {
+
+  .SS_btns{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 .SS_btns button.active{
   background-color: #ffb219;
 }
@@ -343,7 +351,6 @@ button:focus-visible , .button:focus-visible, .button:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin:0 2rem 2rem 2rem;
 }
 .skills-icons div{
   background-color: #e7e7e7;

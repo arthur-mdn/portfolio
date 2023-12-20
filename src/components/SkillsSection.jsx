@@ -15,7 +15,6 @@ function SkillsSection() {
             <section className={"SS fc g1"}>
                 <h2>Compétences</h2>
                 <div className="SS_btns fr g0-5">
-                    {/* Bouton "All" avec la classe active si nécessaire */}
                     <button
                         type={'button'}
                         className={activeCategory === 'All' ? 'active' : ''}
@@ -23,7 +22,6 @@ function SkillsSection() {
                         All
                     </button>
 
-                    {/* Boutons des catégories avec la classe active si nécessaire */}
                     {skillsData.map(category => (
                         <button
                             key={category.id}
