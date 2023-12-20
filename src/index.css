@@ -563,10 +563,12 @@ button:focus-visible , .button:focus-visible, .button:focus {
   margin: 0.5rem 0;
 }
 .PP .PP_content{
-  text-align: justify;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+.PP .PP_content p{
+  text-align: justify;
 }
 .PP .PP_content h1{
   font-family: 'Cardium A', sans-serif;
