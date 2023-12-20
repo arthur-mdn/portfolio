@@ -22,7 +22,7 @@ function ProjectPage() {
     const hasLinks = project.github || project.link;
 
     return (
-        <section className="PP fr g2">
+        <section className="PP fc g2">
 
             <img src={`/${project.image}`} alt={project.name} className={"PP_img"}/>
             <div className={"PP_content"}>

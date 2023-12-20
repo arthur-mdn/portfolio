@@ -68,17 +68,15 @@ function ProjectsSection() {
                 <h2 className={"s-font"}>Projets</h2>
                 <Slider {...settings}>
                     {projectsData.map(project => (
-                        <div key={project.id} className="PS_card">
-                            <Link to={`/projects/${project.slug}`} style={{width:'100%'}}>
-                                <img src={`/${project.image}`} alt={project.name} />
-                                <div className="content">
-                                    <p>{project.type}</p>
-                                    <span>{project.date}</span>
-                                    <h3>{project.name}</h3>
-                                    <button type="button" className="button"><FaArrowRightLong/></button>
-                                </div>
-                            </Link>
-                        </div>
+                        <Link to={`/projects/${project.slug}`} style={{width:'100%'}} className="PS_card" key={project.id} >
+                            <img src={`/${project.image}`} alt={project.name} />
+                            <div className="content">
+                                <p>{project.type}</p>
+                                <span>{project.date}</span>
+                                <h3>{project.name}</h3>
+                                <button type="button" className="button"><FaArrowRightLong/></button>
+                            </div>
+                        </Link>
                     ))}
                 </Slider>
                 <Link to="/projets" className="button c-white" style={{width: "fit-content", margin: '1.5rem auto'}}>
