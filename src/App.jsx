@@ -5,7 +5,8 @@ import SkillsSection from "./components/SkillsSection.jsx";
 import HomePage from "./components/HomePage.jsx";
 import ContactPage from "./components/ContactPage.jsx";
 import ProjectsPage from "./components/ProjectsPage.jsx";
-import ProjectPage from "./components/ProjectPage.jsx"; // Supposons que vous ayez un composant pour la section Contact
+import ProjectPage from "./components/ProjectPage.jsx";
+import NotFound from "./components/NotFound.jsx"; // Supposons que vous ayez un composant pour la section Contact
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <Route path="/projets" element={<ProjectsPage />} />
                 <Route path="/projects/:slug" element={<ProjectPage />} />
                 <Route path="/contact" element={<ContactPage />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
         </Router>
     );
