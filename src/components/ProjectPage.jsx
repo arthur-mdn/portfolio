@@ -33,7 +33,10 @@ function ProjectPage() {
 
     console.log(projectSkills)
     const hasLinks = project.github || project.link;
-
+    const formatDate = (dateString) => {
+        const [year, month, day] = dateString.split("-");
+        return `${day}/${month}/${year}`;
+    };
     return (
         <section className="PP fc g2">
             <div className={"PP_img"}>
@@ -46,7 +49,7 @@ function ProjectPage() {
             <div className={"PP_content"}>
                 <div className={"PP_title_date_type"}>
                     <h1>{project.name}</h1>
-                    <span style={{color:"green", fontWeight:"bold"}}>{project.date}</span>
+                    <span style={{color:"green", fontWeight:"bold"}}>{formatDate(project.date)}</span>
                     <h3>{project.type}</h3>
                 </div>
 

@@ -5,7 +5,10 @@ import {Link} from "react-router-dom";
 import {FaArrowRightLong, FaEye} from "react-icons/fa6";
 
 function ProjectsPage() {
-
+    const formatDate = (dateString) => {
+        const [year, month, day] = dateString.split("-");
+        return `${day}/${month}/${year}`;
+    };
     return (
         <>
             <section className="PsP fc g1">
@@ -16,7 +19,7 @@ function ProjectsPage() {
                             <img src={`/${project.image}`} alt={project.name} />
                             <div className="content">
                                 <p>{project.type}</p>
-                                <span>{project.date}</span>
+                                <span>{formatDate(project.date)}</span>
                                 <h3>{project.name}</h3>
                                 <button type="button" className="button"><FaArrowRightLong/></button>
                             </div>
