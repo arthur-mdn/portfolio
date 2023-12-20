@@ -289,7 +289,7 @@ button:focus-visible , .button:focus-visible, .button:focus {
     margin-bottom: 2rem;
   }
   .HS .HS_extra {
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     gap: 1rem;
   }
   .HS .HS_extra li p{
@@ -396,12 +396,12 @@ button:focus-visible , .button:focus-visible, .button:focus {
 .PS_card{
   display: flex!important;
   width: auto!important;
-  height: -webkit-fill-available;
   /*width: 300px ;*/
   border-radius: 1rem;
   overflow: hidden;
   background-color: #e7e7e7;
   position: relative;
+  aspect-ratio: 1/1;
 
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
@@ -520,7 +520,7 @@ button:focus-visible , .button:focus-visible, .button:focus {
   aspect-ratio: 1/1;
 }
 .slick-slide >div , .slick-slide > div > div.PS_card{
-  height: -webkit-fill-available;
+  /*height: -webkit-fill-available;*/
 }
 .slick-track{
   display: flex;
