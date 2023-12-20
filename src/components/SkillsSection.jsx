@@ -13,7 +13,7 @@ function SkillsSection() {
     return (
         <>
             <section className={"SS fc g1"}>
-                <h2>Compétences</h2>
+                <h2 className={"s-font"}>Compétences</h2>
                 <div className="SS_btns fr g0-5">
                     <button
                         type={'button'}
@@ -36,7 +36,7 @@ function SkillsSection() {
                         category.skills.map(skill => (
                             <div key={skill.name} title={skill.description}>
                                 <img src={"/"+skill.links[0].url} alt={skill.links[0].alt} />
-                                <p>{skill.name}</p>
+                                <p className={"s-font fs0-8"}>{skill.name}</p>
                                 {/*<p>{skill.id}</p>*/}
                             </div>
                         ))

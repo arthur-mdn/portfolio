@@ -6,7 +6,7 @@ function LinksSection() {
     return (
         <>
             <section className="PS fc g1">
-                <h2>Liens</h2>
+                <h2 className={"s-font"}>Liens</h2>
                 <div className={"fr g1"}>
                     <a href={"https://www.linkedin.com/in/arthur-mondon-25147b21b/"} className={"button linkedin"}>
                         <FaLinkedin style={{fontSize:'1.2rem'}}/>

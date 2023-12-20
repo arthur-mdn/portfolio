@@ -65,7 +65,7 @@ function ProjectsSection() {
     return (
         <>
             <section className="PS fc g1">
-                <h2>Projets</h2>
+                <h2 className={"s-font"}>Projets</h2>
                 <Slider {...settings}>
                     {projectsData.map(project => (
                         <div key={project.id} className="PS_card">

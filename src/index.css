@@ -165,8 +165,27 @@ button:focus-visible , .button:focus-visible, .button:focus {
     display: none;
   }
 }
+.s-font{
+  font-family: 'Cardium A', sans-serif;
+}
+.fs0-8{
+  font-size: 0.8rem;
+}
+.fs0-5{
+  font-size: 0.5rem;
+}
+.lh1{
+  line-height: 1;
+}
 
 /* END - General styles */
+
+
+
+
+
+
+
 
 
 /* START - HeroSection */
@@ -228,6 +247,7 @@ button:focus-visible , .button:focus-visible, .button:focus {
   justify-content: center;
   gap: 0.5rem;
   color: white;
+  padding: 0.8rem 1.2rem;
 }
 
 
