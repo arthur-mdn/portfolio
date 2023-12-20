@@ -131,6 +131,9 @@ button:focus-visible , .button:focus-visible, .button:focus {
 .c-white{
   color: white;
 }
+.fw-w{
+  flex-wrap: wrap;
+}
 
 .button.special_button{
   background: rgb(56,255,167);
@@ -583,6 +586,8 @@ button:focus-visible , .button:focus-visible, .button:focus {
 
 .PP_img{
   position: relative;
+  max-width: 900px;
+
 }
 .PP_img .indicator{
   position: absolute;
@@ -591,22 +596,23 @@ button:focus-visible , .button:focus-visible, .button:focus {
   background-color: white;
   padding: 0.3rem 0.5rem 0.1rem;
   border-radius: 2rem;
+  pointer-events: none;
 }
 .PP_img img{
   width: 100%;
   max-width: 100%;
-  height: 40vw;
-  max-height: 300px;
+  max-height: 200px;
   object-fit: cover;
   object-position: center;
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  transition: max-height 0.4s;
 }
 
 .PP_img img.expanded {
   width: 100%;
   height: auto;
-  max-height: none;
+  max-height: 100vh;
 }
 
 
@@ -629,3 +635,34 @@ button:focus-visible , .button:focus-visible, .button:focus {
   object-fit: contain;
 }
 /* END - ProjetPage */
+
+
+
+
+
+/* Styles pour le conteneur de la grille */
+.PsP > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Ajustez selon vos besoins */
+  gap: 20px; /* Espace entre les cartes */
+}
+
+/* Styles pour les cartes */
+.PsP a {
+  max-width: 300px; /* Largeur maximale pour les grandes résolutions */
+  flex: 1 1 auto; /* Permet aux cartes de grandir et de rétrécir */
+  margin: 10px; /* Espace autour de chaque carte */
+}
+
+/* Styles pour les écrans plus petits */
+@media (max-width: 768px) {
+  .PsP > div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .PsP a {
+    max-width: 100%; /* Cartes prennent toute la largeur sur les petits écrans */
+  }
+}

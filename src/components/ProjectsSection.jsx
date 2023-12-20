@@ -11,7 +11,7 @@ function ProjectsSection() {
         dots: true,
         infinite: false,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 3,
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
@@ -67,7 +67,7 @@ function ProjectsSection() {
             <section className="PS fc g1">
                 <h2 className={"s-font"}>Projets</h2>
                 <Slider {...settings}>
-                    {projectsData.map(project => (
+                    {projectsData.sort((b, a) => a.date.localeCompare(b.date)).map(project => (
                         <Link to={`/projects/${project.slug}`} style={{width:'100%'}} className="PS_card" key={project.id} >
                             <img src={`/${project.image}`} alt={project.name} />
                             <div className="content">
