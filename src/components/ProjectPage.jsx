@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { useParams } from "react-router-dom";
 import projectsData from "../data/projects.json";
 import skillsData from "../data/skills.json"; // Importez les données de compétences
@@ -13,6 +13,15 @@ function ProjectPage() {
     if (!project) {
         return <div>Projet introuvable</div>;
     }
+
+    const [showFullDescription, setShowFullDescription] = useState(false);
+
+    const truncateDescription = (description) => {
+        if (description.length > 300 && !showFullDescription) {
+            return description.substring(0, 300) + '...';
+        }
+        return description;
+    };
 
     const projectSkills = project.technos.map(techId =>
         skillsData.flatMap(category => category.skills).find(skill => skill.id === techId)
@@ -35,7 +44,12 @@ function ProjectPage() {
 
                 <div>
                     <h4>Description</h4>
-                    <p>{project.description}</p>
+                    <p>{truncateDescription(project.description)}</p>
+                    {project.description.length > 300 && (
+                        <button onClick={() => setShowFullDescription(!showFullDescription)} className={"see_more"}>
+                            {showFullDescription ? "Voir moins" : "Voir plus"}
+                        </button>
+                    )}
                 </div>
                 <div>
                     <h4>Technologies utilisées</h4>

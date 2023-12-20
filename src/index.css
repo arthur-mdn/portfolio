@@ -554,8 +554,16 @@ button:focus-visible , .button:focus-visible, .button:focus {
 
 /* START - ProjetPage */
 
-
+.see_more{
+  background-color: transparent;
+  border:0;
+  padding: 0;
+  color: green;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
 .PP .PP_content{
+  text-align: justify;
   display: flex;
   flex-direction: column;
   gap: 1rem;
