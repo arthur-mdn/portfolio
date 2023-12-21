@@ -73,10 +73,11 @@ button , .button{
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.25s;
 }
 button:hover, .button:hover {
   border-color: #646cff;
+  opacity: 0.6;
 }
 button:focus,
 button:focus-visible , .button:focus-visible, .button:focus {
@@ -669,4 +670,21 @@ button:focus-visible , .button:focus-visible, .button:focus {
   .PsP a {
     max-width: 100%; /* Cartes prennent toute la largeur sur les petits écrans */
   }
+}
+
+
+
+
+
+.FS{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.FS a{
+  color: #80b38d ;
+  transition: color 0.2s;
+}
+.FS a:hover{
+  color: #d0dcc0;
 }

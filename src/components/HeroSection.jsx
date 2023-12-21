@@ -31,7 +31,7 @@ function HeroSection() {
                     <ul className={"HS_extra"}>
                         <li>
                             <p>Projets terminés</p>
-                            <h4>62 </h4>
+                            <h4>28</h4>
                         </li>
                         <li>
                             <p>Taux de satisfaction</p>

@@ -6,7 +6,8 @@ import HomePage from "./components/HomePage.jsx";
 import ContactPage from "./components/ContactPage.jsx";
 import ProjectsPage from "./components/ProjectsPage.jsx";
 import ProjectPage from "./components/ProjectPage.jsx";
-import NotFound from "./components/NotFound.jsx"; // Supposons que vous ayez un composant pour la section Contact
+import NotFound from "./components/NotFound.jsx";
+import Footer from "./components/Footer.jsx"; // Supposons que vous ayez un composant pour la section Contact
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
+            <Footer />
         </Router>
     );
 }

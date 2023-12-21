@@ -37,7 +37,7 @@ function SkillsSection() {
                             <div key={skill.name} title={skill.description}>
                                 <img src={"/"+skill.links[0].url} alt={skill.links[0].alt} />
                                 <p className={"s-font fs0-8"}>{skill.name}</p>
-                                <p>{skill.id}</p>
+                                <p style={{fontSize:'0.8rem',opacity:'0.6'}}>{skill.id}</p>
                             </div>
                         ))
                     )}
