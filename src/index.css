@@ -92,6 +92,28 @@ button:focus-visible , .button:focus-visible, .button:focus {
   color: white;
 }
 
+
+input[type=text], input[type=email], textarea, select{
+  width: 100%;
+  max-width: 500px;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  border: 1px solid #cdcdcd;
+  background-color: white;
+  color: black;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing: border-box;
+  font-family: Arial;
+}
+textarea{
+  resize: vertical;
+  min-height: 100px;
+  max-height: 200px;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -687,4 +709,16 @@ button:focus-visible , .button:focus-visible, .button:focus {
 }
 .FS a:hover{
   color: #d0dcc0;
+}
+
+
+
+
+
+.CP{
+
+}
+.CP form label{
+  display: flex;
+  flex-direction: column;
 }
