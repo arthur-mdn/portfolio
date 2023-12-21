@@ -7,7 +7,7 @@ function AboutSection() {
                 <div className={"fr g1"}>
                     <div className={"sms orange"}>
                         <h4 className={"s-font"}>
-                            Arthur Mondon, Développeur Web full-stack freelance.
+                            Arthur Mondon, Développeur Web full-stack freelance en Provence (Vaucluse).
                         </h4>
                     </div>
                     <div className={"sms"}>
