@@ -151,6 +151,10 @@ button:focus-visible , .button:focus-visible, .button:focus {
   border-radius: 1rem;
   position: relative;
 }
+.sms.orange{
+  background-color: #ffeaba;
+  color: black;
+}
 
 
 /* Hide .hide_mobile on mobile, make .fc_on_mobile clas flex-direciton column on mobile */

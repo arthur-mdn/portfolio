@@ -4,11 +4,19 @@ function AboutSection() {
             <section className={"AS fc g1"}>
                 <h2 className={"s-font"}>À propos</h2>
 
-                <div className={"sms"}>
-                    <h4 className={"s-font"}>
-                        Je vais au-delà du simple codage, en fusionnant compétences techniques, créativité artistique et acuité commerciale. Pour des résultats qui surpassent les attentes.
-                    </h4>
+                <div className={"fr g1"}>
+                    <div className={"sms orange"}>
+                        <h4 className={"s-font"}>
+                            Arthur Mondon, Développeur Web full-stack freelance.
+                        </h4>
+                    </div>
+                    <div className={"sms"}>
+                        <h4 className={"s-font"}>
+                            Je vais au-delà du simple codage, en fusionnant compétences techniques, créativité artistique et acuité commerciale. Pour des résultats qui surpassent les attentes.
+                        </h4>
+                    </div>
                 </div>
+
                 <div className={"fr g1 fc_on_mobile"}>
                     <div className={"AS_card"}>
                         <img src={"/illustrations/memoji2.png"} alt={"avatar"}/>
