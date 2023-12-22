@@ -69,9 +69,9 @@ function ProjectsSection() {
     return (
         <>
             <section className="PS fc g1">
-                <h2 className={"s-font"}>Projets</h2>
+                <h2 className={"s-font"}>Projets Récents</h2>
                 <Slider {...settings}>
-                    {projectsData.sort((b, a) => a.date.localeCompare(b.date)).map(project => (
+                    {projectsData.sort((b, a) => a.date.localeCompare(b.date)).slice(0, 8).map(project => (
                         <Link to={`/projects/${project.slug}`} style={{width:'100%'}} className="PS_card" key={project.id} >
                             <img src={`/${project.image}`} alt={project.name} />
                             <div className="content">
@@ -84,7 +84,7 @@ function ProjectsSection() {
                     ))}
                 </Slider>
                 <Link to="/projets" className="button c-white" style={{width: "fit-content", margin: '1.5rem auto'}}>
-                    <FaEye/> Voir tous les projets
+                    <FaEye/> Voir plus de projets
                 </Link>
             </section>
         </>

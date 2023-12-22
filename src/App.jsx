@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes, useLocation} from 'react-router-dom';
 import './App.css';
 import Menu from "./components/menu.jsx";
 import SkillsSection from "./components/SkillsSection.jsx";
@@ -7,11 +7,23 @@ import ContactPage from "./components/ContactPage.jsx";
 import ProjectsPage from "./components/ProjectsPage.jsx";
 import ProjectPage from "./components/ProjectPage.jsx";
 import NotFound from "./components/NotFound.jsx";
-import Footer from "./components/Footer.jsx"; // Supposons que vous ayez un composant pour la section Contact
+import Footer from "./components/Footer.jsx";
+import {useEffect} from "react"; // Supposons que vous ayez un composant pour la section Contact
+
+function ScrollToTop() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+}
 
 function App() {
     return (
         <Router>
+            <ScrollToTop />
             <Menu />
             <Routes>
                 <Route path="/" element={<HomePage />} />
