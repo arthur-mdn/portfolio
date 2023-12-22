@@ -15,7 +15,7 @@ const projectsData = JSON.parse(readFileSync('src/data/projects.json'));
 
 // Ajouter les routes des projets
 const projectRoutes = projectsData.map(project => ({
-    url: `/projects/${project.slug}`,
+    url: `/projet/${project.slug}`,
     changefreq: 'monthly',
     priority: 0.8
 }));
