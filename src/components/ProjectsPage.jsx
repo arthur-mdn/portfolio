@@ -15,7 +15,7 @@ function ProjectsPage() {
                 <h2 className={"s-font"}>Projets</h2>
                 <div className={"fr fw-w"}>
                     {projectsData.sort((b, a) => a.date.localeCompare(b.date)).map(project => (
-                        <Link to={`/projects/${project.slug}`} style={{width:'100%'}} className="PS_card" key={project.id} >
+                        <Link to={`/projet/${project.slug}`} style={{width:'100%'}} className="PS_card" key={project.id} >
                             <img src={`/${project.image}`} alt={project.name} />
                             <div className="content">
                                 <p>{project.type}</p>

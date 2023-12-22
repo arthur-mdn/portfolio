@@ -25,7 +25,7 @@ function Footer() {
                                 {/*    <h3>Projets récents</h3>*/}
                                 {/*    <div className={"fc g2"}>*/}
                                 {/*        {projectsData.sort((b, a) => a.date.localeCompare(b.date)).slice(0, 2).map(project => (*/}
-                                {/*            <Link to={`/projects/${project.slug}`} style={{width:'100%'}}  key={project.id} >*/}
+                                {/*            <Link to={`/projet/${project.slug}`} style={{width:'100%'}}  key={project.id} >*/}
                                 {/*                <img src={`/${project.image}`} alt={project.name} style={{width:'50px'}}/>*/}
                                 {/*                <p>{project.type}</p>*/}
                                 {/*                <span>{formatDate(project.date)}</span>*/}
