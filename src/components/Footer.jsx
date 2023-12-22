@@ -49,7 +49,7 @@ function Footer() {
                                         <a href={"/mentions-legales"}>
                                             Mentions légales
                                         </a>
-                                        <a href={"/sitemamp"}>
+                                        <a href={"/sitemap.xml"}>
                                             Sitemap
                                         </a>
 
