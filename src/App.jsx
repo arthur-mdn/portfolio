@@ -1,6 +1,6 @@
 import {BrowserRouter as Router, Route, Routes, useLocation} from 'react-router-dom';
 import './App.css';
-import Menu from "./components/menu.jsx";
+import Menu from "./components/Menu.jsx";
 import SkillsSection from "./components/SkillsSection.jsx";
 import HomePage from "./components/HomePage.jsx";
 import ContactPage from "./components/ContactPage.jsx";
