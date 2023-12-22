@@ -21,10 +21,10 @@ function HeroSection() {
                                 <FaDownload/>
                                 Télécharger le CV
                             </a>
-                            <button className={"button contact s-font lh1"}>
+                            <a className={"button contact s-font lh1"} href="/projets">
                                 <FaEye/>
-                                Projets récents
-                            </button>
+                                Projets réalisés
+                            </a>
                         </div>
                     </div>
                     <img src={"/illustrations/memoji2.png"} alt={"avatar"} className={"hide_mobile"}/>
