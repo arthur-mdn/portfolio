@@ -37,22 +37,17 @@ body {
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  padding-top: calc(80px + 2rem);
+  /*padding-top: calc(60px + 2rem);*/
 }
 section{
   max-width: 1700px;
   margin: auto;
-  padding: 0 2rem 2rem 2rem;
+  padding: 0 1rem 1rem 1rem;
+}
+section.NAVS{
+  padding: 1rem 1rem 1rem 1rem;
 }
 
-@media (max-width: 768px) {
-  body{
-    padding-top: calc(80px + 1rem);
-  }
-  section{
-    padding: 0 1rem 1rem 1rem;
-  }
-}
 
 h1 {
   font-size: 2.8rem;
@@ -213,6 +208,13 @@ textarea{
 
 
 
+.NAVS{
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
 
 
 

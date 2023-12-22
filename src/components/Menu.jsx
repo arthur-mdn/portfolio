@@ -16,34 +16,36 @@ function Menu() {
     // ...
     return (
         <>
-            <nav style={styles.navbar}>
-                <ul style={styles.menu}>
-                    <li style={styles.menuItem}>
-                        <Link style={styles.menuLink} to="/">
-                            <FaHouse style={{fontSize:'1.2rem'}}/>
-                            <span style={styles.menuLinkSpan} >Accueil</span>
-                        </Link>
-                    </li>
-                    <li style={styles.menuItem}>
-                        <Link style={styles.menuLink} to="/competences">
-                            <FaPuzzlePiece style={{fontSize:'1.2rem'}}/>
-                            <span style={styles.menuLinkSpan}>Compétences</span>
-                        </Link>
-                    </li>
-                    <li style={styles.menuItem}>
-                        <Link style={styles.menuLink} to="/projets">
-                            <FaListCheck style={{fontSize:'1.2rem'}}/>
-                            <span style={styles.menuLinkSpan}>Projets</span>
-                        </Link>
-                    </li>
-                    <li style={styles.menuItem}>
-                        <Link style={styles.menuLink} to="/contact">
-                            <FaComment style={{fontSize:'1.2rem'}}/>
-                            <span style={styles.menuLinkSpan}>Contact</span>
-                        </Link>
-                    </li>
-                </ul>
-            </nav>
+            <section className={"NAVS"}>
+                <nav style={styles.navbar}>
+                    <ul style={styles.menu}>
+                        <li style={styles.menuItem}>
+                            <Link style={styles.menuLink} to="/">
+                                <FaHouse style={{fontSize:'1.2rem'}}/>
+                                <span style={styles.menuLinkSpan} >Accueil</span>
+                            </Link>
+                        </li>
+                        <li style={styles.menuItem}>
+                            <Link style={styles.menuLink} to="/competences">
+                                <FaPuzzlePiece style={{fontSize:'1.2rem'}}/>
+                                <span style={styles.menuLinkSpan}>Compétences</span>
+                            </Link>
+                        </li>
+                        <li style={styles.menuItem}>
+                            <Link style={styles.menuLink} to="/projets">
+                                <FaListCheck style={{fontSize:'1.2rem'}}/>
+                                <span style={styles.menuLinkSpan}>Projets</span>
+                            </Link>
+                        </li>
+                        <li style={styles.menuItem}>
+                            <Link style={styles.menuLink} to="/contact">
+                                <FaComment style={{fontSize:'1.2rem'}}/>
+                                <span style={styles.menuLinkSpan}>Contact</span>
+                            </Link>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
         </>
     );
 }
@@ -54,13 +56,10 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        zIndex: 1000,
         backgroundColor:'white',
-        height: '80px',
-        boxShadow:'rgb(67 71 85 / 27%) 1px -2px 0.25em, rgb(90 125 188 / 5%) 0px 0.25em 1em'
+        height: '60px',
+        boxShadow: 'rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px',
+        borderRadius: '0.5rem',
     },
     menu:{
         maxWidth:'75rem',
