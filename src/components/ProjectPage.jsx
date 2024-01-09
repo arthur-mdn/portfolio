@@ -56,7 +56,9 @@ function ProjectPage() {
 
                 <div>
                     <h4>Description</h4>
-                    <p>{truncateDescription(project.description)}</p>
+                    <p className={showFullDescription ? "full-description" : "truncated-description"}>
+                        {project.description}
+                    </p>
                     {project.description.length > 300 && (
                         <button onClick={() => setShowFullDescription(!showFullDescription)} className={"see_more"}>
                             {showFullDescription ? "Voir moins" : "Voir plus"}

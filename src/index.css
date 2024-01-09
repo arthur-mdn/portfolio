@@ -663,6 +663,16 @@ textarea{
   height: 30px;
   object-fit: contain;
 }
+
+.truncated-description {
+  max-height: 145px; /* Hauteur maximale pour l'affichage restreint */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.full-description {
+  max-height: none;
+}
 /* END - ProjetPage */
 
 
