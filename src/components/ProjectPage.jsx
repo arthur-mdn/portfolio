@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import { useParams } from "react-router-dom";
 import projectsData from "../data/projects.json";
 import skillsData from "../data/skills.json";
@@ -15,12 +15,29 @@ function ProjectPage() {
     }
 
     const [showFullDescription, setShowFullDescription] = useState(false);
-    const truncateDescription = (description) => {
-        if (description.length > 300 && !showFullDescription) {
-            return description.substring(0, 300) + '...';
+    const [showToggleButton, setShowToggleButton] = useState(false);
+    const descriptionRef = useRef(null);
+
+    const checkDescriptionHeight = () => {
+        if (descriptionRef.current.scrollHeight > 145) {
+            setShowToggleButton(true);
+        } else {
+            setShowToggleButton(false);
         }
-        return description;
     };
+
+    useEffect(() => {
+        // Vérifie si la hauteur du contenu dépasse la hauteur maximale
+        checkDescriptionHeight();
+        const handleResize = () => {
+            checkDescriptionHeight();
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
     const [isImageExpanded, setIsImageExpanded] = useState(false);
     const handleImageClick = () => {
@@ -56,14 +73,16 @@ function ProjectPage() {
 
                 <div>
                     <h4>Description</h4>
-                    <p className={showFullDescription ? "full-description" : "truncated-description"}>
+                    <p ref={descriptionRef} className={showFullDescription ? "full-description" : "truncated-description"}>
                         {project.description}
                     </p>
-                    {project.description.length > 300 && (
+
+                    {showToggleButton && (
                         <button onClick={() => setShowFullDescription(!showFullDescription)} className={"see_more"}>
                             {showFullDescription ? "Voir moins" : "Voir plus"}
                         </button>
                     )}
+
                 </div>
                 <div>
                     <h4>Technologies utilisées</h4>
