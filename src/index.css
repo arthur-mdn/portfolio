@@ -668,10 +668,12 @@ textarea{
   max-height: 145px; /* Hauteur maximale pour l'affichage restreint */
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: max-height 0.5s ease-in-out; /* Ajout de la transition */
 }
 
 .full-description {
-  max-height: none;
+  max-height: 800px; /* Une valeur maximale suffisamment grande */
+  transition: max-height 0.5s ease-in-out; /* Ajout de la transition */
 }
 /* END - ProjetPage */
 
