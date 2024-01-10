@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import projectsData from "../data/projects.json";
 import skillsData from "../data/skills.json";
 import { FaBan, FaGithub, FaLink, FaArrowUp, FaArrowDown } from "react-icons/fa6";
+import {Helmet} from "react-helmet";
 
 
 function ProjectPage() {
@@ -48,7 +49,6 @@ function ProjectPage() {
         skillsData.flatMap(category => category.skills).find(skill => skill.id === techId)
     ).filter(Boolean); // Filtrer les undefined
 
-    console.log(projectSkills)
     const hasLinks = project.github || project.link;
     const formatDate = (dateString) => {
         const [year, month, day] = dateString.split("-");
@@ -56,6 +56,25 @@ function ProjectPage() {
     };
     return (
         <section className="PP fc g2">
+            <Helmet>
+                <title>{project.name} - Arthur Mondon</title>
+                {/*// meta description slice to 300 character max*/}
+                <meta name="description" content={project.description.slice(0, 300)}/>
+
+                {/* Facebook Meta Tags */}
+                <meta property="og:url" content={`https://mondon.pro/${project.slug}`}/>
+                <meta property="og:title" content={`${project.name} - Arthur Mondon`}/>
+                <meta property="og:description" content={project.description.slice(0, 300)}/>
+                <meta property="og:image" content={`https://mondon.pro/ogs/${project.image}`}/>
+
+                {/* Twitter Meta Tags */}
+                <meta name="twitter:card" content="summary_large_image"/>
+                <meta property="twitter:url" content={`https://mondon.pro/${project.slug}`}/>
+                <meta name="twitter:title" content={`${project.name} - Arthur Mondon`}/>
+                <meta name="twitter:description" content={project.description.slice(0, 300)}/>
+                <meta name="twitter:image" content={`https://mondon.pro/ogs/${project.image}`}/>
+
+            </Helmet>
             <div className={"PP_img"}>
 
                 <img src={`/${project.image}`} alt={project.name}  onClick={handleImageClick} className={isImageExpanded ? " expanded" : "PP_img"}/>

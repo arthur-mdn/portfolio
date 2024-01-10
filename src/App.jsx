@@ -8,7 +8,7 @@ import ProjectsPage from "./components/ProjectsPage.jsx";
 import ProjectPage from "./components/ProjectPage.jsx";
 import NotFound from "./components/NotFound.jsx";
 import Footer from "./components/Footer.jsx";
-import {useEffect} from "react"; // Supposons que vous ayez un composant pour la section Contact
+import {useEffect} from "react";
 
 function ScrollToTop() {
     const { pathname } = useLocation();
