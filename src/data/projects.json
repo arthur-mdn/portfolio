@@ -6,7 +6,7 @@
     "description": "Découvrez mon dernier projet innovant : un jeu vidéo interactif projeté au mur, une expérience immersive mêlant technologie de pointe et interactivité. Utilisant Python et YOLOv8, ce système avancé détecte en temps réel les mouvements du joueur, permettant un contrôle précis par le positionnement des mains dans l'environnement virtuel. Le jeu se distingue par sa fonction de calibration unique, assurant une synchronisation parfaite entre les mouvements réels et leur représentation numérique. En outre, une intégration transparente avec Unity permet une visualisation fluide de mains virtuelles, reflétant fidèlement la position et les gestes du joueur. Actuellement en phase de développement, ce projet promet déjà une précision remarquable : la calibration, la détection des mouvements, la communication avec Unity et l'affichage de mains virtuelles fonctionnent impeccablement. L'étape suivante ? Donner vie au jeu lui-même, une aventure qui promet d'être aussi fascinante que technologiquement avancée.",
     "image": "projects/interactive-wall-game.png",
     "link": "",
-    "github": "https://github.com/arthur-mdn/dev-detect",
+    "github": "https://github.com/arthur-mdn/UnityPythonInteractiveGame_SaveTheTurtles",
     "technos": [204, 404, 401, 108],
     "tags": ["Python", "Unity"],
     "date": "2023-12-12",
