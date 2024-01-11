@@ -21,7 +21,7 @@
     "image": "projects/interactive-wall-game.png",
     "link": "",
     "github": "https://github.com/arthur-mdn/UnityPythonInteractiveGame_SaveTheTurtles",
-    "technos": [204, 404, 401, 108],
+    "technos": [203, 204, 404, 401, 108],
     "tags": ["Python", "Unity"],
     "date": "2023-12-12",
     "status": "draft",
