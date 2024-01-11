@@ -399,7 +399,6 @@ textarea{
   font-weight: bold;
   cursor: pointer;
   transition: all 0.25s;
-
 }
 @media (max-width: 768px) {
 
@@ -430,6 +429,10 @@ textarea{
   justify-content: center;
   border-radius: 0.5rem;
   position: relative;
+}
+.skills-icons button:hover{
+  opacity: 1;
+  background-color: #f6f6f6;
 }
 .skills-icons .popup{
   position: absolute;
