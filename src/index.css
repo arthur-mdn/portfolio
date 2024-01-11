@@ -416,7 +416,10 @@ textarea{
   flex-wrap: wrap;
   justify-content: center;
 }
-.skills-icons div{
+.skills-icons button{
+  color:black;
+  padding: 0;
+  gap: 0;
   background-color: #e7e7e7;
   width: 90px;
   height: 90px;
@@ -426,6 +429,26 @@ textarea{
   align-items: center;
   justify-content: center;
   border-radius: 0.5rem;
+  position: relative;
+}
+.skills-icons .popup{
+  position: absolute;
+  top: 0;
+  background-color: #94dfa9;
+  margin-top: -60px;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  width: 190px;
+}
+.skills-icons .popup:after{
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  rotate:45deg;
+  background-color: #94dfa9;
+  padding: 0.25rem;
+  left: 44%;
+  transform: translate(-50%, -50%);
 }
 .skills-icons img{
   width: 50px;
