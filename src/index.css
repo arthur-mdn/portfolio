@@ -434,6 +434,13 @@ textarea{
   opacity: 1;
   background-color: #f6f6f6;
 }
+
+.skills-icons button img, .skills-icons button p{
+  transition: 0.2s all;
+}
+.skills-icons button:hover > img, .skills-icons button:hover > p{
+  opacity: 0.6;
+}
 .skills-icons .popup{
   position: absolute;
   top: 0;
