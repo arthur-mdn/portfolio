@@ -95,7 +95,7 @@ function ProjectPage() {
                         project.disclaimer && (
                             <div className={"PP_disclaimer fr g1 ai-c"}>
                                 <FaTriangleExclamation size={"6rem"}/>
-                                <p>{project.disclaimer}</p>
+                                <p dangerouslySetInnerHTML={{ __html: project.disclaimer }}></p>
                             </div>
                         )
                     }

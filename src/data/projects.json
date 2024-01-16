@@ -1,5 +1,20 @@
 [
   {
+    "id": 25,
+    "name": "Réseau Mistral",
+    "slug": "reseau-mistral",
+    "description": "Ce projet est une application web complexe et multifonctionnelle pour la validation des titres de transport, utilisée pour les bus et les bateaux. Développée avec React et Node.js, cette application est également gérée via Docker, offrant ainsi une solution robuste et scalable.\n\nL'application permet aux utilisateurs de se créer un compte et d'associer plusieurs profils à ce compte, ce qui est particulièrement utile pour les familles ou les groupes. Une fois inscrits, les utilisateurs ont la possibilité d'acheter différents types de tickets selon leurs besoins de voyage. Les tickets sont diversifiés, comprenant des options pour les voyages terrestres (bus) et maritimes (bateaux), ainsi que des abonnements, tels que des tickets hebdomadaires, offrant une flexibilité et une commodité maximales.\n\nL'un des aspects les plus innovants de l'application est la fonction de scan de QR code. Lorsqu'un utilisateur monte dans un bus, il peut scanner un QR code spécifique à ce véhicule, ce qui valide un ticket d'une heure. Cette fonctionnalité rend l'utilisation des transports en commun plus efficace et plus pratique, réduisant le besoin de tickets physiques et accélérant le processus d'embarquement.\n\nEn plus de la vente et de la validation des tickets, l'application est équipée d'une interface de contrôle pour les agents de contrôle des transports. Cette interface permet de vérifier facilement la validité des tickets des passagers, assurant ainsi la conformité et la sécurité du système de transport.\n\nCe projet, impliquant React, Node.js et MongoDB pour la gestion des données, est un exemple de mon expertise en matière de développement de solutions web complètes et modernes. Il démontre ma capacité à créer des applications fonctionnelles et conviviales, tout en répondant aux besoins spécifiques d'un secteur d'activité tel que le transport public. La gestion via Docker assure une mise en œuvre et un déploiement efficaces, soulignant mon engagement à adopter des technologies de pointe pour offrir des solutions performantes et évolutives.",
+    "image": "projects/reseau-mistral.png",
+    "link": "https://reseau-mistral.mondon.pro",
+    "github": "https://github.com/arthur-mdn/reseau-mistral",
+    "disclaimer": "Ce projet est une <strong>simulation</strong> à des fins <strong>éducatives et démonstratives</strong> de l'application de validation de tickets de transports <strong>M-Tickets - Réseau mistral</strong> pour Toulon Métropole. Conçue pour mettre en valeur mes aptitudes en React et Node.js. <strong>Son usage dans un contexte réel ou quotidien est strictement interdit</strong>. Cette application n'a aucun lien avec l'application originale et <strong>ne doit pas être utilisée</strong> comme telle. Tous les éléments de propriété intellectuelle appartiennent à leurs détenteurs respectifs. <strong>Je décline toute responsabilité</strong> en cas d'utilisation inappropriée de cette simulation. Une bannière d'avertissement est continuellement visible sur le site, servant de rappel des conditions d'utilisation afin de prévenir tout emploi illicite de l'application.",
+    "technos": [101,102,103,105,106, 402, 401],
+    "tags": [],
+    "date": "2024-01-16",
+    "status": "online",
+    "type": "Wep Abb"
+  },
+  {
     "id": 24,
     "name": "Site Portfolio",
     "slug": "site-portfolio",
