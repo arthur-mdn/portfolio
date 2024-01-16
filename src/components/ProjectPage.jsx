@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from "react";
 import { useParams } from "react-router-dom";
 import projectsData from "../data/projects.json";
 import skillsData from "../data/skills.json";
-import { FaBan, FaGithub, FaLink, FaArrowUp, FaArrowDown } from "react-icons/fa6";
+import {FaBan, FaGithub, FaLink, FaArrowUp, FaArrowDown, FaExclamation, FaTriangleExclamation} from "react-icons/fa6";
 import {Helmet} from "react-helmet";
 
 
@@ -91,6 +91,14 @@ function ProjectPage() {
 
 
                 <div>
+                    {
+                        project.disclaimer && (
+                            <div className={"PP_disclaimer fr g1 ai-c"}>
+                                <FaTriangleExclamation size={"6rem"}/>
+                                <p>{project.disclaimer}</p>
+                            </div>
+                        )
+                    }
                     <h4>Description</h4>
                     <p ref={descriptionRef} className={showFullDescription ? "full-description" : "truncated-description"}>
                         {project.description}
