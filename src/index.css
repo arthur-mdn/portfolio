@@ -696,6 +696,15 @@ textarea{
   height: 30px;
   object-fit: contain;
 }
+.PP_disclaimer{
+background-color: #fff8f8;
+  color: red;
+  border: 1px solid red;
+  padding:0.5rem 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
 .truncated-description {
   max-height: 145px; /* Hauteur maximale pour l'affichage restreint */
