@@ -68,7 +68,6 @@ function ProjectPage() {
                 <meta property="og:image" content={`https://mondon.pro/ogs/${project.image}`}/>
 
                 {/* Twitter Meta Tags */}
-                <meta name="twitter:card" content="summary_large_image"/>
                 <meta property="twitter:url" content={`https://mondon.pro/${project.slug}`}/>
                 <meta name="twitter:title" content={`${project.name} - Arthur Mondon`}/>
                 <meta name="twitter:description" content={project.description.slice(0, 300)}/>
