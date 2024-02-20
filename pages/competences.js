@@ -1,5 +1,5 @@
 // /pages/competences.js
-import SkillsSection from '../components/SkillsSection';
+import SkillsSection from '../components/HomePage/SkillsSection';
 import Menu from '../components/Menu';
 import Footer from '../components/Footer';
 import Head from "next/head";

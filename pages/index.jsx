@@ -1,5 +1,5 @@
 // /pages/index.jsx
-import SkillsSection from '../components/SkillsSection';
+import SkillsSection from '../components/HomePage/SkillsSection';
 import Menu from '../components/Menu';
 import Footer from '../components/Footer';
 import HeroSection from "@/components/HomePage/HeroSection";

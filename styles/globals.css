@@ -368,16 +368,16 @@ textarea{
     position: relative;
 }
 
-.AS .AS_card{
+.AS_card{
     padding: 1.5rem;
     border-radius: 1rem;
     background-color: #94dfa9;
 }
-.AS .AS_card.grey{
+.AS_card.grey{
     background-color: #e7e7e7;
 }
 
-.AS .AS_card img{
+.AS_card img{
     width: 120px;
 }
 

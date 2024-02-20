@@ -1,6 +1,7 @@
 function AboutSection() {
     return (
         <>
+            <br/>
             <section className={"AS fc g1"}>
                 <h2 className={"s-font"}>À propos</h2>
 
