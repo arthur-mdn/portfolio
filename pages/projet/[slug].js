@@ -66,6 +66,9 @@ function ProjectPage({ project }) {
     return (
         <section className="PP fc g2">
             <Head>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+                <link rel="icon" href="/others/favicon.ico"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <title>{project.name} - Arthur Mondon</title>
                 {/*// meta description slice to 300 character max*/}
                 <meta name="description" content={project.description.slice(0, 300)}/>
