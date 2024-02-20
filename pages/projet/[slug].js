@@ -69,19 +69,19 @@ function ProjectPage({project}) {
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
                 <link rel="icon" href="/others/favicon.ico"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                <title>{project.name} - Arthur Mondon</title>
+                <title>{project.name.trim()} - Arthur Mondon</title>
                 {/*// meta description slice to 300 character max*/}
                 <meta name="description" content={project.description.slice(0, 300)}/>
 
                 {/* Facebook Meta Tags */}
                 <meta property="og:url" content={`https://mondon.pro/${project.slug}`}/>
-                <meta property="og:title" content={`${project.name} - Arthur Mondon`}/>
+                <meta property="og:title" content={`${project.name.trim()} - Arthur Mondon`}/>
                 <meta property="og:description" content={project.description.slice(0, 300)}/>
                 <meta property="og:image" content={`https://mondon.pro/ogs/${project.image}`}/>
 
                 {/* Twitter Meta Tags */}
                 <meta property="twitter:url" content={`https://mondon.pro/${project.slug}`}/>
-                <meta name="twitter:title" content={`${project.name} - Arthur Mondon`}/>
+                <meta name="twitter:title" content={`${project.name.trim()} - Arthur Mondon`}/>
                 <meta name="twitter:description" content={project.description.slice(0, 300)}/>
                 <meta name="twitter:image" content={`https://mondon.pro/ogs/${project.image}`}/>
 
