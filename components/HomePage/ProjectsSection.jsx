@@ -12,8 +12,8 @@ function ProjectsSection() {
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 3,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
+        nextArrow: <SampleNextArrow/>,
+        prevArrow: <SamplePrevArrow/>,
         responsive: [
             {
                 breakpoint: 1024,
@@ -35,11 +35,11 @@ function ProjectsSection() {
 
 // Composants pour les boutons personnalisés
     function SamplePrevArrow(props) {
-        const { className, style, onClick } = props;
+        const {className, style, onClick} = props;
         return (
             <div
                 className={className}
-                style={{ ...style }}
+                style={{...style}}
                 onClick={onClick}
             >
                 <FaArrowLeft/>
@@ -48,11 +48,11 @@ function ProjectsSection() {
     }
 
     function SampleNextArrow(props) {
-        const { className, style, onClick } = props;
+        const {className, style, onClick} = props;
         return (
             <div
                 className={className}
-                style={{ ...style }}
+                style={{...style}}
                 onClick={onClick}
             >
                 <FaArrowRight/>
@@ -71,12 +71,20 @@ function ProjectsSection() {
                 <h2 className={"s-font"}>Projets Récents</h2>
                 <Slider {...settings}>
                     {projectsData.sort((b, a) => a.date.localeCompare(b.date)).slice(0, 8).map(project => (
-                        <Link href={`/projet/${project.slug}`} style={{width:'100%'}} className="PS_card" key={project.id} >
-                            <img src={`/${project.image}`} alt={project.name} />
+                        <Link href={`/projet/${project.slug}`} style={{width: '100%'}} className="PS_card"
+                              key={project.id}>
+                            <img src={`/${project.image}`} alt={project.name}/>
                             <div className="content">
                                 {
                                     project.disclaimer && (
-                                        <div className={"PP_disclaimer fr g1 ai-c"}  style={{position:"absolute",left:0,top:0, margin:'1rem',padding:'0.5rem 0.5rem', borderRadius:'0.5rem'}} title={"Une attention particulière est requise pour ce projet"}>
+                                        <div className={"PP_disclaimer fr g1 ai-c"} style={{
+                                            position: "absolute",
+                                            left: 0,
+                                            top: 0,
+                                            margin: '1rem',
+                                            padding: '0.5rem 0.5rem',
+                                            borderRadius: '0.5rem'
+                                        }} title={"Une attention particulière est requise pour ce projet"}>
                                             <FaTriangleExclamation size={"2rem"}/>
                                         </div>
                                     )

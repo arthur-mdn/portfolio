@@ -1,5 +1,5 @@
 const Jimp = require('jimp');
-const { readFileSync } = require("fs");
+const {readFileSync} = require("fs");
 const projects = JSON.parse(readFileSync('data/projects.json'));
 
 function wrapText(context, text, maxWidth) {
@@ -47,7 +47,7 @@ async function generateOGImages() {
             yOffset += Jimp.measureTextHeight(descriptionFont, line, maxWidth) + 5;
         });
 
-        template.print(titleFont, 60, 500, "https://mondon.pro/"+project.slug, maxWidth);
+        template.print(titleFont, 60, 500, "https://mondon.pro/" + project.slug, maxWidth);
 
 
         await template.writeAsync(`public/ogs/${project.image}`);

@@ -1,8 +1,8 @@
-import { useState } from "react";
+import {useState} from "react";
 import skillsData from "../data/skills.json";
 import projects from "../data/projects.json";
 
-function SkillElement({ skill, displayedPopup, setDisplayedPopup }) {
+function SkillElement({skill, displayedPopup, setDisplayedPopup}) {
     const isPopupDisplayed = displayedPopup === skill.id;
 
     const togglePopup = () => {
@@ -25,12 +25,13 @@ function SkillElement({ skill, displayedPopup, setDisplayedPopup }) {
                 </div>
             }
 
-            <img src={"/"+skill.links[0].url} alt={skill.links[0].alt} />
+            <img src={"/" + skill.links[0].url} alt={skill.links[0].alt}/>
             <p className={"s-font fs0-8"}>{skill.name}</p>
-            <p style={{fontSize:'0.8rem',opacity:'0.6'}}>{skill.id}</p>
+            <p style={{fontSize: '0.8rem', opacity: '0.6'}}>{skill.id}</p>
         </button>
     );
 }
+
 function SkillsSection() {
     // État pour suivre la catégorie actuelle
     const [activeCategory, setActiveCategory] = useState('All');

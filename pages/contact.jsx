@@ -1,7 +1,8 @@
 import React from "react";
 import LinksSection from "../components/HomePage/LinksSection.jsx"
-import { useForm, ValidationError } from '@formspree/react';
+import {useForm, ValidationError} from '@formspree/react';
 import Head from "next/head";
+
 function ContactForm() {
     const [state, handleSubmit] = useForm("xvoepbnb");
     if (state.succeeded) {
@@ -71,6 +72,7 @@ function ContactForm() {
         </form>
     );
 }
+
 function ContactPage() {
 
     return (
@@ -80,8 +82,10 @@ function ContactPage() {
                 <link rel="icon" href="/others/favicon.ico"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <title>Arthur Mondon : Contactez-Moi</title>
-                <meta name="description" content="Vous avez un projet en tête ou souhaitez discuter d'une opportunité ? N'hésitez pas à me contacter. Je suis toujours à la recherche de collaborations passionnantes et de nouveaux défis."/>
-                <meta name="keywords" content="Arthur Mondon, Contact, Développeur Web, Collaboration, Projets Web, Opportunités"/>
+                <meta name="description"
+                      content="Vous avez un projet en tête ou souhaitez discuter d'une opportunité ? N'hésitez pas à me contacter. Je suis toujours à la recherche de collaborations passionnantes et de nouveaux défis."/>
+                <meta name="keywords"
+                      content="Arthur Mondon, Contact, Développeur Web, Collaboration, Projets Web, Opportunités"/>
                 <meta name="author" content="Arthur MONDON"/>
                 <meta name="robots" content="index, follow"/>
 
@@ -89,7 +93,8 @@ function ContactPage() {
                 <meta property="og:url" content="https://mondon.pro/contact"/>
                 <meta property="og:type" content="website"/>
                 <meta property="og:title" content="Entrons en Contact : Arthur Mondon"/>
-                <meta property="og:description" content="Je suis ouvert à discuter de vos idées et de voir comment nous pouvons travailler ensemble. Contactez-moi pour toute question ou proposition."/>
+                <meta property="og:description"
+                      content="Je suis ouvert à discuter de vos idées et de voir comment nous pouvons travailler ensemble. Contactez-moi pour toute question ou proposition."/>
                 <meta property="og:image" content="https://mondon.pro/others/preview.png"/>
 
                 {/* Twitter Meta Tags */}
@@ -97,13 +102,14 @@ function ContactPage() {
                 <meta property="twitter:domain" content="mondon.pro"/>
                 <meta property="twitter:url" content="https://mondon.pro/contact"/>
                 <meta name="twitter:title" content="Arthur Mondon : Discutons de Vos Projets"/>
-                <meta name="twitter:description" content="Je suis à votre disposition pour discuter de vos besoins en développement web et de la manière dont nous pouvons collaborer pour réaliser vos objectifs."/>
+                <meta name="twitter:description"
+                      content="Je suis à votre disposition pour discuter de vos besoins en développement web et de la manière dont nous pouvons collaborer pour réaliser vos objectifs."/>
                 <meta name="twitter:image" content="https://mondon.pro/others/preview.png"/>
             </Head>
             <section className={"CP"}>
-                <ContactForm />
+                <ContactForm/>
             </section>
-            <LinksSection />
+            <LinksSection/>
         </>
     );
 }

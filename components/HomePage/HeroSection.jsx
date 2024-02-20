@@ -8,7 +8,8 @@ function HeroSection() {
                 <div className={"HS_container"}>
                     <div className={"HS_content"}>
                         <h1 className={"HS_title"}>Portfolio d&apos;Arthur Mondon.</h1>
-                        <img src={"/illustrations/memoji2.png"} alt={"avatar"} className={"hide_desktop"} style={{margin:"auto"}}/>
+                        <img src={"/illustrations/memoji2.png"} alt={"avatar"} className={"hide_desktop"}
+                             style={{margin: "auto"}}/>
                         <p className={"HS_txt"}>
                             Transformez vos idées en solutions web.
                             Exploitez le plein potentiel du web avec des solutions sur mesure, conçues pour réussir.

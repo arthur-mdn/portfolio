@@ -11,12 +11,13 @@ function Footer() {
         <>
             <br/>
             <br/>
-            <footer  style={{backgroundColor:"#004500", color:"white"}}>
+            <footer style={{backgroundColor: "#004500", color: "white"}}>
                 <section className={"FS"}>
                     <div className={"FS_container"}>
                         <div className={"FS_content"}>
                             <h2 className={"FS_title"}>Portfolio d&apos;Arthur Mondon.</h2>
-                            <p style={{color:"lightgrey"}}>Développeur web FullStack dans le Vaucluse (à Carpentras, Monteux, Aubignan et ses alentours).</p>
+                            <p style={{color: "lightgrey"}}>Développeur web FullStack dans le Vaucluse (à Carpentras,
+                                Monteux, Aubignan et ses alentours).</p>
                             <br/>
                             <br/>
                             <div className={"fr g3"}>
