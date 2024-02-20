@@ -11,24 +11,11 @@ function ProjectPage() {
 
     const router = useRouter();
     const { slug } = router.query;
-
-    const project = projectsData.find(p => p.slug.toString() === slug);
-
-    if (!project) {
-        return <div>Projet introuvable</div>;
-    }
-
     const [showFullDescription, setShowFullDescription] = useState(false);
     const [showToggleButton, setShowToggleButton] = useState(false);
     const descriptionRef = useRef(null);
 
-    const checkDescriptionHeight = () => {
-        if (descriptionRef.current.scrollHeight > 145) {
-            setShowToggleButton(true);
-        } else {
-            setShowToggleButton(false);
-        }
-    };
+    const project = projectsData.find(p => p.slug.toString() === slug);
 
     useEffect(() => {
         // Vérifie si la hauteur du contenu dépasse la hauteur maximale
@@ -44,6 +31,19 @@ function ProjectPage() {
     }, []);
 
     const [isImageExpanded, setIsImageExpanded] = useState(false);
+
+    if (!project) {
+        return <div>Projet introuvable</div>;
+    }
+
+    const checkDescriptionHeight = () => {
+        if (descriptionRef.current.scrollHeight > 145) {
+            setShowToggleButton(true);
+        } else {
+            setShowToggleButton(false);
+        }
+    };
+
     const handleImageClick = () => {
         setIsImageExpanded(!isImageExpanded);
     };
