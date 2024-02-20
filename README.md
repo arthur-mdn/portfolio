@@ -11,7 +11,7 @@ This website was created with React and Vite.
 
 ## Installation
 ```bash
-git clone https://github.com/arthur-mdn/portfolio.git
+git clone -b vite_react https://github.com/arthur-mdn/portfolio.git
 cd portfolio
 npm install
 ```
