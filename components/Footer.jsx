@@ -49,6 +49,10 @@ function Footer() {
                                             Github
                                         </Link>
 
+                                        <Link href={"https://www.youtube.com/@arthurmdn"}>
+                                            YouTube
+                                        </Link>
+
                                         <Link href={"/contact"}>
                                             Formulaire de Contact
                                         </Link>
