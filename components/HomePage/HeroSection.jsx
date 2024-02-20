@@ -1,4 +1,5 @@
 import {FaDownload, FaEye} from "react-icons/fa6";
+import Link from "next/link";
 
 function HeroSection() {
     return (
@@ -6,7 +7,7 @@ function HeroSection() {
             <section className={"HS"}>
                 <div className={"HS_container"}>
                     <div className={"HS_content"}>
-                        <h1 className={"HS_title"}>Portfolio d'Arthur Mondon.</h1>
+                        <h1 className={"HS_title"}>Portfolio d&apos;Arthur Mondon.</h1>
                         <img src={"/illustrations/memoji2.png"} alt={"avatar"} className={"hide_desktop"} style={{margin:"auto"}}/>
                         <p className={"HS_txt"}>
                             Transformez vos idées en solutions web.
@@ -21,10 +22,10 @@ function HeroSection() {
                                 <FaDownload/>
                                 Télécharger le CV
                             </a>
-                            <a className={"button contact s-font lh1"} href="/projets">
+                            <Link className={"button contact s-font lh1"} href="/projets">
                                 <FaEye/>
                                 Projets réalisés
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <img src={"/illustrations/memoji2.png"} alt={"avatar"} className={"hide_mobile"}/>

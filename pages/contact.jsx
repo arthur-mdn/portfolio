@@ -46,8 +46,8 @@ function ContactForm() {
                     <option value="prise de contact">Prise de contact</option>
                     <option value="demande de devis">Demande de devis</option>
                     <option value="demande de renseignements">Demande de renseignements</option>
-                    <option value="J'ai trouvé un bug">J'ai trouvé un bug</option>
-                    <option value="J'ai une suggestion">J'ai une suggestion</option>
+                    <option value="J'ai trouvé un bug">J&apos;ai trouvé un bug</option>
+                    <option value="J'ai une suggestion">J&apos;ai une suggestion</option>
                     <option value="autre">Autre</option>
                 </select>
             </label>
