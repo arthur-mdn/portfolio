@@ -1,0 +1,254 @@
+[
+  {
+    "id": 1,
+    "name": "Frontend et Frameworks",
+    "skills": [
+      {
+        "id": 101,
+        "name": "HTML 5",
+        "description": "HTML5",
+        "keywords": ["HTML5"],
+        "links": [
+          {
+            "alt": "HTML5 logo",
+            "url": "logos/html.svg"
+          }
+        ]
+      },
+      {
+        "id": 102,
+        "name": "CSS 3",
+        "description": "CSS3",
+        "keywords": ["CSS3"],
+        "links": [
+          {
+            "alt": "CSS3 logo",
+            "url": "logos/css.svg"
+          }
+        ]
+      },
+      {
+        "id": 103,
+        "name": "JavaScript",
+        "description": "JavaScript",
+        "keywords": ["JavaScript", "JS"],
+        "links": [
+          {
+            "alt": "JavaScript logo",
+            "url": "logos/js.svg"
+          }
+        ]
+      },
+      {
+        "id": 104,
+        "name": "Angular",
+        "description": "Angular",
+        "keywords": ["Angular"],
+        "links": [
+          {
+            "alt": "Angular logo",
+            "url": "logos/angular.svg"
+          }
+        ]
+      },
+      {
+        "id": 105,
+        "name": "React",
+        "description": "React",
+        "keywords": ["React"],
+        "links": [
+          {
+            "alt": "React logo",
+            "url": "logos/react.png"
+          }
+        ]
+      },
+      {
+        "id": 106,
+        "name": "Vite",
+        "description": "Vite",
+        "keywords": ["Vite"],
+        "links": [
+          {
+            "alt": "Vite logo",
+            "url": "logos/vite.svg"
+          }
+        ]
+      },
+      {
+        "id": 107,
+        "name": "jQuery",
+        "description": "jQuery",
+        "keywords": ["jQuery"],
+        "links": [
+          {
+            "alt": "jQuery logo",
+            "url": "logos/jquery.svg"
+          }
+        ]
+      },
+      {
+        "id": 108,
+        "name": "Socket.io",
+        "description": "Socket.io",
+        "keywords": ["socket.io"],
+        "links": [
+          {
+            "alt": "socket.io logo",
+            "url": "logos/socketio.svg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Backend",
+    "skills": [
+      {
+        "id": 201,
+        "name": "NodeJS",
+        "description": "NodeJS",
+        "keywords": ["NodeJS"],
+        "links": [
+          {
+            "alt": "NodeJS logo",
+            "url": "logos/nodejs.svg"
+          }
+        ]
+      },
+      {
+        "id": 202,
+        "name": "PHP",
+        "description": "PHP",
+        "keywords": ["PHP"],
+        "links": [
+          {
+            "alt": "PHP logo",
+            "url": "logos/php.svg"
+          }
+        ]
+      },
+      {
+        "id": 203,
+        "name": "C#",
+        "description": "C#",
+        "keywords": ["C#"],
+        "links": [
+          {
+            "alt": "C# logo",
+            "url": "logos/csharp.svg"
+          }
+        ]
+      },
+      {
+        "id": 204,
+        "name": "Python",
+        "description": "Python",
+        "keywords": ["Python"],
+        "links": [
+          {
+            "alt": "Python logo",
+            "url": "logos/python.svg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Bases de Données",
+    "skills": [
+      {
+        "id": 301,
+        "name": "MySQL",
+        "description": "MySQL",
+        "keywords": ["MySQL"],
+        "links": [
+          {
+            "alt": "MySQL logo",
+            "url": "logos/mysql.svg"
+          }
+        ]
+      },
+      {
+        "id": 302,
+        "name": "MongoDB",
+        "description": "MongoDB",
+        "keywords": ["MongoDB"],
+        "links": [
+          {
+            "alt": "MongoDB logo",
+            "url": "logos/mongodb.svg"
+          }
+        ]
+      },
+      {
+        "id": 303,
+        "name": "PostgreSQL",
+        "description": "PostgreSQL",
+        "keywords": ["PostgreSQL"],
+        "links": [
+          {
+            "alt": "PostgreSQL logo",
+            "url": "logos/postgresql.svg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Outils",
+    "skills": [
+      {
+        "id": 401,
+        "name": "Git",
+        "description": "Git",
+        "keywords": ["Git"],
+        "links": [
+          {
+            "alt": "Git logo",
+            "url": "logos/git.svg"
+          }
+        ]
+      },
+      {
+        "id": 402,
+        "name": "Docker",
+        "description": "Docker",
+        "keywords": ["Docker"],
+        "links": [
+          {
+            "alt": "Docker logo",
+            "url": "logos/docker.svg"
+          }
+        ]
+      },
+      {
+        "id": 403,
+        "name": "Wordpress",
+        "description": "Wordpress",
+        "keywords": ["Wordpress"],
+        "links": [
+          {
+            "alt": "Wordpress logo",
+            "url": "logos/wordpress.svg"
+          }
+        ]
+      },
+      {
+        "id": 404,
+        "name": "Unity",
+        "description": "Unity",
+        "keywords": ["Unity"],
+        "links": [
+          {
+            "alt": "Unity logo",
+            "url": "logos/unity.svg"
+          }
+        ]
+      }
+    ]
+  }
+]
