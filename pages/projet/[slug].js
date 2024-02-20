@@ -24,13 +24,16 @@ export async function getStaticProps({ params }) {
 }
 
 function ProjectPage({ project }) {
+    const [showToggleButton, setShowToggleButton] = useState(false);
     const [showFullDescription, setShowFullDescription] = useState(false);
     const [isImageExpanded, setIsImageExpanded] = useState(false);
     const descriptionRef = useRef(null);
 
     const checkDescriptionHeight = () => {
         if (descriptionRef.current && descriptionRef.current.scrollHeight > 145) {
-            setShowFullDescription(true); // Automatiquement montrer le bouton si le contenu dépasse la hauteur
+            setShowToggleButton(true);
+        } else {
+            setShowToggleButton(false);
         }
     };
 
