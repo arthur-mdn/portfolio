@@ -8,14 +8,27 @@ import {FaBan, FaGithub, FaLink, FaArrowUp, FaArrowDown, FaExclamation, FaTriang
 import Link from "next/link";
 
 function ProjectPage() {
-
     const router = useRouter();
     const { slug } = router.query;
+    const [isLoading, setIsLoading] = useState(true);
+    const [project, setProject] = useState(null);
     const [showFullDescription, setShowFullDescription] = useState(false);
     const [showToggleButton, setShowToggleButton] = useState(false);
     const descriptionRef = useRef(null);
 
-    const project = projectsData.find(p => p.slug.toString() === slug);
+    useEffect(() => {
+        const project = projectsData.find(p => p.slug.toString() === slug);
+        setProject(project);
+        setIsLoading(false);
+    }, [slug]);
+
+    const checkDescriptionHeight = () => {
+        if (descriptionRef.current && descriptionRef.current.scrollHeight > 145) {
+            setShowToggleButton(true);
+        } else {
+            setShowToggleButton(false);
+        }
+    };
 
     useEffect(() => {
         // Vérifie si la hauteur du contenu dépasse la hauteur maximale
@@ -32,17 +45,13 @@ function ProjectPage() {
 
     const [isImageExpanded, setIsImageExpanded] = useState(false);
 
+    if (isLoading) {
+        return <div>Récupération du projet...</div>;
+    }
+
     if (!project) {
         return <div>Projet introuvable</div>;
     }
-
-    const checkDescriptionHeight = () => {
-        if (descriptionRef.current.scrollHeight > 145) {
-            setShowToggleButton(true);
-        } else {
-            setShowToggleButton(false);
-        }
-    };
 
     const handleImageClick = () => {
         setIsImageExpanded(!isImageExpanded);
