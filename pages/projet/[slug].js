@@ -1,7 +1,7 @@
 // /pages/projet/[slug].js
 import React, {useEffect, useRef, useState} from "react";
 import Head from "next/head";
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 import projectsData from "../../data/projects.json";
 import skillsData from "../../data/skills.json";
 import {FaBan, FaGithub, FaLink, FaArrowUp, FaArrowDown, FaExclamation, FaTriangleExclamation} from "react-icons/fa6";
@@ -9,21 +9,21 @@ import Link from "next/link";
 
 export async function getStaticPaths() {
     const paths = projectsData.map(project => ({
-        params: { slug: project.slug.toString() },
+        params: {slug: project.slug.toString()},
     }));
 
-    return { paths, fallback: false };
+    return {paths, fallback: false};
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({params}) {
     const project = projectsData.find(p => p.slug === params.slug);
     if (!project) {
-        return { notFound: true };
+        return {notFound: true};
     }
-    return { props: { project } };
+    return {props: {project}};
 }
 
-function ProjectPage({ project }) {
+function ProjectPage({project}) {
     const [showToggleButton, setShowToggleButton] = useState(false);
     const [showFullDescription, setShowFullDescription] = useState(false);
     const [isImageExpanded, setIsImageExpanded] = useState(false);
@@ -58,13 +58,13 @@ function ProjectPage({ project }) {
         skillsData.flatMap(category => category.skills).find(skill => skill.id === techId)
     ).filter(Boolean); // Filtrer les undefined
 
-    const hasLinks = project.github || project.link || project.youtube ;
+    const hasLinks = project.github || project.link || project.youtube;
     const formatDate = (dateString) => {
         const [year, month, day] = dateString.split("-");
         return `${day}/${month}/${year}`;
     };
     return (
-        <section className="PP fc g2">
+        <>
             <Head>
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
                 <link rel="icon" href="/others/favicon.ico"/>
@@ -86,93 +86,108 @@ function ProjectPage({ project }) {
                 <meta name="twitter:image" content={`https://mondon.pro/ogs/${project.image}`}/>
 
             </Head>
-            <div className={"PP_img"}>
+            <section className="PP fc g2">
+                <div className={"PP_img"}>
 
-                <img src={`/${project.image}`} alt={project.name}  onClick={handleImageClick} className={isImageExpanded ? " expanded" : "PP_img"}/>
-                <div className={"indicator"}>
-                    {isImageExpanded ? <FaArrowUp /> : <FaArrowDown />}
-                </div>
-            </div>
-            <div className={"PP_content"}>
-                <div className={"PP_title_date_type"}>
-                    <h1>{project.name}</h1>
-                    <span style={{color:"green", fontWeight:"bold"}}>{formatDate(project.date)}</span>
-                    <h3>{project.type}</h3>
-                </div>
-
-
-                <div>
-                    {
-                        project.disclaimer && (
-                            <div className={"PP_disclaimer fr g1 ai-c"}>
-                                <FaTriangleExclamation size={"6rem"}/>
-                                <p dangerouslySetInnerHTML={{ __html: project.disclaimer }}></p>
-                            </div>
-                        )
-                    }
-                    <h4>Description</h4>
-                    <p ref={descriptionRef} className={showFullDescription ? "full-description" : "truncated-description"}>
-                        {project.description}
-                    </p>
-
-                    {showToggleButton && (
-                        <button onClick={() => setShowFullDescription(!showFullDescription)} className={"see_more"}>
-                            {showFullDescription ? "Voir moins" : "Voir plus"}
-                        </button>
-                    )}
-
-                </div>
-                <div>
-                    <h4>Technologies utilisées</h4>
-                    <div className={"fr g0-5 PP_technos"} >
-                        {projectSkills.map((skill, index) => (
-                            <div key={index}>
-                                <img src={`/${skill.links[0].url}`} alt={skill.name} />
-                                <span key={index}>{skill.name}</span>
-                            </div>
-                        ))}
+                    <img src={`/${project.image}`} alt={project.name} onClick={handleImageClick}
+                         className={isImageExpanded ? " expanded" : "PP_img"}/>
+                    <div className={"indicator"}>
+                        {isImageExpanded ? <FaArrowUp/> : <FaArrowDown/>}
                     </div>
                 </div>
-
-                <div>
-                    <h4>Liens associés</h4>
-                    <div className={"fr g0-5"}>
-                        {project.github && (
-                            <Link href={project.github} target="_blank" rel="noopener noreferrer" className={"button github"}>
-                                <FaGithub />
-                                Github
-                            </Link>
-                        )}
-                        {project.link && (
-                            <Link href={project.link} target="_blank" rel="noopener noreferrer" className={"button linkedin"}>
-                                <FaLink />
-                                Lien
-                            </Link>
-                        )}
-                        {!hasLinks && <p className={"fr ai-c g0-5"} style={{color:"red", fontWeight:"bold"}}><FaBan/> Aucun lien public disponible.</p>}
+                <div className={"PP_content"}>
+                    <div className={"PP_title_date_type"}>
+                        <h1>{project.name}</h1>
+                        <span style={{color: "green", fontWeight: "bold"}}>{formatDate(project.date)}</span>
+                        <h3>{project.type}</h3>
                     </div>
-                </div>
 
-                {project.youtube.length > 0 && (
-                <div>
-                    <h4>Vidéos associés</h4>
-                    <div className={"fc g1 fw-w"}>
-                        {project.youtube.map((video, index) => (
-                            <div key={index} className={"PP_video fc"}>
-                                <a href={video.link} target="_blank" rel="noopener noreferrer" >
-                                    <p>{video.title}</p>
-                                    <img src={video.image} alt={video.title} style={{width: '300px', aspectRatio: '16/9', objectFit:"cover", borderRadius: '0.5rem'}}/>
-                                </a>
-                            </div>
-                            ))
+
+                    <div>
+                        {
+                            project.disclaimer && (
+                                <div className={"PP_disclaimer fr g1 ai-c"}>
+                                    <FaTriangleExclamation size={"6rem"}/>
+                                    <p dangerouslySetInnerHTML={{__html: project.disclaimer}}></p>
+                                </div>
+                            )
                         }
-                        {!hasLinks && <p className={"fr ai-c g0-5"} style={{color:"red", fontWeight:"bold"}}><FaBan/> Aucun lien public disponible.</p>}
-                    </div>
-                </div>
-                )}
-            </div>
+                        <h4>Description</h4>
+                        <p ref={descriptionRef}
+                           className={showFullDescription ? "full-description" : "truncated-description"}>
+                            {project.description}
+                        </p>
 
-        </section>
+                        {showToggleButton && (
+                            <button onClick={() => setShowFullDescription(!showFullDescription)} className={"see_more"}>
+                                {showFullDescription ? "Voir moins" : "Voir plus"}
+                            </button>
+                        )}
+
+                    </div>
+                    <div>
+                        <h4>Technologies utilisées</h4>
+                        <div className={"fr g0-5 PP_technos"}>
+                            {projectSkills.map((skill, index) => (
+                                <div key={index}>
+                                    <img src={`/${skill.links[0].url}`} alt={skill.name}/>
+                                    <span key={index}>{skill.name}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4>Liens associés</h4>
+                        <div className={"fr g0-5"}>
+                            {project.github && (
+                                <Link href={project.github} target="_blank" rel="noopener noreferrer"
+                                      className={"button github"}>
+                                    <FaGithub/>
+                                    Github
+                                </Link>
+                            )}
+                            {project.link && (
+                                <Link href={project.link} target="_blank" rel="noopener noreferrer"
+                                      className={"button linkedin"}>
+                                    <FaLink/>
+                                    Lien
+                                </Link>
+                            )}
+                            {!hasLinks &&
+                                <p className={"fr ai-c g0-5"} style={{color: "red", fontWeight: "bold"}}><FaBan/> Aucun
+                                    lien public disponible.</p>}
+                        </div>
+                    </div>
+
+                    {project.youtube.length > 0 && (
+                        <div>
+                            <h4>Vidéos associés</h4>
+                            <div className={"fc g1 fw-w"}>
+                                {project.youtube.map((video, index) => (
+                                    <div key={index} className={"PP_video fc"}>
+                                        <a href={video.link} target="_blank" rel="noopener noreferrer">
+                                            <p>{video.title}</p>
+                                            <img src={video.image} alt={video.title} style={{
+                                                width: '300px',
+                                                aspectRatio: '16/9',
+                                                objectFit: "cover",
+                                                borderRadius: '0.5rem'
+                                            }}/>
+                                        </a>
+                                    </div>
+                                ))
+                                }
+                                {!hasLinks && <p className={"fr ai-c g0-5"} style={{color: "red", fontWeight: "bold"}}>
+                                    <FaBan/> Aucun lien public disponible.</p>}
+                            </div>
+                        </div>
+                    )}
+                </div>
+
+            </section>
+        </>
+
     );
 }
 
