@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mondon.pro/sitemap.xml
