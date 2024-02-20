@@ -20,7 +20,6 @@ export async function getStaticProps({ params }) {
     return { props: { project } };
 }
 
-
 function ProjectPage() {
     const router = useRouter();
     const { slug } = router.query;
@@ -60,11 +59,21 @@ function ProjectPage() {
     const [isImageExpanded, setIsImageExpanded] = useState(false);
 
     if (isLoading) {
-        return <div>Récupération du projet...</div>;
+        return <div>
+            <Head>
+                <title>Chargement...</title>
+            </Head>
+            Récupération du projet...
+        </div>;
     }
 
     if (!project) {
-        return <div>Projet introuvable</div>;
+        return <div>
+            <Head>
+                <title>Projet introuvable</title>
+            </Head>
+            Projet introuvable
+        </div>;
     }
 
     const handleImageClick = () => {
