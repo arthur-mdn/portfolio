@@ -1,5 +1,43 @@
 [
   {
+    "id": 26,
+    "name": "Save The Turtles",
+    "slug": "save-the-turtles",
+    "description": "Mon projet Save the Turtles est une initiative passionnante alliant la technologie Unity à la puissance de Python, spécifiquement en utilisant la bibliothèque YOLOv8 pour la reconnaissance et la localisation des joueurs à travers une caméra, telle que la webcam d'un ordinateur. Ce jeu interactif est conçu pour être projeté sur un mur, où les joueurs utilisent des mouvements physiques capturés par la caméra pour interagir avec le jeu, créant ainsi une expérience immersive sans l'usage traditionnel de clavier ou de souris.\n\nLa calibration et le traitement d'image, essentiels pour aligner précisément l'interaction dans l'espace de jeu, sont gérés via OpenCV. Cette étape est cruciale pour assurer que les mouvements des joueurs dans l'espace physique correspondent de manière fluide et précise aux actions dans le jeu. La détection des joueurs et la localisation des mains sont réalisées grâce à YOLOv8, permettant de suivre dynamiquement les mouvements des joueurs et d'intégrer ces informations dans le jeu Unity.\n\nLa communication entre Python et Unity est établie via des sockets, facilitant une interaction en temps réel entre la capture des mouvements et leur répercussion dans le jeu. Cette synergie entre les deux plateformes est fondamentale pour le gameplay interactif de \"Save the Turtles\".\n\nLe concept du jeu est à la fois ludique et éducatif. Les joueurs sont chargés de protéger des tortues virtuelles se déplaçant de la gauche vers la droite de l'écran, en les sauvant des crabes qui tentent de les attaquer. À l'aide d'une main virtuelle et d'une épuisette, les joueurs attrapent les crabes pour assurer la sécurité des tortues. Le jeu comporte un système de vies, avec des tortues perdant une vie à chaque fois qu'elles sont touchées par un crabe, et le jeu se termine lorsque toutes les vies sont perdues.\n\nL'aspect visuel du jeu, y compris le logo, les indicateurs de vie, et la scène 3D, a été entièrement conçu par moi. La gestion des apparitions aléatoires des tortues et des crabes, ainsi que le système de scoring, ajoutent une dimension supplémentaire au jeu, offrant une expérience riche et engageante.\n\nCe projet est inspiré d'un événement réel où une tortue protégée a pondu hors de son habitat habituel, un événement qui a été protégé par les autorités locales. \"Save the Turtles\" rend hommage à cet événement, sensibilisant les joueurs à la protection des espèces menacées.\n\nLe projet est open source, disponible sur GitHub, accompagné de vidéos explicatives sur YouTube présentant à la fois les coulisses du développement et une démonstration du jeu. Cette initiative personnelle illustre mon aptitude à fusionner créativité, technologie, et engagement écologique dans le développement de solutions de divertissement innovantes et significatives.",
+    "image": "projects/save_the_turtles.png",
+    "link": "",
+    "github": "https://github.com/arthur-mdn/UnityPythonInteractiveGame_SaveTheTurtles",
+    "youtube": [
+      {
+        "id": "K8k6RFVC_Io",
+        "title": "Démonstration du jeu Save The Turtles - Jeu interactif et innovant ! Unity + Python (Yolo V8)",
+        "image": "https://img.youtube.com/vi/K8k6RFVC_Io/0.jpg",
+        "link": "https://www.youtube.com/watch?v=K8k6RFVC_Io"
+      },
+      {
+        "id": "G4kqt2PyODY",
+        "title": "Présentation et coulisses du jeu interactif innovant Save The Turtles",
+        "image": "https://img.youtube.com/vi/G4kqt2PyODY/0.jpg",
+        "link": "https://www.youtube.com/watch?v=G4kqt2PyODY"
+      }
+    ],
+    "disclaimer": "",
+    "technos": [
+      203,
+      204,
+      404,
+      401,
+      108
+    ],
+    "tags": [
+      "Python",
+      "Unity"
+    ],
+    "date": "2024-02-01",
+    "status": "online",
+    "type": "Jeu vidéo"
+  },
+  {
     "id": 25,
     "name": "Réseau Mistral",
     "slug": "reseau-mistral",
@@ -7,8 +45,17 @@
     "image": "projects/reseau-mistral.png",
     "link": "https://reseau-mistral.mondon.pro",
     "github": "https://github.com/arthur-mdn/reseau-mistral",
+    "youtube": [],
     "disclaimer": "Ce projet est une <strong>simulation</strong> à des fins <strong>éducatives et démonstratives</strong> de l'application de validation de tickets de transports <strong>M-Tickets - Réseau mistral</strong> pour Toulon Métropole. Conçue pour mettre en valeur mes aptitudes en React et Node.js. <strong>Son usage dans un contexte réel ou quotidien est strictement interdit</strong>. Cette application n'a aucun lien avec l'application originale et <strong>ne doit pas être utilisée</strong> comme telle. Tous les éléments de propriété intellectuelle appartiennent à leurs détenteurs respectifs. <strong>Je décline toute responsabilité</strong> en cas d'utilisation inappropriée de cette simulation. Une bannière d'avertissement est continuellement visible sur le site, servant de rappel des conditions d'utilisation afin de prévenir tout emploi illicite de l'application.",
-    "technos": [101,102,103,105,106, 402, 401],
+    "technos": [
+      101,
+      102,
+      103,
+      105,
+      106,
+      402,
+      401
+    ],
     "tags": [],
     "date": "2024-01-16",
     "status": "online",
@@ -22,25 +69,20 @@
     "image": "projects/portfolio.png",
     "link": "",
     "github": "https://github.com/arthur-mdn/portfolio",
-    "technos": [101,102,103,105,106,109, 401],
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103,
+      105,
+      106,
+      109,
+      401
+    ],
     "tags": [],
     "date": "2024-02-20",
     "status": "online",
     "type": "Site web"
-  },
-  {
-    "id": 16,
-    "name": "Jeu Vidéo Interactif Mural",
-    "slug": "jeu-video-interactif-mural",
-    "description": "Découvrez mon dernier projet innovant : un jeu vidéo interactif projeté au mur, une expérience immersive mêlant technologie de pointe et interactivité. Utilisant Python et YOLOv8, ce système avancé détecte en temps réel les mouvements du joueur, permettant un contrôle précis par le positionnement des mains dans l'environnement virtuel. Le jeu se distingue par sa fonction de calibration unique, assurant une synchronisation parfaite entre les mouvements réels et leur représentation numérique. En outre, une intégration transparente avec Unity permet une visualisation fluide de mains virtuelles, reflétant fidèlement la position et les gestes du joueur. Actuellement en phase de développement, ce projet promet déjà une précision remarquable : la calibration, la détection des mouvements, la communication avec Unity et l'affichage de mains virtuelles fonctionnent impeccablement. L'étape suivante ? Donner vie au jeu lui-même, une aventure qui promet d'être aussi fascinante que technologiquement avancée.",
-    "image": "projects/interactive-wall-game.png",
-    "link": "",
-    "github": "https://github.com/arthur-mdn/UnityPythonInteractiveGame_SaveTheTurtles",
-    "technos": [203, 204, 404, 401, 108],
-    "tags": ["Python", "Unity"],
-    "date": "2023-12-12",
-    "status": "draft",
-    "type": "Jeu vidéo"
   },
   {
     "id": 1,
@@ -50,8 +92,21 @@
     "image": "projects/dukartalaf1.png",
     "link": "https://noctivibe.site",
     "github": "https://github.com/arthur-mdn/kartf1",
-    "technos": [101,102,103,105, 401],
-    "tags": ["HTML", "CSS", "JavaScript", "JS" ,"React"],
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103,
+      105,
+      401
+    ],
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JS",
+      "React"
+    ],
     "date": "2023-12-19",
     "status": "online",
     "type": "Site web"
@@ -64,8 +119,28 @@
     "image": "projects/buzzer-app.png",
     "link": "https://buzzer-app.fr",
     "github": "https://github.com/arthur-mdn/buzzer-app",
-    "technos": [101,102,103,105, 201, 108, 302, 401],
-    "tags": ["HTML", "CSS", "JavaScript", "JS" ,"React", "NodeJS", "Socket.io", "MongoDB", "GIT"],
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103,
+      105,
+      201,
+      108,
+      302,
+      401
+    ],
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JS",
+      "React",
+      "NodeJS",
+      "Socket.io",
+      "MongoDB",
+      "GIT"
+    ],
     "date": "2023-11-26",
     "status": "online",
     "type": "WebApp"
@@ -78,11 +153,27 @@
     "image": "projects/cookie-remover.png",
     "link": "",
     "github": "https://github.com/arthur-mdn/cookie-remover",
-    "technos": [101,102,103, 401],
-    "tags": ["HTML", "CSS", "JavaScript", "JS" ,"React", "NodeJS", "Socket.io", "MongoDB", "GIT"],
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103,
+      401
+    ],
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JS",
+      "React",
+      "NodeJS",
+      "Socket.io",
+      "MongoDB",
+      "GIT"
+    ],
     "date": "2023-08-25",
     "status": "online",
-    "type": "WebApp"
+    "type": "Extension de navigateur"
   },
   {
     "id": 3,
@@ -92,13 +183,26 @@
     "image": "projects/noctivibe.png",
     "link": "https://demo.noctivibe.fr",
     "github": "",
-    "technos": [101,102,103,202, 301],
-    "tags": ["HTML", "CSS", "JavaScript", "JS","PHP", "MySQL"],
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103,
+      202,
+      301
+    ],
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JS",
+      "PHP",
+      "MySQL"
+    ],
     "date": "2023-08-07",
     "status": "online",
     "type": "WebApp"
   },
-
   {
     "id": 6,
     "name": "PWA Factures et Dépenses",
@@ -107,8 +211,22 @@
     "image": "projects/facture.png",
     "link": "https://facture.mondon.pro/",
     "github": "",
-    "technos": [101,102,103,202, 301],
-    "tags": ["HTML", "CSS", "JavaScript", "JS" ,"React", "MySQL"],
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103,
+      202,
+      301
+    ],
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JS",
+      "React",
+      "MySQL"
+    ],
     "date": "2022-01-21",
     "status": "online",
     "type": "WebApp"
@@ -121,8 +239,21 @@
     "image": "projects/mailgenerator.png",
     "link": "",
     "github": "",
-    "technos": [101,102,103,107, 202],
-    "tags": ["HTML", "CSS", "JavaScript", "JS", "PHP"],
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103,
+      107,
+      202
+    ],
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JS",
+      "PHP"
+    ],
     "date": "2023-01-16",
     "status": "online",
     "type": "Outil"
@@ -135,8 +266,20 @@
     "image": "projects/cinephony.png",
     "link": "https://cinephony.mondon.pro/",
     "github": "",
-    "technos": [101,102,103,202, 301, 401],
-    "tags": ["PHP", "MySQL", "Git"],
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103,
+      202,
+      301,
+      401
+    ],
+    "tags": [
+      "PHP",
+      "MySQL",
+      "Git"
+    ],
     "date": "2023-05-28",
     "status": "online",
     "type": "Site web"
@@ -149,8 +292,22 @@
     "image": "projects/edt.png",
     "link": "https://edt.mondon.pro",
     "github": "",
-    "technos": [101,102,103,202, 301],
-    "tags": ["HTML", "CSS", "JavaScript", "JS" , "PHP","MySQL"],
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103,
+      202,
+      301
+    ],
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JS",
+      "PHP",
+      "MySQL"
+    ],
     "date": "2021-09-22",
     "status": "online",
     "type": "WebApp"
@@ -163,8 +320,12 @@
     "image": "projects/visites_virtuelles.png",
     "link": "https://visites.eradion.fr",
     "github": "",
+    "youtube": [],
     "technos": [],
-    "tags": ["3D Modeling", "Web Development"],
+    "tags": [
+      "3D Modeling",
+      "Web Development"
+    ],
     "date": "2023-04-18",
     "status": "online",
     "type": "Visite virtuelle"
@@ -177,8 +338,17 @@
     "image": "projects/eradion.png",
     "link": "https://eradion.fr",
     "github": "",
-    "technos": [101,102,103,202,301],
-    "tags": ["Web Development"],
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103,
+      202,
+      301
+    ],
+    "tags": [
+      "Web Development"
+    ],
     "date": "2023-03-21",
     "status": "online",
     "type": "Site Web"
@@ -191,8 +361,22 @@
     "image": "projects/interactive-screen-display.png",
     "link": "",
     "github": "",
-    "technos": [101,102,103,202, 301],
-    "tags": ["HTML", "CSS", "JavaScript", "JS" ,"PHP", "MySQL"],
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103,
+      202,
+      301
+    ],
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JS",
+      "PHP",
+      "MySQL"
+    ],
     "date": "2023-01-05",
     "status": "online",
     "type": "Écran interactif"
@@ -205,8 +389,22 @@
     "image": "projects/funkylike.png",
     "link": "https://app.funkylike.com",
     "github": "",
-    "technos": [101,102,103,202, 301],
-    "tags": ["HTML", "CSS", "JavaScript", "JS" ,"PHP", "MySQL"],
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103,
+      202,
+      301
+    ],
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JS",
+      "PHP",
+      "MySQL"
+    ],
     "date": "2022-09-25",
     "status": "online",
     "type": "Écran interactif"
@@ -219,14 +417,26 @@
     "image": "projects/calendry.png",
     "link": "",
     "github": "",
-    "technos": [101,102,103,202, 301],
-    "tags": ["HTML", "CSS", "JavaScript", "JS" ,"PHP", "MySQL"],
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103,
+      202,
+      301
+    ],
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JS",
+      "PHP",
+      "MySQL"
+    ],
     "date": "2022-10-19",
     "status": "online",
     "type": "Site web"
   },
-
-
   {
     "id": 12,
     "name": "Refonte du Site Web sous Wordpress",
@@ -235,8 +445,16 @@
     "image": "projects/edissyum.png",
     "link": "https://edissyum.com",
     "github": "",
-    "technos": [101,102,103,403],
-    "tags": ["Wordpress"],
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103,
+      403
+    ],
+    "tags": [
+      "Wordpress"
+    ],
     "date": "2022-09-10",
     "status": "online",
     "type": "Site web"
@@ -249,7 +467,14 @@
     "image": "projects/dj.png",
     "link": "https://dj.mondon.pro",
     "github": "",
-    "technos": [101,102,103, 202,301],
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103,
+      202,
+      301
+    ],
     "date": "2022-06-31",
     "status": "online",
     "type": "WebApp"
@@ -262,13 +487,18 @@
     "image": "projects/atmosphair.png",
     "link": "https://atmosphair.mondon.pro/",
     "github": "",
-    "technos": [101,102,103,202],
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103,
+      202
+    ],
     "tags": [],
     "date": "2023-01-10",
     "status": "online",
     "type": "WebApp"
   },
-
   {
     "id": 4,
     "name": "Seamless Réseau Mistral Toulon",
@@ -277,13 +507,25 @@
     "image": "projects/seamless.png",
     "link": "https://seamless.mondon.pro/",
     "github": "",
-    "technos": [101,102,103,202, 301],
-    "tags": ["HTML", "CSS", "JavaScript", "JS" , "MySQL"],
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103,
+      202,
+      301
+    ],
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JS",
+      "MySQL"
+    ],
     "date": "2021-09-20",
     "status": "development",
     "type": "WebApp"
   },
-
   {
     "id": 18,
     "name": "Site interactif style MacOS",
@@ -292,8 +534,17 @@
     "image": "projects/oldsite.png",
     "link": "https://projets.mondon.pro/",
     "github": "",
-    "technos": [101, 102, 103, 107],
-    "tags": ["Web Development", "portfolio"],
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103,
+      107
+    ],
+    "tags": [
+      "Web Development",
+      "portfolio"
+    ],
     "date": "2020-02-18",
     "status": "online",
     "type": "Site web"
@@ -306,8 +557,18 @@
     "image": "projects/glucidecheck.png",
     "link": "https://projets.mondon.pro/glucidecheck",
     "github": "",
-    "technos": [101, 102, 103],
-    "tags": ["HTML", "CSS", "JavaScript", "JS"],
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103
+    ],
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JS"
+    ],
     "date": "2019-04-07",
     "status": "development",
     "type": "WebApp"
@@ -320,8 +581,18 @@
     "image": "projects/miniOS.png",
     "link": "https://projets.mondon.pro/miniOS/index_lockscreen.html",
     "github": "",
-    "technos": [101, 102, 103],
-    "tags": ["HTML", "CSS", "JavaScript", "JS"],
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103
+    ],
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JS"
+    ],
     "date": "2019-05-22",
     "status": "development",
     "type": "WebApp"
@@ -334,8 +605,18 @@
     "image": "projects/lg.png",
     "link": "https://projets.mondon.pro/lg/",
     "github": "",
-    "technos": [101, 102, 103],
-    "tags": ["HTML", "CSS", "JavaScript", "JS"],
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103
+    ],
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JS"
+    ],
     "date": "2019-06-19",
     "status": "development",
     "type": "WebApp"
@@ -348,8 +629,18 @@
     "image": "projects/qui-est-ce.png",
     "link": "https://projets.mondon.pro/qui-est-ce/",
     "github": "",
-    "technos": [101, 102, 103],
-    "tags": ["HTML", "CSS", "JavaScript", "JS"],
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103
+    ],
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JS"
+    ],
     "date": "2019-12-18",
     "status": "development",
     "type": "WebApp"

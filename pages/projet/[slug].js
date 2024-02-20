@@ -51,7 +51,7 @@ function ProjectPage() {
         skillsData.flatMap(category => category.skills).find(skill => skill.id === techId)
     ).filter(Boolean); // Filtrer les undefined
 
-    const hasLinks = project.github || project.link;
+    const hasLinks = project.github || project.link || project.youtube ;
     const formatDate = (dateString) => {
         const [year, month, day] = dateString.split("-");
         return `${day}/${month}/${year}`;
@@ -142,6 +142,24 @@ function ProjectPage() {
                         {!hasLinks && <p className={"fr ai-c g0-5"} style={{color:"red", fontWeight:"bold"}}><FaBan/> Aucun lien public disponible.</p>}
                     </div>
                 </div>
+
+                {project.youtube.length > 0 && (
+                <div>
+                    <h4>Vidéos associés</h4>
+                    <div className={"fc g1 fw-w"}>
+                        {project.youtube.map((video, index) => (
+                            <div key={index} className={"PP_video fc"}>
+                                <a href={video.link} target="_blank" rel="noopener noreferrer" >
+                                    <p>{video.title}</p>
+                                    <img src={video.image} alt={video.title} style={{width: '300px', aspectRatio: '16/9', objectFit:"cover", borderRadius: '0.5rem'}}/>
+                                </a>
+                            </div>
+                            ))
+                        }
+                        {!hasLinks && <p className={"fr ai-c g0-5"} style={{color:"red", fontWeight:"bold"}}><FaBan/> Aucun lien public disponible.</p>}
+                    </div>
+                </div>
+                )}
             </div>
 
         </section>
