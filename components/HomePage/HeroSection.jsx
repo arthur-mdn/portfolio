@@ -15,7 +15,7 @@ function HeroSection() {
                         </p>
                         <div className={'HS_btns'}>
                             <a
-                                href="/others/CV_Mondon_Arthur.pdf"
+                                href="/others/CV_Arthur_Mondon_2024.pdf"
                                 download
                                 className={"button special_button s-font lh1"}
                             >
