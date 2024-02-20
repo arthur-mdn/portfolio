@@ -17,29 +17,20 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     const project = projectsData.find(p => p.slug === params.slug);
+    if (!project) {
+        return { notFound: true };
+    }
     return { props: { project } };
 }
 
-function ProjectPage() {
-    const router = useRouter();
-    const { slug } = router.query;
-    const [isLoading, setIsLoading] = useState(true);
-    const [project, setProject] = useState(null);
+function ProjectPage({ project }) {
     const [showFullDescription, setShowFullDescription] = useState(false);
-    const [showToggleButton, setShowToggleButton] = useState(false);
+    const [isImageExpanded, setIsImageExpanded] = useState(false);
     const descriptionRef = useRef(null);
-
-    useEffect(() => {
-        const project = projectsData.find(p => p.slug.toString() === slug);
-        setProject(project);
-        setIsLoading(false);
-    }, [slug]);
 
     const checkDescriptionHeight = () => {
         if (descriptionRef.current && descriptionRef.current.scrollHeight > 145) {
-            setShowToggleButton(true);
-        } else {
-            setShowToggleButton(false);
+            setShowFullDescription(true); // Automatiquement montrer le bouton si le contenu dépasse la hauteur
         }
     };
 
@@ -55,26 +46,6 @@ function ProjectPage() {
             window.removeEventListener("resize", handleResize);
         };
     }, []);
-
-    const [isImageExpanded, setIsImageExpanded] = useState(false);
-
-    if (isLoading) {
-        return <div>
-            <Head>
-                <title>Chargement...</title>
-            </Head>
-            Récupération du projet...
-        </div>;
-    }
-
-    if (!project) {
-        return <div>
-            <Head>
-                <title>Projet introuvable</title>
-            </Head>
-            Projet introuvable
-        </div>;
-    }
 
     const handleImageClick = () => {
         setIsImageExpanded(!isImageExpanded);
