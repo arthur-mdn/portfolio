@@ -7,7 +7,7 @@ const baseRoutes = [
     {url: '/', changefreq: 'daily', priority: 1},
     {url: '/projets', changefreq: 'daily', priority: 0.9},
     {url: '/competences', changefreq: 'monthly', priority: 0.3},
-    {url: '/contact', changefreq: 'monthly', priority: 0.3},
+    {url: '/contact', changefreq: 'monthly', priority: 0.5},
     {url: '/rgpd', changefreq: 'monthly', priority: 0.1},
     {url: '/mentions-legales', changefreq: 'monthly', priority: 0.1}
 ];
@@ -19,7 +19,7 @@ const projectsData = JSON.parse(readFileSync('data/projects.json'));
 const projectRoutes = projectsData.map(project => ({
     url: `/projet/${project.slug}`,
     changefreq: 'monthly',
-    priority: 0.8
+    priority: 0.9
 }));
 
 // Combiner toutes les routes
