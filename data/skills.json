@@ -98,6 +98,18 @@
             "url": "logos/socketio.svg"
           }
         ]
+      },
+      {
+        "id": 109,
+        "name": "NextJS",
+        "description": "NextJS",
+        "keywords": ["NextJS"],
+        "links": [
+          {
+            "alt": "nextJS logo",
+            "url": "logos/nextjs.png"
+          }
+        ]
       }
     ]
   },
