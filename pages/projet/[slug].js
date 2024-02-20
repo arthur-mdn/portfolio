@@ -7,6 +7,20 @@ import skillsData from "../../data/skills.json";
 import {FaBan, FaGithub, FaLink, FaArrowUp, FaArrowDown, FaExclamation, FaTriangleExclamation} from "react-icons/fa6";
 import Link from "next/link";
 
+export async function getStaticPaths() {
+    const paths = projectsData.map(project => ({
+        params: { slug: project.slug.toString() },
+    }));
+
+    return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params }) {
+    const project = projectsData.find(p => p.slug === params.slug);
+    return { props: { project } };
+}
+
+
 function ProjectPage() {
     const router = useRouter();
     const { slug } = router.query;
