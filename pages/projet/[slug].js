@@ -72,7 +72,7 @@ function ProjectPage({project}) {
                 <title>{project.name.trim()} - Arthur Mondon</title>
                 {/*// meta description slice to 300 character max*/}
                 <meta name="description" content={project.description.slice(0, 300)}/>
-                <link rel={"canonical"} href={`https://mondon.pro/${project.slug}`}/>
+                <link rel={"canonical"} href={`https://mondon.pro/projet/${project.slug}`}/>
                 {/* Facebook Meta Tags */}
                 <meta property="og:url" content={`https://mondon.pro/${project.slug}`}/>
                 <meta property="og:title" content={`${project.name.trim()} - Arthur Mondon`}/>
