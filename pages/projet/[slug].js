@@ -75,7 +75,7 @@ function ProjectPage({project}) {
         "author": {
             "@type": "Person",
             "name": "Arthur Mondon",
-            "url": "https://www.linkedin.com/in/arthur-mondon-25147b21b/",
+            "url": "https://www.linkedin.com/in/arthurmondon/",
             "image": "https://mondon.pro/others/profile.jpg"
         },
         "keywords": project.tags.join(", "),

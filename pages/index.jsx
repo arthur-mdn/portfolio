@@ -21,7 +21,7 @@ export default function Competences() {
             "contactType": "service client"
         }],
         "sameAs": [
-            "https://www.linkedin.com/in/arthur-mondon-25147b21b/",
+            "https://www.linkedin.com/in/arthurmondon/",
             "https://github.com/arthur-mdn",
             "https://www.youtube.com/@arthurmdn"
         ]
@@ -36,7 +36,7 @@ export default function Competences() {
         "url": "https://mondon.pro",
         "image": "https://mondon.pro/illustrations/memoji2.png",
         "sameAs": [
-            "https://www.linkedin.com/in/arthur-mondon-25147b21b/",
+            "https://www.linkedin.com/in/arthurmondon/",
             "https://github.com/arthur-mdn",
             "https://www.youtube.com/@arthurmdn",
             "https://eradion.fr"

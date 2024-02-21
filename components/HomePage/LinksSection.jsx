@@ -14,7 +14,7 @@ function LinksSection() {
                     </p>
                 </div>
                 <div className={"fr g1 fw-w"}>
-                    <Link href={"https://www.linkedin.com/in/arthur-mondon-25147b21b/"} target={"_blank"}
+                    <Link href={"https://www.linkedin.com/in/arthurmondon/"} target={"_blank"}
                           className={"button linkedin"}>
                         <FaLinkedin style={{fontSize: '1.2rem'}}/>
                         LinkedIn

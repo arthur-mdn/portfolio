@@ -42,7 +42,7 @@ function Footer() {
                                     <h3>Liens</h3>
                                     <br/>
                                     <div className={"fc g0-5"}>
-                                        <Link href={"https://www.linkedin.com/in/arthur-mondon-25147b21b/"}>
+                                        <Link href={"https://www.linkedin.com/in/arthurmondon/"}>
                                             LinkedIn
                                         </Link>
 
