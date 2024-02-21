@@ -13,7 +13,7 @@ function LinksSection() {
                         Vous êtes curieux d&apos;en savoir plus sur mon parcours et mes réalisations ? Je vous invite à me suivre et à vous connecter avec moi sur LinkedIn, où je partage des anecdotes sur mes projets et les tendances du développement web. Découvrez également mes contributions et projets open-source sur GitHub, témoignant de ma passion pour la collaboration et le partage de connaissances dans la communauté des développeurs. Et pour un aperçu plus visuel et interactif de mon travail, n&apos;hésitez pas à consulter ma chaîne YouTube, où je publie des vidéos démontrant mes compétences en action. Rejoignez-moi dans cette aventure numérique et ensemble, explorons les possibilités infinies de la technologie.
                     </p>
                 </div>
-                        <div className={"fr g1"}>
+                <div className={"fr g1 fw-w"}>
                     <Link href={"https://www.linkedin.com/in/arthur-mondon-25147b21b/"} target={"_blank"}
                           className={"button linkedin"}>
                         <FaLinkedin style={{fontSize: '1.2rem'}}/>

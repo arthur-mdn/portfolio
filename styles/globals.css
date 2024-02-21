@@ -796,3 +796,12 @@ textarea{
     color: black;
     opacity: .25;
 }
+
+.slick-list .slick-track {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.PS .PS_card{
+    margin: 0;
+}
