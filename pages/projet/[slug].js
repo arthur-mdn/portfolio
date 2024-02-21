@@ -63,11 +63,46 @@ function ProjectPage({project}) {
         const [year, month, day] = dateString.split("-");
         return `${day}/${month}/${year}`;
     };
+
+    const schemaOrgJSONLD = {
+        "@context": "http://schema.org",
+        "@type": "CreativeWork",
+        "name": project.name,
+        "description": project.description,
+        "url": `https://mondon.pro/projet/${project.slug}`,
+        "image": `https://mondon.pro/${project.image}`,
+        "dateCreated": project.date,
+        "author": {
+            "@type": "Person",
+            "name": "Arthur Mondon",
+            "url": "https://www.linkedin.com/in/arthur-mondon-25147b21b/",
+            "image": "https://mondon.pro/others/profile.jpg"
+        },
+        "keywords": project.tags.join(", "),
+        "genre": project.type,
+        "inLanguage": "fr-FR",
+        "isAccessibleForFree": "True",
+        "hasPart": project.technos.map(techId => {
+            const skill = skillsData.flatMap(category => category.skills).find(skill => skill.id === techId);
+            return {
+                "@type": "CreativeWork",
+                "name": skill.name,
+                "description": skill.description,
+                "image": `https://mondon.pro/${skill.links[0].url}`
+            };
+        }),
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `https://mondon.pro/projet/${project.slug}`
+        },
+    };
     return (
         <>
             <Head>
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
                 <link rel="icon" href="/others/favicon.ico"/>
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrgJSONLD) }}>
+                </script>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <title>{project.name.trim()} - Arthur Mondon</title>
                 {/*// meta description slice to 300 character max*/}
@@ -75,6 +110,7 @@ function ProjectPage({project}) {
                 <link rel={"canonical"} href={`https://mondon.pro/projet/${project.slug}`}/>
                 {/* Facebook Meta Tags */}
                 <meta property="og:url" content={`https://mondon.pro/${project.slug}`}/>
+                <meta property="og:type" content="article" />
                 <meta property="og:title" content={`${project.name.trim()} - Arthur Mondon`}/>
                 <meta property="og:description" content={project.description.slice(0, 300)}/>
                 <meta property="og:image" content={`https://mondon.pro/ogs/${project.image}`}/>
@@ -82,6 +118,7 @@ function ProjectPage({project}) {
                 {/* Twitter Meta Tags */}
                 <meta property="twitter:url" content={`https://mondon.pro/${project.slug}`}/>
                 <meta name="twitter:title" content={`${project.name.trim()} - Arthur Mondon`}/>
+                <meta property="twitter:type" content="article" />
                 <meta name="twitter:description" content={project.description.slice(0, 300)}/>
                 <meta name="twitter:image" content={`https://mondon.pro/ogs/${project.image}`}/>
 
