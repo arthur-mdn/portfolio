@@ -11,6 +11,7 @@ export default function Competences() {
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
                 <link rel="icon" href="/others/favicon.ico"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                <link rel={"canonical"} href={"https://mondon.pro/competences"}/>
                 <title>Arthur Mondon : Mes Compétences</title>
                 <meta name="description"
                       content="Je vous invite à découvrir mes compétences en développement web, couvrant à la fois le frontend et le backend, ma maîtrise des bases de données et mon utilisation efficace des outils de développement."/>

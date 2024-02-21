@@ -14,6 +14,7 @@ export default function Competences() {
             <Head>
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
                 <link rel="icon" href="/others/favicon.ico"/>
+                <link rel={"canonical"} href={"https://mondon.pro"}/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <title>Arthur Mondon : Portfolio</title>
                 <meta name="description"
