@@ -27,7 +27,7 @@ function SkillElement({skill, displayedPopup, setDisplayedPopup}) {
 
             <img src={"/" + skill.links[0].url} alt={skill.links[0].alt}/>
             <p className={"s-font fs0-8"}>{skill.name}</p>
-            <p style={{fontSize: '0.8rem', opacity: '0.6'}}>{skill.id}</p>
+            {/*<p style={{fontSize: '0.8rem', opacity: '0.6'}}>{skill.id}</p>*/}
         </button>
     );
 }
