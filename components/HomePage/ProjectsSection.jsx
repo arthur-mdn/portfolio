@@ -71,7 +71,7 @@ function ProjectsSection() {
             <section className="PS fc g1">
                 <h2 className={"s-font"}>Projets Récents</h2>
                 <div className={"AS_card grey"}>
-                    <p className={"s-font"}>Bienvenue dans l'espace dédié à mes réalisations. Chaque projet présenté ici est le fruit d'innovation et de créativité dans le domaine du développement web et du design interactif.  Explorez cette vitrine pour découvrir une diversité de projets, chacun témoignant de mon engagement à pousser les limites de la technologie pour créer des expériences utilisateur mémorables et significatives. Plongez dans cet univers de créativité et laissez-vous inspirer par l'étendue et la variété de mon travail. Que ce soit des simples sites vitrines, des web-apps, des sites web complet en passant par les extensions de navigateur, ou même des jeux vidéos !</p>
+                    <p className={"s-font"}>Bienvenue dans le coin où je range tous mes projets ! C'est ici que je partage les projets publics sur lesquels j'ai travaillé, que ça soit des sites web, des applis, des extensions ou même des jeux. C'est un peu comme mon petit musée personnel. Jetez un œil, il y a de tout et pour tous les goûts !</p>
                 </div>
                 <Slider {...settings}>
                     {projectsData.sort((b, a) => a.date.localeCompare(b.date)).slice(0, 8).map(project => (
