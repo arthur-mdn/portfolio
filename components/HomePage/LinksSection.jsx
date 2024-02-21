@@ -10,7 +10,7 @@ function LinksSection() {
                 <h2 className={"s-font"}>Liens</h2>
                 <div className={"AS_card grey"}>
                     <p>
-                        Vous êtes curieux d&apos;en savoir plus sur mon parcours et mes réalisations ? Je vous invite à me suivre et à vous connecter avec moi sur LinkedIn, où je partage des anecdotes sur mes projets et les tendances du développement web. Découvrez également mes contributions et projets open-source sur GitHub, témoignant de ma passion pour la collaboration et le partage de connaissances dans la communauté des développeurs. Et pour un aperçu plus visuel et interactif de mon travail, n&apos;hésitez pas à consulter ma chaîne YouTube, où je publie des vidéos démontrant mes compétences en action. Rejoignez-moi dans cette aventure numérique et ensemble, explorons les possibilités infinies de la technologie.
+                        Envie de creuser un peu plus qui je suis et ce que je fais ? Suivez-moi sur LinkedIn pour des insights de mes projets, jetez un œil à mes projets sur GitHub, et plongez dans mon univers créatif sur YouTube.
                     </p>
                 </div>
                 <div className={"fr g1 fw-w"}>
