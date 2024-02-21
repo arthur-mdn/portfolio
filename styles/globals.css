@@ -563,7 +563,7 @@ textarea{
     object-fit: cover;
 }
 
-.PS_card .content button{
+.PS_card .content .button{
     transition: all 0.2s;
     opacity: 0;
     font-size: 0.8rem;
@@ -576,7 +576,7 @@ textarea{
     color: black;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
-.PS_card .content:hover button{
+.PS_card .content:hover .button{
     opacity: 1;
 }
 .PS_card .content:hover:before{

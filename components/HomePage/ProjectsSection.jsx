@@ -96,7 +96,7 @@ function ProjectsSection() {
                                 <p>{project.type}</p>
                                 <span>{formatDate(project.date)}</span>
                                 <h3>{project.name}</h3>
-                                <button type="button" className="button"><FaArrowRightLong/></button>
+                                <div className="button"><FaArrowRightLong/></div>
                             </div>
                         </Link>
                     ))}
