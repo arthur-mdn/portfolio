@@ -15,14 +15,17 @@ function HeroSection() {
                             Exploitez le plein potentiel du web avec des solutions sur mesure, conçues pour réussir.
                         </p>
                         <div className={'HS_btns'}>
-                            <a
+                            <Link
                                 href="/others/CV_Arthur_Mondon_2024.pdf"
+                                target={"_blank"}
+                                rel={"noopener noreferrer"}
                                 download
                                 className={"button special_button s-font lh1"}
+                                style={{color: 'white'}}
                             >
                                 <FaDownload/>
                                 Télécharger le CV
-                            </a>
+                            </Link>
                             <Link className={"button contact s-font lh1"} href="/projets">
                                 <FaEye/>
                                 Projets réalisés
