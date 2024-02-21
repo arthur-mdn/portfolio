@@ -41,7 +41,7 @@ export default function Competences() {
             "https://www.youtube.com/@arthurmdn",
             "https://eradion.fr"
         ],
-        "skills": ["HTML", "CSS", "JavaScript", "React", "Node.js", "NextJS", "MongoDB", "SQL", "Vite"]
+        "knowsAbout": ["HTML", "CSS", "JavaScript", "React", "Node.js", "NextJS", "MongoDB", "SQL", "Vite"]
     }
 
     return (
@@ -52,12 +52,8 @@ export default function Competences() {
                 <link rel={"canonical"} href={"https://mondon.pro"}/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <title>Arthur Mondon : Portfolio</title>
-                <script type="application/ld+json">
-                    {JSON.stringify(schemaOrgJSONLD)}
-                </script>
-                <script type="application/ld+json">
-                    {JSON.stringify(schemaOrgJSONLDPerson)}
-                </script>
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrgJSONLD) }}></script>
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrgJSONLDPerson) }}></script>
                 <meta name="description"
                       content="Je suis Arthur Mondon, développeur web passionné. À travers mon portfolio, découvrez ma passion pour la création de solutions web innovantes. En tant qu'auto-entrepreneur et freelance, j'ai créé 'Eradion' pour réaliser des projets numériques captivants. Ma spécialité réside dans le mélange de compétences techniques et de créativité, visant à offrir des expériences en ligne inoubliables. Actuellement étudiant en BUT MMI à Toulon. Je propose mes services en Provence-Alpes-Côte-d'Azur dans le Vaucluse et le Var."/>
                 <meta name="keywords"

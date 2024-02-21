@@ -101,8 +101,7 @@ function ProjectPage({project}) {
             <Head>
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
                 <link rel="icon" href="/others/favicon.ico"/>
-                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrgJSONLD) }}>
-                </script>
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrgJSONLD) }}></script>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <title>{project.name.trim()} - Arthur Mondon</title>
                 {/*// meta description slice to 300 character max*/}
