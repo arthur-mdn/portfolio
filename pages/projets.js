@@ -12,7 +12,7 @@ export default function Projets() {
     return (
         <>
             <Head>
-                <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+                
                 <link rel={"canonical"} href={"https://mondon.pro/projets"}/>
                 <link rel="icon" href="/others/favicon.ico"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>

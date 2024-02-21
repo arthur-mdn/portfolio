@@ -99,7 +99,7 @@ function ProjectPage({project}) {
     return (
         <>
             <Head>
-                <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+                
                 <link rel="icon" href="/others/favicon.ico"/>
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrgJSONLD) }}></script>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
