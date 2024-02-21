@@ -41,7 +41,7 @@ export default function Projets() {
                 <meta name="twitter:image" content="https://mondon.pro/others/preview.png"/>
             </Head>
             <section className="PsP fc g1">
-                <h2 className={"s-font"}>Projets</h2>
+                <h1 className={"s-font"}>Projets</h1>
                 <div className={"fr fw-w"}>
                     {projectsData.sort((b, a) => a.date.localeCompare(b.date)).map(project => (
                         <Link href={`/projet/${project.slug}`} style={{width: '100%'}} className="PS_card"

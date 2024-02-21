@@ -107,6 +107,8 @@ function ContactPage() {
                 <meta name="twitter:image" content="https://mondon.pro/others/preview.png"/>
             </Head>
             <section className={"CP"}>
+                <br/>
+                <h1 className={"s-font"}>Formulaire de Contact</h1>
                 <ContactForm/>
             </section>
             <LinksSection/>

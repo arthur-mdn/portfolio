@@ -731,15 +731,17 @@ textarea{
 .PsP > div {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* Ajustez selon vos besoins */
-    gap: 20px; /* Espace entre les cartes */
+    justify-content: space-around;
+    gap: 20px;
 }
 
 /* Styles pour les cartes */
 .PsP a {
-    max-width: 300px; /* Largeur maximale pour les grandes résolutions */
-    flex: 1 1 auto; /* Permet aux cartes de grandir et de rétrécir */
-    margin: 10px; /* Espace autour de chaque carte */
+    max-width: 300px;
+    max-height: 300px;
+    flex: 1 1 auto;
+    margin: 10px;
+    aspect-ratio: 1/1;
 }
 
 /* Styles pour les écrans plus petits */
@@ -750,7 +752,8 @@ textarea{
     }
 
     .PsP a {
-        max-width: 100%; /* Cartes prennent toute la largeur sur les petits écrans */
+        max-width: 100%;
+        max-height: 100%;
     }
 }
 
