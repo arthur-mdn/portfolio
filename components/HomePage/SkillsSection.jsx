@@ -21,12 +21,12 @@ function SkillElement({skill, displayedPopup, setDisplayedPopup}) {
         <button title={skill.description} onClick={togglePopup}>
             {isPopupDisplayed &&
                 <div className={"popup"}>
-                    <p>Projets publics utilisant {skill.description} : {projectCount}</p>
+                    <span>Projets publics utilisant {skill.description} : {projectCount}</span>
                 </div>
             }
 
             <img src={"/" + skill.links[0].url} alt={skill.links[0].alt}/>
-            <p className={"s-font fs0-8"}>{skill.name}</p>
+            <span className={"s-font fs0-8"}>{skill.name}</span>
             {/*<p style={{fontSize: '0.8rem', opacity: '0.6'}}>{skill.id}</p>*/}
         </button>
     );
