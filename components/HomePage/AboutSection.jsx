@@ -51,6 +51,16 @@ function AboutSection() {
                         </div>
                     </div>
                 </div>
+                <div className={"fc g1"}>
+                    <div className={"fr sms orange g1 ai-c"} style={{flexDirection:"row"}}>
+                        <img src={"/illustrations/france-map.svg"} alt={"map france"} style={{width:'4rem'}}/>
+                        <h4 className={"s-font"}>
+                            Arthur Mondon, Développeur Web full-stack freelance situé en région Provence-Alpes-Côte d'Azur.
+                            Originaire du Vaucluse, je propose mes services dans le Var et dans l'Hérault.
+                            Je peux également me déplacer et/ou réaliser des missions à distance.
+                        </h4>
+                    </div>
+                </div>
 
 
             </section>
