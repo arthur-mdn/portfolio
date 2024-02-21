@@ -718,7 +718,7 @@ textarea{
 }
 
 .full-description {
-    max-height: 2000px;
+    max-height: fit-content;
     transition: max-height 0.5s ease-in-out;
 }
 /* END - ProjetPage */

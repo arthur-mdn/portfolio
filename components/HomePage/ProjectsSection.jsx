@@ -71,7 +71,7 @@ function ProjectsSection() {
             <section className="PS fc g1">
                 <h2 className={"s-font"}>Projets Récents</h2>
                 <div className={"AS_card grey"}>
-                    <p className={"s-font"}>Bienvenue dans le coin où je range tous mes projets ! C'est ici que je partage les projets publics sur lesquels j'ai travaillé, que ça soit des sites web, des applis, des extensions ou même des jeux. C'est un peu comme mon petit musée personnel. Jetez un œil, il y a de tout et pour tous les goûts !</p>
+                    <p className={"s-font"}>Bienvenue dans le coin où je range tous mes projets ! C&apos;est ici que je partage les projets publics sur lesquels j&apos;ai travaillé, que ça soit des sites web, des applis, des extensions ou même des jeux. C&apos;est un peu comme mon petit musée personnel. Jetez un œil, il y a de tout et pour tous les goûts !</p>
                 </div>
                 <Slider {...settings}>
                     {projectsData.sort((b, a) => a.date.localeCompare(b.date)).slice(0, 8).map(project => (
