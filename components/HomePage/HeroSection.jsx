@@ -34,6 +34,7 @@ function HeroSection() {
                     </div>
                     <img src={"/illustrations/memoji2.png"} alt={"avatar"} className={"hide_mobile"}/>
                     <ul className={"HS_extra"}>
+                        <div className="HS_extra_blur"></div>
                         <li>
                             <p>Projets terminés</p>
                             <h4>28</h4>

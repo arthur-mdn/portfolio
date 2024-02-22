@@ -299,13 +299,24 @@ textarea{
     transform: translate(-50%, 50%);
     padding: 1rem 2rem;
     z-index: 1;
-    background: rgba(255,255,255,0.5);
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
     border-radius: 1rem;
+    overflow: hidden;
     margin: 0;
     width: fit-content;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.HS_extra_blur {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255,255,255,0.5);
+
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    z-index: -1; /* Assurez-vous que l'arrière-plan est derrière le contenu */
 }
 
 .HS .HS_extra li{
