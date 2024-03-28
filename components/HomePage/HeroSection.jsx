@@ -1,6 +1,6 @@
 import {FaDownload, FaEye} from "react-icons/fa6";
 import Link from "next/link";
-
+import projectsData from "../../data/projects.json";
 function HeroSection() {
     return (
         <>
@@ -37,7 +37,7 @@ function HeroSection() {
                         <div className="HS_extra_blur"></div>
                         <li>
                             <p>Projets terminés</p>
-                            <h4>28</h4>
+                            <h4>{Object.keys(projectsData).length + 1}</h4>
                         </li>
                         <li>
                             <p>Taux de satisfaction</p>
