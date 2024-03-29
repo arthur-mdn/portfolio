@@ -99,17 +99,19 @@ function ProjectPage({project}) {
     return (
         <>
             <Head>
-                
+
                 <link rel="icon" href="/others/favicon.ico"/>
-                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrgJSONLD) }}></script>
+                <script type="application/ld+json"
+                        dangerouslySetInnerHTML={{__html: JSON.stringify(schemaOrgJSONLD)}}></script>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <title>{project.name.trim()} - Arthur Mondon</title>
+                <meta name="robots" content="index, follow"/>
                 {/*// meta description slice to 300 character max*/}
                 <meta name="description" content={project.description.slice(0, 300)}/>
                 <link rel={"canonical"} href={`https://mondon.pro/projet/${project.slug}`}/>
                 {/* Facebook Meta Tags */}
                 <meta property="og:url" content={`https://mondon.pro/${project.slug}`}/>
-                <meta property="og:type" content="article" />
+                <meta property="og:type" content="article"/>
                 <meta property="og:title" content={`${project.name.trim()} - Arthur Mondon`}/>
                 <meta property="og:description" content={project.description.slice(0, 300)}/>
                 <meta property="og:image" content={`https://mondon.pro/ogs/${project.image}`}/>
@@ -117,13 +119,13 @@ function ProjectPage({project}) {
                 {/* Twitter Meta Tags */}
                 <meta property="twitter:url" content={`https://mondon.pro/${project.slug}`}/>
                 <meta name="twitter:title" content={`${project.name.trim()} - Arthur Mondon`}/>
-                <meta property="twitter:type" content="article" />
+                <meta property="twitter:type" content="article"/>
                 <meta name="twitter:description" content={project.description.slice(0, 300)}/>
                 <meta name="twitter:image" content={`https://mondon.pro/ogs/${project.image}`}/>
 
             </Head>
             <section className="PP fc g2">
-                <div className={"PP_img"}>
+            <div className={"PP_img"}>
 
                     <img src={`/${project.image}`} alt={project.name} onClick={handleImageClick}
                          className={isImageExpanded ? " expanded" : "PP_img"}/>
