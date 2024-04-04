@@ -66,7 +66,7 @@ function Footer() {
                     <br/>
                     <br/>
                     <p>
-                        Copyright 2023 - Arthur Mondon
+                        Copyright 2024 - Arthur MONDON
                     </p>
                 </section>
 
