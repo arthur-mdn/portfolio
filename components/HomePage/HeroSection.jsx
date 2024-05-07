@@ -1,7 +1,27 @@
 import {FaDownload, FaEye} from "react-icons/fa6";
 import Link from "next/link";
 import projectsData from "../../data/projects.json";
+import {useEffect} from "react";
 function HeroSection() {
+
+    useEffect(() => {
+        const parallax = (e) => {
+            const elem = document.querySelector(".HS_container");
+            const _w = window.innerWidth / 2;
+            const _h = window.innerHeight / 2;
+            const _mouseX = e.clientX;
+            const _mouseY = e.clientY;
+            const _depth = `${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.01}%`;
+            elem.style.backgroundPosition = _depth;
+        };
+
+        document.addEventListener("mousemove", parallax);
+
+        return () => {
+            document.removeEventListener("mousemove", parallax);
+        };
+    }, []);
+
     return (
         <>
             <section className={"HS"}>

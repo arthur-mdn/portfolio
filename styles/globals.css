@@ -234,9 +234,11 @@ textarea{
     background-image: radial-gradient(circle at center center, #29cdf5, #89cf79), repeating-radial-gradient(circle at center center, #29cdf5, #29cdf5, 3rem, transparent 6rem, transparent 3rem);
     background-blend-mode: multiply;
     background-color: #89cf79;
+    background-size: 120%;
     border-radius: 1rem;
     gap: 2rem;
     position: relative;
+    transition: background-position 0.15s;
 }
 
 .HS .HS_container:before{
@@ -819,3 +821,5 @@ textarea{
 .slick-initialized .slick-slide {
     margin: 1rem
 }
+
+
