@@ -1,6 +1,6 @@
 [
   {
-    "id": 30,
+    "id": 31,
     "name": "Glucide Check - App iOS",
     "slug": "glucide-check-app-ios",
     "description": "J’ai créé le site web \"Private Events\" pour DJ Mika, qui est une vitrine en ligne conçue pour mettre en lumière les services exceptionnels de DJing et de karaoké offerts par DJ Mika pour des événements privés et des soirées d'entreprise. Développé avec React, ce site présente une interface utilisateur élégante et responsive, reflétant l'ambiance dynamique et professionnelle que DJ Mika apporte à chaque événement.\nLe site web englobe une présentation des services de DJ Mika, offrant aux visiteurs une vue d'ensemble sur sa capacité à créer des ambiances musicales sur-mesure et des expériences de karaoké immersives. Les visiteurs peuvent explorer le répertoire musical diversifié de DJ Mika, qui s'étend des classiques intemporels aux hits contemporains, promettant une playlist personnalisée qui correspond parfaitement à l'atmosphère souhaitée pour chaque événement.\nUne section dédiée permet aux utilisateurs de télécharger librement un mix généraliste, couvrant des succès musicaux de 1970 à aujourd'hui, démontrant ainsi l'étendue et la flexibilité du talent musical de DJ Mika. Le site encourage également les visiteurs à soumettre leurs listes de 10 à 15 titres préférés, permettant à DJ Mika d'élaborer des sets musicaux personnalisés gratuitement.\nEn outre, le site met en avant l'engagement de DJ Mika à utiliser un équipement audiovisuel de haute qualité, assurant une expérience sonore et visuelle incomparable. Les témoignages de clients satisfaits viennent renforcer la réputation de DJ Mika, attestant de son habileté à transformer les soirées en moments inoubliables.\nLa portée géographique des services de DJ Mika est également mise en avant, soulignant sa disponibilité à travers le Vaucluse, le Var et les régions avoisinantes. Ce positionnement stratégique garantit une ambiance exceptionnelle pour des événements dans des lieux variés, de l'effervescence d'Avignon aux charmes côtiers de Saint-Tropez.\nLa réalisation de ce site avec React a permis de créer une expérience utilisateur fluide et attrayante, mettant en valeur le professionnalisme et la passion de DJ Mika pour la musique et le divertissement.",
@@ -13,9 +13,26 @@
       401
     ],
     "tags": [],
-    "date": "2024-03-25",
+    "date": "2024-05-4",
     "status": "online",
     "type": "Application mobile"
+  },
+  {
+    "id": 30,
+    "name": "Programme Atlas",
+    "slug": "site-vitrine-atlas-programme",
+    "description": "J'ai récemment développé un site web sous WordPress pour un programme de sport personnalisé appelé \"Atlas\". Ce programme est un ensemble complet axé sur la musculation, la nutrition et le bien-être, conçu pour s'adapter aux besoins individuels des utilisateurs. Le site vise à promouvoir un corps esthétique et en pleine santé, tout en encourageant l'épanouissement physique et mental. Atlas est conçu pour rendre la transformation physique plus accessible et agréable, que ce soit pour les débutants ou les personnes déjà familiarisées avec ces disciplines.\n\nLa page d'accueil du site offre un aperçu du programme, mettant en avant ses principaux aspects et ses avantages. Elle inclut également des avis clients et des liens vers les réseaux sociaux. Une page dédiée explore en détail les différents thèmes abordés, notamment les plans d'entraînement, les plans nutritionnels et les plans de bien-être.\n\nLe site présente également une page de transformations, qui met en lumière les réussites des participants au programme, ainsi qu'une page de contact pour les visiteurs souhaitant en savoir plus ou poser des questions. Les utilisateurs ont la possibilité de mettre le programme Atlas dans leur panier et de payer directement sur le site, ce qui facilite l'inscription et l'accès au programme.",
+    "image": "projects/site-web-programme-atlas.png",
+    "link": "https://atlas-programme.fr",
+    "github": "",
+    "youtube": [],
+    "technos": [
+      101,102,103, 403
+    ],
+    "tags": [],
+    "date": "2024-04-12",
+    "status": "online",
+    "type": "Site Web"
   },
   {
     "id": 29,
