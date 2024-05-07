@@ -713,8 +713,8 @@ textarea{
 }
 .PP_disclaimer{
     background-color: #fff8f8;
-    color: red;
-    border: 1px solid red;
+    color: #ff8800;
+    border: 1px solid #ff8800;
     padding:0.5rem 1rem;
     border-radius: 1rem;
     text-align: center;
