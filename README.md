@@ -14,7 +14,7 @@ This website was created with React and NextJS.
 ## Installation
 
 ```bash
-git clone -b next_react https://github.com/arthur-mdn/portfolio.git
+git clone https://github.com/arthur-mdn/portfolio.git
 cd portfolio
 npm install
 ```
