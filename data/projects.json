@@ -1,10 +1,28 @@
 [
   {
+    "id": 30,
+    "name": "Glucide Check - App iOS",
+    "slug": "glucide-check-app-ios",
+    "description": "J’ai créé le site web \"Private Events\" pour DJ Mika, qui est une vitrine en ligne conçue pour mettre en lumière les services exceptionnels de DJing et de karaoké offerts par DJ Mika pour des événements privés et des soirées d'entreprise. Développé avec React, ce site présente une interface utilisateur élégante et responsive, reflétant l'ambiance dynamique et professionnelle que DJ Mika apporte à chaque événement.\nLe site web englobe une présentation des services de DJ Mika, offrant aux visiteurs une vue d'ensemble sur sa capacité à créer des ambiances musicales sur-mesure et des expériences de karaoké immersives. Les visiteurs peuvent explorer le répertoire musical diversifié de DJ Mika, qui s'étend des classiques intemporels aux hits contemporains, promettant une playlist personnalisée qui correspond parfaitement à l'atmosphère souhaitée pour chaque événement.\nUne section dédiée permet aux utilisateurs de télécharger librement un mix généraliste, couvrant des succès musicaux de 1970 à aujourd'hui, démontrant ainsi l'étendue et la flexibilité du talent musical de DJ Mika. Le site encourage également les visiteurs à soumettre leurs listes de 10 à 15 titres préférés, permettant à DJ Mika d'élaborer des sets musicaux personnalisés gratuitement.\nEn outre, le site met en avant l'engagement de DJ Mika à utiliser un équipement audiovisuel de haute qualité, assurant une expérience sonore et visuelle incomparable. Les témoignages de clients satisfaits viennent renforcer la réputation de DJ Mika, attestant de son habileté à transformer les soirées en moments inoubliables.\nLa portée géographique des services de DJ Mika est également mise en avant, soulignant sa disponibilité à travers le Vaucluse, le Var et les régions avoisinantes. Ce positionnement stratégique garantit une ambiance exceptionnelle pour des événements dans des lieux variés, de l'effervescence d'Avignon aux charmes côtiers de Saint-Tropez.\nLa réalisation de ce site avec React a permis de créer une expérience utilisateur fluide et attrayante, mettant en valeur le professionnalisme et la passion de DJ Mika pour la musique et le divertissement.",
+    "image": "projects/glucide-check-app-ios.png",
+    "link": "",
+    "github": "https://github.com/arthur-mdn/glucide-check",
+    "youtube": [],
+    "technos": [
+      110,
+      401
+    ],
+    "tags": [],
+    "date": "2024-03-25",
+    "status": "online",
+    "type": "Application mobile"
+  },
+  {
     "id": 29,
     "name": "Private Events - DJ Mika",
     "slug": "private-events-dj-mika",
     "description": "J’ai créé le site web \"Private Events\" pour DJ Mika, qui est une vitrine en ligne conçue pour mettre en lumière les services exceptionnels de DJing et de karaoké offerts par DJ Mika pour des événements privés et des soirées d'entreprise. Développé avec React, ce site présente une interface utilisateur élégante et responsive, reflétant l'ambiance dynamique et professionnelle que DJ Mika apporte à chaque événement.\nLe site web englobe une présentation des services de DJ Mika, offrant aux visiteurs une vue d'ensemble sur sa capacité à créer des ambiances musicales sur-mesure et des expériences de karaoké immersives. Les visiteurs peuvent explorer le répertoire musical diversifié de DJ Mika, qui s'étend des classiques intemporels aux hits contemporains, promettant une playlist personnalisée qui correspond parfaitement à l'atmosphère souhaitée pour chaque événement.\nUne section dédiée permet aux utilisateurs de télécharger librement un mix généraliste, couvrant des succès musicaux de 1970 à aujourd'hui, démontrant ainsi l'étendue et la flexibilité du talent musical de DJ Mika. Le site encourage également les visiteurs à soumettre leurs listes de 10 à 15 titres préférés, permettant à DJ Mika d'élaborer des sets musicaux personnalisés gratuitement.\nEn outre, le site met en avant l'engagement de DJ Mika à utiliser un équipement audiovisuel de haute qualité, assurant une expérience sonore et visuelle incomparable. Les témoignages de clients satisfaits viennent renforcer la réputation de DJ Mika, attestant de son habileté à transformer les soirées en moments inoubliables.\nLa portée géographique des services de DJ Mika est également mise en avant, soulignant sa disponibilité à travers le Vaucluse, le Var et les régions avoisinantes. Ce positionnement stratégique garantit une ambiance exceptionnelle pour des événements dans des lieux variés, de l'effervescence d'Avignon aux charmes côtiers de Saint-Tropez.\nLa réalisation de ce site avec React a permis de créer une expérience utilisateur fluide et attrayante, mettant en valeur le professionnalisme et la passion de DJ Mika pour la musique et le divertissement.",
-    "image": "projects/djmika-privateevents-website.png",
+    "image": "projects/djmika-private-events-website.png",
     "link": "https://privateevents.fr",
     "github": "https://github.com/arthur-mdn/private-events",
     "youtube": [],

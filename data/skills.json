@@ -110,6 +110,18 @@
             "url": "logos/nextjs.png"
           }
         ]
+      },
+      {
+        "id": 110,
+        "name": "Swift",
+        "description": "Swift",
+        "keywords": ["Swift"],
+        "links": [
+          {
+            "alt": "Swift logo",
+            "url": "logos/swift.svg"
+          }
+        ]
       }
     ]
   },
