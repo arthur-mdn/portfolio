@@ -1,5 +1,29 @@
 [
   {
+    "id": 32,
+    "name": "Studer - WebApp Tinder pour étudiants",
+    "slug": "studer-tinder-mmi",
+    "description": "Lors de la \"Wild Work Week\" à l'université de Toulon, j'ai participé à un projet étudiant visant à valoriser la formation MMI (Métiers du Multimédia et de l'Internet) et les travaux réalisés par les étudiants. Au sein de mon équipe, composée de créateurs numériques et de communicants, j'étais le seul développeur. Notre mission était de créer une expérience web interactive et innovante en un temps très limité de seulement 3 jours.\n\nLe résultat de cette intense collaboration est \"Studer\", une application web inspirée par Tinder, où l'objectif est de \"matcher\" avec le parcours MMI préféré de l'utilisateur, qu'il s'agisse de création, développement ou communication. Cette approche ludique et interactive permet de mettre en lumière les divers aspects et spécialisations de la formation MMI de manière engageante.\n\nL'application \"Studer\" est structurée autour de la fonctionnalité principale de \"cards\", qui présentent les réalisations des étudiants du groupe. Les utilisateurs peuvent glisser les cartes vers la droite ou la gauche pour liker ou disliker chaque projet. Cette interaction n'est pas seulement ludique; elle permet également d'incrémenter un score invisible qui calcule les préférences de l'utilisateur en fonction de ses réactions aux différents projets.\n\nEn plus de la navigation parmi les projets, les utilisateurs peuvent cliquer sur une carte pour accéder à plus de détails sur chaque réalisation. Ils peuvent en apprendre davantage sur le projet, poser des questions via un chatbot intégré et interagir de manière plus approfondie avec le contenu présenté.\n\nÀ la fin de l'expérience, l'application révèle les résultats de compatibilité, indiquant le parcours MMI — création, développement, ou communication — qui correspond le mieux aux préférences de l'utilisateur, basées sur ses interactions avec les projets. Ce résultat est accompagné d'options pour contacter les étudiants responsables des travaux qui ont le plus intéressé l'utilisateur, facilitant ainsi des échanges plus personnalisés et ciblés.",
+    "image": "projects/studer.png",
+    "link": "https://studer.mondon.pro",
+    "github": "https://github.com/arthur-mdn/Studer",
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103,
+      105,
+      106,
+      302,
+      402,
+      401
+    ],
+    "tags": [],
+    "date": "2024-05-16",
+    "status": "online",
+    "type": "WebApp"
+  },
+  {
     "id": 31,
     "name": "Glucide Check - App iOS",
     "slug": "glucide-check-app-ios",
@@ -13,7 +37,7 @@
       401
     ],
     "tags": [],
-    "date": "2024-05-4",
+    "date": "2024-05-04",
     "status": "online",
     "type": "Application mobile"
   },
