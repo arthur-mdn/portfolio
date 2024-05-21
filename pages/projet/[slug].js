@@ -4,7 +4,16 @@ import Head from "next/head";
 import {useRouter} from 'next/router';
 import projectsData from "../../data/projects.json";
 import skillsData from "../../data/skills.json";
-import {FaBan, FaGithub, FaLink, FaArrowUp, FaArrowDown, FaExclamation, FaTriangleExclamation} from "react-icons/fa6";
+import {
+    FaBan,
+    FaGithub,
+    FaLink,
+    FaArrowUp,
+    FaArrowDown,
+    FaExclamation,
+    FaTriangleExclamation,
+    FaUser
+} from "react-icons/fa6";
 import Link from "next/link";
 
 export async function getStaticPaths() {
@@ -135,15 +144,17 @@ function ProjectPage({project}) {
                 </div>
                 <div className={"PP_content"}>
                     <div className={"PP_title_date_type"}>
+                        <div className={"fr g0-25 ai-c o0-3 mb0-5"}><img src={"/others/user.svg"} style={{width:"1rem"}}/><h4 className={"fw-n"}>Arthur Mondon</h4></div>
                         <h1>{project.name}</h1>
                         <span style={{color: "green", fontWeight: "bold"}}>{formatDate(project.date)}</span>
-                        <h3>{project.type}</h3>
+                        <ul>
+                            <li className={"type"}>{project.type}</li>
+                        </ul>
                     </div>
-
 
                     <div>
                         {
-                            project.disclaimer && (
+                        project.disclaimer && (
                                 <div className={"PP_disclaimer fr g1 ai-c"}>
                                     <FaTriangleExclamation size={"6rem"}/>
                                     <p dangerouslySetInnerHTML={{__html: project.disclaimer}}></p>
