@@ -295,6 +295,13 @@ textarea{
     font-family: 'Cardium A', sans-serif;
     font-size: 1.2rem;
 }
+.HS_txt a{
+    color: #ce0000;
+    transition: color 0.2s;
+}
+.HS_txt a:hover{
+    color: #000000;
+}
 .HS .HS_btns{
     display: flex;
     gap: 1rem;
