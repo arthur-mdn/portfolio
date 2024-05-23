@@ -1,6 +1,7 @@
 // /pages/projet/[slug].js
 import React, {useEffect, useRef, useState} from "react";
 import Head from "next/head";
+import Image from "next/image";
 import {useRouter} from 'next/router';
 import projectsData from "../../data/projects.json";
 import skillsData from "../../data/skills.json";
@@ -144,7 +145,10 @@ function ProjectPage({project}) {
                 </div>
                 <div className={"PP_content"}>
                     <div className={"PP_title_date_type"}>
-                        <div className={"fr g0-25 ai-c o0-3 mb0-5"}><img src={"/others/user.svg"} style={{width:"1rem"}}/><h4 className={"fw-n"}>Arthur Mondon</h4></div>
+                        <div className={"fr g0-25 ai-c o0-3 mb0-5"}>
+                            <Image src={"/others/user.svg"} alt={"user"} width={0} height={0} style={{width:"1rem", height:"1rem", objectFit:"contain"}}/>
+                            <h4 className={"fw-n"}>Arthur Mondon</h4>
+                        </div>
                         <h1>{project.name}</h1>
                         <span style={{color: "green", fontWeight: "bold"}}>{formatDate(project.date)}</span>
                         <ul>
@@ -179,7 +183,7 @@ function ProjectPage({project}) {
                         <div className={"fr g0-5 PP_technos"}>
                             {projectSkills.map((skill, index) => (
                                 <div key={index}>
-                                    <img src={`/${skill.links[0].url}`} alt={skill.name}/>
+                                    <Image src={`/${skill.links[0].url}`} alt={skill.name} width={50} height={50} style={{objectFit:"contain"}}/>
                                     <span key={index}>{skill.name}</span>
                                 </div>
                             ))}

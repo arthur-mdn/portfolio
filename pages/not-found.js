@@ -1,4 +1,5 @@
 // pages/not-found.js
+import Image from "next/image";
 export default function Custom404() {
     const goBack = () => {
         window.history.back();
@@ -9,7 +10,7 @@ export default function Custom404() {
                 <h1 style={{textAlign: "center"}}>
                     404 - Page introuvable
                 </h1>
-                <img src="/others/404.svg" alt="404" style={{width: "80%", maxWidth: "300px"}}/>
+                <Image src={"/others/404.svg"} alt={"404"} width={300} height={300} style={{width:"100%"}}/>
                 <button type={"button"} onClick={goBack} className={"button skew"}>Retour</button>
             </div>
             <br/>

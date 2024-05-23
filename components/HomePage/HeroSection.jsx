@@ -2,6 +2,7 @@ import {FaDownload, FaEye} from "react-icons/fa6";
 import Link from "next/link";
 import projectsData from "../../data/projects.json";
 import {useEffect} from "react";
+import Image from "next/image";
 function HeroSection() {
 
     useEffect(() => {
@@ -28,8 +29,7 @@ function HeroSection() {
                 <div className={"HS_container"}>
                     <div className={"HS_content"}>
                         <h1 className={"HS_title"}>Portfolio d&apos;Arthur Mondon.</h1>
-                        <img src={"/illustrations/memoji2.png"} alt={"avatar"} className={"hide_desktop"}
-                             style={{margin: "auto"}}/>
+                        <Image src={"/illustrations/memoji2.png"} alt={"avatar"} className={"hide_desktop"} width={200} height={260} style={{margin: "auto", objectFit:"contain"}}/>
                         <p className={"HS_txt"}>
                             Transformez vos idées en solutions web.
                             Exploitez le plein potentiel du web avec des solutions sur mesure, conçues pour réussir.
@@ -52,7 +52,7 @@ function HeroSection() {
                             </Link>
                         </div>
                     </div>
-                    <img src={"/illustrations/memoji2.png"} alt={"avatar"} className={"hide_mobile"}/>
+                    <Image src={"/illustrations/memoji2.png"} alt={"avatar"} className={"hide_mobile"} width={200} height={260} style={{margin: "auto", objectFit:"contain"}}/>
                     <ul className={"HS_extra"}>
                         <div className="HS_extra_blur"></div>
                         <li>

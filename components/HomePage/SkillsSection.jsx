@@ -1,6 +1,7 @@
 import {useState} from "react";
 import skillsData from "../../data/skills.json";
 import projects from "../../data/projects.json";
+import Image from "next/image";
 
 function SkillElement({skill, displayedPopup, setDisplayedPopup}) {
     const isPopupDisplayed = displayedPopup === skill.id;
@@ -24,8 +25,7 @@ function SkillElement({skill, displayedPopup, setDisplayedPopup}) {
                     <span>Projets publics utilisant {skill.description} : {projectCount}</span>
                 </div>
             }
-
-            <img src={"/" + skill.links[0].url} alt={skill.links[0].alt}/>
+            <Image src={"/" + skill.links[0].url} alt={skill.links[0].alt} style={{objectFit:"contain"}} width={50} height={50} />
             <span className={"s-font fs0-8"}>{skill.name}</span>
             {/*<p style={{fontSize: '0.8rem', opacity: '0.6'}}>{skill.id}</p>*/}
         </button>

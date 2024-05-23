@@ -1,3 +1,4 @@
+import Image from "next/image";
 function AboutSection() {
     return (
         <>
@@ -21,7 +22,7 @@ function AboutSection() {
 
                 <div className={"fr g1 fc_on_mobile"}>
                     <div className={"AS_card"}>
-                        <img src={"/illustrations/memoji2.png"} alt={"avatar"}/>
+                        <Image src={"/illustrations/memoji2.png"} alt={"avatar"} width={120} height={150} style={{margin: "auto", objectFit:"contain"}}/>
                         <div>
                             <h2 className={"HS_title s-font"}>Expertise en Développement Web</h2>
                             <p className={"HS_txt s-font"}>
@@ -53,7 +54,7 @@ function AboutSection() {
                 </div>
                 <div className={"fc g1"}>
                     <div className={"fr sms orange g1 ai-c"} style={{flexDirection:"row"}}>
-                        <img src={"/illustrations/france-map.svg"} alt={"map france"} style={{width:'4rem'}}/>
+                        <Image src={"/illustrations/france-map.svg"} alt={"map france"} width={65} height={65} style={{margin: "auto", objectFit:"contain"}}/>
                         <h4 className={"s-font"}>
                             Arthur Mondon, Développeur Web full-stack freelance situé en région Provence-Alpes-Côte d&apos;Azur.
                             Originaire du Vaucluse, je propose mes services dans le Var et dans l&apos;Hérault.
