@@ -1,5 +1,5 @@
 // /pages/projet/[slug].js
-import React, {useEffect, useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import Head from "next/head";
 import Image from "next/image";
 import {useRouter} from 'next/router';

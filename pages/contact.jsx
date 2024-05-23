@@ -1,4 +1,3 @@
-import React from "react";
 import LinksSection from "../components/HomePage/LinksSection.jsx"
 import {useForm, ValidationError} from '@formspree/react';
 import Head from "next/head";
