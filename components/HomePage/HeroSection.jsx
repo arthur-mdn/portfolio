@@ -57,11 +57,11 @@ function HeroSection() {
                         <div className="HS_extra_blur"></div>
                         <li>
                             <p>Projets terminés</p>
-                            <h4>{Object.keys(projectsData).length + 1}</h4>
+                            <p className={"count"}>{Object.keys(projectsData).length + 1}</p>
                         </li>
                         <li>
                             <p>Taux de satisfaction</p>
-                            <h4>100%</h4>
+                            <p className={"taux"}>100%</p>
                         </li>
                     </ul>
                 </div>

@@ -356,7 +356,7 @@ textarea{
     line-height: 1.2rem;
     text-wrap: nowrap;
 }
-.HS .HS_extra li h4{
+.HS .HS_extra li .taux, .HS .HS_extra li .count{
     font-size: 2rem;
     text-align: center;
     line-height: 2rem;
@@ -385,7 +385,7 @@ textarea{
     .HS .HS_extra li p{
         font-size: 1.1rem;
     }
-    .HS .HS_extra li h4{
+    .HS .HS_extra li .taux, .HS .HS_extra li .count{
         font-size: 1.8rem;
     }
 }
