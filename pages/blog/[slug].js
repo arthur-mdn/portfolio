@@ -97,8 +97,9 @@ function ArticlePage({ article }) {
             <div className={"blog-bg"}>
             </div>
             <article className={"fc g1"}>
+                <h1>{article.title}</h1>
                 <header className={"fc g1"}>
-                    <div className={"fc g0-5 fw-w jc-sb"} style={{maxWidth:"900px"}}>
+                    <div className={"fc g0-5 fw-w jc-sb"} style={{maxWidth: "900px"}}>
                         <div className="article-meta BP_card">
                             <div className={"fr g0-5 ai-c"}>
                                 <img src={`/${article.author.profile_image}`} alt={article.author.name}
@@ -115,7 +116,8 @@ function ArticlePage({ article }) {
                         </div>
                     </div>
                 </header>
-                <ReactMarkdown rehypePlugins={[rehypeRaw]} components={renderers}>{article.content.replace(/\[BASE_URL\]/g, "http://localhost:3000/")}</ReactMarkdown>
+                <ReactMarkdown rehypePlugins={[rehypeRaw]}
+                               components={renderers}>{article.content.replace(/\[BASE_URL\]/g, "http://localhost:3000/")}</ReactMarkdown>
                 <div className="article-interactions">
                     <button onClick={handleLike}>Like ({likes})</button>
                     <div className="comments">
@@ -147,7 +149,7 @@ function ArticlePage({ article }) {
                             const relatedArticle = articlesData.find(a => a.id === id);
                             return (
                                 <Link key={relatedArticle.id} href={`/blog/${relatedArticle.slug}`}>
-                                    <img src={`/${relatedArticle.cover_image}`} alt={relatedArticle.title} />
+                                    <img src={`/${relatedArticle.cover_image}`} alt={relatedArticle.title}/>
                                     <h4>{relatedArticle.title}</h4>
                                 </Link>
                             );
