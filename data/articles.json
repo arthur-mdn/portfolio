@@ -1,31 +1,45 @@
 [
   {
     "id": 1,
-    "title": "Introduction to Next.js",
-    "slug": "introduction-to-nextjs",
+    "title": "L'Importance d'Avoir un Portfolio en tant que Développeur",
+    "slug": "importance-portfolio-developpeur",
     "author": {
       "name": "Arthur Mondon",
-      "profile_image": "path/to/profile.jpg",
-      "bio": "Developer at XYZ"
+      "profile_image": "others/arthur-mondon.png",
+      "bio": "Fondateur - Développeur"
     },
-    "date": "2024-05-16",
-    "category": "Web Development",
-    "tags": ["Next.js", "React", "JavaScript"],
-    "excerpt": "Learn the basics of Next.js and how it can be used to build powerful web applications.",
-    "content": "# Introduction to Next.js\n\nLearn the basics of **Next.js** and how it can be used to build powerful web applications.\n\n## What is Next.js?\nNext.js is a React framework that enables several extra features, including server-side rendering and generating static websites.",
-    "cover_image": "path/to/cover_image.jpg",
+    "date": "2024-05-27",
+    "category": "Développement Web",
+    "tags": [
+      "Portfolio",
+      "Carrière",
+      "Développement Web"
+    ],
+    "excerpt": "Découvrez pourquoi il est crucial pour un développeur d'avoir un portfolio en ligne et comment cela peut booster votre carrière.",
+    "content": "# L'Importance d'Avoir un Portfolio en tant que Développeur\n\n## Introduction\n\nAvoir un **portfolio en ligne** est devenu essentiel pour tout développeur qui souhaite se démarquer dans le monde professionnel. Un portfolio ne se limite pas à une simple vitrine de vos compétences, mais il représente également votre **identité professionnelle** et votre passion pour le développement.\n\n![Développeur travaillant sur un portfolio]([BASE_URL]/blogs/dev-travaillant.png)\n\n## Pourquoi un Portfolio est-il Important ?\n\n### 1. Montrer vos Compétences\n\nUn **CV** énumère vos compétences, mais un **portfolio** les **démontre**. En exposant des projets réels, des exemples de code et des études de cas, vous pouvez prouver concrètement ce dont vous êtes capable.\n\n> <h6>\"Un bon projet en dit plus que mille mots.\"</h6> <span>Scriptocrate</span>\n\n### 2. Attirer les Employeurs\n\nLes employeurs cherchent des preuves tangibles de ce que vous pouvez accomplir. Un portfolio bien structuré et à jour peut faire la différence entre décrocher un entretien ou être ignoré. Il montre votre **sérieux** et votre **engagement** envers votre carrière.\n\n### 3. Construire votre Marque Personnelle\n\nVotre portfolio est une extension de vous-même. Il reflète non seulement vos **compétences techniques**, mais aussi votre goût esthétique, votre attention aux détails et votre **capacité à résoudre des problèmes**. De plus, il améliore votre **présence en ligne**, vous rendant plus visible et facile à trouver par les recruteurs et les clients.\n\n## Comment Créer un Portfolio Efficace\n\n### 1. Choisir les Bons Projets\n\nIncluez des projets qui montrent une variété de compétences et qui sont pertinents pour le poste que vous recherchez. Chaque projet doit raconter une **histoire** : le défi que vous avez rencontré, la solution que vous avez développée et le résultat final.\n\n```javascript\n// Exemple de projet à (ne pas) mettre en avant.\n\nfunction faireCrepes() {\n  const ingredients = ['lait', 'farine', 'œufs', 'sucre', 'beurre'];\n  alert(`Pour faire des crêpes, vous avez besoin de : ${ingredients.join(', ')}.`);\n  alert('Étape 1 : Mélanger les ingrédients.');\n  alert('Étape 2 : Cuire dans une poêle chaude.');\n  alert('Étape 3 : Déguster avec du Nutella !');\n}\n```\n\n<button type=\"button\" id=\"faireCrepesButton\">Tester</button>\n\n### 2. Utiliser des Technologies Modernes\n\nUn portfolio doit être **techniquement impressionnant**. Utilisez des frameworks modernes comme **React**, **Next.js**, **Vite**, **MongoDB** et <del>WordPress</del> (non sérieusement..? Vous êtes développeur, alors montrez vos talents !).\n\n <img class='full s' src=\"[BASE_URL]/blogs/portfolio-technos.png\"> \n\n Assurez-vous que votre site soit **responsive** et **performant**. Il n'y a rien de plus frustant qu'un site mal optimisé et long à charger..\n\n<div class=\"lds-spinner\"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>\n\n### 3. Ajouter des Témoignages et des Références\n\nLes avis de vos anciens collègues, mentors ou clients peuvent ajouter une **crédibilité** à votre portfolio. N'hésitez pas à inclure des témoignages et des références vérifiables.\n\n### 4. Mettre à Jour Régulièrement\n\nVotre portfolio doit évoluer avec vous. Ajoutez régulièrement de nouveaux projets, mettez à jour les anciens et assurez-vous que toutes les informations sont actuelles. Un portfolio stagnant peut donner une mauvaise impression. \n\n## Conclusion\n\nEn résumé, un portfolio est bien plus qu'une simple collection de projets. C'est un **outil stratégique** qui peut grandement influencer votre carrière en développement. Prenez le temps de le construire soigneusement, de le maintenir à jour et de le promouvoir activement. Cela peut faire toute la différence pour atteindre vos objectifs professionnels.\n\n<img class=\"full\" src=\"[BASE_URL]/blogs/5-raisons-davoir-portfolio-developpeur.png\"/>\n",
+    "js_to_inject": "function faireCrepes() { const ingredients = ['lait', 'farine', 'œufs', 'sucre', 'beurre']; alert(`Pour faire des crêpes, vous avez besoin de : ${ingredients.join(', ')}.`); alert('Étape 1 : Mélanger les ingrédients.'); alert('Étape 2 : Cuire dans une poêle chaude.'); alert('Étape 3 : Déguster avec du Nutella !'); } document.getElementById('faireCrepesButton').addEventListener('click', faireCrepes);",
+    "cover_image": "projects/save_the_turtles.png",
     "reading_time": "5 min",
-    "likes": 120,
+    "likes": 45,
     "comments": [
       {
         "id": 1,
-        "author": "John Doe",
-        "author_profile_image": "path/to/john_profile.jpg",
-        "content": "Great article! Really enjoyed the explanation on SSR.",
-        "date": "2024-05-17"
+        "author": "Jean Dupont",
+        "author_profile_image": "path/to/jean_profile.jpg",
+        "content": "Merci pour cet article ! Il m'a motivé à enfin créer mon propre portfolio.",
+        "date": "2024-05-28"
+      },
+      {
+        "id": 2,
+        "author": "Marie Curie",
+        "author_profile_image": "path/to/marie_profile.jpg",
+        "content": "Très bien écrit, et je suis totalement d'accord sur l'importance de maintenir le portfolio à jour.",
+        "date": "2024-05-29"
       }
     ],
-    "related_articles": [2]
+    "related_articles": [
+      2
+    ]
   },
   {
     "id": 2,
@@ -33,15 +47,18 @@
     "slug": "understanding-server-side-rendering",
     "author": {
       "name": "Arthur Mondon",
-      "profile_image": "path/to/profile.jpg",
-      "bio": "Developer at XYZ"
+      "profile_image": "others/arthur-mondon.png",
+      "bio": "Fondateur - Développeur"
     },
     "date": "2024-05-14",
     "category": "Web Development",
-    "tags": ["SSR", "Next.js"],
+    "tags": [
+      "SSR",
+      "Next.js"
+    ],
     "excerpt": "Server-side rendering is a powerful technique to improve the performance and SEO of your web applications.",
     "content": "# Understanding Server-Side Rendering\n\nServer-side rendering (SSR) is a powerful technique to improve the performance and SEO of your web applications.",
-    "cover_image": "path/to/cover_image2.jpg",
+    "cover_image": "projects/save_the_turtles.png",
     "reading_time": "7 min",
     "likes": 95,
     "comments": [
@@ -53,6 +70,8 @@
         "date": "2024-05-15"
       }
     ],
-    "related_articles": [1]
+    "related_articles": [
+      1
+    ]
   }
 ]
