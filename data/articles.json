@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to Next.js",
+    "slug": "introduction-to-nextjs",
+    "author": {
+      "name": "Arthur Mondon",
+      "profile_image": "path/to/profile.jpg",
+      "bio": "Developer at XYZ"
+    },
+    "date": "2024-05-16",
+    "category": "Web Development",
+    "tags": ["Next.js", "React", "JavaScript"],
+    "excerpt": "Learn the basics of Next.js and how it can be used to build powerful web applications.",
+    "content": "path/to/content.md",
+    "cover_image": "path/to/cover_image.jpg",
+    "reading_time": "5 min",
+    "likes": 120,
+    "comments": [
+      {
+        "id": 1,
+        "author": "John Doe",
+        "author_profile_image": "path/to/john_profile.jpg",
+        "content": "Great article! Really enjoyed the explanation on SSR.",
+        "date": "2024-05-17"
+      }
+    ],
+    "related_articles": [2, 3]
+  },
+  {
+    "id": 2,
+    "title": "Understanding Server-Side Rendering",
+    "slug": "understanding-server-side-rendering",
+    "author": {
+      "name": "Arthur Mondon",
+      "profile_image": "path/to/profile.jpg",
+      "bio": "Developer at XYZ"
+    },
+    "date": "2024-05-14",
+    "category": "Web Development",
+    "tags": ["SSR", "Next.js"],
+    "excerpt": "Server-side rendering is a powerful technique to improve the performance and SEO of your web applications.",
+    "content": "path/to/content.md",
+    "cover_image": "path/to/cover_image2.jpg",
+    "reading_time": "7 min",
+    "likes": 95,
+    "comments": [
+      {
+        "id": 1,
+        "author": "Jane Doe",
+        "author_profile_image": "path/to/jane_profile.jpg",
+        "content": "Thanks for the detailed explanation on SSR.",
+        "date": "2024-05-15"
+      }
+    ],
+    "related_articles": [1, 3]
+  }
+]

@@ -13,7 +13,7 @@ function HeroSection() {
             const _mouseX = e.clientX;
             const _mouseY = e.clientY;
             const _depth = `${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.01}%`;
-            elem.style.backgroundPosition = _depth;
+            if(elem) elem.style.backgroundPosition = _depth;
         };
 
         document.addEventListener("mousemove", parallax);
