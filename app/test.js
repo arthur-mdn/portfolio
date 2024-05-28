@@ -1,6 +1,6 @@
-// pages/not-found.js
+// pages/test.js
 import Image from "next/image";
-export default function NotFound() {
+export default function Test() {
     const goBack = () => {
         window.history.back();
     };
