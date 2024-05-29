@@ -6,7 +6,7 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { okaidia } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import {FaRegCalendar} from "react-icons/fa6";
+import {FaRegCalendar, FaTriangleExclamation} from "react-icons/fa6";
 
 export async function getStaticPaths() {
     const paths = articlesData.map(article => ({
@@ -30,6 +30,7 @@ function ArticlePage({ article }) {
     const [comments, setComments] = useState(article.comments);
     const [isImageExpanded, setIsImageExpanded] = useState(false);
     const [newComment, setNewComment] = useState("");
+    const [newCommentAuthor, setNewCommentAuthor] = useState("");
 
     useEffect(() => {
         if (article.js_to_inject) {
@@ -48,15 +49,19 @@ function ArticlePage({ article }) {
     const handleImageClick = () => {
         setIsImageExpanded(!isImageExpanded);
     };
-    const handleAddComment = () => {
+    const handleAddComment = (e) => {
+        e.preventDefault();
+        if(!newCommentAuthor.trim()) setNewCommentAuthor("Anonyme");
+
         if (newComment.trim()) {
             setComments([
                 ...comments,
                 {
                     id: comments.length + 1,
-                    author: "Current User",
-                    author_profile_image: "/path/to/current_user.jpg",
+                    author: newCommentAuthor,
+                    author_profile_image: "others/default.png",
                     content: newComment,
+                    status: "pending",
                     date: new Date().toISOString().split("T")[0]
                 }
             ]);
@@ -96,8 +101,8 @@ function ArticlePage({ article }) {
             </Head>
             <div className={"blog-bg"}>
             </div>
-            <article className={"fc g1"}>
-                <h1>{article.title}</h1>
+            <article className={"fc g1 BP"}>
+                <h1 className={"s-font"}>{article.title}</h1>
                 <header className={"fc g1"}>
                     <div className={"fc g0-5 fw-w jc-sb"} style={{maxWidth: "900px"}}>
                         <div className="article-meta BP_card">
@@ -119,43 +124,69 @@ function ArticlePage({ article }) {
                 <ReactMarkdown rehypePlugins={[rehypeRaw]}
                                components={renderers}>{article.content.replace(/\[BASE_URL\]/g, "http://localhost:3000/")}</ReactMarkdown>
                 <div className="article-interactions">
-                    <button onClick={handleLike}>Like ({likes})</button>
-                    <div className="comments">
-                        <h3>Comments</h3>
+                    <div className="comments fc g0-5">
+                        <h3>Commentaires</h3>
                         {comments.map(comment => (
-                            <div key={comment.id} className="comment">
-                                <img src={`/${comment.author_profile_image}`} alt={comment.author}/>
+                            <div key={comment.id} className="comment fc g0-5">
+                                <div className={"fr g0-5"}>
+                                    <img src={`/${comment.author_profile_image}`} alt={comment.author}/>
+                                    <div className={"fc"}>
+                                        <h4>{comment.author}</h4>
+                                        <time dateTime={comment.date} className={"o0-5 fs0-8"}>{formatDate(comment.date)}</time>
+                                    </div>
+                                </div>
+                                {comment.status === "pending" &&
+                                    <p className={"fr g0-5 ai-c"} style={{color:"#ff6200"}}><FaTriangleExclamation/>En attente de modération.</p>
+                                }
                                 <div>
-                                    <h4>{comment.author}</h4>
                                     <p>{comment.content}</p>
-                                    <time dateTime={comment.date}>{formatDate(comment.date)}</time>
                                 </div>
                             </div>
                         ))}
-                        <div className="add-comment">
-                            <textarea
-                                value={newComment}
-                                onChange={(e) => setNewComment(e.target.value)}
-                                placeholder="Add a comment"
-                            />
-                            <button onClick={handleAddComment}>Post Comment</button>
-                        </div>
+                        {comments.length === 0 && <p className={"o0-5"}>Aucun commentaire pour l&apos;instant.</p>}
+                        <form className="add-comment" onSubmit={handleAddComment}>
+                            <h3>Ajouter un Commentaire</h3>
+                            <div className={"fc g0-25"}>
+                                <label htmlFor="comment-author" className={"o0-5"}>Votre nom</label>
+                                <input
+                                    type="text"
+                                    id="comment-author"
+                                    value={newCommentAuthor}
+                                    onChange={(e) => setNewCommentAuthor(e.target.value)}
+                                    placeholder="John Doe"
+                                    required
+                                />
+                            </div>
+                            <div className={"fc g0-25"}>
+                                <label htmlFor="comment-content" className={"o0-5"}>Votre commentaire</label>
+                                <textarea
+                                    id="comment-content"
+                                    value={newComment}
+                                    onChange={(e) => setNewComment(e.target.value)}
+                                    placeholder="Merci pour cet article !"
+                                    required
+                                />
+                            </div>
+                            <button type={"submit"}>Ajouter un commentaire</button>
+                        </form>
                     </div>
                 </div>
-                <footer>
-                    <h3>Related Articles</h3>
-                    <div className="related-articles">
-                        {article.related_articles.map(id => {
-                            const relatedArticle = articlesData.find(a => a.id === id);
-                            return (
-                                <Link key={relatedArticle.id} href={`/blog/${relatedArticle.slug}`}>
-                                    <img src={`/${relatedArticle.cover_image}`} alt={relatedArticle.title}/>
-                                    <h4>{relatedArticle.title}</h4>
-                                </Link>
-                            );
-                        })}
-                    </div>
-                </footer>
+                {article.related_articles.length > 0 && (
+                    <>
+                        <h3>Related Articles</h3>
+                        <div className="related-articles">
+                            {article.related_articles.map(id => {
+                                const relatedArticle = articlesData.find(a => a.id === id);
+                                return (
+                                    <Link key={relatedArticle.id} href={`/blog/${relatedArticle.slug}`}>
+                                        <img src={`/${relatedArticle.cover_image}`} alt={relatedArticle.title}/>
+                                        <h4>{relatedArticle.title}</h4>
+                                    </Link>
+                                );
+                            })}
+                        </div>
+                    </>
+                )}
             </article>
         </>
     );

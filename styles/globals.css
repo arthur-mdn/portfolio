@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 @import url('https://fonts.cdnfonts.com/css/cardium-a');
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('/fonts/fontawesome-webfont.eot');
+    src: url('/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/fontawesome-webfont.woff2') format('woff2'),
+    url('/fonts/fontawesome-webfont.woff') format('woff'),
+    url('/fonts/fontawesome-webfont.ttf') format('truetype'),
+    url('/fonts/fontawesome-webfont.svgfontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 *{
     box-sizing: border-box;
@@ -979,7 +990,7 @@ article{
     height: 100%;
     width: 100%;
     /* background with opacity */
-    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 1));
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1));
 }
 
 @keyframes gradient {
@@ -1011,8 +1022,9 @@ article img.square{
     width: 200px;
     height: 200px;
     object-fit: cover;
-    border-radius: 1rem;
-    max-width: 800px;
+}
+article img.contain{
+    object-fit: contain;
 }
 article img.full{
     width: 100%;
@@ -1039,6 +1051,7 @@ blockquote h6{
     font-size: 1.8rem;
     font-weight: bold;
     font-style: italic;
+    font-family: 'Cardium A', sans-serif;
 }
 blockquote span{
     color: gray;
@@ -1061,7 +1074,90 @@ blockquote span{
     line-height: 1rem;
 }
 
+.BP ul{
+    margin:0;
+    padding: .25rem 0 .25rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.BP ul >li{
+    position: relative;
+    list-style: none;
+}
+.BP ul >li:before{
+    position: absolute;
+    display: flex;
+    font-family: FontAwesome; font-weight: 900; content: "\f054";
+    font-size: 0.7rem;
+    background-color: #d1e8d6;
+    color: rgb(0, 131, 52);
+    border-radius: 50rem;
+    height: 1rem;
+    width: 1rem;
+    padding: 0.35rem;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    left: -2.5rem;
+}
 
+ul>li:after, .content ul>li:after {
+    position: absolute;
+    display: flex;
+    content: "";
+    bottom: 0.2rem;
+    height: calc(100% - 2.5rem);
+    border-left: 1px solid currentcolor;
+    opacity: .5;
+    left: -1.7rem;
+}
+
+.BP h2{
+    position: relative;
+    padding-left: 3rem;
+    color:#04622a;
+    font-family: 'Cardium A', sans-serif;
+    line-height: 1em;
+    margin-top: 1rem;
+}
+.BP h3{
+    font-family: 'Cardium A', sans-serif;
+
+}
+.BP h2:before{
+    position: absolute;
+    display: flex;
+    font-family: FontAwesome; font-weight: 900; content: "\f120";
+    font-size: 1.2rem;
+    background-color: #d1e8d6;
+    color: #04622a;
+    border-radius: 0.25rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    padding: 0.5rem;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.BP .comments img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.BP .comments{
+max-width: 800px;
+}
+.BP .comment{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
 
 .lds-spinner,
 .lds-spinner div,
