@@ -22,13 +22,6 @@
     "reading_time": "5 min",
     "likes": 45,
     "comments": [
-      {
-        "id": 1,
-        "author": "Jane Doe",
-        "author_profile_image": "others/default.png",
-        "content": "Thanks for the detailed explanation on SSR. Je pensais justement à rédiger un portfolio pour montrer mes compétences. Je testerai et je reviendrai poster un commentaire pour te demander ton avis. c'est ok pour toi ? ",
-        "date": "2024-05-15"
-      }
     ],
     "related_articles": [
 
