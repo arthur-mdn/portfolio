@@ -970,6 +970,7 @@ textarea{
     }
 }
 article{
+    max-width: 900px;
 }
 .blog-bg {
     position: absolute;
@@ -1016,7 +1017,7 @@ article img{
     height: 200px;
     object-fit: cover;
     border-radius: 1rem;
-    max-width: 800px;
+    max-width: 900px;
 }
 article img.square{
     width: 200px;
@@ -1156,7 +1157,7 @@ blockquote span{
     border-radius: 50%;
 }
 .BP .comments{
-max-width: 800px;
+max-width: 900px;
 }
 .BP .comment{
     padding: 1rem;
@@ -1176,6 +1177,7 @@ max-width: 800px;
     position: relative;
     width: 80px;
     height: 80px;
+    margin: auto;
 }
 .lds-spinner div {
     transform-origin: 40px 40px;
