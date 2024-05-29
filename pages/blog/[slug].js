@@ -116,7 +116,7 @@ function ArticlePage({ article }) {
             </Head>
             <div className={"blog-bg"}>
             </div>
-            <article className={"fc g1 BP"}>
+            <article className={"fc g0-5 BP"}>
                 <h1 className={"s-font"}>{article.title}</h1>
                 <header className={"fc g1"}>
                     <div className={"fc g0-5 fw-w jc-sb"} style={{maxWidth: "900px"}}>
