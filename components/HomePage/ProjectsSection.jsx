@@ -65,6 +65,9 @@ function ProjectsSection() {
         return `${day}/${month}/${year}`;
     };
 
+    const interestingProjects = projectsData.filter(project => project.interesting);
+    const otherProjects = projectsData.filter(project => !project.interesting);
+
     return (
         <>
             <br/>
@@ -74,7 +77,7 @@ function ProjectsSection() {
                     <p className={"s-font"}>Bienvenue dans le coin où je range tous mes projets ! C&apos;est ici que je partage les projets publics sur lesquels j&apos;ai travaillé, que ça soit des sites web, des applis, des extensions ou même des jeux. C&apos;est un peu comme mon petit musée personnel. Jetez un œil, il y a de tout et pour tous les goûts !</p>
                 </div>
                 <Slider {...settings}>
-                    {projectsData.sort((b, a) => a.date.localeCompare(b.date)).slice(0, 8).map(project => (
+                    {interestingProjects.sort((b, a) => a.date.localeCompare(b.date)).slice(0, 8).map(project => (
                         <Link href={`/projet/${project.slug}`} style={{width: '100%'}} className="PS_card"
                               key={project.id}>
                             <img src={`/${project.image}`} alt={project.name}/>

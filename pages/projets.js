@@ -9,10 +9,11 @@ export default function Projets() {
         const [year, month, day] = dateString.split("-");
         return `${day}/${month}/${year}`;
     };
+    const interestingProjects = projectsData.filter(project => project.interesting);
+    const otherProjects = projectsData.filter(project => !project.interesting);
     return (
         <>
             <Head>
-                
                 <link rel={"canonical"} href={"https://mondon.pro/projets"}/>
                 <link rel="icon" href="/others/favicon.ico"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -44,7 +45,40 @@ export default function Projets() {
             <section className="PsP fc g1">
                 <h1 className={"s-font"}>Projets</h1>
                 <div className={"fr fw-w"}>
-                    {projectsData.sort((b, a) => a.date.localeCompare(b.date)).map(project => (
+                    {interestingProjects.sort((b, a) => a.date.localeCompare(b.date)).map(project => (
+                        <Link href={`/projet/${project.slug}`} style={{width: '100%'}} className="PS_card"
+                              key={project.id}>
+                            <img src={`/${project.image}`} alt={project.name}/>
+                            <div className="content">
+                                {
+                                    project.disclaimer && (
+                                        <div className={"PP_disclaimer fr g1 ai-c"} style={{
+                                            position: "absolute",
+                                            left: 0,
+                                            top: 0,
+                                            margin: '1rem',
+                                            padding: '0.5rem 0.5rem',
+                                            borderRadius: '0.5rem'
+                                        }} title={"Une attention particulière est requise pour ce projet"}>
+                                            <FaTriangleExclamation size={"2rem"}/>
+                                        </div>
+                                    )
+                                }
+                                <p>{project.type}</p>
+                                <span>{formatDate(project.date)}</span>
+                                <h3>{project.name}</h3>
+                                <button type="button" className="button"><FaArrowRightLong/></button>
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+            </section>
+            <br/>
+            <br/>
+            <section className="PsP fc g1">
+                <h1 className={"s-font"}>Autres projets jugés moins intéressants.</h1>
+                <div className={"fr fw-w"}>
+                    {otherProjects.sort((b, a) => a.date.localeCompare(b.date)).map(project => (
                         <Link href={`/projet/${project.slug}`} style={{width: '100%'}} className="PS_card"
                               key={project.id}>
                             <img src={`/${project.image}`} alt={project.name}/>
