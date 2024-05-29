@@ -1048,6 +1048,7 @@ blockquote{
     background-color: #f8f8f8;
     width: fit-content;
     border-radius: 0.5rem;
+    margin-left: 0;
 }
 blockquote h6{
     margin: 0;
@@ -1105,7 +1106,7 @@ blockquote span{
     left: -2.5rem;
 }
 
-ul>li:after, .content ul>li:after {
+.BP ul>li:after {
     position: absolute;
     display: flex;
     content: "";
