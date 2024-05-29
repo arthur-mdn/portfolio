@@ -15,7 +15,7 @@ function Footer() {
                 <section className={"FS"}>
                     <div className={"FS_container"}>
                         <div className={"FS_content"}>
-                            <h2 className={"FS_title"}>Portfolio d&apos;Arthur Mondon.</h2>
+                            <h2 className={"FS_title s-font"}>Portfolio d&apos;Arthur Mondon.</h2>
                             <p style={{color: "lightgrey"}}>Développeur web FullStack dans le Vaucluse (à Carpentras,
                                 Monteux, Aubignan et ses alentours).</p>
                             <br/>
@@ -23,8 +23,7 @@ function Footer() {
                             <div className={"fr g3"}>
 
                                 <div>
-                                    <h3>Ressources</h3>
-                                    <br/>
+                                    <h3 className={"s-font"}>Ressources</h3>
                                     <div className={"fc g0-5"}>
                                         <Link href={"/rgpd"}>
                                             RGPD
@@ -39,8 +38,7 @@ function Footer() {
                                     </div>
                                 </div>
                                 <div>
-                                    <h3>Liens</h3>
-                                    <br/>
+                                    <h3 className={"s-font"}>Liens</h3>
                                     <div className={"fc g0-5"}>
                                         <Link href={"https://www.linkedin.com/in/arthurmondon/"}>
                                             LinkedIn
@@ -65,7 +63,7 @@ function Footer() {
                     <br/>
                     <br/>
                     <br/>
-                    <p>
+                    <p className={"s-font"}>
                         Copyright 2024 - Arthur MONDON
                     </p>
                 </section>
