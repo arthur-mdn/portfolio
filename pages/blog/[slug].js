@@ -26,9 +26,7 @@ export async function getStaticProps({ params }) {
 }
 
 function ArticlePage({ article }) {
-    const [likes, setLikes] = useState(article.likes);
     const [comments, setComments] = useState(article.comments);
-    const [isImageExpanded, setIsImageExpanded] = useState(false);
     const [newComment, setNewComment] = useState("");
     const [newCommentAuthor, setNewCommentAuthor] = useState("");
 
@@ -43,31 +41,48 @@ function ArticlePage({ article }) {
         }
     }, [article.js_to_inject]);
 
-    const handleLike = () => {
-        setLikes(likes + 1);
-    };
-    const handleImageClick = () => {
-        setIsImageExpanded(!isImageExpanded);
-    };
-    const handleAddComment = (e) => {
+
+    const handleAddComment = async (e) => {
         e.preventDefault();
-        if(!newCommentAuthor.trim()) setNewCommentAuthor("Anonyme");
+        if (!newCommentAuthor.trim()) setNewCommentAuthor("Anonyme");
 
         if (newComment.trim()) {
-            setComments([
-                ...comments,
-                {
-                    id: comments.length + 1,
-                    author: newCommentAuthor,
-                    author_profile_image: "others/default.png",
-                    content: newComment,
-                    status: "pending",
-                    date: new Date().toISOString().split("T")[0]
+            const comment = {
+                id: comments.length + 1,
+                author: newCommentAuthor,
+                author_profile_image: "others/default.png",
+                content: newComment,
+                status: "pending",
+                date: new Date().toISOString().split("T")[0]
+            };
+
+            setComments([...comments, comment]);
+
+            try {
+                const response = await fetch('/api/send-comment-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        author: comment.author,
+                        content: comment.content,
+                        article: article.title + " - " + article.slug
+                    }),
+                });
+
+                if (!response.ok) {
+                    throw new Error('Erreur lors de l\'envoi de l\'email');
                 }
-            ]);
+            } catch (error) {
+                console.error('Erreur:', error);
+            }
+
             setNewComment("");
+            setNewCommentAuthor("");
         }
     };
+
 
     const formatDate = (dateString) => {
         const [year, month, day] = dateString.split("-");
@@ -122,7 +137,7 @@ function ArticlePage({ article }) {
                     </div>
                 </header>
                 <ReactMarkdown rehypePlugins={[rehypeRaw]}
-                               components={renderers}>{article.content.replace(/\[BASE_URL\]/g, "http://localhost:3000/")}</ReactMarkdown>
+                               components={renderers}>{article.content.replace(/\[BASE_URL\]/g, process.env.NEXT_PUBLIC_BASE_URL)}</ReactMarkdown>
                 <div className="article-interactions">
                     <div className="comments fc g0-5">
                         <h3>Commentaires</h3>
