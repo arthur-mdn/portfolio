@@ -23,6 +23,26 @@ function Footer() {
                             <div className={"fr g3"}>
 
                                 <div>
+                                    <h3 className={"s-font"}>Naviguation</h3>
+                                    <div className={"fc g0-5"}>
+                                        <Link href={"/"}>
+                                            Accueil
+                                        </Link>
+                                        <Link href={"/blog"}>
+                                            Blog
+                                        </Link>
+                                        <Link href={"/services"}>
+                                            Services
+                                        </Link>
+                                        <Link href={"/projets"}>
+                                            Projets
+                                        </Link>
+                                        <Link href={"/contact"}>
+                                            Contact
+                                        </Link>
+                                    </div>
+                                </div>
+                                <div>
                                     <h3 className={"s-font"}>Ressources</h3>
                                     <div className={"fc g0-5"}>
                                         <Link href={"/rgpd"}>

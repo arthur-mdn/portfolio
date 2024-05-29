@@ -7,6 +7,7 @@ import AboutSection from "@/components/HomePage/AboutSection";
 import LinksSection from "@/components/HomePage/LinksSection";
 import ProjectsSection from "@/components/HomePage/ProjectsSection";
 import Head from "next/head";
+import BlogSection from "@/components/HomePage/BlogSection";
 
 export default function Competences() {
     const schemaOrgJSONLD = {
@@ -79,6 +80,7 @@ export default function Competences() {
             <AboutSection/>
             <SkillsSection/>
             <ProjectsSection/>
+            <BlogSection/>
             <LinksSection/>
         </>
     );

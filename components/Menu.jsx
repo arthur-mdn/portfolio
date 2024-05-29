@@ -2,7 +2,7 @@ import Link from 'next/link';
 import {
     FaHouse,
     FaComment,
-    FaListCheck, FaPuzzlePiece, FaHandshakeAngle
+    FaListCheck, FaPuzzlePiece, FaHandshakeAngle, FaNewspaper
 } from "react-icons/fa6";
 
 
@@ -20,9 +20,9 @@ function Menu() {
                             </Link>
                         </li>
                         <li style={styles.menuItem}>
-                            <Link style={styles.menuLink} href="/services">
-                                <FaHandshakeAngle style={{fontSize: '1.2rem'}}/>
-                                <span style={styles.menuLinkSpan}>Services</span>
+                            <Link style={styles.menuLink} href="/blog">
+                                <FaNewspaper style={{fontSize: '1.2rem'}}/>
+                                <span style={styles.menuLinkSpan}>Blog</span>
                             </Link>
                         </li>
                         <li style={styles.menuItem}>

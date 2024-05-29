@@ -185,6 +185,9 @@ textarea{
 .c-white{
     color: white;
 }
+.c-primary{
+    color: #008334;
+}
 .fw-w{
     flex-wrap: wrap;
 }
@@ -1068,7 +1071,15 @@ blockquote span{
     border-radius: 1rem;
 }
 .BP_card{
+    background-color: #f8f8f8;
+    padding: 0.5rem 0.6rem;
+    border-radius: 0.5rem;
+    width: fit-content;
     gap: 0;
+    border: 1px solid #77c29b;
+}
+.BP_card img{
+    border:1px solid #d8e0d9;
 }
 .BP_card h4{
     font-size: 1rem;
@@ -1251,3 +1262,113 @@ max-width: 900px;
     }
 }
 
+
+
+
+
+.BS_card.featured {
+    display: flex!important;
+    /*width: auto!important;*/
+    /*width: 300px ;*/
+    border-radius: 1rem;
+    overflow: hidden;
+    /*background-color: #f6fbf4;*/
+    position: relative;
+    max-width: 900px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.BS_card.featured .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 2.5rem;
+    width: 100%;
+    gap: 1rem;
+}
+
+.BS_card.featured img{
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .BS_card.featured img{
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+    .BS_card.featured {
+        flex-direction: column;
+    }
+    .BS_card.featured .content{
+        padding: 1.5rem;
+    }
+}
+.BS_card.featured .content span{
+    color: #008334;
+}
+.BS_card.featured .content .button{
+    color: white;
+}
+.BS_card.featured .content p.category{
+    padding-left: 0.8rem;
+    width: fit-content;
+    font-weight: bold;
+    background-color: red;
+    text-transform: capitalize;
+    background-image: linear-gradient(97deg, rgb(164 199 30) 0%, rgb(255, 118, 5) 100%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    position: relative;
+    font-family: 'Cardium A', sans-serif;
+}
+
+
+
+.BS_card.featured .content h2{
+    font-family: 'Cardium A', sans-serif;
+}
+.BS_card.featured .content p.category:before{
+    content: '';
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: rgb(164 199 30);
+}
+
+p.category{
+    padding-left: 0.8rem;
+    width: fit-content;
+    font-weight: bold;
+    background-color: red;
+    text-transform: capitalize;
+    background-image: linear-gradient(97deg, rgb(164 199 30) 0%, rgb(255, 118, 5) 100%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    position: relative;
+    font-family: 'Cardium A', sans-serif;
+}
+
+
+p.category:before{
+    content: '';
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: rgb(164 199 30);
+}

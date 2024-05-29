@@ -130,7 +130,8 @@ function ArticlePage({ article }) {
                                 </div>
                             </div>
                         </div>
-                        <div className={"fr ai-c g0-5 o0-25"}>
+                        <p className={"category"}>{article.category}</p>
+                        <div className={"fr ai-c g0-5 o0-5 c-primary"}>
                             <FaRegCalendar/>
                             <time dateTime={article.date}>{formatDate(article.date)}</time>
                         </div>
