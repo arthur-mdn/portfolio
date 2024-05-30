@@ -107,12 +107,23 @@ function ArticlePage({ article }) {
     return (
         <>
             <Head>
-                <title>{article.title} - Blog</title>
-                <meta name="description" content={article.excerpt} />
-                <meta property="og:title" content={article.title} />
-                <meta property="og:description" content={article.excerpt} />
-                <meta property="og:image" content={`https://yourwebsite.com/${article.cover_image}`} />
-                <meta property="og:type" content="article" />
+                <title>{article.title} - Blog - Arthur Mondon</title>
+                <meta name="description" content={article.excerpt.slice(0, 300)}/>
+                <link rel={"canonical"} href={`https://mondon.pro/projet/${article.slug}`}/>
+
+                {/* Facebook Meta Tags */}
+                <meta property="og:url" content={`https://mondon.pro/${article.slug}`}/>
+                <meta property="og:type" content="article"/>
+                <meta property="og:title" content={`${article.title.trim()} - Blog - Arthur Mondon`}/>
+                <meta property="og:description" content={article.excerpt.slice(0, 300)}/>
+                <meta property="og:image" content={`https://mondon.pro/${article.ogs_image}`}/>
+
+                {/* Twitter Meta Tags */}
+                <meta property="twitter:url" content={`https://mondon.pro/${article.slug}`}/>
+                <meta name="twitter:title" content={`${article.title.trim()} - Blog - Arthur Mondon`}/>
+                <meta property="twitter:type" content="article"/>
+                <meta name="twitter:description" content={article.excerpt.slice(0, 300)}/>
+                <meta name="twitter:image" content={`https://mondon.pro/${article.ogs_image}`}/>
             </Head>
             <div className={"blog-bg"}>
             </div>
