@@ -109,7 +109,7 @@ function ArticlePage({ article }) {
             <Head>
                 <title>{article.title} - Blog - Arthur Mondon</title>
                 <meta name="description" content={article.excerpt.slice(0, 300)}/>
-                <link rel={"canonical"} href={`https://mondon.pro/projet/${article.slug}`}/>
+                <link rel={"canonical"} href={`https://mondon.pro/blog/${article.slug}`}/>
 
                 {/* Facebook Meta Tags */}
                 <meta property="og:url" content={`https://mondon.pro/${article.slug}`}/>
@@ -150,6 +150,18 @@ function ArticlePage({ article }) {
                 </header>
                 <ReactMarkdown rehypePlugins={[rehypeRaw]}
                                components={renderers}>{article.content.replace(/\[BASE_URL\]/g, process.env.NEXT_PUBLIC_BASE_URL)}</ReactMarkdown>
+                {article.related_links.length > 0 && (
+                    <>
+                        <h3>Liens externes</h3>
+                        <div className="related-articles">
+                            {article.related_links.map(link => {
+                                return (
+                                    <iframe key={"link"} src={`${link.iframe}`} frameBorder="0" allowFullScreen="" title="Post intégré"></iframe>
+                                );
+                            })}
+                        </div>
+                    </>
+                )}
                 <div className="article-interactions">
                     <div className="comments fc g0-5">
                         <h3>Commentaires</h3>
@@ -200,7 +212,7 @@ function ArticlePage({ article }) {
                 </div>
                 {article.related_articles.length > 0 && (
                     <>
-                        <h3>Related Articles</h3>
+                        <h3>Articles similaires</h3>
                         <div className="related-articles">
                             {article.related_articles.map(id => {
                                 const relatedArticle = articlesData.find(a => a.id === id);
