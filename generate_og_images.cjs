@@ -1,6 +1,8 @@
 const Jimp = require('jimp');
-const {readFileSync} = require("fs");
+const { readFileSync } = require("fs");
+
 const projects = JSON.parse(readFileSync('data/projects.json'));
+const articles = JSON.parse(readFileSync('data/articles.json'));
 
 function wrapText(context, text, maxWidth) {
     const words = text.split(' ');
@@ -49,9 +51,45 @@ async function generateOGImages() {
 
         template.print(titleFont, 60, 500, "https://mondon.pro/" + project.slug, maxWidth);
 
-
         await template.writeAsync(`public/ogs/${project.image}`);
     }
 }
 
-generateOGImages().then(() => console.log('Images OG générées !'));
+async function generateBlogOGImages() {
+    const titleFont = await Jimp.loadFont(Jimp.FONT_SANS_32_BLACK);
+    const descriptionFont = await Jimp.loadFont(Jimp.FONT_SANS_16_BLACK);
+
+    for (const article of articles) {
+        const template = await Jimp.read('public/others/template_og.png');
+        const articleImage = await Jimp.read('public/' + article.cover_image);
+
+        articleImage.resize(350, 350);
+        template.composite(articleImage, 790, 60);
+
+        template.print(titleFont, 60, 60, article.title);
+
+        const maxWidth = 720; // Largeur maximale pour la description
+        const lines = wrapText(descriptionFont, article.excerpt.slice(0, 400), maxWidth);
+
+        if (lines.length > 0) {
+            lines[lines.length - 1] += "...";
+        }
+
+        let yOffset = 115;
+        lines.forEach(line => {
+            template.print(descriptionFont, 60, yOffset, line, maxWidth);
+            yOffset += Jimp.measureTextHeight(descriptionFont, line, maxWidth) + 5;
+        });
+
+        template.print(titleFont, 60, 500, "https://mondon.pro/blog/" + article.slug, maxWidth);
+
+        await template.writeAsync(`public/ogs/${article.cover_image}`);
+    }
+}
+
+async function generateAllOGImages() {
+    await generateOGImages();
+    await generateBlogOGImages();
+}
+
+generateAllOGImages().then(() => console.log('Images OG générées pour projets et articles de blog !'));
