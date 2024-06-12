@@ -6,7 +6,7 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { okaidia } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import {FaRegCalendar, FaTriangleExclamation} from "react-icons/fa6";
+import {FaArrowRightLong, FaRegCalendar, FaTriangleExclamation} from "react-icons/fa6";
 
 export async function getStaticPaths() {
     const paths = articlesData.map(article => ({
@@ -217,11 +217,36 @@ function ArticlePage({ article }) {
                             {article.related_articles.map(id => {
                                 const relatedArticle = articlesData.find(a => a.id === id);
                                 return (
-                                    <Link key={relatedArticle.id} href={`/blog/${relatedArticle.slug}`}>
+                                    <div className={`BS_card featured`}
+                                         key={relatedArticle.id}
+                                         style={{width: '100%'}}>
                                         <img src={`/${relatedArticle.cover_image}`} alt={relatedArticle.title}/>
-                                        <h4>{relatedArticle.title}</h4>
-                                    </Link>
-                                );
+                                        <div className="content">
+                                            <div className="article-meta BP_card">
+                                                <div className={"fr g0-5 ai-c"}>
+                                                    <img src={`/${relatedArticle.author.profile_image}`}
+                                                         alt={relatedArticle.author.name}
+                                                         className="author-image"
+                                                         style={{width: "40px", height: "40px"}}/>
+                                                    <div className={"fc"}>
+                                                        <h4>{relatedArticle.author.name}</h4>
+                                                        <p>{relatedArticle.author.bio}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h2>{relatedArticle.title}</h2>
+                                            <div>
+                                                <p className={"category"}>{relatedArticle.category}</p>
+                                                <span
+                                                    className={"fr g0-5 ai-c o0-5"}><FaRegCalendar/>{formatDate(relatedArticle.date)}</span>
+                                            </div>
+                                            <p>{relatedArticle.excerpt}</p>
+                                            <Link className={"button"} href={`/blog/${relatedArticle.slug}`}>Lire la
+                                                suite<FaArrowRightLong/></Link>
+                                        </div>
+                                    </div>
+                            )
+                                ;
                             })}
                         </div>
                     </>
