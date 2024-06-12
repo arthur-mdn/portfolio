@@ -116,14 +116,14 @@ function ArticlePage({ article }) {
                 <meta property="og:type" content="article"/>
                 <meta property="og:title" content={`${article.title.trim()} - Blog - Arthur Mondon`}/>
                 <meta property="og:description" content={article.excerpt.slice(0, 300)}/>
-                <meta property="og:image" content={`https://mondon.pro/ogs/blogs/${article.cover_image}`}/>
+                <meta property="og:image" content={`https://mondon.pro/ogs/${article.cover_image}`}/>
 
                 {/* Twitter Meta Tags */}
                 <meta property="twitter:url" content={`https://mondon.pro/${article.slug}`}/>
                 <meta name="twitter:title" content={`${article.title.trim()} - Blog - Arthur Mondon`}/>
                 <meta property="twitter:type" content="article"/>
                 <meta name="twitter:description" content={article.excerpt.slice(0, 300)}/>
-                <meta name="twitter:image" content={`https://mondon.pro/ogs/blogs/${article.cover_image}`}/>
+                <meta name="twitter:image" content={`https://mondon.pro/ogs/${article.cover_image}`}/>
             </Head>
             <div className={"blog-bg"}>
             </div>
