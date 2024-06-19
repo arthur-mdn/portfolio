@@ -35,7 +35,7 @@ export default function Blog() {
                       content="Plongez dans le blog d'Arthur Mondon pour des articles sur le développement web, des technologies innovantes et des conseils de carrière pour développeurs." />
                 <meta name="twitter:image" content="https://mondon.pro/others/preview.png" />
             </Head>
-            <BlogSection/>
+            <BlogSection limit={false}/>
         </>
     );
 }

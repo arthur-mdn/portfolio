@@ -1,6 +1,6 @@
 import articlesData from "../../data/articles.json";
 import Link from "next/link";
-import { FaArrowRightLong, FaRegCalendar } from "react-icons/fa6";
+import {FaArrowRightLong, FaEye, FaRegCalendar} from "react-icons/fa6";
 
 export default function BlogSection() {
     const formatDate = (dateString) => {

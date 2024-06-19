@@ -80,7 +80,7 @@ export default function Competences() {
             <AboutSection/>
             <SkillsSection/>
             <ProjectsSection/>
-            <BlogSection/>
+            <BlogSection limit={2}/>
             <LinksSection/>
         </>
     );
