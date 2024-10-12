@@ -1,5 +1,5 @@
 # Étape de construction
-FROM node:latest as builder
+FROM node:22.2 as builder
 WORKDIR /app
 COPY . .
 RUN npm install
