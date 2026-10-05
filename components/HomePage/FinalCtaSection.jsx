@@ -8,8 +8,8 @@ function FinalCtaSection() {
         <h2 className="final-cta-title">Un projet en tête ?</h2>
         <p className="final-cta-lead">
           Parlons de ce que vous souhaitez créer. Site internet, application
-          métier, refonte ou projet plus atypique : expliquez-moi votre besoin et
-          voyons ensemble comment le concrétiser.
+          web, app iOS/macOS, refonte ou déploiement : expliquez-moi votre
+          besoin et voyons ensemble comment le concrétiser.
         </p>
         <Link href="/contact" className="btn btn-final">
           Me parler de mon projet

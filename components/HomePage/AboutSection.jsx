@@ -23,14 +23,12 @@ function AboutSection() {
         <div className="about-copy">
           <p className="section-label">À propos</p>
           <h2 className="section-title">
-            Du développement à la mise en production.
+            Du web aux apps natives, jusqu&apos;à la mise en production.
           </h2>
           <p>
-            Je suis Arthur Mondon, développeur full-stack freelance basé dans le
-            Vaucluse. Après cinq années d&apos;expérience en développement web,
-            déploiement et exploitation d&apos;applications, j&apos;accompagne
-            aujourd&apos;hui entreprises, indépendants et porteurs de projets
-            dans la création de leurs outils numériques.
+            Je suis Arthur Mondon, développeur full-stack freelance dans le
+            Vaucluse. Je crée des sites, des applications web et des apps
+            natives iOS/macOS, avec le déploiement et le suivi dans la durée.
           </p>
           <div className="about-stats">
             <div className="about-stat">
@@ -43,7 +41,7 @@ function AboutSection() {
             </div>
             <div className="about-stat">
               <strong>Full-stack</strong>
-              <span>front, back et infra</span>
+              <span>web, native &amp; infra</span>
             </div>
             <div className="about-stat">
               <strong>Vaucluse</strong>
@@ -51,7 +49,7 @@ function AboutSection() {
             </div>
           </div>
           <Link href="/a-propos" className="projects-link" style={{ marginTop: "1.5rem" }}>
-            En savoir plus
+            Découvrir mon parcours
             <FaArrowRight size={13} />
           </Link>
         </div>

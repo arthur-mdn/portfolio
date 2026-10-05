@@ -4,9 +4,9 @@ import { FaArrowRight } from "react-icons/fa6";
 import { SERVICES } from "../../data/services";
 
 export default function ServicesHub() {
-  const title = "Services de développement web | Arthur Mondon";
+  const title = "Services web & apps natives | Arthur Mondon";
   const description =
-    "Création de sites internet, applications web sur mesure, refonte et déploiement. Services de développeur web freelance dans le Vaucluse.";
+    "Création de sites internet, applications web, apps natives iOS/macOS, refonte et déploiement. Développeur full-stack freelance dans le Vaucluse.";
 
   return (
     <>
@@ -24,14 +24,15 @@ export default function ServicesHub() {
         <div className="container">
           <div className="page-hero">
             <p className="section-label">Services</p>
-            <h1>Ce que je peux réaliser pour vous</h1>
+            <h1>Web et applications natives</h1>
             <p>
-              Sites vitrines, applications métier, refonte ou déploiement : je
-              vous accompagne de l&apos;idée à la mise en production.
+              Sites vitrines, applications métier, apps iOS/macOS, refonte ou
+              déploiement : je vous accompagne de l&apos;idée à la mise en
+              production.
             </p>
           </div>
 
-          <div className="service-cards">
+          <div className="service-cards service-cards-5">
             {SERVICES.map((service) => (
               <Link
                 key={service.slug}

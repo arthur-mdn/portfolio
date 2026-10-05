@@ -8,9 +8,9 @@ function Footer() {
           <div className="footer-brand">
             <strong>Arthur Mondon</strong>
             <p>
-              Développeur web full-stack freelance
+              Développeur full-stack freelance
               <br />
-              Vaucluse, Provence
+              Web &amp; apps natives · Vaucluse
             </p>
           </div>
 
@@ -53,7 +53,7 @@ function Footer() {
 
         <div className="footer-bottom">
           <span>© 2026 Arthur Mondon</span>
-          <span>Développeur web freelance · Vaucluse</span>
+          <span>Web · iOS · macOS · Vaucluse</span>
         </div>
       </div>
     </footer>

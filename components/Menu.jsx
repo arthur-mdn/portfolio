@@ -32,7 +32,7 @@ function Menu() {
         <Link href="/" className="topbar-brand" onClick={() => setOpen(false)}>
           <span className="topbar-brand-name">Arthur Mondon</span>
           <span className="topbar-brand-role">
-            Développeur Full-Stack · Vaucluse
+            Full-stack · Web &amp; apps natives
           </span>
         </Link>
 

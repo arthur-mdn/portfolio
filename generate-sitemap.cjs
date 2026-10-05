@@ -18,6 +18,11 @@ const baseRoutes = [
     changefreq: "monthly",
     priority: 0.8,
   },
+  {
+    url: "/services/applications-natives-ios-macos",
+    changefreq: "monthly",
+    priority: 0.8,
+  },
   { url: "/a-propos", changefreq: "monthly", priority: 0.7 },
   { url: "/blog", changefreq: "weekly", priority: 0.8 },
   { url: "/competences", changefreq: "monthly", priority: 0.4 },

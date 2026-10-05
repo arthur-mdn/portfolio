@@ -12,13 +12,13 @@ import Head from "next/head";
 export default function HomePage() {
   const title = "Développeur Web Freelance Vaucluse | Arthur Mondon";
   const description =
-    "Développeur web freelance dans le Vaucluse, je crée des sites internet et applications web sur mesure pour entreprises et indépendants à Avignon, Carpentras et en Provence.";
+    "Développeur web freelance dans le Vaucluse : sites internet, applications web et apps natives iOS/macOS pour entreprises et indépendants à Avignon, Carpentras et en Provence.";
 
   const schemaPerson = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Arthur Mondon",
-    jobTitle: "Développeur web freelance",
+    jobTitle: "Développeur full-stack freelance",
     description,
     url: "https://mondon.pro",
     image: "https://mondon.pro/illustrations/memoji.webp",
@@ -37,10 +37,13 @@ export default function HomePage() {
     ],
     knowsAbout: [
       "Développement web",
+      "Applications iOS",
+      "Applications macOS",
       "Full-stack",
       "React",
+      "Swift",
+      "SwiftUI",
       "Node.js",
-      "WordPress",
       "Docker",
     ],
   };
@@ -48,7 +51,7 @@ export default function HomePage() {
   const schemaService = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Arthur Mondon — Développeur web freelance",
+    name: "Arthur Mondon — Développeur full-stack freelance",
     description,
     url: "https://mondon.pro",
     image: "https://mondon.pro/others/preview.png",

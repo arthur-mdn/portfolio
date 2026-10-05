@@ -17,8 +17,8 @@ function HeroSection() {
           </h1>
           <p className="hero-text fade-up fade-up-delay-2">
             Développeur full-stack freelance dans le Vaucluse, je conçois des
-            sites internet et applications web sur mesure, de la conception au
-            déploiement.
+            sites internet, applications web et apps natives iOS/macOS, de la
+            conception au déploiement.
           </p>
           <div className="hero-actions fade-up fade-up-delay-3">
             <Link href="/#realisations" className="btn btn-primary">

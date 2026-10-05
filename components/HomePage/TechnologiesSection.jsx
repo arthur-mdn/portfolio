@@ -3,15 +3,15 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const TECHS = [
   "React",
-  "Angular",
   "Node.js",
-  "PHP",
-  "Python",
+  "Swift",
+  "SwiftUI",
   "WordPress",
   "PostgreSQL",
   "MongoDB",
   "Docker",
   "Linux",
+  "Python",
 ];
 
 function TechnologiesSection() {
