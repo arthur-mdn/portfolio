@@ -1,0 +1,21 @@
+services:
+  portfolio:
+    container_name: portfolio-nextjs
+    build:
+      context: .
+    env_file: .env
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.nextjs-app.rule=Host(`mondon.pro`)"
+      - "traefik.http.routers.nextjs-app.entrypoints=websecure"
+      - "traefik.http.routers.nextjs-app.tls.certresolver=myresolver"
+      - "traefik.http.services.nextjs-app.loadbalancer.server.port=3000"
+
+      - "traefik.http.routers.nextjs-app-redirect.rule=Host(`www.mondon.pro`)"
+      - "traefik.http.routers.nextjs-app-redirect.entrypoints=websecure"
+      - "traefik.http.routers.nextjs-app-redirect.middlewares=redirect-www-to-nonwww"
+      - "traefik.http.routers.nextjs-app-redirect.tls.certresolver=myresolver"
+
+      - "traefik.http.middlewares.redirect-www-to-nonwww.redirectregex.regex=^https://www\\.mondon\\.pro/(.*)"
+      - "traefik.http.middlewares.redirect-www-to-nonwww.redirectregex.replacement=https://mondon.pro/$${1}"
+      - "traefik.http.middlewares.redirect-www-to-nonwww.redirectregex.permanent=true"
