@@ -1,5 +1,14 @@
 node_modules
 .next
-Dockerfile
-Dockerfile.dev
-npm-debug.log
+out
+build
+dist
+.env
+.env*.local
+.git
+.gitignore
+*.md
+.DS_Store
+.idea
+.vercel
+coverage

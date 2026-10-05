@@ -1,7 +1,18 @@
 services:
-  portfolio-nextjs:
+  portfolio:
     build:
       context: .
       dockerfile: Dockerfile.dev
+    env_file: .env
     ports:
       - "3000:3000"
+    volumes:
+      - .:/app
+      - portfolio_node_modules:/app/node_modules
+    environment:
+      WATCHPACK_POLLING: "true"
+    command: ["npm", "run", "dev", "--", "-H", "0.0.0.0"]
+
+volumes:
+  portfolio_node_modules:
+    driver: local

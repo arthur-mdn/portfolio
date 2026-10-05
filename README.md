@@ -24,3 +24,21 @@ npm install
 ```bash
 npm run dev
 ```
+
+### Docker (development)
+
+Duplicate `.env.template` to `.env`, then:
+
+```bash
+docker compose up --build
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+### Docker (production)
+
+```bash
+docker compose -f docker-compose.prod.yml up --build -d
+```
+
+Traefik labels target `mondon.pro` (with www redirect).
