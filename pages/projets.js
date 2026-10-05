@@ -1,111 +1,140 @@
-// /pages/projets.js
-import Head from 'next/head';
-import projectsData from "../data/projects.json";
+import Head from "next/head";
 import Link from "next/link";
-import {FaArrowRightLong, FaEye, FaTriangleExclamation} from "react-icons/fa6";
+import { FaArrowRight, FaChevronDown, FaTriangleExclamation } from "react-icons/fa6";
+import projectsData from "../data/projects.json";
+import skillsData from "../data/skills.json";
+
+const skillMap = Object.fromEntries(
+  skillsData.flatMap((category) =>
+    category.skills.map((skill) => [skill.id, skill.name])
+  )
+);
+
+function getTechLabels(technos = []) {
+  return technos
+    .map((id) => skillMap[id])
+    .filter(Boolean)
+    .slice(0, 2);
+}
+
+function ProjectCard({ project }) {
+  const tags = getTechLabels(project.technos);
+
+  return (
+    <Link href={`/projet/${project.slug}`} className="library-card">
+      <div className="library-card-media">
+        <img src={`/${project.image}`} alt={project.name} />
+        {project.disclaimer && (
+          <span
+            className="project-card-warning"
+            title="Attention particulière requise"
+          >
+            <FaTriangleExclamation size={12} />
+          </span>
+        )}
+      </div>
+      <div className="library-card-body">
+        <span className="library-card-type">{project.type}</span>
+        <h3>{project.name}</h3>
+        <div className="library-card-meta">
+          <div className="project-tags">
+            {tags.map((tag) => (
+              <span key={tag} className="project-tag">
+                {tag}
+              </span>
+            ))}
+          </div>
+          <span className="project-arrow" aria-hidden="true">
+            <FaArrowRight size={11} />
+          </span>
+        </div>
+      </div>
+    </Link>
+  );
+}
 
 export default function Projets() {
-    const formatDate = (dateString) => {
-        const [year, month, day] = dateString.split("-");
-        return `${day}/${month}/${year}`;
-    };
-    const interestingProjects = projectsData.filter(project => project.interesting);
-    const otherProjects = projectsData.filter(project => !project.interesting);
-    return (
-        <>
-            <Head>
-                <link rel={"canonical"} href={"https://mondon.pro/projets"}/>
-                <link rel="icon" href="/others/favicon.ico"/>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                <title>Arthur Mondon : Mes Projets</title>
-                <meta name="description"
-                      content="Découvrez mes projets, où je fusionne créativité et technologie pour développer des solutions web innovantes. Chaque projet est une fenêtre sur mon univers professionnel et mes compétences en développement web."/>
-                <meta name="keywords"
-                      content="Arthur Mondon, Projets, Développement Web, Solutions Innovantes, Technologie, Créativité, Portfolio"/>
-                <meta name="author" content="Arthur MONDON"/>
-                <meta name="robots" content="index, follow"/>
+  const title = "Réalisations | Arthur Mondon — Développeur web freelance";
+  const description =
+    "Sites vitrines, applications web et outils sur mesure conçus par Arthur Mondon, développeur web freelance dans le Vaucluse.";
 
-                {/* Facebook Meta Tags */}
-                <meta property="og:url" content="https://mondon.pro/projets"/>
-                <meta property="og:type" content="website"/>
-                <meta property="og:title" content="Plongez dans Mes Projets : Arthur Mondon"/>
-                <meta property="og:description"
-                      content="Je vous invite à explorer mes projets, une combinaison de technologie et de créativité, reflétant ma passion pour le développement de solutions web uniques."/>
-                <meta property="og:image" content="https://mondon.pro/others/preview.png"/>
+  const interestingProjects = [...projectsData]
+    .filter((project) => project.interesting)
+    .sort((a, b) => b.date.localeCompare(a.date));
 
-                {/* Twitter Meta Tags */}
-                <meta name="twitter:card" content="summary_large_image"/>
-                <meta property="twitter:domain" content="mondon.pro"/>
-                <meta property="twitter:url" content="https://mondon.pro/projets"/>
-                <meta name="twitter:title" content="Arthur Mondon : Explorez Mes Projets"/>
-                <meta name="twitter:description"
-                      content="Je vous présente mes projets, où innovation et créativité se rencontrent pour créer des expériences web enrichissantes et mémorables."/>
-                <meta name="twitter:image" content="https://mondon.pro/others/preview.png"/>
-            </Head>
-            <section className="PsP fc g1">
-                <h1 className={"s-font"}>Projets</h1>
-                <div className={"fr fw-w"}>
-                    {interestingProjects.sort((b, a) => a.date.localeCompare(b.date)).map(project => (
-                        <Link href={`/projet/${project.slug}`} style={{width: '100%'}} className="PS_card"
-                              key={project.id}>
-                            <img src={`/${project.image}`} alt={project.name}/>
-                            <div className="content">
-                                {
-                                    project.disclaimer && (
-                                        <div className={"PP_disclaimer fr g1 ai-c"} style={{
-                                            position: "absolute",
-                                            left: 0,
-                                            top: 0,
-                                            margin: '1rem',
-                                            padding: '0.5rem 0.5rem',
-                                            borderRadius: '0.5rem'
-                                        }} title={"Une attention particulière est requise pour ce projet"}>
-                                            <FaTriangleExclamation size={"2rem"}/>
-                                        </div>
-                                    )
-                                }
-                                <p>{project.type}</p>
-                                <span>{formatDate(project.date)}</span>
-                                <h3>{project.name}</h3>
-                                <button type="button" className="button"><FaArrowRightLong/></button>
-                            </div>
-                        </Link>
-                    ))}
-                </div>
-            </section>
-            <br/>
-            <br/>
-            <section className="PsP fc g1">
-                <h1 className={"s-font"}>Autres projets jugés moins intéressants.</h1>
-                <div className={"fr fw-w"}>
-                    {otherProjects.sort((b, a) => a.date.localeCompare(b.date)).map(project => (
-                        <Link href={`/projet/${project.slug}`} style={{width: '100%'}} className="PS_card"
-                              key={project.id}>
-                            <img src={`/${project.image}`} alt={project.name}/>
-                            <div className="content">
-                                {
-                                    project.disclaimer && (
-                                        <div className={"PP_disclaimer fr g1 ai-c"} style={{
-                                            position: "absolute",
-                                            left: 0,
-                                            top: 0,
-                                            margin: '1rem',
-                                            padding: '0.5rem 0.5rem',
-                                            borderRadius: '0.5rem'
-                                        }} title={"Une attention particulière est requise pour ce projet"}>
-                                            <FaTriangleExclamation size={"2rem"}/>
-                                        </div>
-                                    )
-                                }
-                                <p>{project.type}</p>
-                                <span>{formatDate(project.date)}</span>
-                                <h3>{project.name}</h3>
-                                <button type="button" className="button"><FaArrowRightLong/></button>
-                            </div>
-                        </Link>
-                    ))}
-                </div>
-            </section>
-        </>
-    );
+  const otherProjects = [...projectsData]
+    .filter((project) => !project.interesting)
+    .sort((a, b) => b.date.localeCompare(a.date));
+
+  return (
+    <>
+      <Head>
+        <link rel="canonical" href="https://mondon.pro/projets" />
+        <link rel="icon" href="/others/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="author" content="Arthur MONDON" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:url" content="https://mondon.pro/projets" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="https://mondon.pro/others/preview.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content="https://mondon.pro/others/preview.png" />
+      </Head>
+
+      <main className="page-shell">
+        <div className="container">
+          <div className="page-hero page-hero-compact">
+            <p className="section-label">Bibliothèque</p>
+            <h1>Tous les projets</h1>
+            <p>
+              Une vue compacte de mes réalisations publiques, du site vitrine à
+              l&apos;outil métier.
+            </p>
+          </div>
+
+          <section className="projects-page-section">
+            <div className="projects-page-heading">
+              <h2>Mis en avant</h2>
+              <p>{interestingProjects.length}</p>
+            </div>
+            <div className="library-grid">
+              {interestingProjects.map((project) => (
+                <ProjectCard key={project.id} project={project} />
+              ))}
+            </div>
+          </section>
+
+          {otherProjects.length > 0 && (
+            <details className="projects-accordion">
+              <summary>
+                <span>
+                  Autres projets
+                  <em>{otherProjects.length}</em>
+                </span>
+                <FaChevronDown className="projects-accordion-icon" size={14} />
+              </summary>
+              <div className="library-grid">
+                {otherProjects.map((project) => (
+                  <ProjectCard key={project.id} project={project} />
+                ))}
+              </div>
+            </details>
+          )}
+
+          <div style={{ marginTop: "2.5rem" }}>
+            <Link href="/contact" className="btn btn-primary">
+              Discuter d&apos;un projet
+              <FaArrowRight size={14} />
+            </Link>
+          </div>
+        </div>
+      </main>
+    </>
+  );
 }
