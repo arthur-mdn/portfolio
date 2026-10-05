@@ -11,7 +11,7 @@ function Footer() {
         <>
             <br/>
             <br/>
-            <footer style={{backgroundColor: "#004500", color: "white"}}>
+            <footer style={{ backgroundColor: "#003f31", color: "white" }}>
                 <section className={"FS"}>
                     <div className={"FS_container"}>
                         <div className={"FS_content"}>

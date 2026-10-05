@@ -1,74 +1,80 @@
-import {FaDownload, FaEye} from "react-icons/fa6";
 import Link from "next/link";
-import projectsData from "../../data/projects.json";
-import {useEffect} from "react";
 import Image from "next/image";
+import { FaArrowRight, FaDownload } from "react-icons/fa6";
+
 function HeroSection() {
+  return (
+    <section className="hero">
+      <div className="container hero-grid">
+        <div className="hero-content">
+          <p className="hero-eyebrow fade-up">Développeur full-stack freelance</p>
+          <h1 className="hero-title fade-up fade-up-delay-1">
+            Des idées en
+            <br />
+            <span className="accent">solutions web.</span>
+          </h1>
+          <p className="hero-text fade-up fade-up-delay-2">
+            Je conçois des applications web et des sites sur mesure, alliant
+            performance, design et simplicité d&apos;utilisation.
+          </p>
+          <div className="hero-actions fade-up fade-up-delay-3">
+            <Link href="/projets" className="btn btn-primary">
+              Découvrir mes projets
+              <FaArrowRight size={14} />
+            </Link>
+            <Link
+              href="/others/CV_Arthur_Mondon_2024.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              className="btn btn-secondary"
+            >
+              <FaDownload size={14} />
+              Télécharger le CV
+            </Link>
+          </div>
+        </div>
 
-    useEffect(() => {
-        const parallax = (e) => {
-            const elem = document.querySelector(".HS_container");
-            const _w = window.innerWidth / 2;
-            const _h = window.innerHeight / 2;
-            const _mouseX = e.clientX;
-            const _mouseY = e.clientY;
-            const _depth = `${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.01}%`;
-            if(elem) elem.style.backgroundPosition = _depth;
-        };
+        <div className="hero-visual fade-up fade-up-delay-2">
+          <div className="hero-blob hero-blob-1" aria-hidden="true" />
+          <div className="hero-blob hero-blob-2" aria-hidden="true" />
+          <div className="hero-blob hero-blob-3" aria-hidden="true" />
 
-        document.addEventListener("mousemove", parallax);
+          <div className="hero-hand" aria-hidden="true">
+            <div>Développement</div>
+            <div>Design</div>
+            <div>Stratégie</div>
+            <svg viewBox="0 0 90 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10 14c18-10 36 0 48 14 8 10 16 16 26 18"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+              />
+              <path
+                d="M70 34l14 12-16 2"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
 
-        return () => {
-            document.removeEventListener("mousemove", parallax);
-        };
-    }, []);
-
-    return (
-        <>
-            <section className={"HS"}>
-                <div className={"HS_container"}>
-                    <div className={"HS_content"}>
-                        <h1 className={"HS_title"}>Portfolio d&apos;Arthur Mondon.</h1>
-                        <Image src={"/illustrations/memoji2.png"} alt={"avatar"} className={"hide_desktop"} width={200} height={260} style={{margin: "auto", objectFit:"contain"}}/>
-                        <p className={"HS_txt"}>
-                            Transformez vos idées en solutions web.
-                            Exploitez le plein potentiel du web avec des solutions sur mesure, conçues pour réussir.
-                        </p>
-                        <div className={'HS_btns'}>
-                            <Link
-                                href="/others/CV_Arthur_Mondon_2024.pdf"
-                                target={"_blank"}
-                                rel={"noopener noreferrer"}
-                                download
-                                className={"button special_button s-font lh1"}
-                                style={{color: 'white'}}
-                            >
-                                <FaDownload/>
-                                Télécharger le CV
-                            </Link>
-                            <Link className={"button contact s-font lh1"} href="/projets">
-                                <FaEye/>
-                                Projets réalisés
-                            </Link>
-                        </div>
-                    </div>
-                    <Image src={"/illustrations/memoji2.png"} alt={"avatar"} className={"hide_mobile"} width={200} height={260} style={{margin: "auto", objectFit:"contain"}}/>
-                    <ul className={"HS_extra"}>
-                        <div className="HS_extra_blur"></div>
-                        <li>
-                            <p>Projets terminés</p>
-                            <p className={"count"}>{Object.keys(projectsData).length + 1}</p>
-                        </li>
-                        <li>
-                            <p>Taux de satisfaction</p>
-                            <p className={"taux"}>100%</p>
-                        </li>
-                    </ul>
-                </div>
-
-            </section>
-        </>
-    );
+          <div className="hero-memoji-wrap">
+            <Image
+              src="/illustrations/memoji.webp"
+              alt="Memoji d'Arthur Mondon"
+              width={480}
+              height={620}
+              className="hero-memoji"
+              priority
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default HeroSection;

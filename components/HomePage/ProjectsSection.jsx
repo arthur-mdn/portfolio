@@ -1,115 +1,103 @@
-import projectsData from "../../data/projects.json";
-import {FaArrowLeft, FaArrowRight, FaArrowRightLong, FaEye, FaTriangleExclamation} from "react-icons/fa6";
 import Link from "next/link";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+import { FaArrowRight } from "react-icons/fa6";
+import projectsData from "../../data/projects.json";
+import skillsData from "../../data/skills.json";
+
+const FEATURED_SLUGS = [
+  "private-events-dj-mika",
+  "buzzer-app",
+  "studer-tinder-mmi",
+  "glucide-check-app-ios",
+];
+
+const skillMap = Object.fromEntries(
+  skillsData.flatMap((category) =>
+    category.skills.map((skill) => [skill.id, skill.name])
+  )
+);
+
+function getShortDescription(text = "") {
+  const clean = text.replace(/\s+/g, " ").trim();
+  if (clean.length <= 140) return clean;
+  return `${clean.slice(0, 137).trim()}...`;
+}
+
+function getTechLabels(technos = []) {
+  return technos
+    .map((id) => skillMap[id])
+    .filter(Boolean)
+    .slice(0, 3);
+}
 
 function ProjectsSection() {
-    const settings = {
-        dots: true,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 3,
-        nextArrow: <SampleNextArrow/>,
-        prevArrow: <SamplePrevArrow/>,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
+  const featured = FEATURED_SLUGS.map((slug) =>
+    projectsData.find((project) => project.slug === slug)
+  ).filter(Boolean);
 
-// Composants pour les boutons personnalisés
-    function SamplePrevArrow(props) {
-        const {className, style, onClick} = props;
-        return (
-            <div
-                className={className}
-                style={{...style}}
-                onClick={onClick}
-            >
-                <FaArrowLeft/>
-            </div>
-        );
-    }
+  const projects =
+    featured.length >= 4
+      ? featured.slice(0, 4)
+      : [...featured, ...projectsData.filter((p) => p.interesting)]
+          .filter(
+            (project, index, list) =>
+              list.findIndex((item) => item.slug === project.slug) === index
+          )
+          .slice(0, 4);
 
-    function SampleNextArrow(props) {
-        const {className, style, onClick} = props;
-        return (
-            <div
-                className={className}
-                style={{...style}}
-                onClick={onClick}
-            >
-                <FaArrowRight/>
-            </div>
-        );
-    }
+  return (
+    <section className="projects" id="realisations">
+      <div className="container">
+        <div className="projects-header">
+          <div>
+            <p className="section-label">Mes réalisations</p>
+            <h2 className="section-title">Des projets concrets et variés</h2>
+            <p className="section-lead">
+              Une sélection de projets publics récents, du site vitrine à
+              l&apos;application métier.
+            </p>
+          </div>
+          <Link href="/projets" className="projects-link">
+            Voir tous les projets
+            <FaArrowRight size={13} />
+          </Link>
+        </div>
 
-    const formatDate = (dateString) => {
-        const [year, month, day] = dateString.split("-");
-        return `${day}/${month}/${year}`;
-    };
-
-    const interestingProjects = projectsData.filter(project => project.interesting);
-    const otherProjects = projectsData.filter(project => !project.interesting);
-
-    return (
-        <>
-            <br/>
-            <section className="PS fc g1">
-                <h2 className={"s-font"}>Projets Récents</h2>
-                <div className={"AS_card grey"}>
-                    <p className={"s-font"}>Bienvenue dans le coin où je range tous mes projets ! C&apos;est ici que je partage les projets publics sur lesquels j&apos;ai travaillé, que ça soit des sites web, des applis, des extensions ou même des jeux. C&apos;est un peu comme mon petit musée personnel. Jetez un œil, il y a de tout et pour tous les goûts !</p>
+        <div className="projects-grid">
+          {projects.map((project) => {
+            const tags = getTechLabels(project.technos);
+            return (
+              <Link
+                key={project.id}
+                href={`/projet/${project.slug}`}
+                className="project-card"
+              >
+                <div className="project-card-media">
+                  <img src={`/${project.image}`} alt={project.name} />
+                  <span className="project-card-cat">{project.type}</span>
                 </div>
-                <Slider {...settings}>
-                    {interestingProjects.sort((b, a) => a.date.localeCompare(b.date)).slice(0, 8).map(project => (
-                        <Link href={`/projet/${project.slug}`} style={{width: '100%'}} className="PS_card"
-                              key={project.id}>
-                            <img src={`/${project.image}`} alt={project.name}/>
-                            <div className="content">
-                                {
-                                    project.disclaimer && (
-                                        <div className={"PP_disclaimer fr g1 ai-c"} style={{
-                                            position: "absolute",
-                                            left: 0,
-                                            top: 0,
-                                            margin: '1rem',
-                                            padding: '0.5rem 0.5rem',
-                                            borderRadius: '0.5rem'
-                                        }} title={"Une attention particulière est requise pour ce projet"}>
-                                            <FaTriangleExclamation size={"2rem"}/>
-                                        </div>
-                                    )
-                                }
-                                <p>{project.type}</p>
-                                <span>{formatDate(project.date)}</span>
-                                <h3>{project.name}</h3>
-                                <div className="button"><FaArrowRightLong/></div>
-                            </div>
-                        </Link>
-                    ))}
-                </Slider>
-                <Link href="/projets" className="button c-white" style={{width: "fit-content", margin: '1.5rem auto'}}>
-                    <FaEye/> Voir plus de projets
-                </Link>
-            </section>
-        </>
-    );
+                <div className="project-card-body">
+                  <h3>{project.name}</h3>
+                  <p>{getShortDescription(project.description)}</p>
+                  <div className="project-card-footer">
+                    <div className="project-tags">
+                      {tags.map((tag) => (
+                        <span key={tag} className="project-tag">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <span className="project-arrow" aria-hidden="true">
+                      <FaArrowRight size={12} />
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default ProjectsSection;

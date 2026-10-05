@@ -1,49 +1,62 @@
-import articlesData from "../../data/articles.json";
 import Link from "next/link";
-import {FaArrowRightLong, FaEye, FaRegCalendar} from "react-icons/fa6";
+import { FaArrowRight, FaRegCalendar } from "react-icons/fa6";
+import articlesData from "../../data/articles.json";
 
-export default function BlogSection() {
-    const formatDate = (dateString) => {
-        const [year, month, day] = dateString.split("-");
-        return `${day}/${month}/${year}`;
-    };
+export default function BlogSection({ limit = 2 }) {
+  const formatDate = (dateString) => {
+    const [year, month, day] = dateString.split("-");
+    return `${day}/${month}/${year}`;
+  };
 
-    const sortedArticles = articlesData.sort((b, a) => a.date.localeCompare(b.date));
-    const featuredArticleId = sortedArticles[0]?.id;
+  const articles = [...articlesData]
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .slice(0, limit);
 
-    return (
-        <>
-            <section className="fc g1">
-                <h2 className={"s-font"}>Articles récents</h2>
+  return (
+    <section className="projects" style={{ paddingTop: "1rem" }}>
+      <div className="container">
+        <div className="projects-header">
+          <div>
+            <p className="section-label">Blog</p>
+            <h2 className="section-title">Articles récents</h2>
+          </div>
+          <Link href="/blog" className="projects-link">
+            Voir tous les articles
+            <FaArrowRight size={13} />
+          </Link>
+        </div>
 
-                <div className={"fr fw-w g1 ai-fs"}>
-                    {sortedArticles.map(article => (
-                        <div className={`BS_card ${article.id === featuredArticleId ? "featured" : ""}`} key={article.id} style={{ width: article.id === featuredArticleId ? '100%' : 'auto' }}>
-                            <img src={`/${article.cover_image}`} alt={article.title} />
-                            <div className="content">
-                                <div className="article-meta BP_card">
-                                    <div className={"fr g0-5 ai-c"}>
-                                        <img src={`/${article.author.profile_image}`}
-                                             alt={article.author.name}
-                                             className="author-image" style={{ width: "40px", height: "40px" }} />
-                                        <div className={"fc"}>
-                                            <h4>{article.author.name}</h4>
-                                            <p>{article.author.bio}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h2>{article.title}</h2>
-                                <div>
-                                    <p className={"category"}>{article.category}</p>
-                                    <span className={"fr g0-5 ai-c o0-5"}><FaRegCalendar />{formatDate(article.date)}</span>
-                                </div>
-                                <p>{article.excerpt}</p>
-                                <Link className={"button"} href={`/blog/${article.slug}`}>Lire la suite<FaArrowRightLong /></Link>
-                            </div>
-                        </div>
-                    ))}
+        <div className="projects-grid">
+          {articles.map((article) => (
+            <Link
+              key={article.id}
+              href={`/blog/${article.slug}`}
+              className="project-card"
+            >
+              <div className="project-card-media">
+                <img src={`/${article.cover_image}`} alt={article.title} />
+                <span className="project-card-cat">{article.category}</span>
+              </div>
+              <div className="project-card-body">
+                <h3>{article.title}</h3>
+                <p>{article.excerpt}</p>
+                <div className="project-card-footer">
+                  <span
+                    className="project-tag"
+                    style={{ display: "inline-flex", alignItems: "center", gap: "0.35rem" }}
+                  >
+                    <FaRegCalendar size={11} />
+                    {formatDate(article.date)}
+                  </span>
+                  <span className="project-arrow" aria-hidden="true">
+                    <FaArrowRight size={12} />
+                  </span>
                 </div>
-            </section>
-        </>
-    );
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
