@@ -16,17 +16,11 @@ const skillMap = Object.fromEntries(
   )
 );
 
-function getShortDescription(text = "") {
-  const clean = text.replace(/\s+/g, " ").trim();
-  if (clean.length <= 140) return clean;
-  return `${clean.slice(0, 137).trim()}...`;
-}
-
 function getTechLabels(technos = []) {
   return technos
     .map((id) => skillMap[id])
     .filter(Boolean)
-    .slice(0, 3);
+    .slice(0, 2);
 }
 
 function ProjectsSection() {
@@ -52,23 +46,22 @@ function ProjectsSection() {
           </Link>
         </div>
 
-        <div className="projects-grid">
+        <div className="library-grid">
           {projects.map((project) => {
             const tags = getTechLabels(project.technos);
             return (
               <Link
                 key={project.id}
                 href={`/projet/${project.slug}`}
-                className="project-card"
+                className="library-card"
               >
-                <div className="project-card-media">
+                <div className="library-card-media">
                   <img src={`/${project.image}`} alt={project.name} />
-                  <span className="project-card-cat">{project.type}</span>
                 </div>
-                <div className="project-card-body">
+                <div className="library-card-body">
+                  <span className="library-card-type">{project.type}</span>
                   <h3>{project.name}</h3>
-                  <p>{getShortDescription(project.description)}</p>
-                  <div className="project-card-footer">
+                  <div className="library-card-meta">
                     <div className="project-tags">
                       {tags.map((tag) => (
                         <span key={tag} className="project-tag">
@@ -77,7 +70,7 @@ function ProjectsSection() {
                       ))}
                     </div>
                     <span className="project-arrow" aria-hidden="true">
-                      <FaArrowRight size={12} />
+                      <FaArrowRight size={11} />
                     </span>
                   </div>
                 </div>
