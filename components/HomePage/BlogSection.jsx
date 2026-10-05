@@ -2,31 +2,43 @@ import Link from "next/link";
 import { FaArrowRight, FaRegCalendar } from "react-icons/fa6";
 import articlesData from "../../data/articles.json";
 
-export default function BlogSection({ limit = 3 }) {
+export default function BlogSection({ limit = 3, showIntro = true }) {
   const formatDate = (dateString) => {
     const [year, month, day] = dateString.split("-");
     return `${day}/${month}/${year}`;
   };
 
-  const articles = [...articlesData]
-    .sort((a, b) => b.date.localeCompare(a.date))
-    .slice(0, limit);
+  const sorted = [...articlesData].sort((a, b) =>
+    b.date.localeCompare(a.date)
+  );
+  const articles =
+    typeof limit === "number" && limit > 0 ? sorted.slice(0, limit) : sorted;
 
   return (
     <section className="projects blog-preview">
       <div className="container">
-        <div className="projects-header">
-          <div>
-            <p className="section-label">Mes articles</p>
-            <h2 className="section-title">Je partage aussi ce que j&apos;apprends</h2>
+        {showIntro && (
+          <div className="projects-header">
+            <div>
+              <p className="section-label">Mes articles</p>
+              <h2 className="section-title">
+                Je partage aussi ce que j&apos;apprends
+              </h2>
+            </div>
+            {typeof limit === "number" && limit > 0 && (
+              <Link href="/blog" className="projects-link">
+                Découvrir tous les articles
+                <FaArrowRight size={13} />
+              </Link>
+            )}
           </div>
-          <Link href="/blog" className="projects-link">
-            Découvrir tous les articles
-            <FaArrowRight size={13} />
-          </Link>
-        </div>
+        )}
 
-        <div className={`projects-grid${articles.length === 3 ? " projects-grid-3" : ""}`}>
+        <div
+          className={`projects-grid${
+            articles.length >= 3 ? " projects-grid-3" : ""
+          }`}
+        >
           {articles.map((article) => (
             <Link
               key={article.id}
