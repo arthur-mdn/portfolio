@@ -6,7 +6,6 @@ const links = [
   { href: "/services", label: "Services" },
   { href: "/a-propos", label: "À propos" },
   { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact" },
 ];
 
 function Menu() {
