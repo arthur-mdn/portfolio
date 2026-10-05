@@ -22,7 +22,17 @@
     "date": "2024-05-16",
     "status": "online",
     "type": "WebApp",
-    "interesting": true
+    "interesting": true,
+    "context": "Pendant la Wild Work Week à l'université de Toulon, l'objectif était de valoriser la formation MMI et les projets étudiants de façon ludique.",
+    "need": "Une expérience web engageante, réalisable en peu de temps, pour faire découvrir les parcours création, développement et communication.",
+    "solution": "Création d'une webapp inspirée de Tinder : swipe de projets étudiants, scoring invisible et révélation du parcours le plus compatible.",
+    "features": [
+      "Interface de swipe type cards",
+      "Détail des projets étudiants",
+      "Logique de compatibilité par parcours",
+      "Expérience interactive pensée pour un événement court"
+    ],
+    "result": "Une démonstration concrète de ce que la formation MMI produit, présentée sous une forme mémorable et participative."
   },
   {
     "id": 31,
@@ -41,7 +51,17 @@
     "date": "2024-05-04",
     "status": "online",
     "type": "Application mobile",
-    "interesting": true
+    "interesting": true,
+    "context": "Premier projet d'application native iOS, pensé comme une aide pour les personnes diabétiques dans le suivi quotidien des glucides.",
+    "need": "Une application mobile simple, fiable et native, centrée sur le calcul et le suivi des apports glucidiques.",
+    "solution": "Développement d'une application iOS en Swift, avec une interface claire orientée usage quotidien.",
+    "features": [
+      "Calcul d'apports glucidiques",
+      "Interface native iOS",
+      "Parcours utilisateur simplifié",
+      "Application pensée pour un usage récurrent"
+    ],
+    "result": "Une première application native qui illustre la capacité à sortir du web pour répondre à un besoin métier mobile précis."
   },
   {
     "id": 30,
@@ -53,7 +73,10 @@
     "github": "",
     "youtube": [],
     "technos": [
-      101,102,103, 403
+      101,
+      102,
+      103,
+      403
     ],
     "tags": [],
     "date": "2024-04-12",
@@ -83,7 +106,17 @@
     "date": "2024-03-25",
     "status": "online",
     "type": "Site web",
-    "interesting": false
+    "interesting": false,
+    "context": "DJ Mika avait besoin d'une présence en ligne crédible pour présenter ses prestations de DJ et karaoké destinées aux événements privés.",
+    "need": "Un site vitrine clair, moderne et orienté conversion, capable de présenter l'offre et de faciliter la prise de contact.",
+    "solution": "Conception et développement d'un site vitrine Next.js / React, pensé mobile-first, avec une présentation des services et un parcours simple vers le contact.",
+    "features": [
+      "Pages de présentation des prestations",
+      "Design moderne adapté au positionnement événementiel",
+      "Parcours de contact simplifié",
+      "Site responsive et rapide"
+    ],
+    "result": "Une vitrine professionnelle qui met en avant l'univers de DJ Mika et facilite les demandes de devis pour événements privés."
   },
   {
     "id": 28,
@@ -236,7 +269,17 @@
     "date": "2023-11-26",
     "status": "online",
     "type": "WebApp",
-    "interesting": true
+    "interesting": true,
+    "context": "Besoin d'un outil ludique pour animer des quiz et blind-tests en soirée, avec plusieurs participants connectés en temps réel.",
+    "need": "Une application web interactive, simple à lancer, capable de gérer buzzers, scores et synchronisation entre appareils.",
+    "solution": "Développement d'une progressive web app React/Vite avec backend Node.js, MongoDB et Socket.io pour le temps réel.",
+    "features": [
+      "Buzzers synchronisés en temps réel",
+      "Gestion de parties et de scores",
+      "Interface responsive pour mobile et desktop",
+      "Architecture temps réel via Socket.io"
+    ],
+    "result": "Un outil prêt à l'emploi pour transformer une soirée en expérience de jeu interactive, déployable facilement."
   },
   {
     "id": 26,

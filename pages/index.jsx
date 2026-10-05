@@ -1,115 +1,132 @@
 import ExpertiseSection from "@/components/HomePage/ExpertiseSection";
 import HeroSection from "@/components/HomePage/HeroSection";
 import AboutSection from "@/components/HomePage/AboutSection";
-import LinksSection from "@/components/HomePage/LinksSection";
 import ProjectsSection from "@/components/HomePage/ProjectsSection";
-import Head from "next/head";
+import TechnologiesSection from "@/components/HomePage/TechnologiesSection";
+import MethodSection from "@/components/HomePage/MethodSection";
+import LocationSection from "@/components/HomePage/LocationSection";
+import FinalCtaSection from "@/components/HomePage/FinalCtaSection";
 import BlogSection from "@/components/HomePage/BlogSection";
+import Head from "next/head";
 
 export default function HomePage() {
-  const schemaOrgJSONLD = {
-    "@context": "http://schema.org",
-    "@type": "Organization",
+  const title = "Développeur Web Freelance Vaucluse | Arthur Mondon";
+  const description =
+    "Développeur web freelance dans le Vaucluse, je crée des sites internet et applications web sur mesure pour entreprises et indépendants à Avignon, Carpentras et en Provence.";
+
+  const schemaPerson = {
+    "@context": "https://schema.org",
+    "@type": "Person",
     name: "Arthur Mondon",
+    jobTitle: "Développeur web freelance",
+    description,
     url: "https://mondon.pro",
-    logo: "https://mondon.pro/others/favicon.ico",
-    contactPoint: [
-      {
-        "@type": "ContactPoint",
-        telephone: "+33783520757",
-        contactType: "service client",
-      },
-    ],
+    image: "https://mondon.pro/illustrations/memoji.webp",
+    email: "mailto:contact@mondon.pro",
+    telephone: "+33783520757",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Carpentras",
+      addressRegion: "Vaucluse",
+      addressCountry: "FR",
+    },
     sameAs: [
       "https://www.linkedin.com/in/arthurmondon/",
       "https://github.com/arthur-mdn",
       "https://www.youtube.com/@arthurmdn",
+    ],
+    knowsAbout: [
+      "Développement web",
+      "Full-stack",
+      "React",
+      "Node.js",
+      "WordPress",
+      "Docker",
     ],
   };
 
-  const schemaOrgJSONLDPerson = {
-    "@context": "http://schema.org",
-    "@type": "Person",
-    name: "Arthur Mondon",
-    jobTitle: "Développeur Web Fullstack",
-    description:
-      "Développeur web passionné, spécialisé dans la création de solutions web innovantes.",
+  const schemaService = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Arthur Mondon — Développeur web freelance",
+    description,
     url: "https://mondon.pro",
-    image: "https://mondon.pro/illustrations/memoji2.png",
-    sameAs: [
-      "https://www.linkedin.com/in/arthurmondon/",
-      "https://github.com/arthur-mdn",
-      "https://www.youtube.com/@arthurmdn",
-      "https://eradion.fr",
+    image: "https://mondon.pro/others/preview.png",
+    telephone: "+33783520757",
+    areaServed: [
+      { "@type": "AdministrativeArea", name: "Vaucluse" },
+      { "@type": "City", name: "Avignon" },
+      { "@type": "City", name: "Carpentras" },
+      { "@type": "AdministrativeArea", name: "Provence" },
+      { "@type": "Country", name: "France" },
     ],
-    knowsAbout: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React",
-      "Node.js",
-      "NextJS",
-      "MongoDB",
-      "SQL",
-      "Vite",
-    ],
+    priceRange: "$$",
+    provider: {
+      "@type": "Person",
+      name: "Arthur Mondon",
+    },
+  };
+
+  const schemaWebsite = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Arthur Mondon",
+    url: "https://mondon.pro",
+    description,
   };
 
   return (
     <>
       <Head>
         <link rel="icon" href="/others/favicon.ico" />
-        <link rel={"canonical"} href={"https://mondon.pro"} />
+        <link rel="canonical" href="https://mondon.pro" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Arthur Mondon : Portfolio</title>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrgJSONLD) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(schemaOrgJSONLDPerson),
-          }}
-        />
-        <meta
-          name="description"
-          content="Arthur Mondon, développeur web fullstack freelance. Solutions web innovantes. Découvrez mon portfolio répertoriant mes projets publics. Originaire du Vaucluse."
-        />
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <meta
           name="keywords"
-          content="Arthur Mondon, développeur web, portfolio, solutions web, innovation numérique, auto-entrepreneur, freelance, Eradion, projets numériques, création web, compétences techniques, créativité, expérience en ligne, BUT MMI, Toulon, services informatiques, Provence-Alpes-Côte-d'Azur, Vaucluse, Var"
+          content="développeur web freelance Vaucluse, développeur full-stack, création site internet Avignon, application web sur mesure Carpentras, développeur Provence"
         />
         <meta name="author" content="Arthur MONDON" />
         <meta name="robots" content="index, follow" />
 
         <meta property="og:url" content="https://mondon.pro" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Arthur Mondon : Portfolio" />
-        <meta
-          property="og:description"
-          content="Arthur Mondon, développeur web fullstack freelance. Solutions web innovantes. Découvrez mon portfolio répertoriant mes projets publics. Originaire du Vaucluse."
-        />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
         <meta property="og:image" content="https://mondon.pro/others/preview.png" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="mondon.pro" />
         <meta property="twitter:url" content="https://mondon.pro" />
-        <meta name="twitter:title" content="Arthur Mondon : Portfolio" />
-        <meta
-          name="twitter:description"
-          content="Arthur Mondon, développeur web fullstack freelance. Solutions web innovantes. Découvrez mon portfolio répertoriant mes projets publics. Originaire du Vaucluse."
-        />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content="https://mondon.pro/others/preview.png" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaPerson) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaService) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebsite) }}
+        />
       </Head>
 
       <div className="home-page">
         <HeroSection />
         <ExpertiseSection />
         <ProjectsSection />
+        <TechnologiesSection />
         <AboutSection />
-        <BlogSection limit={2} />
-        <LinksSection />
+        <MethodSection />
+        <LocationSection />
+        <BlogSection limit={3} />
+        <FinalCtaSection />
       </div>
     </>
   );

@@ -30,19 +30,9 @@ function getTechLabels(technos = []) {
 }
 
 function ProjectsSection() {
-  const featured = FEATURED_SLUGS.map((slug) =>
+  const projects = FEATURED_SLUGS.map((slug) =>
     projectsData.find((project) => project.slug === slug)
   ).filter(Boolean);
-
-  const projects =
-    featured.length >= 4
-      ? featured.slice(0, 4)
-      : [...featured, ...projectsData.filter((p) => p.interesting)]
-          .filter(
-            (project, index, list) =>
-              list.findIndex((item) => item.slug === project.slug) === index
-          )
-          .slice(0, 4);
 
   return (
     <section className="projects" id="realisations">
@@ -52,8 +42,8 @@ function ProjectsSection() {
             <p className="section-label">Mes réalisations</p>
             <h2 className="section-title">Des projets concrets et variés</h2>
             <p className="section-lead">
-              Une sélection de projets publics récents, du site vitrine à
-              l&apos;application métier.
+              Sites vitrines, applications métier, outils événementiels ou
+              logiciels : quelques projets que j&apos;ai conçus et développés.
             </p>
           </div>
           <Link href="/projets" className="projects-link">

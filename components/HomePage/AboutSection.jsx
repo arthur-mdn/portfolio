@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa6";
 import projectsData from "../../data/projects.json";
 
 function AboutSection() {
@@ -10,8 +12,8 @@ function AboutSection() {
         <div className="about-visual">
           <div className="about-visual-bg" aria-hidden="true" />
           <Image
-            src="/illustrations/memoji.png"
-            alt="Arthur Mondon"
+            src="/illustrations/memoji.webp"
+            alt="Arthur Mondon, développeur web freelance dans le Vaucluse"
             width={320}
             height={412}
             style={{ objectFit: "contain" }}
@@ -20,30 +22,38 @@ function AboutSection() {
 
         <div className="about-copy">
           <p className="section-label">À propos</p>
-          <h2 className="section-title">Développeur, mais pas seulement.</h2>
+          <h2 className="section-title">
+            Du développement à la mise en production.
+          </h2>
           <p>
-            Je conçois des solutions web full-stack en partant du besoin métier :
-            interfaces claires, architecture solide, déploiement maîtrisé.
-          </p>
-          <p>
-            Au-delà du code, j&apos;interviens sur le design UI, l&apos;infrastructure
-            (Docker, VPS, monitoring) et l&apos;accompagnement de A à Z, de
-            l&apos;idée à la mise en ligne.
+            Je suis Arthur Mondon, développeur full-stack freelance basé dans le
+            Vaucluse. Après cinq années d&apos;expérience en développement web,
+            déploiement et exploitation d&apos;applications, j&apos;accompagne
+            aujourd&apos;hui entreprises, indépendants et porteurs de projets
+            dans la création de leurs outils numériques.
           </p>
           <div className="about-stats">
             <div className="about-stat">
+              <strong>5 ans</strong>
+              <span>d&apos;expérience</span>
+            </div>
+            <div className="about-stat">
               <strong>{projectCount}+</strong>
-              <span>projets publics</span>
+              <span>projets</span>
             </div>
             <div className="about-stat">
               <strong>Full-stack</strong>
-              <span>front, back, infra</span>
+              <span>front, back et infra</span>
             </div>
             <div className="about-stat">
-              <strong>PACA</strong>
-              <span>basé dans le Vaucluse</span>
+              <strong>Vaucluse</strong>
+              <span>près de Carpentras</span>
             </div>
           </div>
+          <Link href="/a-propos" className="projects-link" style={{ marginTop: "1.5rem" }}>
+            En savoir plus
+            <FaArrowRight size={13} />
+          </Link>
         </div>
       </div>
     </section>

@@ -1,247 +1,269 @@
-// /pages/projet/[slug].js
-import {useEffect, useRef, useState} from "react";
+import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
-import {useRouter} from 'next/router';
 import projectsData from "../../data/projects.json";
 import skillsData from "../../data/skills.json";
 import {
-    FaBan,
-    FaGithub,
-    FaLink,
-    FaArrowUp,
-    FaArrowDown,
-    FaExclamation,
-    FaTriangleExclamation,
-    FaUser
+  FaBan,
+  FaGithub,
+  FaLink,
+  FaArrowUp,
+  FaArrowDown,
+  FaTriangleExclamation,
 } from "react-icons/fa6";
 import Link from "next/link";
 
 export async function getStaticPaths() {
-    const paths = projectsData.map(project => ({
-        params: {slug: project.slug.toString()},
-    }));
-
-    return {paths, fallback: false};
+  const paths = projectsData.map((project) => ({
+    params: { slug: project.slug.toString() },
+  }));
+  return { paths, fallback: false };
 }
 
-export async function getStaticProps({params}) {
-    const project = projectsData.find(p => p.slug === params.slug);
-    if (!project) {
-        return {notFound: true};
-    }
-    return {props: {project}};
+export async function getStaticProps({ params }) {
+  const project = projectsData.find((p) => p.slug === params.slug);
+  if (!project) return { notFound: true };
+  return { props: { project } };
 }
 
-function ProjectPage({project}) {
-    const [showToggleButton, setShowToggleButton] = useState(false);
-    const [showFullDescription, setShowFullDescription] = useState(false);
-    const [isImageExpanded, setIsImageExpanded] = useState(false);
-    const descriptionRef = useRef(null);
+function ProjectPage({ project }) {
+  const [isImageExpanded, setIsImageExpanded] = useState(false);
 
-    const checkDescriptionHeight = () => {
-        if (descriptionRef.current && descriptionRef.current.scrollHeight > 145) {
-            setShowToggleButton(true);
-        } else {
-            setShowToggleButton(false);
-        }
-    };
+  const projectSkills = project.technos
+    .map((techId) =>
+      skillsData
+        .flatMap((category) => category.skills)
+        .find((skill) => skill.id === techId)
+    )
+    .filter(Boolean);
 
-    useEffect(() => {
-        // Vérifie si la hauteur du contenu dépasse la hauteur maximale
-        checkDescriptionHeight();
-        const handleResize = () => {
-            checkDescriptionHeight();
-        };
+  const hasLinks = project.github || project.link || project.youtube?.length;
+  const hasCaseStudy = Boolean(
+    project.context || project.need || project.solution || project.result
+  );
 
-        window.addEventListener("resize", handleResize);
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
+  const formatDate = (dateString) => {
+    const [year, month, day] = dateString.split("-");
+    return `${day}/${month}/${year}`;
+  };
 
-    const handleImageClick = () => {
-        setIsImageExpanded(!isImageExpanded);
-    };
+  const metaDescription = (
+    project.context ||
+    project.description ||
+    ""
+  ).slice(0, 160);
+  const pageTitle = `${project.name.trim()} | Réalisation — Arthur Mondon`;
+  const canonical = `https://mondon.pro/projet/${project.slug}`;
 
-    const projectSkills = project.technos.map(techId =>
-        skillsData.flatMap(category => category.skills).find(skill => skill.id === techId)
-    ).filter(Boolean); // Filtrer les undefined
+  const schemaOrgJSONLD = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: project.name,
+    description: metaDescription,
+    url: canonical,
+    image: `https://mondon.pro/${project.image}`,
+    dateCreated: project.date,
+    author: {
+      "@type": "Person",
+      name: "Arthur Mondon",
+      url: "https://mondon.pro",
+    },
+    keywords: (project.tags || []).join(", "),
+    genre: project.type,
+    inLanguage: "fr-FR",
+  };
 
-    const hasLinks = project.github || project.link || project.youtube;
-    const formatDate = (dateString) => {
-        const [year, month, day] = dateString.split("-");
-        return `${day}/${month}/${year}`;
-    };
+  return (
+    <>
+      <Head>
+        <link rel="icon" href="/others/favicon.ico" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrgJSONLD) }}
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{pageTitle}</title>
+        <meta name="robots" content="index, follow" />
+        <meta name="description" content={metaDescription} />
+        <link rel="canonical" href={canonical} />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta
+          property="og:image"
+          content={`https://mondon.pro/ogs/${project.image}`}
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta
+          name="twitter:image"
+          content={`https://mondon.pro/ogs/${project.image}`}
+        />
+      </Head>
 
-    const schemaOrgJSONLD = {
-        "@context": "http://schema.org",
-        "@type": "CreativeWork",
-        "name": project.name,
-        "description": project.description,
-        "url": `https://mondon.pro/projet/${project.slug}`,
-        "image": `https://mondon.pro/${project.image}`,
-        "dateCreated": project.date,
-        "author": {
-            "@type": "Person",
-            "name": "Arthur Mondon",
-            "url": "https://www.linkedin.com/in/arthurmondon/",
-            "image": "https://mondon.pro/others/profile.jpg"
-        },
-        "keywords": project.tags.join(", "),
-        "genre": project.type,
-        "inLanguage": "fr-FR",
-        "isAccessibleForFree": "True",
-        "hasPart": project.technos.map(techId => {
-            const skill = skillsData.flatMap(category => category.skills).find(skill => skill.id === techId);
-            return {
-                "@type": "CreativeWork",
-                "name": skill.name,
-                "description": skill.description,
-                "image": `https://mondon.pro/${skill.links[0].url}`
-            };
-        }),
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": `https://mondon.pro/projet/${project.slug}`
-        },
-    };
-    return (
-        <>
-            <Head>
+      <main className="page-shell">
+        <div className="container" style={{ maxWidth: "960px" }}>
+          <div className="PP_img" style={{ maxWidth: "100%", marginBottom: "1.5rem" }}>
+            <img
+              src={`/${project.image}`}
+              alt={project.name}
+              onClick={() => setIsImageExpanded(!isImageExpanded)}
+              className={isImageExpanded ? "expanded" : ""}
+            />
+            <div className="indicator">
+              {isImageExpanded ? <FaArrowUp /> : <FaArrowDown />}
+            </div>
+          </div>
 
-                <link rel="icon" href="/others/favicon.ico"/>
-                <script type="application/ld+json"
-                        dangerouslySetInnerHTML={{__html: JSON.stringify(schemaOrgJSONLD)}}></script>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                <title>{project.name.trim()} - Arthur Mondon</title>
-                <meta name="robots" content="index, follow"/>
-                {/*// meta description slice to 300 character max*/}
-                <meta name="description" content={project.description.slice(0, 300)}/>
-                <link rel={"canonical"} href={`https://mondon.pro/projet/${project.slug}`}/>
-                {/* Facebook Meta Tags */}
-                <meta property="og:url" content={`https://mondon.pro/${project.slug}`}/>
-                <meta property="og:type" content="article"/>
-                <meta property="og:title" content={`${project.name.trim()} - Arthur Mondon`}/>
-                <meta property="og:description" content={project.description.slice(0, 300)}/>
-                <meta property="og:image" content={`https://mondon.pro/ogs/${project.image}`}/>
+          <p className="section-label">{project.type}</p>
+          <h1 className="section-title" style={{ marginBottom: "0.5rem" }}>
+            {project.name}
+          </h1>
+          <p style={{ color: "var(--text-secondary)", marginBottom: "1.5rem" }}>
+            {formatDate(project.date)} · Arthur Mondon
+          </p>
 
-                {/* Twitter Meta Tags */}
-                <meta property="twitter:url" content={`https://mondon.pro/${project.slug}`}/>
-                <meta name="twitter:title" content={`${project.name.trim()} - Arthur Mondon`}/>
-                <meta property="twitter:type" content="article"/>
-                <meta name="twitter:description" content={project.description.slice(0, 300)}/>
-                <meta name="twitter:image" content={`https://mondon.pro/ogs/${project.image}`}/>
+          {project.disclaimer && (
+            <div className="PP_disclaimer fr g1 ai-c">
+              <FaTriangleExclamation size="2rem" />
+              <p dangerouslySetInnerHTML={{ __html: project.disclaimer }} />
+            </div>
+          )}
 
-            </Head>
-            <section className="PP fc g2">
-            <div className={"PP_img"}>
-
-                    <img src={`/${project.image}`} alt={project.name} onClick={handleImageClick}
-                         className={isImageExpanded ? " expanded" : "PP_img"}/>
-                    <div className={"indicator"}>
-                        {isImageExpanded ? <FaArrowUp/> : <FaArrowDown/>}
-                    </div>
+          {hasCaseStudy ? (
+            <div className="case-grid">
+              {project.context && (
+                <div className="case-block">
+                  <h2>Contexte</h2>
+                  <p>{project.context}</p>
                 </div>
-                <div className={"PP_content"}>
-                    <div className={"PP_title_date_type"}>
-                        <div className={"fr g0-25 ai-c o0-3 mb0-5"}>
-                            <Image src={"/others/user.svg"} alt={"user"} width={0} height={0} style={{width:"1rem", height:"1rem", objectFit:"contain"}}/>
-                            <h4 className={"fw-n"}>Arthur Mondon</h4>
-                        </div>
-                        <h1>{project.name}</h1>
-                        <span style={{color: "green", fontWeight: "bold"}}>{formatDate(project.date)}</span>
-                        <ul>
-                            <li className={"type"}>{project.type}</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        {
-                        project.disclaimer && (
-                                <div className={"PP_disclaimer fr g1 ai-c"}>
-                                    <FaTriangleExclamation size={"6rem"}/>
-                                    <p dangerouslySetInnerHTML={{__html: project.disclaimer}}></p>
-                                </div>
-                            )
-                        }
-                        <h4>Description</h4>
-                        <p ref={descriptionRef}
-                           className={showFullDescription ? "full-description" : "truncated-description"}>
-                            {project.description}
-                        </p>
-
-                        {showToggleButton && (
-                            <button onClick={() => setShowFullDescription(!showFullDescription)} className={"see_more"}>
-                                {showFullDescription ? "Voir moins" : "Voir plus"}
-                            </button>
-                        )}
-
-                    </div>
-                    <div>
-                        <h4>Technologies utilisées</h4>
-                        <div className={"fr g0-5 PP_technos"}>
-                            {projectSkills.map((skill, index) => (
-                                <div key={index}>
-                                    <Image src={`/${skill.links[0].url}`} alt={skill.name} width={50} height={50} style={{objectFit:"contain"}}/>
-                                    <span key={index}>{skill.name}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
-                    <div>
-                        <h4>Liens associés</h4>
-                        <div className={"fr g0-5"}>
-                            {project.github && (
-                                <Link href={project.github} target="_blank" rel="noopener noreferrer"
-                                      className={"button github"}>
-                                    <FaGithub/>
-                                    Github
-                                </Link>
-                            )}
-                            {project.link && (
-                                <Link href={project.link} target="_blank" rel="noopener noreferrer"
-                                      className={"button linkedin"}>
-                                    <FaLink/>
-                                    Lien
-                                </Link>
-                            )}
-                            {!hasLinks &&
-                                <p className={"fr ai-c g0-5"} style={{color: "red", fontWeight: "bold"}}><FaBan/> Aucun
-                                    lien public disponible.</p>}
-                        </div>
-                    </div>
-
-                    {project.youtube.length > 0 && (
-                        <div>
-                            <h4>Vidéos associés</h4>
-                            <div className={"fc g1 fw-w"}>
-                                {project.youtube.map((video, index) => (
-                                    <div key={index} className={"PP_video fc"}>
-                                        <a href={video.link} target="_blank" rel="noopener noreferrer">
-                                            <p>{video.title}</p>
-                                            <img src={video.image} alt={video.title} style={{
-                                                width: '300px',
-                                                aspectRatio: '16/9',
-                                                objectFit: "cover",
-                                                borderRadius: '0.5rem'
-                                            }}/>
-                                        </a>
-                                    </div>
-                                ))
-                                }
-                                {!hasLinks && <p className={"fr ai-c g0-5"} style={{color: "red", fontWeight: "bold"}}>
-                                    <FaBan/> Aucun lien public disponible.</p>}
-                            </div>
-                        </div>
-                    )}
+              )}
+              {project.need && (
+                <div className="case-block">
+                  <h2>Besoin</h2>
+                  <p>{project.need}</p>
                 </div>
+              )}
+              {project.solution && (
+                <div className="case-block">
+                  <h2>Solution</h2>
+                  <p>{project.solution}</p>
+                </div>
+              )}
+              {project.features?.length > 0 && (
+                <div className="case-block">
+                  <h2>Fonctionnalités</h2>
+                  <ul>
+                    {project.features.map((feature) => (
+                      <li key={feature}>{feature}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {project.result && (
+                <div className="case-block">
+                  <h2>Résultat</h2>
+                  <p>{project.result}</p>
+                </div>
+              )}
+            </div>
+          ) : (
+            <div className="case-block">
+              <h2>Description</h2>
+              <p>{project.description}</p>
+            </div>
+          )}
 
-            </section>
-        </>
+          <div className="case-block" style={{ marginTop: "1.5rem" }}>
+            <h2>Technologies</h2>
+            <div className="fr g0-5 PP_technos" style={{ marginTop: "0.75rem" }}>
+              {projectSkills.map((skill) => (
+                <div key={skill.id}>
+                  <Image
+                    src={`/${skill.links[0].url}`}
+                    alt={skill.name}
+                    width={50}
+                    height={50}
+                    style={{ objectFit: "contain" }}
+                  />
+                  <span>{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
 
-    );
+          <div className="case-block" style={{ marginTop: "1.5rem" }}>
+            <h2>Liens</h2>
+            <div className="fr g0-5" style={{ marginTop: "0.75rem", flexWrap: "wrap" }}>
+              {project.github && (
+                <Link
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button github"
+                >
+                  <FaGithub />
+                  GitHub
+                </Link>
+              )}
+              {project.link && (
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button linkedin"
+                >
+                  <FaLink />
+                  Voir le projet
+                </Link>
+              )}
+              {!hasLinks && (
+                <p className="fr ai-c g0-5" style={{ color: "red", fontWeight: "bold" }}>
+                  <FaBan /> Aucun lien public disponible.
+                </p>
+              )}
+            </div>
+          </div>
+
+          {project.youtube?.length > 0 && (
+            <div className="case-block" style={{ marginTop: "1.5rem" }}>
+              <h2>Vidéos</h2>
+              <div className="fc g1 fw-w" style={{ marginTop: "0.75rem" }}>
+                {project.youtube.map((video) => (
+                  <a
+                    key={video.link}
+                    href={video.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <p>{video.title}</p>
+                    <img
+                      src={video.image}
+                      alt={video.title}
+                      style={{
+                        width: "300px",
+                        aspectRatio: "16/9",
+                        objectFit: "cover",
+                        borderRadius: "0.5rem",
+                      }}
+                    />
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <div style={{ marginTop: "2.5rem" }}>
+            <Link href="/contact" className="btn btn-primary">
+              Un projet similaire ? Parlons-en
+            </Link>
+          </div>
+        </div>
+      </main>
+    </>
+  );
 }
 
 export default ProjectPage;

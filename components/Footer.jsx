@@ -1,97 +1,63 @@
 import Link from "next/link";
 
 function Footer() {
+  return (
+    <footer className="site-footer">
+      <div className="container">
+        <div className="footer-grid">
+          <div className="footer-brand">
+            <strong>Arthur Mondon</strong>
+            <p>
+              Développeur web full-stack freelance
+              <br />
+              Vaucluse, Provence
+            </p>
+          </div>
 
-    const formatDate = (dateString) => {
-        const [year, month, day] = dateString.split("-");
-        return `${day}/${month}/${year}`;
-    };
+          <div className="footer-col">
+            <h3>Navigation</h3>
+            <Link href="/projets">Projets</Link>
+            <Link href="/services">Services</Link>
+            <Link href="/a-propos">À propos</Link>
+            <Link href="/blog">Blog</Link>
+            <Link href="/contact">Contact</Link>
+          </div>
 
-    return (
-        <>
-            <br/>
-            <br/>
-            <footer style={{ backgroundColor: "#003f31", color: "white" }}>
-                <section className={"FS"}>
-                    <div className={"FS_container"}>
-                        <div className={"FS_content"}>
-                            <h2 className={"FS_title s-font"}>Portfolio d&apos;Arthur Mondon.</h2>
-                            <p style={{color: "lightgrey"}}>Développeur web FullStack dans le Vaucluse (à Carpentras,
-                                Monteux, Aubignan et ses alentours).</p>
-                            <br/>
-                            <br/>
-                            <div className={"fr g3"}>
+          <div className="footer-col">
+            <h3>Liens</h3>
+            <Link
+              href="https://www.linkedin.com/in/arthurmondon/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </Link>
+            <Link
+              href="https://github.com/arthur-mdn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </Link>
+            <Link
+              href="/others/CV_Arthur_Mondon_2024.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Télécharger le CV
+            </Link>
+            <Link href="/mentions-legales">Mentions légales</Link>
+            <Link href="/rgpd">Politique de confidentialité</Link>
+          </div>
+        </div>
 
-                                <div>
-                                    <h3 className={"s-font"}>Naviguation</h3>
-                                    <div className={"fc g0-5"}>
-                                        <Link href={"/"}>
-                                            Accueil
-                                        </Link>
-                                        <Link href={"/blog"}>
-                                            Blog
-                                        </Link>
-                                        <Link href={"/services"}>
-                                            Services
-                                        </Link>
-                                        <Link href={"/projets"}>
-                                            Projets
-                                        </Link>
-                                        <Link href={"/contact"}>
-                                            Contact
-                                        </Link>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h3 className={"s-font"}>Ressources</h3>
-                                    <div className={"fc g0-5"}>
-                                        <Link href={"/rgpd"}>
-                                            RGPD
-                                        </Link>
-                                        <Link href={"/mentions-legales"}>
-                                            Mentions légales
-                                        </Link>
-                                        <Link href={"/sitemap.xml"}>
-                                            Sitemap
-                                        </Link>
-
-                                    </div>
-                                </div>
-                                <div>
-                                    <h3 className={"s-font"}>Liens</h3>
-                                    <div className={"fc g0-5"}>
-                                        <Link href={"https://www.linkedin.com/in/arthurmondon/"}>
-                                            LinkedIn
-                                        </Link>
-
-                                        <Link href={"https://github.com/arthur-mdn"}>
-                                            Github
-                                        </Link>
-
-                                        <Link href={"https://www.youtube.com/@arthurmdn"}>
-                                            YouTube
-                                        </Link>
-
-                                        <Link href={"/contact"}>
-                                            Formulaire de Contact
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <p className={"s-font"}>
-                        Copyright 2024 - Arthur MONDON
-                    </p>
-                </section>
-
-
-            </footer>
-        </>
-    );
+        <div className="footer-bottom">
+          <span>© 2026 Arthur Mondon</span>
+          <span>Développeur web freelance · Vaucluse</span>
+        </div>
+      </div>
+    </footer>
+  );
 }
 
 export default Footer;

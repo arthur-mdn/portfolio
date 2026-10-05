@@ -1,36 +1,32 @@
 import Link from "next/link";
 import Image from "next/image";
-import { FaArrowRight, FaDownload } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
 
 function HeroSection() {
   return (
     <section className="hero">
       <div className="container hero-grid">
         <div className="hero-content">
-          <p className="hero-eyebrow fade-up">Développeur full-stack freelance</p>
+          <p className="hero-eyebrow fade-up">
+            Développeur web freelance · Vaucluse
+          </p>
           <h1 className="hero-title fade-up fade-up-delay-1">
             Des idées en
             <br />
             <span className="accent">solutions web.</span>
           </h1>
           <p className="hero-text fade-up fade-up-delay-2">
-            Je conçois des applications web et des sites sur mesure, alliant
-            performance, design et simplicité d&apos;utilisation.
+            Développeur full-stack freelance dans le Vaucluse, je conçois des
+            sites internet et applications web sur mesure, de la conception au
+            déploiement.
           </p>
           <div className="hero-actions fade-up fade-up-delay-3">
-            <Link href="/projets" className="btn btn-primary">
+            <Link href="/#realisations" className="btn btn-primary">
               Découvrir mes projets
               <FaArrowRight size={14} />
             </Link>
-            <Link
-              href="/others/CV_Arthur_Mondon_2024.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              download
-              className="btn btn-secondary"
-            >
-              <FaDownload size={14} />
-              Télécharger le CV
+            <Link href="/contact" className="btn btn-secondary">
+              Parler de votre projet
             </Link>
           </div>
         </div>
@@ -64,7 +60,7 @@ function HeroSection() {
           <div className="hero-memoji-wrap">
             <Image
               src="/illustrations/memoji.webp"
-              alt="Memoji d'Arthur Mondon"
+              alt="Memoji d'Arthur Mondon, développeur web freelance"
               width={480}
               height={620}
               className="hero-memoji"

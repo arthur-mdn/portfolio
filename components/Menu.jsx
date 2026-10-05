@@ -3,8 +3,9 @@ import Link from "next/link";
 
 const links = [
   { href: "/projets", label: "Projets" },
-  { href: "/competences", label: "Compétences" },
-  { href: "/#a-propos", label: "À propos" },
+  { href: "/services", label: "Services" },
+  { href: "/a-propos", label: "À propos" },
+  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -31,7 +32,9 @@ function Menu() {
       <div className="topbar-inner">
         <Link href="/" className="topbar-brand" onClick={() => setOpen(false)}>
           <span className="topbar-brand-name">Arthur Mondon</span>
-          <span className="topbar-brand-role">Développeur Full-Stack</span>
+          <span className="topbar-brand-role">
+            Développeur Full-Stack · Vaucluse
+          </span>
         </Link>
 
         <nav className="topbar-nav" aria-label="Navigation principale">
