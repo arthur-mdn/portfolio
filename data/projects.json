@@ -1,5 +1,325 @@
 [
   {
+    "id": 40,
+    "name": "BlindSet Studio",
+    "slug": "blindset-studio",
+    "description": "Application macOS dédiée à la création et à l'animation de blind tests et de quiz musicaux personnalisés.\n\nBlindSet Studio permet de préparer ses quiz, gérer sa bibliothèque musicale, personnaliser les extraits et appliquer différents effets audio. Pendant l'animation, l'application pilote un écran public distinct afin de diffuser les questions, réponses et différents temps du jeu aux participants.",
+    "image": "projects/blindset-studio.webp",
+    "link": "",
+    "github": "",
+    "youtube": [],
+    "technos": [
+      110,
+      401
+    ],
+    "tags": [],
+    "date": "2026-10-01",
+    "status": "online",
+    "type": "Application macOS",
+    "interesting": true,
+    "context": "Besoin d'un outil desktop pour préparer et animer des blind tests musicaux avec un écran public dédié.",
+    "need": "Une application macOS native pour gérer bibliothèque, extraits, effets et diffusion live.",
+    "solution": "Développement d'une app macOS en Swift, centrée sur la préparation des quiz et le pilotage d'un écran public.",
+    "features": [
+      "Préparation de quiz musicaux",
+      "Gestion de bibliothèque et extraits",
+      "Effets audio",
+      "Pilotage écran public pendant l’animation"
+    ],
+    "result": "Un outil natif macOS pensé pour animer des blind tests de façon fluide et personnalisée."
+  },
+  {
+    "id": 39,
+    "name": "Karaoké & Propositions",
+    "slug": "karaoke-and-propositions",
+    "description": "Webapp conçue pour les DJ et animateurs afin de gérer les demandes musicales du public pendant une soirée.\n\nDepuis leur téléphone, les invités parcourent le catalogue KaraFun, recherchent un morceau et transmettent leur demande de karaoké ou leur proposition musicale. Le DJ reçoit toutes les demandes en temps réel depuis son interface et peut les accepter, les refuser et organiser sa file d'attente sans interrompre son animation.",
+    "image": "projects/karaoke-and-propositions.webp",
+    "link": "",
+    "github": "",
+    "youtube": [],
+    "technos": [
+      105,
+      109,
+      201,
+      108,
+      401
+    ],
+    "tags": [],
+    "date": "2026-09-01",
+    "status": "online",
+    "type": "WebApp",
+    "interesting": true,
+    "context": "Les DJ ont besoin de recevoir et organiser les demandes musicales du public sans casser le rythme de la soirée.",
+    "need": "Une webapp temps réel : catalogue, demandes invités, file DJ et actions accepter/refuser.",
+    "solution": "Développement d'une application web synchronisée entre interface invités et interface DJ.",
+    "features": [
+      "Catalogue KaraFun côté invités",
+      "Demandes de karaoké et propositions",
+      "Interface DJ en temps réel",
+      "Gestion de file d'attente"
+    ],
+    "result": "Un outil événementiel qui fluidifie l'interaction entre le public et le DJ."
+  },
+  {
+    "id": 38,
+    "name": "Élevage Hitch",
+    "slug": "elevage-hitch",
+    "description": "Conception du site vitrine d'un élevage familial de chiens et de chats. Le site présente l'élevage, ses différentes races, ses reproducteurs et les animaux disponibles ou à venir.\n\nUne attention particulière a été portée à la gestion des animaux et des demandes de contact, avec des fiches structurées et des formulaires adaptés aux personnes souhaitant accueillir un futur compagnon.",
+    "image": "projects/elevage-hitch.webp",
+    "link": "",
+    "github": "",
+    "youtube": [],
+    "technos": [
+      105,
+      109,
+      401
+    ],
+    "tags": [],
+    "date": "2026-09-01",
+    "status": "online",
+    "type": "Site web",
+    "interesting": true,
+    "context": "Un élevage familial avait besoin d'une vitrine claire pour présenter races, reproducteurs et animaux disponibles.",
+    "need": "Un site structuré avec fiches animaux et formulaires de contact adaptés.",
+    "solution": "Création d'un site vitrine orienté présentation de l'élevage et prise de contact.",
+    "features": [
+      "Présentation de l'élevage et des races",
+      "Fiches reproducteurs et animaux",
+      "Formulaires de contact adaptés",
+      "Parcours clair pour les adoptants"
+    ],
+    "result": "Une présence en ligne crédible qui facilite la découverte de l'élevage et les demandes de contact."
+  },
+  {
+    "id": 29,
+    "name": "Private Events - DJ Mika",
+    "slug": "private-events-dj-mika",
+    "description": "Refonte complète du site Private Events pour DJ Mika, réalisée le 13 juin 2026. Le projet a été entièrement reconstruit côté architecture, style et référencement, afin d'offrir une vitrine plus claire, plus rapide et mieux adaptée à la conversion.\n\nLe site présente les prestations de DJ et karaoké pour événements privés et soirées d'entreprise, avec une expérience mobile-first et un parcours de contact simplifié. Un constructeur d'événement a également été ajouté pour faciliter la demande de devis : les visiteurs précisent le type d'événement, le contexte et leurs besoins avant d'envoyer leur demande.",
+    "image": "projects/private-events.webp",
+    "link": "https://privateevents.fr",
+    "github": "https://github.com/arthur-mdn/private-events",
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103,
+      105,
+      106,
+      109,
+      401
+    ],
+    "tags": [],
+    "date": "2026-06-13",
+    "status": "online",
+    "type": "Site web",
+    "interesting": true,
+    "context": "DJ Mika avait besoin d'une présence en ligne plus moderne, mieux référencée et capable de convertir plus facilement les demandes d'événements.",
+    "need": "Une refonte complète du site : architecture, design, SEO et un parcours de devis plus guidé.",
+    "solution": "Reconstruction du site avec une nouvelle structure, un style mis à jour, une base SEO technique propre et un constructeur d'événement pour préparer les demandes de devis.",
+    "features": [
+      "Refonte complète architecture et design",
+      "Optimisation SEO technique",
+      "Constructeur d'événement pour devis",
+      "Parcours mobile-first orienté conversion"
+    ],
+    "result": "Une vitrine plus professionnelle, plus visible, et un parcours de contact plus simple pour les événements privés."
+  },
+  {
+    "id": 37,
+    "name": "FidelityWallet",
+    "slug": "fidelity-wallet",
+    "description": "Application iOS permettant de regrouper ses cartes de fidélité directement sur son iPhone pour les retrouver rapidement au quotidien.\n\nL'application a été conçue nativement pour iOS avec une interface inspirée du nouveau langage visuel Liquid Glass d'iOS 26, afin de proposer une expérience moderne et parfaitement intégrée à l'écosystème Apple.",
+    "image": "projects/fidelity-wallet.webp",
+    "link": "",
+    "github": "",
+    "youtube": [],
+    "technos": [
+      110,
+      401
+    ],
+    "tags": [],
+    "date": "2026-03-01",
+    "status": "online",
+    "type": "Application mobile",
+    "interesting": true,
+    "context": "Besoin quotidien de retrouver rapidement ses cartes de fidélité sans accumuler les supports physiques.",
+    "need": "Une app iOS native simple pour centraliser et consulter ses cartes.",
+    "solution": "Développement d'une application iOS en Swift, avec une interface inspirée du langage Liquid Glass.",
+    "features": [
+      "Regroupement des cartes de fidélité",
+      "Interface native iOS",
+      "Expérience inspirée Liquid Glass",
+      "Usage quotidien rapide"
+    ],
+    "result": "Une app native qui illustre la capacité à produire une expérience Apple moderne et utile."
+  },
+  {
+    "id": 8,
+    "name": "DisplayHub",
+    "slug": "displayhub",
+    "description": "DisplayHub est un système d'affichage dynamique basé sur Raspberry Pi, conçu pour diffuser des informations pratiques et visuelles sur un écran. Il affiche une page web animée avec logo, météo, date, directives de navigation, slider photo et bandeau d'informations.\n\nUn panel administratif permet d'ajouter, modifier ou supprimer directives, orientations de flèches, photos et icônes. Le système inclut un mode sombre programmable, la gestion d'horaires d'affichage et une intégration météo en temps réel.\n\nCe dispositif illustre la capacité à concevoir une solution d'affichage interactive, utile au quotidien et administrable sans complexité.",
+    "image": "projects/interactive-screen-display.png",
+    "link": "",
+    "github": "",
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103,
+      202,
+      301
+    ],
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JS",
+      "PHP",
+      "MySQL"
+    ],
+    "date": "2025-11-01",
+    "status": "online",
+    "type": "Écran interactif",
+    "interesting": true,
+    "context": "Besoin d'un écran d'aide à la navigation capable d'afficher des informations utiles et actualisées en continu.",
+    "need": "Un système d'affichage dynamique, administrable, avec météo, directives et contenus visuelle.",
+    "solution": "Développement d'une interface web animée déployée sur Raspberry Pi, avec back-office et programmation horaire.",
+    "features": [
+      "Affichage dynamique multi-contenus",
+      "Panel administratif",
+      "Mode sombre programmable",
+      "Météo en temps réel"
+    ],
+    "result": "Un écran d'information autonome, clair et simple à maintenir au quotidien."
+  },
+  {
+    "id": 36,
+    "name": "Mariage Vidéobooth",
+    "slug": "mariage-videobooth",
+    "description": "Webapp événementielle conçue autour d'un téléphone filaire vintage transformé en vidéobooth pour un mariage.\n\nUne tablette guide les invités à travers une expérience simple permettant d'enregistrer un message vidéo souvenir. Le téléphone physique apporte l'aspect ludique et rétro du dispositif, tandis que l'application prend en charge l'expérience numérique et la collecte des vidéos laissées par les invités.",
+    "image": "projects/mariage-videobooth.webp",
+    "link": "",
+    "github": "",
+    "youtube": [],
+    "technos": [
+      105,
+      109,
+      201,
+      401
+    ],
+    "tags": [],
+    "date": "2025-08-01",
+    "status": "online",
+    "type": "WebApp",
+    "interesting": true,
+    "context": "Pour un mariage, besoin d'un dispositif ludique permettant aux invités de laisser des messages vidéo.",
+    "need": "Une webapp simple, guidée sur tablette, associée à un téléphone vintage pour créer l’expérience.",
+    "solution": "Conception d'une expérience numérique événementielle couplée à un objet physique rétro.",
+    "features": [
+      "Parcours guidé sur tablette",
+      "Enregistrement de messages vidéo",
+      "Dispositif téléphone vintage",
+      "Collecte centralisée des souvenirs"
+    ],
+    "result": "Une activation événementielle mémorable, à la fois physique et numérique."
+  },
+  {
+    "id": 35,
+    "name": "Askéo",
+    "slug": "askeo",
+    "description": "Plateforme de création de formulaires pensée comme une alternative simple à Google Forms. Askéo permet de construire ses propres formulaires, de les partager et de centraliser les réponses depuis une interface dédiée.\n\nLe projet couvre toute la chaîne, de la création du formulaire jusqu'à la consultation et à l'exploitation des réponses.",
+    "image": "projects/askeo.webp",
+    "link": "",
+    "github": "",
+    "youtube": [],
+    "technos": [
+      105,
+      109,
+      201,
+      303,
+      401
+    ],
+    "tags": [],
+    "date": "2025-07-01",
+    "status": "online",
+    "type": "WebApp",
+    "interesting": true,
+    "context": "Besoin d’une alternative simple à Google Forms pour créer, partager et exploiter des formulaires.",
+    "need": "Une plateforme complète : construction, partage et consultation des réponses.",
+    "solution": "Développement d'une webapp de formulaires avec interface de création et back-office de réponses.",
+    "features": [
+      "Création de formulaires",
+      "Partage et collecte de réponses",
+      "Interface dédiée d’exploitation",
+      "Chaîne complète de bout en bout"
+    ],
+    "result": "Un outil métier clair pour créer et exploiter des formulaires sans dépendre de solutions génériques."
+  },
+  {
+    "id": 34,
+    "name": "CallMeMaybe",
+    "slug": "callmemaybe",
+    "description": "Projet étudiant réalisé pour répondre aux besoins internes d'une agence de casting. L'outil permet d'organiser des entretiens audio avec les candidats, d'enregistrer les échanges puis de les retranscrire automatiquement grâce à Whisper.\n\nL'intelligence artificielle analyse ensuite l'entretien afin de générer une fiche candidat structurée et personnalisée avec GPT-4, exportable au format PDF. L'objectif était de transformer un appel en une fiche exploitable par l'agence avec un minimum de traitement manuel.",
+    "image": "projects/callmemaybe.webp",
+    "link": "",
+    "github": "",
+    "youtube": [],
+    "technos": [
+      105,
+      109,
+      201,
+      204,
+      401
+    ],
+    "tags": [],
+    "date": "2025-06-01",
+    "status": "online",
+    "type": "WebApp",
+    "interesting": true,
+    "context": "Une agence de casting avait besoin d'accélérer le traitement des entretiens audio candidats.",
+    "need": "Enregistrer, retranscrire et transformer un appel en fiche candidat structurée.",
+    "solution": "Webapp intégrant Whisper pour la transcription et GPT-4 pour la génération de fiches PDF.",
+    "features": [
+      "Entretiens audio organisés",
+      "Transcription automatique Whisper",
+      "Analyse et fiche candidat GPT-4",
+      "Export PDF"
+    ],
+    "result": "Un pipeline qui transforme un appel en fiche exploitable avec peu de traitement manuel."
+  },
+  {
+    "id": 33,
+    "name": "Logiciel de facturation",
+    "slug": "logiciel-de-facturation",
+    "description": "Outil de gestion développé pour les besoins de ma micro-entreprise. Il permet de créer et gérer clients, prestations, devis et factures depuis une interface centralisée, puis de générer les documents nécessaires à mon activité.\n\nLe logiciel est utilisé en interne et n’est pas accessible publiquement. Un accès de démonstration peut être accordé sur invitation.",
+    "image": "projects/logiciel-facturation.webp",
+    "link": "",
+    "github": "",
+    "youtube": [],
+    "technos": [
+      105,
+      109,
+      201,
+      303,
+      401
+    ],
+    "tags": [],
+    "date": "2025-04-01",
+    "status": "private",
+    "type": "Logiciel",
+    "interesting": true,
+    "context": "Besoin d'un outil interne pour gérer clients, devis et factures sans dépendre d'un logiciel trop générique.",
+    "need": "Une interface centralisée pour créer, suivre et générer les documents de facturation.",
+    "solution": "Développement d'un logiciel métier sur mesure, utilisé en interne pour le quotidien de la micro-entreprise.",
+    "features": [
+      "Gestion clients et prestations",
+      "Création de devis et factures",
+      "Génération de documents",
+      "Usage interne avec démo sur invitation"
+    ],
+    "result": "Un outil métier adapté à mon activité, distinct de la PWA Factures et Dépenses plus ancienne."
+  },
+  {
     "id": 32,
     "name": "Studer - WebApp Tinder pour étudiants",
     "slug": "studer-tinder-mmi",
@@ -85,13 +405,13 @@
     "interesting": false
   },
   {
-    "id": 29,
-    "name": "Private Events - DJ Mika",
-    "slug": "private-events-dj-mika",
-    "description": "J’ai créé le site web \"Private Events\" pour DJ Mika, qui est une vitrine en ligne conçue pour mettre en lumière les services exceptionnels de DJing et de karaoké offerts par DJ Mika pour des événements privés et des soirées d'entreprise. Développé avec React, ce site présente une interface utilisateur élégante et responsive, reflétant l'ambiance dynamique et professionnelle que DJ Mika apporte à chaque événement.\nLe site web englobe une présentation des services de DJ Mika, offrant aux visiteurs une vue d'ensemble sur sa capacité à créer des ambiances musicales sur-mesure et des expériences de karaoké immersives. Les visiteurs peuvent explorer le répertoire musical diversifié de DJ Mika, qui s'étend des classiques intemporels aux hits contemporains, promettant une playlist personnalisée qui correspond parfaitement à l'atmosphère souhaitée pour chaque événement.\nUne section dédiée permet aux utilisateurs de télécharger librement un mix généraliste, couvrant des succès musicaux de 1970 à aujourd'hui, démontrant ainsi l'étendue et la flexibilité du talent musical de DJ Mika. Le site encourage également les visiteurs à soumettre leurs listes de 10 à 15 titres préférés, permettant à DJ Mika d'élaborer des sets musicaux personnalisés gratuitement.\nEn outre, le site met en avant l'engagement de DJ Mika à utiliser un équipement audiovisuel de haute qualité, assurant une expérience sonore et visuelle incomparable. Les témoignages de clients satisfaits viennent renforcer la réputation de DJ Mika, attestant de son habileté à transformer les soirées en moments inoubliables.\nLa portée géographique des services de DJ Mika est également mise en avant, soulignant sa disponibilité à travers le Vaucluse, le Var et les régions avoisinantes. Ce positionnement stratégique garantit une ambiance exceptionnelle pour des événements dans des lieux variés, de l'effervescence d'Avignon aux charmes côtiers de Saint-Tropez.\nLa réalisation de ce site avec React a permis de créer une expérience utilisateur fluide et attrayante, mettant en valeur le professionnalisme et la passion de DJ Mika pour la musique et le divertissement.",
-    "image": "projects/djmika-private-events-website.png",
-    "link": "https://privateevents.fr",
-    "github": "https://github.com/arthur-mdn/private-events",
+    "id": 24,
+    "name": "Site Portfolio",
+    "slug": "site-portfolio",
+    "description": "Mon site portfolio, actuellement accessible en ligne, est une vitrine de mon parcours professionnel en tant que développeur web. Réalisé en React et Vite, ce site reflète et affiche ma maîtrise de diverses technologies. Il présente une interface utilisateur intuitive et moderne, conçue pour offrir une expérience fluide aux visiteurs souhaitant explorer mon univers professionnel.\n\nSur ce site, je mets en avant mes projets publics, chacun accompagné d'une description, des technologies utilisées, et des liens vers des ressources supplémentaires comme GitHub ou des démonstrations en ligne. Cette section permet aux visiteurs de se plonger dans mes travaux, reflétant ma capacité à mener à bien des projets variés et complexes.\n\nIl est également possible pour les visiteurs de télécharger directement mon CV, offrant ainsi un accès immédiat à mes qualifications et à mon parcours professionnel. De plus, le site intègre un formulaire de contact, facilitant la communication avec les clients potentiels, les employeurs ou les collaborateurs intéressés par mon profil et mes services.\n\nL'esthétique et la performance du site, grâce à l'utilisation de React et Vite, témoignent de mon engagement à offrir une expérience utilisateur de qualité. Le design est à la fois élégant et fonctionnel, et le site est optimisé pour une navigation rapide et réactive. En rendant le code source du site disponible dans un repository public, je démontre également mon intérêt pour la transparence et le partage de connaissances avec la communauté des développeurs.\n\nEn résumé, mon site portfolio est non seulement une représentation de mes compétences techniques et de mon expérience en développement web, mais aussi une plateforme interactive où les visiteurs peuvent découvrir mon univers professionnel, mes réalisations, et entrer en contact avec moi. C'est un outil essentiel dans ma démarche de mise en valeur de mon profil professionnel et de connexion avec le monde du développement web. Mon site portfolio, qui se veut être le miroir de mon parcours en tant que développeur web, a récemment connu une évolution significative. En plus de la version initiale développée avec React et Vite, le projet a été réintégré en utilisant Next.js en combinaison avec React. Cette transition vers Next.js a été motivée par la volonté d'améliorer l'optimisation SEO du site, en particulier pour intégrer le Server-Side Rendering (SSR) des métadonnées dans l'en-tête de chaque page. Cette amélioration technique vise à renforcer la visibilité et l'accessibilité du site dans les moteurs de recherche, ce qui est essentiel pour atteindre un public plus large.\n\nCette démarche illustre non seulement mon engagement à adopter les meilleures pratiques en matière de développement web, mais aussi ma capacité à évoluer et à réagir aux exigences changeantes du domaine, tout en cherchant constamment à améliorer l'expérience utilisateur et la performance du site. Les deux versions du site, celle basée sur Vite/React et la nouvelle version avec Next/React, sont accessibles sur mon repository GitHub. Cette coexistence offre une transparence totale sur mon processus de développement et souligne mon aptitude à maîtriser différentes approches et technologies dans la réalisation de projets web.",
+    "image": "projects/site-portfolio.png",
+    "link": "",
+    "github": "https://github.com/arthur-mdn/portfolio",
     "youtube": [],
     "technos": [
       101,
@@ -103,20 +423,10 @@
       401
     ],
     "tags": [],
-    "date": "2024-03-25",
+    "date": "2024-02-20",
     "status": "online",
     "type": "Site web",
-    "interesting": false,
-    "context": "DJ Mika avait besoin d'une présence en ligne crédible pour présenter ses prestations de DJ et karaoké destinées aux événements privés.",
-    "need": "Un site vitrine clair, moderne et orienté conversion, capable de présenter l'offre et de faciliter la prise de contact.",
-    "solution": "Conception et développement d'un site vitrine Next.js / React, pensé mobile-first, avec une présentation des services et un parcours simple vers le contact.",
-    "features": [
-      "Pages de présentation des prestations",
-      "Design moderne adapté au positionnement événementiel",
-      "Parcours de contact simplifié",
-      "Site responsive et rapide"
-    ],
-    "result": "Une vitrine professionnelle qui met en avant l'univers de DJ Mika et facilite les demandes de devis pour événements privés."
+    "interesting": true
   },
   {
     "id": 28,
@@ -181,30 +491,6 @@
     "date": "2024-01-16",
     "status": "online",
     "type": "WebApp",
-    "interesting": true
-  },
-  {
-    "id": 24,
-    "name": "Site Portfolio",
-    "slug": "site-portfolio",
-    "description": "Mon site portfolio, actuellement accessible en ligne, est une vitrine de mon parcours professionnel en tant que développeur web. Réalisé en React et Vite, ce site reflète et affiche ma maîtrise de diverses technologies. Il présente une interface utilisateur intuitive et moderne, conçue pour offrir une expérience fluide aux visiteurs souhaitant explorer mon univers professionnel.\n\nSur ce site, je mets en avant mes projets publics, chacun accompagné d'une description, des technologies utilisées, et des liens vers des ressources supplémentaires comme GitHub ou des démonstrations en ligne. Cette section permet aux visiteurs de se plonger dans mes travaux, reflétant ma capacité à mener à bien des projets variés et complexes.\n\nIl est également possible pour les visiteurs de télécharger directement mon CV, offrant ainsi un accès immédiat à mes qualifications et à mon parcours professionnel. De plus, le site intègre un formulaire de contact, facilitant la communication avec les clients potentiels, les employeurs ou les collaborateurs intéressés par mon profil et mes services.\n\nL'esthétique et la performance du site, grâce à l'utilisation de React et Vite, témoignent de mon engagement à offrir une expérience utilisateur de qualité. Le design est à la fois élégant et fonctionnel, et le site est optimisé pour une navigation rapide et réactive. En rendant le code source du site disponible dans un repository public, je démontre également mon intérêt pour la transparence et le partage de connaissances avec la communauté des développeurs.\n\nEn résumé, mon site portfolio est non seulement une représentation de mes compétences techniques et de mon expérience en développement web, mais aussi une plateforme interactive où les visiteurs peuvent découvrir mon univers professionnel, mes réalisations, et entrer en contact avec moi. C'est un outil essentiel dans ma démarche de mise en valeur de mon profil professionnel et de connexion avec le monde du développement web. Mon site portfolio, qui se veut être le miroir de mon parcours en tant que développeur web, a récemment connu une évolution significative. En plus de la version initiale développée avec React et Vite, le projet a été réintégré en utilisant Next.js en combinaison avec React. Cette transition vers Next.js a été motivée par la volonté d'améliorer l'optimisation SEO du site, en particulier pour intégrer le Server-Side Rendering (SSR) des métadonnées dans l'en-tête de chaque page. Cette amélioration technique vise à renforcer la visibilité et l'accessibilité du site dans les moteurs de recherche, ce qui est essentiel pour atteindre un public plus large.\n\nCette démarche illustre non seulement mon engagement à adopter les meilleures pratiques en matière de développement web, mais aussi ma capacité à évoluer et à réagir aux exigences changeantes du domaine, tout en cherchant constamment à améliorer l'expérience utilisateur et la performance du site. Les deux versions du site, celle basée sur Vite/React et la nouvelle version avec Next/React, sont accessibles sur mon repository GitHub. Cette coexistence offre une transparence totale sur mon processus de développement et souligne mon aptitude à maîtriser différentes approches et technologies dans la réalisation de projets web.",
-    "image": "projects/site-portfolio.png",
-    "link": "",
-    "github": "https://github.com/arthur-mdn/portfolio",
-    "youtube": [],
-    "technos": [
-      101,
-      102,
-      103,
-      105,
-      106,
-      109,
-      401
-    ],
-    "tags": [],
-    "date": "2024-02-20",
-    "status": "online",
-    "type": "Site web",
     "interesting": true
   },
   {
@@ -342,119 +628,6 @@
     "interesting": true
   },
   {
-    "id": 6,
-    "name": "PWA Factures et Dépenses",
-    "slug": "factures-et-depenses",
-    "description": "\"Facture\" est une progressive web app innovante que j'ai conçue pour simplifier la gestion des dépenses des enfants, tout en impliquant les parents dans le processus. Cette application sert de pont numérique entre les enfants et leurs parents, offrant une solution transparente et efficace pour la gestion financière familiale.\n\nDans \"Facture\", les comptes enfants sont liés à ceux des parents, avec la possibilité pour un parent de gérer plusieurs enfants. Les enfants peuvent saisir leurs dépenses en détaillant le titre, la description, le montant, la date et le type de dépense. Ils ont également la possibilité d'ajouter un justificatif d'achat et de demander un remboursement.\n\nL'application offre un historique clair où les enfants peuvent voir si leurs dépenses ont été acceptées ou refusées, avec les raisons associées. Du côté des parents, \"Facture\" permet de gérer les dépenses de manière flexible : acceptation ou refus de dépenses multiples, paiement total ou partiel, déduction ou ajout de montants spécifiques.\n\nLes parents ont accès aux profils de tous leurs enfants, pouvant examiner et gérer les dépenses de chacun individuellement. Bien que l'application ne gère pas directement les transactions financières, elle facilite la communication et la prise de décision en matière de finances familiales, avec la possibilité de réaliser les paiements via d'autres moyens, comme les virements bancaires.\n\n\"Facture\" illustre mon engagement à créer des solutions numériques qui répondent aux besoins quotidiens des familles, en combinant fonctionnalité, facilité d'utilisation et une approche centrée sur l'utilisateur pour une gestion financière familiale plus organisée et transparente.\n\n\n\n\n\n\n",
-    "image": "projects/facture.png",
-    "link": "https://facture.mondon.pro/",
-    "github": "",
-    "youtube": [],
-    "technos": [
-      101,
-      102,
-      103,
-      202,
-      301
-    ],
-    "tags": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "JS",
-      "React",
-      "MySQL"
-    ],
-    "date": "2022-01-21",
-    "status": "online",
-    "type": "WebApp",
-    "interesting": true
-  },
-  {
-    "id": 13,
-    "name": "Générateur de Signatures Email",
-    "slug": "generateur-de-signatures-email",
-    "description": "Lors de mon alternance chez Edissyum, j'ai été confronté à la tâche répétitive de créer des signatures mail personnalisées pour chaque nouvel arrivant ou événement spécifique, comme l'ajout de cartes de vœux en fin d'année. Pour résoudre ce défi, j'ai développé un générateur de signatures mail innovant, conçu pour automatiser et simplifier ce processus.\n\nCe générateur est basé sur un formulaire utilisateur dans lequel on peut entrer des informations telles que le pseudo, le nom, le prénom, le rôle dans l'entreprise, le numéro de téléphone, ainsi que l'option d'intégrer une image. L'une des caractéristiques clés de cet outil est la capacité de choisir le type de signature souhaité, adapté soit pour Thunderbird, soit pour Outlook.\n\nUne fois le formulaire soumis, le générateur, alimenté par PHP en arrière-plan, crée un template d'email personnalisé. Il intègre automatiquement les informations fournies dans le formulaire, générant ainsi une signature mail prête à l'emploi. L'utilisateur peut alors simplement télécharger cette signature et la glisser-déposer dans le dossier de signatures de son application de messagerie.\n\nCe projet, développé en PHP, est un exemple parfait de la manière dont je peux apporter des solutions numériques pratiques et efficaces pour optimiser les processus administratifs. Le générateur de signatures mail a non seulement amélioré l'efficacité au sein d'Edissyum, mais a également démontré mon aptitude à innover et à résoudre des problèmes courants par des moyens technologiques.",
-    "image": "projects/mailgenerator.png",
-    "link": "",
-    "github": "",
-    "youtube": [],
-    "technos": [
-      101,
-      102,
-      103,
-      107,
-      202
-    ],
-    "tags": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "JS",
-      "PHP"
-    ],
-    "date": "2023-01-16",
-    "status": "online",
-    "type": "Outil",
-    "interesting": false
-  },
-  {
-    "id": 15,
-    "name": "Cinephony",
-    "slug": "cinephony",
-    "description": "Dans le cadre d'un projet étudiant en 2ème année de BUT MMI, j'ai développé un site web catalogue de films et de livres, une plateforme robuste et dynamique construite avec PHP et MySQL, suivant la structure MVC (Modèle-Vue-Contrôleur) et orientée objet. Ce site se distingue par sa gestion détaillée des objets de livres et de films.\n\nLes informations sur les films sont récupérées via l'API TheMovieDB, permettant d'accéder à un large éventail de détails : images, plateformes de visionnage, descriptions, synopsis, informations sur la production. Une fonctionnalité intéressante est la possibilité de cliquer sur une maison de production pour voir tous les films associés. Les utilisateurs peuvent également explorer des détails spécifiques tels que le budget, les revenus, la date de sortie, et le site web du film, ainsi que la liste complète du casting. En cliquant sur un membre du casting, ils peuvent voir d'autres films auxquels cette personne a participé.\n\nLa gestion des notes et des commentaires est une autre fonctionnalité clé, nécessitant une connexion utilisateur pour ajouter un commentaire ou une note. De plus, le site intègre une fonction de recherche sophistiquée, avec des requêtes Ajax affichant en temps réel les résultats cliquables, offrant ainsi une expérience utilisateur fluide et interactive.\n\nLe panel administratif du site permet d'ajouter des livres ou des films, donnant aux administrateurs un contrôle total sur le contenu disponible. Ce projet étudiant illustre ma capacité à créer des solutions web complexes et fonctionnelles, mettant en valeur mon expertise technique en développement web ainsi que ma passion pour la mise en œuvre de systèmes informatiques interactifs et utilisateurs.",
-    "image": "projects/cinephony.png",
-    "link": "https://cinephony.mondon.pro/",
-    "github": "",
-    "youtube": [],
-    "technos": [
-      101,
-      102,
-      103,
-      202,
-      301,
-      401
-    ],
-    "tags": [
-      "PHP",
-      "MySQL",
-      "Git"
-    ],
-    "date": "2023-05-28",
-    "status": "online",
-    "type": "Site web",
-    "interesting": false
-  },
-  {
-    "id": 7,
-    "name": "EDT - PWA Emploi du Temps Université",
-    "slug": "edt-pwa-emploi-du-temps-universite",
-    "description": "\n\"EDT\" est une progressive web app que j'ai conçue pour améliorer la gestion de l'emploi du temps des étudiants à l'Université de Toulon, en utilisant PHP et MySQL. Cette application s'interface avec hyperplanning, un outil de planification académique, pour offrir une expérience utilisateur personnalisée et efficace.\n\nL'application permet aux étudiants de récupérer et de gérer leur emploi du temps en téléchargeant le fichier ICS depuis hyperplanning. Chaque requête assure que l'emploi du temps est constamment mis à jour. Les utilisateurs peuvent ajouter plusieurs calendriers, les modifier, et choisir entre différentes vues (mois, semaine, jour). Ils peuvent également personnaliser le calendrier, comme la plage horaire d'affichage, la couleur par défaut des événements, et activer des filtres spécifiques. Par exemple, un filtre \"entreprise\" pour les étudiants en alternance, permettant de différencier facilement les jours de cours des jours en entreprise.\n\nLa page d'accueil affiche le calendrier selon les paramètres choisis, avec des options pour changer la vue ou ajouter des événements personnels. La fonction de recherche permet de filtrer les cours, les salles, les noms des professeurs, ou les matières. De plus, un bouton pratique sur la page d'accueil permet aux étudiants d'afficher rapidement leur carte d'étudiant pour un accès facile à l'université.\n\n\"EDT\" propose également une fonctionnalité de groupe, permettant aux étudiants de rejoindre ou de créer des groupes de classe. Au sein de ces groupes, ils peuvent accéder à un chat, une liste de tâches (comme les contrôles et les devoirs) avec des dates butoirs, et visualiser la liste des membres du groupe, avec l'option de le quitter.\n\nPour les administrateurs, l'application offre un panel de contrôle en temps réel pour surveiller l'utilisation de l'application, le nombre d'utilisateurs, les dernières connexions et le nombre de calendriers. Ils peuvent également envoyer des messages aux utilisateurs, qui s'affichent en plein écran lors du lancement de l'application.\n\n\"EDT\" est une démonstration de ma capacité à créer des solutions numériques intuitives et fonctionnelles, visant à améliorer l'expérience universitaire et à faciliter la gestion du temps pour les étudiants.",
-    "image": "projects/edt.png",
-    "link": "https://edt.mondon.pro",
-    "github": "",
-    "youtube": [],
-    "technos": [
-      101,
-      102,
-      103,
-      202,
-      301
-    ],
-    "tags": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "JS",
-      "PHP",
-      "MySQL"
-    ],
-    "date": "2021-09-22",
-    "status": "online",
-    "type": "WebApp",
-    "interesting": true
-  },
-  {
     "id": 17,
     "name": "Création de Visites Virtuelles",
     "slug": "visites-virtuelles",
@@ -498,11 +671,11 @@
     "interesting": true
   },
   {
-    "id": 8,
-    "name": "Écran d'Aide à la Navigation",
-    "slug": "ecran-d-aide-a-la-navigation",
-    "description": "Un système d'affichage dynamique basé sur Raspberry Pi, destiné à fournir des informations pratiques et visuelles sur un écran. Ce dispositif polyvalent affiche une variété de contenus interactifs, rendant l'information à la fois accessible et engageante.\n\nLe Raspberry Pi est configuré pour afficher une page web animée montrant le logo de l'entreprise, la météo actuelle, la date et le jour, ainsi que des icônes spécifiques. Au cœur de l'écran, des directives sous forme de flèches indiquent divers emplacements tels que l'ascenseur, le rez-de-chaussée ou l'infirmerie. À côté de ces indications, un slider tourne en boucle, montrant des photos sélectionnées, tandis qu'un texte défilant en bas de l'écran communique des informations pratiques, comme les horaires d'ouverture du secrétariat.\n\nCe système inclut un panel administratif permettant d'ajouter, de supprimer ou de modifier les directives, l'orientation des flèches, les photos ou les icônes. Une fonctionnalité notable est le mode sombre programmable, qui réduit la consommation électrique sur les écrans OLED, particulièrement utile pendant les heures creuses.\n\nLa gestion des horaires est également une composante clé de ce système. L'affichage peut être programmé pour indiquer différents statuts en fonction des heures, comme les heures d'ouverture ou de fermeture du secrétariat, avec des couleurs de fond personnalisables pour chaque plage horaire.\n\nEn outre, le dispositif intègre une fonctionnalité météo en temps réel, utilisant l'API d'Owen Weather. Il récupère automatiquement des informations telles que le nom de la ville, la température, l'état du ciel, et affiche une icône correspondante (soleil, nuages, pluie, etc.), basée sur la localisation GPS actuelle.\n\nCe projet illustre mon aptitude à créer des solutions numériques personnalisées et interactives, qui améliorent l'expérience utilisateur tout en fournissant des informations essentielles de manière intuitive et esthétique.",
-    "image": "projects/interactive-screen-display.png",
+    "id": 13,
+    "name": "Générateur de Signatures Email",
+    "slug": "generateur-de-signatures-email",
+    "description": "Lors de mon alternance chez Edissyum, j'ai été confronté à la tâche répétitive de créer des signatures mail personnalisées pour chaque nouvel arrivant ou événement spécifique, comme l'ajout de cartes de vœux en fin d'année. Pour résoudre ce défi, j'ai développé un générateur de signatures mail innovant, conçu pour automatiser et simplifier ce processus.\n\nCe générateur est basé sur un formulaire utilisateur dans lequel on peut entrer des informations telles que le pseudo, le nom, le prénom, le rôle dans l'entreprise, le numéro de téléphone, ainsi que l'option d'intégrer une image. L'une des caractéristiques clés de cet outil est la capacité de choisir le type de signature souhaité, adapté soit pour Thunderbird, soit pour Outlook.\n\nUne fois le formulaire soumis, le générateur, alimenté par PHP en arrière-plan, crée un template d'email personnalisé. Il intègre automatiquement les informations fournies dans le formulaire, générant ainsi une signature mail prête à l'emploi. L'utilisateur peut alors simplement télécharger cette signature et la glisser-déposer dans le dossier de signatures de son application de messagerie.\n\nCe projet, développé en PHP, est un exemple parfait de la manière dont je peux apporter des solutions numériques pratiques et efficaces pour optimiser les processus administratifs. Le générateur de signatures mail a non seulement amélioré l'efficacité au sein d'Edissyum, mais a également démontré mon aptitude à innover et à résoudre des problèmes courants par des moyens technologiques.",
+    "image": "projects/mailgenerator.png",
     "link": "",
     "github": "",
     "youtube": [],
@@ -510,49 +683,40 @@
       101,
       102,
       103,
-      202,
-      301
+      107,
+      202
     ],
     "tags": [
       "HTML",
       "CSS",
       "JavaScript",
       "JS",
-      "PHP",
-      "MySQL"
+      "PHP"
     ],
-    "date": "2023-01-05",
+    "date": "2023-01-16",
     "status": "online",
-    "type": "Écran interactif",
+    "type": "Outil",
     "interesting": false
   },
   {
-    "id": 9,
-    "name": "Funkylike",
-    "slug": "funkylike",
-    "description": "Funkylike est une application web que j'ai développée, offrant un service de compteur en temps réel des abonnés sur Facebook et Instagram. Utilisant PHP et MySQL, cette application permet aux utilisateurs de se connecter, d'accéder à leur profil et de choisir entre différentes formules d'abonnement, avec des options gratuites et payantes.\n\nLes utilisateurs peuvent intégrer une page Facebook ou Instagram en se connectant via l'API respective. Après connexion et autorisation, un token est généré, permettant de récupérer en temps réel des informations telles que l'image de la page, le nom, et surtout, le nombre d'abonnés. Ces données sont ensuite affichées sur la page d'accueil de l'utilisateur avec une mise en page dynamique.\n\nChaque compteur peut être personnalisé avec un fond d'écran différent. Sur la page d'accueil, le compteur s'affiche en plein écran, montrant le nom de la page Facebook ou Instagram, le logo correspondant, et le nombre d'abonnés en temps réel grâce à la librairie \"flip\", qui anime le changement des chiffres.\n\nFunkylike comprend également une interface d'administration avancée. Les administrateurs peuvent modifier la fréquence de rafraîchissement des compteurs, définir une période d'inactivité après laquelle la barre de menu se cache, et gérer la publicité pour les comptes gratuits. Les utilisateurs premium bénéficient de fonctionnalités supplémentaires, telles que l'absence de publicité et un nombre illimité de compteurs.\n\nCette application est particulièrement utile pour les commerçants souhaitant encourager les abonnements en temps réel. Elle permet aux clients de voir le nombre d'abonnés augmenter instantanément, créant un effet incitatif. Avec ses différentes formules, de la version gratuite avec publicité à la version premium sans limite et sans publicité, Funkylike offre une flexibilité adaptée aux besoins de chaque utilisateur. Ce projet démontre ma capacité à développer des solutions web interactives et utiles pour le marketing et la promotion en ligne.",
-    "image": "projects/funkylike.png",
-    "link": "https://app.funkylike.com",
+    "id": 14,
+    "name": "Atmosph'air - PWA Qualité de l'Air",
+    "slug": "atmosphair-pwa-qualite-de-l-air",
+    "description": "Atmosph'Air est un projet étudiant que j'ai développé, une progressive web app conçue pour fournir des informations en temps réel sur la qualité de l'air dans différentes villes. Cette application utilise l'API d'Atmosud pour calculer et afficher ces données, offrant aux utilisateurs une interface intuitive et informative.\n\nSur la page d'accueil, les utilisateurs sont accueillis par des animations engageantes et un classement des trois bulletins les plus consultés, avec le nombre total de consultations. En cliquant sur une ville, comme Toulon par exemple, l'application affiche la qualité de l'air actuelle, le polluant majoritaire, et l'évolution de la qualité de l'air sur les 30 derniers jours, représentée par un graphique créé avec ChartJS.\n\nLes utilisateurs ont la possibilité de rechercher leur ville parmi toutes les villes de France disponibles dans l'API d'Atmosphère. Ils peuvent également ajouter des villes à leur liste de favoris, ce qui permet un accès rapide à la qualité de l'air de ces villes depuis la page d'accueil.\n\nLe mode administrateur de l'application offre des fonctionnalités avancées pour gérer la récupération des données. Il existe un \"mode rapide\", qui économise la bande passante en utilisant des données mises en cache, et un \"mode basique\". Pour optimiser les performances, l'application met à jour quotidiennement le cache en requêtant l'API pour obtenir les données au format JSON, qui sont ensuite stockées et utilisées pour les recherches, évitant ainsi les délais associés aux requêtes API en temps réel.\n\nL'application est également équipée d'un script PHP exécuté par une tâche cron, qui actualise toutes les 8 heures les données de la qualité de l'air de chaque ville et les stocke dans le cache JSON. Un bouton permet aux administrateurs de forcer manuellement cette actualisation des données.\n\nAtmosph'Air est un exemple de ma capacité à créer des solutions numériques utiles et innovantes, en combinant des technologies web modernes pour offrir une expérience utilisateur enrichissante et informative, tout en mettant l'accent sur l'optimisation des performances et la facilité d'utilisation.",
+    "image": "projects/atmosphair.png",
+    "link": "https://atmosphair.mondon.pro/",
     "github": "",
     "youtube": [],
     "technos": [
       101,
       102,
       103,
-      202,
-      301
+      202
     ],
-    "tags": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "JS",
-      "PHP",
-      "MySQL"
-    ],
-    "date": "2022-09-25",
+    "tags": [],
+    "date": "2023-01-10",
     "status": "online",
-    "type": "Écran interactif",
+    "type": "WebApp",
     "interesting": false
   },
   {
@@ -585,6 +749,35 @@
     "interesting": false
   },
   {
+    "id": 9,
+    "name": "Funkylike",
+    "slug": "funkylike",
+    "description": "Funkylike est une application web que j'ai développée, offrant un service de compteur en temps réel des abonnés sur Facebook et Instagram. Utilisant PHP et MySQL, cette application permet aux utilisateurs de se connecter, d'accéder à leur profil et de choisir entre différentes formules d'abonnement, avec des options gratuites et payantes.\n\nLes utilisateurs peuvent intégrer une page Facebook ou Instagram en se connectant via l'API respective. Après connexion et autorisation, un token est généré, permettant de récupérer en temps réel des informations telles que l'image de la page, le nom, et surtout, le nombre d'abonnés. Ces données sont ensuite affichées sur la page d'accueil de l'utilisateur avec une mise en page dynamique.\n\nChaque compteur peut être personnalisé avec un fond d'écran différent. Sur la page d'accueil, le compteur s'affiche en plein écran, montrant le nom de la page Facebook ou Instagram, le logo correspondant, et le nombre d'abonnés en temps réel grâce à la librairie \"flip\", qui anime le changement des chiffres.\n\nFunkylike comprend également une interface d'administration avancée. Les administrateurs peuvent modifier la fréquence de rafraîchissement des compteurs, définir une période d'inactivité après laquelle la barre de menu se cache, et gérer la publicité pour les comptes gratuits. Les utilisateurs premium bénéficient de fonctionnalités supplémentaires, telles que l'absence de publicité et un nombre illimité de compteurs.\n\nCette application est particulièrement utile pour les commerçants souhaitant encourager les abonnements en temps réel. Elle permet aux clients de voir le nombre d'abonnés augmenter instantanément, créant un effet incitatif. Avec ses différentes formules, de la version gratuite avec publicité à la version premium sans limite et sans publicité, Funkylike offre une flexibilité adaptée aux besoins de chaque utilisateur. Ce projet démontre ma capacité à développer des solutions web interactives et utiles pour le marketing et la promotion en ligne.",
+    "image": "projects/funkylike.png",
+    "link": "https://app.funkylike.com",
+    "github": "",
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103,
+      202,
+      301
+    ],
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JS",
+      "PHP",
+      "MySQL"
+    ],
+    "date": "2022-09-25",
+    "status": "online",
+    "type": "Écran interactif",
+    "interesting": false
+  },
+  {
     "id": 12,
     "name": "Refonte du Site Web sous Wordpress",
     "slug": "edissyum-wordpress",
@@ -608,12 +801,41 @@
     "interesting": false
   },
   {
-    "id": 22,
-    "name": "Propositions pour DJ",
-    "slug": "dj",
-    "description": "DJ est une web app que j'ai développée pour faciliter les interactions entre les invités d'un événement et le DJ. Cette application propose un moyen moderne et interactif pour les participants de suggérer des musiques à jouer, rendant la soirée plus dynamique et personnalisée.\n\nLorsqu'un utilisateur visite le site, il est accueilli par un formulaire simple où il peut entrer son prénom, le titre de la musique souhaitée, l'artiste, et laisser un petit message pour le DJ. Cette fonctionnalité permet aux invités de participer activement à l'ambiance musicale de l'événement, en proposant des morceaux qui leur tiennent à cœur.\n\nPour le DJ, l'application offre un panel de connexion où il peut voir en temps réel toutes les propositions de musique faites par les invités. Il a la possibilité de passer en revue ces suggestions, de les accepter ou de les refuser, ce qui lui donne un contrôle total sur la playlist tout en tenant compte des préférences des invités.\n\nEn plus de la gestion des propositions musicales, l'application fournit des statistiques en temps réel, comme le nombre total de propositions effectuées au cours de la soirée. Cette fonctionnalité permet au DJ d'avoir une vue d'ensemble de l'engagement des invités et de l'impact de la musique sur l'ambiance de l'événement.\n\nDJ est un exemple de mon aptitude à développer des solutions web interactives et innovantes qui améliorent l'expérience utilisateur lors d'événements. Ce projet démontre mon intérêt pour la création d'outils numériques qui facilitent la communication et l'interaction dans des contextes sociaux et festifs. Pour l'occasion, j'avais réalisé et imprimé une affiche avec un QR code pour accéder à l'application facilement.",
-    "image": "projects/dj.png",
-    "link": "https://dj.mondon.pro",
+    "id": 6,
+    "name": "PWA Factures et Dépenses",
+    "slug": "factures-et-depenses",
+    "description": "\"Facture\" est une progressive web app innovante que j'ai conçue pour simplifier la gestion des dépenses des enfants, tout en impliquant les parents dans le processus. Cette application sert de pont numérique entre les enfants et leurs parents, offrant une solution transparente et efficace pour la gestion financière familiale.\n\nDans \"Facture\", les comptes enfants sont liés à ceux des parents, avec la possibilité pour un parent de gérer plusieurs enfants. Les enfants peuvent saisir leurs dépenses en détaillant le titre, la description, le montant, la date et le type de dépense. Ils ont également la possibilité d'ajouter un justificatif d'achat et de demander un remboursement.\n\nL'application offre un historique clair où les enfants peuvent voir si leurs dépenses ont été acceptées ou refusées, avec les raisons associées. Du côté des parents, \"Facture\" permet de gérer les dépenses de manière flexible : acceptation ou refus de dépenses multiples, paiement total ou partiel, déduction ou ajout de montants spécifiques.\n\nLes parents ont accès aux profils de tous leurs enfants, pouvant examiner et gérer les dépenses de chacun individuellement. Bien que l'application ne gère pas directement les transactions financières, elle facilite la communication et la prise de décision en matière de finances familiales, avec la possibilité de réaliser les paiements via d'autres moyens, comme les virements bancaires.\n\n\"Facture\" illustre mon engagement à créer des solutions numériques qui répondent aux besoins quotidiens des familles, en combinant fonctionnalité, facilité d'utilisation et une approche centrée sur l'utilisateur pour une gestion financière familiale plus organisée et transparente.\n\n\n\n\n\n\n",
+    "image": "projects/facture.png",
+    "link": "https://facture.mondon.pro/",
+    "github": "",
+    "youtube": [],
+    "technos": [
+      101,
+      102,
+      103,
+      202,
+      301
+    ],
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JS",
+      "React",
+      "MySQL"
+    ],
+    "date": "2022-01-21",
+    "status": "online",
+    "type": "WebApp",
+    "interesting": true
+  },
+  {
+    "id": 7,
+    "name": "EDT - PWA Emploi du Temps Université",
+    "slug": "edt-pwa-emploi-du-temps-universite",
+    "description": "\n\"EDT\" est une progressive web app que j'ai conçue pour améliorer la gestion de l'emploi du temps des étudiants à l'Université de Toulon, en utilisant PHP et MySQL. Cette application s'interface avec hyperplanning, un outil de planification académique, pour offrir une expérience utilisateur personnalisée et efficace.\n\nL'application permet aux étudiants de récupérer et de gérer leur emploi du temps en téléchargeant le fichier ICS depuis hyperplanning. Chaque requête assure que l'emploi du temps est constamment mis à jour. Les utilisateurs peuvent ajouter plusieurs calendriers, les modifier, et choisir entre différentes vues (mois, semaine, jour). Ils peuvent également personnaliser le calendrier, comme la plage horaire d'affichage, la couleur par défaut des événements, et activer des filtres spécifiques. Par exemple, un filtre \"entreprise\" pour les étudiants en alternance, permettant de différencier facilement les jours de cours des jours en entreprise.\n\nLa page d'accueil affiche le calendrier selon les paramètres choisis, avec des options pour changer la vue ou ajouter des événements personnels. La fonction de recherche permet de filtrer les cours, les salles, les noms des professeurs, ou les matières. De plus, un bouton pratique sur la page d'accueil permet aux étudiants d'afficher rapidement leur carte d'étudiant pour un accès facile à l'université.\n\n\"EDT\" propose également une fonctionnalité de groupe, permettant aux étudiants de rejoindre ou de créer des groupes de classe. Au sein de ces groupes, ils peuvent accéder à un chat, une liste de tâches (comme les contrôles et les devoirs) avec des dates butoirs, et visualiser la liste des membres du groupe, avec l'option de le quitter.\n\nPour les administrateurs, l'application offre un panel de contrôle en temps réel pour surveiller l'utilisation de l'application, le nombre d'utilisateurs, les dernières connexions et le nombre de calendriers. Ils peuvent également envoyer des messages aux utilisateurs, qui s'affichent en plein écran lors du lancement de l'application.\n\n\"EDT\" est une démonstration de ma capacité à créer des solutions numériques intuitives et fonctionnelles, visant à améliorer l'expérience universitaire et à faciliter la gestion du temps pour les étudiants.",
+    "image": "projects/edt.png",
+    "link": "https://edt.mondon.pro",
     "github": "",
     "youtube": [],
     "technos": [
@@ -631,31 +853,10 @@
       "PHP",
       "MySQL"
     ],
-    "date": "2022-06-31",
+    "date": "2021-09-22",
     "status": "online",
     "type": "WebApp",
-    "interesting": false
-  },
-  {
-    "id": 14,
-    "name": "Atmosph'air - PWA Qualité de l'Air",
-    "slug": "atmosphair-pwa-qualite-de-l-air",
-    "description": "Atmosph'Air est un projet étudiant que j'ai développé, une progressive web app conçue pour fournir des informations en temps réel sur la qualité de l'air dans différentes villes. Cette application utilise l'API d'Atmosud pour calculer et afficher ces données, offrant aux utilisateurs une interface intuitive et informative.\n\nSur la page d'accueil, les utilisateurs sont accueillis par des animations engageantes et un classement des trois bulletins les plus consultés, avec le nombre total de consultations. En cliquant sur une ville, comme Toulon par exemple, l'application affiche la qualité de l'air actuelle, le polluant majoritaire, et l'évolution de la qualité de l'air sur les 30 derniers jours, représentée par un graphique créé avec ChartJS.\n\nLes utilisateurs ont la possibilité de rechercher leur ville parmi toutes les villes de France disponibles dans l'API d'Atmosphère. Ils peuvent également ajouter des villes à leur liste de favoris, ce qui permet un accès rapide à la qualité de l'air de ces villes depuis la page d'accueil.\n\nLe mode administrateur de l'application offre des fonctionnalités avancées pour gérer la récupération des données. Il existe un \"mode rapide\", qui économise la bande passante en utilisant des données mises en cache, et un \"mode basique\". Pour optimiser les performances, l'application met à jour quotidiennement le cache en requêtant l'API pour obtenir les données au format JSON, qui sont ensuite stockées et utilisées pour les recherches, évitant ainsi les délais associés aux requêtes API en temps réel.\n\nL'application est également équipée d'un script PHP exécuté par une tâche cron, qui actualise toutes les 8 heures les données de la qualité de l'air de chaque ville et les stocke dans le cache JSON. Un bouton permet aux administrateurs de forcer manuellement cette actualisation des données.\n\nAtmosph'Air est un exemple de ma capacité à créer des solutions numériques utiles et innovantes, en combinant des technologies web modernes pour offrir une expérience utilisateur enrichissante et informative, tout en mettant l'accent sur l'optimisation des performances et la facilité d'utilisation.",
-    "image": "projects/atmosphair.png",
-    "link": "https://atmosphair.mondon.pro/",
-    "github": "",
-    "youtube": [],
-    "technos": [
-      101,
-      102,
-      103,
-      202
-    ],
-    "tags": [],
-    "date": "2023-01-10",
-    "status": "online",
-    "type": "WebApp",
-    "interesting": false
+    "interesting": true
   },
   {
     "id": 4,
@@ -710,12 +911,12 @@
     "interesting": false
   },
   {
-    "id": 19,
-    "name": "GlucideCheck",
-    "slug": "glucidecheck",
-    "description": "GlucideCheck représente mon tout premier projet de développement, une progressive web app conçue pour aider les personnes diabétiques à gérer leur condition. Cette application a été une source d'inspiration pour moi et a joué un rôle crucial dans ma décision de poursuivre une carrière en développement.\n\nL'application a pour objectif principal de simplifier le calcul de la quantité d'insuline nécessaire en fonction des taux de glycémie. Sur la page d'accueil, l'utilisateur peut saisir son taux de glycémie actuel. L'application analyse ensuite ce taux et indique s'il est optimal, s'il correspond à une hyperglycémie (modérée, élevée ou sévère) et recommande la quantité d'insuline nécessaire pour atteindre un taux cible, par exemple 110.\n\nLes données les plus récentes saisies par l'utilisateur, ainsi que la date correspondante, sont stockées en local storage et sont affichées sur la page d'accueil pour un accès rapide. L'onglet \"Calcul\" permet aux utilisateurs de déterminer la quantité de glucides dans un aliment en fonction de ses valeurs nutritionnelles pour 100 g. Cette fonctionnalité offre une aide pratique pour gérer l'alimentation, un aspect crucial dans le traitement du diabète.\n\nDans un souci de personnalisation, GlucideCheck comprend également un onglet de paramètres. Les utilisateurs peuvent activer un mode sombre, choisir la langue (français ou anglais), définir leur taux cible d'insuline et ajuster l'impact d'une unité d'insuline sur leur glycémie. Toutes ces préférences sont enregistrées en local storage.\n\nBien que ce soit mon premier projet, et qu'il ne soit pas entièrement optimisé ou responsive, GlucideCheck a été extrêmement utile. Développé avec HTML, CSS et JavaScript, ce projet a non seulement été une réussite fonctionnelle, mais a également renforcé ma passion pour le développement web et la création de solutions numériques significatives.",
-    "image": "projects/glucidecheck.png",
-    "link": "https://projets.mondon.pro/glucidecheck",
+    "id": 20,
+    "name": "Qui-Est-Ce ?",
+    "slug": "qui-est-ce",
+    "description": "Qui-Est-Ce ? est un jeu en ligne que j'ai conçu, inspiré du jeu classique de déduction et de questions. Ce projet, développé avec HTML, CSS et JavaScript pur, offre une expérience ludique et engageante, tout en mettant à l'épreuve les capacités de raisonnement et de déduction des joueurs.\n\nSur la page d'accueil, l'utilisateur trouve plusieurs options : jouer, crédits, paramètres pour activer ou désactiver les animations, et une section dédiée aux trophées et succès, comme gagner une partie ou en remporter 100. Toutes les données relatives aux succès et aux parties jouées sont stockées en local storage.\n\nEn cliquant sur \"Jouer\", les joueurs sont accueillis par un tableau de personnages générés aléatoirement avec divers attributs. À chaque nouvelle partie, les personnages et leurs attributs changent, offrant ainsi un défi renouvelé. À côté du tableau, les joueurs peuvent sélectionner et poser des questions pour éliminer les personnages qui ne correspondent pas aux indices obtenus. Par exemple, en posant la question \"a-t-il les cheveux longs?\" et en recevant une réponse affirmative, le joueur peut alors éliminer tous les personnages aux cheveux courts.\n\nLe jeu progresse avec des questions successives permettant de réduire le nombre de personnages jusqu'à ce qu'il n'en reste qu'un seul. Une fois le personnage correct identifié, un écran de victoire s'affiche avec des félicitations et une option pour rejouer.\n\nQui-Est-Ce ? est un exemple de mes premiers pas dans le développement web, démontrant ma capacité à créer des jeux interactifs et divertissants. Ce projet met en valeur mes compétences en programmation et mon intérêt pour le développement de jeux simples mais captivants.",
+    "image": "projects/qui-est-ce.png",
+    "link": "https://projets.mondon.pro/qui-est-ce/",
     "github": "",
     "youtube": [],
     "technos": [
@@ -729,7 +930,7 @@
       "JavaScript",
       "JS"
     ],
-    "date": "2019-04-07",
+    "date": "2019-12-18",
     "status": "development",
     "type": "WebApp",
     "interesting": false
@@ -760,12 +961,12 @@
     "interesting": false
   },
   {
-    "id": 27,
-    "name": "Loup Garou",
-    "slug": "loup-garou",
-    "description": "Qui-Est-Ce ? est un jeu en ligne que j'ai conçu, inspiré du jeu classique de déduction et de questions. Ce projet, développé avec HTML, CSS et JavaScript pur, offre une expérience ludique et engageante, tout en mettant à l'épreuve les capacités de raisonnement et de déduction des joueurs.\n\nSur la page d'accueil, l'utilisateur trouve plusieurs options : jouer, crédits, paramètres pour activer ou désactiver les animations, et une section dédiée aux trophées et succès, comme gagner une partie ou en remporter 100. Toutes les données relatives aux succès et aux parties jouées sont stockées en local storage.\n\nEn cliquant sur \"Jouer\", les joueurs sont accueillis par un tableau de personnages générés aléatoirement avec divers attributs. À chaque nouvelle partie, les personnages et leurs attributs changent, offrant ainsi un défi renouvelé. À côté du tableau, les joueurs peuvent sélectionner et poser des questions pour éliminer les personnages qui ne correspondent pas aux indices obtenus. Par exemple, en posant la question \"a-t-il les cheveux longs?\" et en recevant une réponse affirmative, le joueur peut alors éliminer tous les personnages aux cheveux courts.\n\nLe jeu progresse avec des questions successives permettant de réduire le nombre de personnages jusqu'à ce qu'il n'en reste qu'un seul. Une fois le personnage correct identifié, un écran de victoire s'affiche avec des félicitations et une option pour rejouer.\n\nQui-Est-Ce ? est un exemple de mes premiers pas dans le développement web, démontrant ma capacité à créer des jeux interactifs et divertissants. Ce projet met en valeur mes compétences en programmation et mon intérêt pour le développement de jeux simples mais captivants.",
-    "image": "projects/lg.png",
-    "link": "https://projets.mondon.pro/lg/",
+    "id": 19,
+    "name": "GlucideCheck",
+    "slug": "glucidecheck",
+    "description": "GlucideCheck représente mon tout premier projet de développement, une progressive web app conçue pour aider les personnes diabétiques à gérer leur condition. Cette application a été une source d'inspiration pour moi et a joué un rôle crucial dans ma décision de poursuivre une carrière en développement.\n\nL'application a pour objectif principal de simplifier le calcul de la quantité d'insuline nécessaire en fonction des taux de glycémie. Sur la page d'accueil, l'utilisateur peut saisir son taux de glycémie actuel. L'application analyse ensuite ce taux et indique s'il est optimal, s'il correspond à une hyperglycémie (modérée, élevée ou sévère) et recommande la quantité d'insuline nécessaire pour atteindre un taux cible, par exemple 110.\n\nLes données les plus récentes saisies par l'utilisateur, ainsi que la date correspondante, sont stockées en local storage et sont affichées sur la page d'accueil pour un accès rapide. L'onglet \"Calcul\" permet aux utilisateurs de déterminer la quantité de glucides dans un aliment en fonction de ses valeurs nutritionnelles pour 100 g. Cette fonctionnalité offre une aide pratique pour gérer l'alimentation, un aspect crucial dans le traitement du diabète.\n\nDans un souci de personnalisation, GlucideCheck comprend également un onglet de paramètres. Les utilisateurs peuvent activer un mode sombre, choisir la langue (français ou anglais), définir leur taux cible d'insuline et ajuster l'impact d'une unité d'insuline sur leur glycémie. Toutes ces préférences sont enregistrées en local storage.\n\nBien que ce soit mon premier projet, et qu'il ne soit pas entièrement optimisé ou responsive, GlucideCheck a été extrêmement utile. Développé avec HTML, CSS et JavaScript, ce projet a non seulement été une réussite fonctionnelle, mais a également renforcé ma passion pour le développement web et la création de solutions numériques significatives.",
+    "image": "projects/glucidecheck.png",
+    "link": "https://projets.mondon.pro/glucidecheck",
     "github": "",
     "youtube": [],
     "technos": [
@@ -779,32 +980,7 @@
       "JavaScript",
       "JS"
     ],
-    "date": "2019-06-19",
-    "status": "development",
-    "type": "WebApp",
-    "interesting": false
-  },
-  {
-    "id": 20,
-    "name": "Qui-Est-Ce ?",
-    "slug": "qui-est-ce",
-    "description": "Qui-Est-Ce ? est un jeu en ligne que j'ai conçu, inspiré du jeu classique de déduction et de questions. Ce projet, développé avec HTML, CSS et JavaScript pur, offre une expérience ludique et engageante, tout en mettant à l'épreuve les capacités de raisonnement et de déduction des joueurs.\n\nSur la page d'accueil, l'utilisateur trouve plusieurs options : jouer, crédits, paramètres pour activer ou désactiver les animations, et une section dédiée aux trophées et succès, comme gagner une partie ou en remporter 100. Toutes les données relatives aux succès et aux parties jouées sont stockées en local storage.\n\nEn cliquant sur \"Jouer\", les joueurs sont accueillis par un tableau de personnages générés aléatoirement avec divers attributs. À chaque nouvelle partie, les personnages et leurs attributs changent, offrant ainsi un défi renouvelé. À côté du tableau, les joueurs peuvent sélectionner et poser des questions pour éliminer les personnages qui ne correspondent pas aux indices obtenus. Par exemple, en posant la question \"a-t-il les cheveux longs?\" et en recevant une réponse affirmative, le joueur peut alors éliminer tous les personnages aux cheveux courts.\n\nLe jeu progresse avec des questions successives permettant de réduire le nombre de personnages jusqu'à ce qu'il n'en reste qu'un seul. Une fois le personnage correct identifié, un écran de victoire s'affiche avec des félicitations et une option pour rejouer.\n\nQui-Est-Ce ? est un exemple de mes premiers pas dans le développement web, démontrant ma capacité à créer des jeux interactifs et divertissants. Ce projet met en valeur mes compétences en programmation et mon intérêt pour le développement de jeux simples mais captivants.",
-    "image": "projects/qui-est-ce.png",
-    "link": "https://projets.mondon.pro/qui-est-ce/",
-    "github": "",
-    "youtube": [],
-    "technos": [
-      101,
-      102,
-      103
-    ],
-    "tags": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "JS"
-    ],
-    "date": "2019-12-18",
+    "date": "2019-04-07",
     "status": "development",
     "type": "WebApp",
     "interesting": false

@@ -5,9 +5,9 @@ import skillsData from "../../data/skills.json";
 
 const FEATURED_SLUGS = [
   "private-events-dj-mika",
-  "buzzer-app",
-  "studer-tinder-mmi",
-  "glucide-check-app-ios",
+  "blindset-studio",
+  "karaoke-and-propositions",
+  "elevage-hitch",
 ];
 
 const skillMap = Object.fromEntries(

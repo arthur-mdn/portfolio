@@ -68,15 +68,17 @@ export const SERVICES = [
     related: [
       {
         slug: "private-events-dj-mika",
-        proof: "Vitrine événementielle claire, orientée présentation de l'offre et prise de contact.",
+        proof:
+          "Vitrine événementielle refondue, avec parcours de devis et SEO soigné.",
+      },
+      {
+        slug: "elevage-hitch",
+        proof:
+          "Site vitrine d'élevage avec fiches structurées et formulaires de contact adaptés.",
       },
       {
         slug: "eradion",
         proof: "Site d'entreprise pensé pour présenter une activité et rassurer les visiteurs.",
-      },
-      {
-        slug: "du-kart-a-la-f1",
-        proof: "Site événementiel moderne avec une expérience fluide sur mobile et desktop.",
       },
     ],
   },
@@ -148,16 +150,18 @@ export const SERVICES = [
     ],
     related: [
       {
-        slug: "studer-tinder-mmi",
-        proof: "WebApp interactive avec logique métier, scoring et parcours utilisateur.",
+        slug: "karaoke-and-propositions",
+        proof:
+          "Webapp temps réel pour gérer les demandes musicales entre public et DJ.",
+      },
+      {
+        slug: "askeo",
+        proof:
+          "Plateforme de formulaires complète, de la création à l'exploitation des réponses.",
       },
       {
         slug: "buzzer-app",
         proof: "Application temps réel multi-appareils pour animer des quiz en live.",
-      },
-      {
-        slug: "noctivibe",
-        proof: "PWA orientée organisation et usages concrets côté utilisateurs.",
       },
     ],
   },
@@ -229,8 +233,14 @@ export const SERVICES = [
     ],
     related: [
       {
+        slug: "private-events-dj-mika",
+        proof:
+          "Refonte complète architecture, style et SEO, avec un parcours de devis modernisé.",
+      },
+      {
         slug: "site-portfolio",
-        proof: "Exemple de modernisation d'une présence en ligne vers une interface plus claire et plus professionnelle.",
+        proof:
+          "Exemple de modernisation d'une présence en ligne vers une interface plus claire.",
       },
       {
         slug: "eradion",
@@ -387,6 +397,16 @@ export const SERVICES = [
       },
     ],
     related: [
+      {
+        slug: "blindset-studio",
+        proof:
+          "Application macOS native pour préparer et animer des blind tests musicaux.",
+      },
+      {
+        slug: "fidelity-wallet",
+        proof:
+          "Application iOS native pour centraliser ses cartes de fidélité au quotidien.",
+      },
       {
         slug: "glucide-check-app-ios",
         proof: "Application iOS native en Swift, centrée sur un usage quotidien précis.",

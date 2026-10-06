@@ -92,14 +92,14 @@ function ProjectPage({ project }) {
         <meta property="og:description" content={metaDescription} />
         <meta
           property="og:image"
-          content={`https://mondon.pro/ogs/${project.image}`}
+          content={`https://mondon.pro/ogs/${project.image.replace(/\.webp$/i, ".png")}`}
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={metaDescription} />
         <meta
           name="twitter:image"
-          content={`https://mondon.pro/ogs/${project.image}`}
+          content={`https://mondon.pro/ogs/${project.image.replace(/\.webp$/i, ".png")}`}
         />
       </Head>
 
