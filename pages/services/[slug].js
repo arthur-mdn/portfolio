@@ -6,6 +6,19 @@ import { getServiceBySlug, SERVICES } from "../../data/services";
 import ServiceHero from "@/components/Services/ServiceHero";
 import ServiceFaq from "@/components/Services/ServiceFaq";
 import ServiceRelated from "@/components/Services/ServiceRelated";
+import ArchitectureDiagram from "@/components/Services/ArchitectureDiagram";
+import BeforeAfter from "@/components/Services/BeforeAfter";
+import DeployPipeline from "@/components/Services/DeployPipeline";
+import NativeStack from "@/components/Services/NativeStack";
+import SiteMockup from "@/components/Services/SiteMockup";
+
+const CTA_VISUALS = {
+  site: SiteMockup,
+  architecture: ArchitectureDiagram,
+  beforeAfter: BeforeAfter,
+  pipeline: DeployPipeline,
+  native: NativeStack,
+};
 
 export async function getStaticPaths() {
   return {
@@ -36,6 +49,8 @@ export async function getStaticProps({ params }) {
 }
 
 export default function ServicePage({ service, related }) {
+  const CtaVisual = CTA_VISUALS[service.visualType] || SiteMockup;
+
   return (
     <>
       <Head>
@@ -74,55 +89,79 @@ export default function ServicePage({ service, related }) {
           </div>
         </section>
 
-        <section className="svc-section svc-section-alt">
-          <div className="container">
-            <div className="svc-section-intro">
-              <p className="section-label">Offre</p>
-              <h2>Ce que je propose</h2>
-            </div>
-            <ul className="svc-chip-list">
-              {service.offerings.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        <div className="svc-thread-zone">
+          <div className="svc-thread" aria-hidden="true" />
 
-        <section className="svc-section">
-          <div className="container">
-            <div className="svc-section-intro">
-              <p className="section-label">Inclus</p>
-              <h2>Ce qui est compris</h2>
+          <section className="svc-section svc-section-alt">
+            <div className="container">
+              <div className="svc-section-intro">
+                <p className="section-label">Offre</p>
+                <h2>Ce que je propose</h2>
+              </div>
+              <ul className="svc-offer-grid">
+                {service.offerings.map((item) => (
+                  <li key={item.title || item}>
+                    <h3>{item.title || item}</h3>
+                    {item.text && <p>{item.text}</p>}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul className="svc-check-list">
-              {service.includes.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </section>
+          </section>
 
-        <section className="svc-section svc-section-alt">
-          <div className="container">
-            <div className="svc-section-intro">
-              <p className="section-label">Process</p>
-              <h2>Comment on avance</h2>
-            </div>
-            <ol className="svc-process">
-              {service.process.map((step, index) => (
-                <li key={step.title}>
-                  <span className="svc-process-num">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <div>
-                    <h3>{step.title}</h3>
-                    <p>{step.text}</p>
+          <section className="svc-section">
+            <div className="container">
+              <div className="svc-section-intro">
+                <p className="section-label">Bénéfices</p>
+                <h2>Ce que vous y gagnez</h2>
+              </div>
+              <div className="svc-benefits">
+                {service.benefits.map((item) => (
+                  <div key={item.title} className="svc-benefit">
+                    <h3>{item.title}</h3>
+                    <p>{item.text}</p>
                   </div>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="svc-section svc-section-alt">
+            <div className="container">
+              <div className="svc-section-intro">
+                <p className="section-label">Inclus</p>
+                <h2>Ce qui est compris</h2>
+              </div>
+              <ul className="svc-check-list">
+                {service.includes.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </section>
+
+          <section className="svc-section">
+            <div className="container">
+              <div className="svc-section-intro">
+                <p className="section-label">Process</p>
+                <h2>Comment on avance</h2>
+              </div>
+              <ol className="svc-process svc-process-rail">
+                {service.process.map((step, index) => (
+                  <li key={step.title}>
+                    <span className="svc-process-num">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <div>
+                      <h3>{step.title}</h3>
+                      <p>{step.text}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </section>
+        </div>
 
         <ServiceRelated
           related={related}
@@ -132,20 +171,27 @@ export default function ServicePage({ service, related }) {
         <ServiceFaq items={service.faq} />
 
         <section className="svc-cta">
-          <div className="container svc-cta-inner">
-            <h2>Un projet de ce type en tête ?</h2>
-            <p>
-              Site, app web ou application native : décrivez votre besoin et
-              voyons ensemble la meilleure façon de le réaliser.
-            </p>
-            <div className="hero-actions" style={{ marginBottom: 0, justifyContent: "center" }}>
-              <Link href="/contact" className="btn btn-primary">
-                Parler de mon projet
-                <FaArrowRight size={14} />
-              </Link>
-              <Link href="/services" className="btn btn-secondary">
-                Voir tous les services
-              </Link>
+          <div className="container">
+            <div className="svc-cta-panel">
+              <div className="svc-cta-copy">
+                <h2>Un projet de ce type en tête ?</h2>
+                <p>
+                  Site, app web ou application native : décrivez votre besoin et
+                  voyons ensemble la meilleure façon de le réaliser.
+                </p>
+                <div className="hero-actions" style={{ marginBottom: 0 }}>
+                  <Link href="/contact" className="btn btn-final">
+                    Parler de mon projet
+                    <FaArrowRight size={14} />
+                  </Link>
+                  <Link href="/services" className="btn btn-secondary svc-cta-secondary">
+                    Voir tous les services
+                  </Link>
+                </div>
+              </div>
+              <div className="svc-cta-visual" aria-hidden="true">
+                <CtaVisual />
+              </div>
             </div>
           </div>
         </section>

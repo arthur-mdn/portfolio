@@ -35,6 +35,12 @@ export default function ServiceHero({ service }) {
           </div>
         </div>
         <div className="svc-hero-visual">
+          <div className="svc-hero-halo" aria-hidden="true" />
+          {service.glyph && (
+            <span className="svc-glyph" aria-hidden="true">
+              {service.glyph}
+            </span>
+          )}
           <Visual />
         </div>
       </div>

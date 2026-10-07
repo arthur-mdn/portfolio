@@ -4,7 +4,7 @@ export default function ServiceRelated({ related, experienceProof }) {
   if (!related?.length && !experienceProof) return null;
 
   return (
-    <section className="svc-section svc-section-alt">
+    <section className="svc-section">
       <div className="container">
         <div className="svc-section-intro">
           <p className="section-label">Preuves</p>

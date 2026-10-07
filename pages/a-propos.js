@@ -5,23 +5,28 @@ import { FaArrowRight, FaDownload } from "react-icons/fa6";
 const TIMELINE = [
   {
     year: "2021",
-    title: "Premiers projets web",
-    text: "Sites et interfaces pour des besoins concrets, avec une attention déjà portée au rendu et à l'usage.",
+    title: "Premiers pas professionnels",
+    text: "Début de mon parcours en alternance : développement de sites et premières applications concrètes.",
   },
   {
-    year: "2022-2023",
-    title: "Full-stack & applications",
-    text: "Montée en puissance côté backend, bases de données et outils métier plus ambitieux.",
+    year: "2021 → 2026",
+    title: "5 ans en développement full-stack",
+    text: "Chez Edissyum : applications métier, frontend, backend, bases de données et intégrations au quotidien.",
   },
   {
-    year: "2023-2025",
-    title: "Exploitation & infrastructure",
-    text: "Déploiements Docker, Linux, support et supervision d'applications en conditions réelles.",
+    year: "2023 → 2026",
+    title: "De plus en plus proche de la production",
+    text: "Docker, Linux, déploiements, migrations, support et supervision d'applications en conditions réelles.",
   },
   {
-    year: "2024-2026",
-    title: "Web + native Apple",
-    text: "Ouverture aux apps iOS/macOS en Swift/SwiftUI, en complément du cycle produit web.",
+    year: "2024 → 2026",
+    title: "Mastère Développeur Full-Stack",
+    text: "Approfondissement de l'architecture applicative et réalisation de projets complets de bout en bout.",
+  },
+  {
+    year: "2026 → aujourd'hui",
+    title: "Freelance & produits personnels",
+    text: "Sites clients, applications web et développement natif avec SwiftUI, en parallèle de l'expérience pro.",
   },
 ];
 
@@ -37,6 +42,35 @@ const DIMENSIONS = [
   {
     title: "Produit & interface",
     text: "Parcours simples, interfaces soignées et décisions techniques au service de l'usage réel.",
+  },
+];
+
+const OUTSIDE = [
+  {
+    title: "Photo",
+    text: "Composition, image et attention aux détails. Une sensibilité qui influence directement le rendu des interfaces.",
+  },
+  {
+    title: "Musique & événementiel",
+    text: (
+      <>
+        Des projets qui m&apos;ont poussé à créer mes propres outils, comme{" "}
+        <Link href="/projet/blindset-studio">BlindSet Studio</Link>,{" "}
+        <Link href="/projet/karaoke-and-propositions">Karaoké &amp; Propositions</Link>{" "}
+        ou <Link href="/projet/private-events-dj-mika">Private Events</Link>.
+      </>
+    ),
+  },
+  {
+    title: "Créer pour résoudre",
+    text: (
+      <>
+        J&apos;aime transformer un problème quotidien en outil concret :{" "}
+        <Link href="/projet/fidelity-wallet">FidelityWallet</Link>,{" "}
+        <Link href="/projet/logiciel-de-facturation">logiciel de facturation</Link>, et
+        d&apos;autres produits personnels.
+      </>
+    ),
   },
 ];
 
@@ -99,11 +133,18 @@ export default function AboutPage() {
             </p>
           </section>
 
-          <section className="svc-section svc-section-alt" style={{ margin: "0 -1.5rem", paddingLeft: "1.5rem", paddingRight: "1.5rem" }}>
+          <section
+            className="svc-section svc-section-alt"
+            style={{
+              margin: "0 -1.5rem",
+              paddingLeft: "1.5rem",
+              paddingRight: "1.5rem",
+            }}
+          >
             <div className="container" style={{ padding: 0 }}>
               <div className="svc-section-intro">
                 <p className="section-label">Parcours</p>
-                <h2>2021 → 2026</h2>
+                <h2>2021 → aujourd&apos;hui</h2>
               </div>
               <div className="about-timeline">
                 {TIMELINE.map((item) => (
@@ -151,39 +192,43 @@ export default function AboutPage() {
               <p className="section-label">Hors code</p>
               <h2>Ce qui nourrit le reste</h2>
             </div>
-            <p className="about-outside">
-              En dehors des projets, je m&apos;intéresse à la photo, à la
-              musique et aux outils qui simplifient vraiment le quotidien. Ces
-              centres d&apos;intérêt influencent ma façon de penser les
-              interfaces : claires, utiles, sans surcharge.
-            </p>
+            <div className="about-outside-grid">
+              {OUTSIDE.map((item) => (
+                <div key={item.title} className="about-outside-card">
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              ))}
+            </div>
           </section>
 
           <section className="svc-cta" style={{ paddingTop: "1rem" }}>
-            <div className="svc-cta-inner">
-              <h2>Envie d&apos;échanger ?</h2>
-              <p>
-                Site, app web ou application native : parlez-moi de votre
-                projet, ou téléchargez mon CV pour en savoir plus.
-              </p>
-              <div
-                className="hero-actions"
-                style={{ marginBottom: 0, justifyContent: "center" }}
-              >
-                <Link href="/contact" className="btn btn-primary">
-                  Me contacter
-                  <FaArrowRight size={14} />
-                </Link>
-                <Link
-                  href="/others/CV_Arthur_Mondon_2024.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  download
-                  className="btn btn-secondary"
+            <div className="svc-cta-panel" style={{ gridTemplateColumns: "1fr" }}>
+              <div className="svc-cta-copy" style={{ textAlign: "center" }}>
+                <h2>Envie d&apos;échanger ?</h2>
+                <p style={{ marginLeft: "auto", marginRight: "auto" }}>
+                  Site, app web ou application native : parlez-moi de votre
+                  projet, ou téléchargez mon CV pour en savoir plus.
+                </p>
+                <div
+                  className="hero-actions"
+                  style={{ marginBottom: 0, justifyContent: "center" }}
                 >
-                  <FaDownload size={14} />
-                  Télécharger le CV
-                </Link>
+                  <Link href="/contact" className="btn btn-final">
+                    Me contacter
+                    <FaArrowRight size={14} />
+                  </Link>
+                  <Link
+                    href="/others/CV_Arthur_Mondon_2024.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download
+                    className="btn btn-secondary svc-cta-secondary"
+                  >
+                    <FaDownload size={14} />
+                    Télécharger le CV
+                  </Link>
+                </div>
               </div>
             </div>
           </section>
