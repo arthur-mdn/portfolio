@@ -137,19 +137,34 @@ function ProjectPage({ project }) {
               {project.context && (
                 <div className="case-block">
                   <h2>Contexte</h2>
-                  <p>{project.context}</p>
+                  {String(project.context)
+                    .split(/\n+/)
+                    .filter(Boolean)
+                    .map((paragraph) => (
+                      <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+                    ))}
                 </div>
               )}
               {project.need && (
                 <div className="case-block">
                   <h2>Besoin</h2>
-                  <p>{project.need}</p>
+                  {String(project.need)
+                    .split(/\n+/)
+                    .filter(Boolean)
+                    .map((paragraph) => (
+                      <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+                    ))}
                 </div>
               )}
               {project.solution && (
                 <div className="case-block">
                   <h2>Solution</h2>
-                  <p>{project.solution}</p>
+                  {String(project.solution)
+                    .split(/\n+/)
+                    .filter(Boolean)
+                    .map((paragraph) => (
+                      <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+                    ))}
                 </div>
               )}
               {project.features?.length > 0 && (
@@ -165,14 +180,24 @@ function ProjectPage({ project }) {
               {project.result && (
                 <div className="case-block">
                   <h2>Résultat</h2>
-                  <p>{project.result}</p>
+                  {String(project.result)
+                    .split(/\n+/)
+                    .filter(Boolean)
+                    .map((paragraph) => (
+                      <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+                    ))}
                 </div>
               )}
             </div>
           ) : (
             <div className="case-block">
               <h2>Description</h2>
-              <p>{project.description}</p>
+              {String(project.description)
+                .split(/\n+/)
+                .filter(Boolean)
+                .map((paragraph) => (
+                  <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+                ))}
             </div>
           )}
 

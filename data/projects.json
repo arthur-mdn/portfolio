@@ -5,7 +5,7 @@
     "slug": "blindset-studio",
     "description": "Application macOS dédiée à la création et à l'animation de blind tests et de quiz musicaux personnalisés.\n\nBlindSet Studio permet de préparer ses quiz, gérer sa bibliothèque musicale, personnaliser les extraits et appliquer différents effets audio. Pendant l'animation, l'application pilote un écran public distinct afin de diffuser les questions, réponses et différents temps du jeu aux participants.",
     "image": "projects/blindset-studio.webp",
-    "link": "",
+    "link": "https://blindset.fr",
     "github": "",
     "youtube": [],
     "technos": [
@@ -66,7 +66,7 @@
     "slug": "elevage-hitch",
     "description": "Conception du site vitrine d'un élevage familial de chiens et de chats. Le site présente l'élevage, ses différentes races, ses reproducteurs et les animaux disponibles ou à venir.\n\nUne attention particulière a été portée à la gestion des animaux et des demandes de contact, avec des fiches structurées et des formulaires adaptés aux personnes souhaitant accueillir un futur compagnon.",
     "image": "projects/elevage-hitch.webp",
-    "link": "",
+    "link": "https://elevage-hitch.fr",
     "github": "",
     "youtube": [],
     "technos": [
@@ -97,7 +97,7 @@
     "description": "Refonte complète du site Private Events pour DJ Mika, réalisée le 13 juin 2026. Le projet a été entièrement reconstruit côté architecture, style et référencement, afin d'offrir une vitrine plus claire, plus rapide et mieux adaptée à la conversion.\n\nLe site présente les prestations de DJ et karaoké pour événements privés et soirées d'entreprise, avec une expérience mobile-first et un parcours de contact simplifié. Un constructeur d'événement a également été ajouté pour faciliter la demande de devis : les visiteurs précisent le type d'événement, le contexte et leurs besoins avant d'envoyer leur demande.",
     "image": "projects/private-events.webp",
     "link": "https://privateevents.fr",
-    "github": "https://github.com/arthur-mdn/private-events",
+    "github": "https://github.com/arthur-mdn/privateevents.fr",
     "youtube": [],
     "technos": [
       101,
@@ -389,7 +389,7 @@
     "slug": "site-vitrine-atlas-programme",
     "description": "J'ai récemment développé un site web sous WordPress pour un programme de sport personnalisé appelé \"Atlas\". Ce programme est un ensemble complet axé sur la musculation, la nutrition et le bien-être, conçu pour s'adapter aux besoins individuels des utilisateurs. Le site vise à promouvoir un corps esthétique et en pleine santé, tout en encourageant l'épanouissement physique et mental. Atlas est conçu pour rendre la transformation physique plus accessible et agréable, que ce soit pour les débutants ou les personnes déjà familiarisées avec ces disciplines.\n\nLa page d'accueil du site offre un aperçu du programme, mettant en avant ses principaux aspects et ses avantages. Elle inclut également des avis clients et des liens vers les réseaux sociaux. Une page dédiée explore en détail les différents thèmes abordés, notamment les plans d'entraînement, les plans nutritionnels et les plans de bien-être.\n\nLe site présente également une page de transformations, qui met en lumière les réussites des participants au programme, ainsi qu'une page de contact pour les visiteurs souhaitant en savoir plus ou poser des questions. Les utilisateurs ont la possibilité de mettre le programme Atlas dans leur panier et de payer directement sur le site, ce qui facilite l'inscription et l'accès au programme.",
     "image": "projects/site-web-programme-atlas.png",
-    "link": "https://atlas-programme.fr",
+    "link": "",
     "github": "",
     "youtube": [],
     "technos": [
@@ -402,7 +402,19 @@
     "date": "2024-04-12",
     "status": "online",
     "type": "Site Web",
-    "interesting": false
+    "interesting": false,
+    "context": "Atlas est un programme de sport personnalisé axé sur la musculation, la nutrition et le bien-être. L'objectif du site était de rendre cette transformation physique plus accessible, aussi bien pour les débutants que pour les pratiquants déjà familiers de ces disciplines.\nLe projet devait à la fois présenter l'univers Atlas et convaincre les visiteurs de s'inscrire au programme.",
+    "need": "Une vitrine WordPress claire pour expliquer l'offre, montrer des preuves concrètes (avis, transformations) et permettre l'achat / l'inscription directement en ligne.\nLe parcours devait rester simple : comprendre le programme, se rassurer, puis passer à l'action.",
+    "solution": "Développement d'un site WordPress structuré autour de l'offre Atlas : page d'accueil orientée bénéfices, pages thématiques (entraînement, nutrition, bien-être), page transformations et contact.\nLe panier et le paiement en ligne ont été intégrés pour fluidifier l'accès au programme sans friction inutile.",
+    "features": [
+      "Page d'accueil avec aperçu du programme, avis clients et réseaux sociaux",
+      "Pages dédiées aux plans d'entraînement, nutrition et bien-être",
+      "Page transformations pour mettre en avant les résultats des participants",
+      "Page contact pour les questions et demandes d'information",
+      "Parcours panier / paiement pour s'inscrire directement au programme",
+      "Administration WordPress pour faire évoluer les contenus"
+    ],
+    "result": "Une vitrine commerciale cohérente avec l'univers Atlas, capable de présenter l'offre en détail et de convertir les visiteurs intéressés en inscriptions."
   },
   {
     "id": 24,
@@ -426,7 +438,20 @@
     "date": "2024-02-20",
     "status": "online",
     "type": "Site web",
-    "interesting": true
+    "interesting": true,
+    "context": "Ce site portfolio sert de vitrine à mon parcours de développeur web. La première version a été construite en React / Vite, puis le projet a évolué vers Next.js pour renforcer le SEO via le rendu côté serveur des métadonnées.\nL'enjeu était de présenter clairement mon profil, mes projets et un moyen de contact, tout en restant techniquement exemplaire.",
+    "need": "Une plateforme moderne, rapide et évolutive pour exposer mes réalisations, permettre le téléchargement du CV et faciliter la prise de contact.\nIl fallait aussi pouvoir itérer sur la stack (Vite puis Next) sans perdre la lisibilité du parcours visiteur.",
+    "solution": "Conception d'un portfolio React avec une interface sobre centrée sur les projets, les technologies et le contact. Chaque projet peut être détaillé avec liens GitHub ou démos.\nLa migration vers Next.js a ensuite permis d'améliorer le référencement et la structure des pages, tout en conservant l'esprit du site. Les deux versions restent accessibles sur GitHub.",
+    "features": [
+      "Présentation du parcours et des compétences",
+      "Galerie de projets avec descriptions, technos et liens",
+      "Téléchargement direct du CV",
+      "Formulaire de contact",
+      "Design responsive et performance soignée",
+      "Évolution Vite/React puis Next.js pour le SEO / SSR des métadonnées",
+      "Code source public pour transparence"
+    ],
+    "result": "Une vitrine professionnelle interactive, techniquement à jour, qui synthétise mon profil et oriente naturellement vers le contact ou l'exploration des projets."
   },
   {
     "id": 28,
@@ -465,7 +490,21 @@
     "date": "2024-02-01",
     "status": "online",
     "type": "Jeu vidéo",
-    "interesting": true
+    "interesting": true,
+    "context": "Save the Turtles est un projet universitaire de 3e année BUT MMI (spécialisation développement) à l'Université de Toulon. L'idée : un jeu immersif projeté sur mur, sans clavier ni souris, où les joueurs interagissent par leurs mouvements.\nLe projet s'inspire d'un événement réel de protection d'une tortue, et mêle jeu, technique et sensibilisation écologique.",
+    "need": "Capturer les joueurs via webcam, calibrer l'espace de jeu, détecter les mains et transmettre ces interactions à Unity en temps réel.\nIl fallait une expérience fluide, compréhensible immédiatement, et suffisamment robuste pour une démonstration publique.",
+    "solution": "Pipeline hybride Python / Unity : OpenCV pour la calibration et le traitement d'image, YOLOv8 pour la détection des joueurs et des mains, sockets pour la communication temps réel avec Unity.\nLe gameplay charge les joueurs de protéger des tortues contre des crabes à l'aide d'une épuisette virtuelle, avec vies, scoring et apparitions aléatoires. Toute la direction artistique (logo, UI, scène 3D) a été conçue pour le projet.",
+    "features": [
+      "Projection murale immersive sans périphériques classiques",
+      "Calibration et traitement d'image via OpenCV",
+      "Détection joueurs / mains avec YOLOv8",
+      "Communication Python ↔ Unity par sockets",
+      "Gameplay éducatif : protéger les tortues des crabes",
+      "Système de vies, scoring et apparitions aléatoires",
+      "Direction artistique complète (logo, indicateurs, scène 3D)",
+      "Open source GitHub + vidéos YouTube (coulisses et démo)"
+    ],
+    "result": "Un jeu interactif original qui démontre la capacité à croiser vision par ordinateur, Unity et game design autour d'un sujet engagé. Le projet reste consultable en open source avec ses démonstrations vidéo."
   },
   {
     "id": 25,
@@ -491,7 +530,19 @@
     "date": "2024-01-16",
     "status": "online",
     "type": "WebApp",
-    "interesting": true
+    "interesting": true,
+    "context": "Application web destinée à la validation des titres de transport sur un réseau de bus et de bateaux. Le produit devait couvrir à la fois l'usager (achat, validation) et le contrôle (vérification).\nL'architecture devait rester robuste et déployable proprement, d'où l'usage de Docker.",
+    "need": "Permettre la création de comptes multi-profils (familles / groupes), l'achat de tickets et abonnements, la validation via QR code à bord, et un espace de contrôle pour les agents.\nLe parcours devait rester simple malgré la complexité métier transport.",
+    "solution": "WebApp complète React / Node.js / MongoDB, déployée avec Docker. Les usagers gèrent leurs profils et tickets ; le scan QR à bord valide un ticket d'une heure. Une interface dédiée permet aux agents de contrôler la validité des titres.\nL'ensemble couvre le cycle vente → validation → contrôle dans une seule application.",
+    "features": [
+      "Comptes utilisateurs avec profils multiples (familles / groupes)",
+      "Achat de tickets bus / bateau et abonnements",
+      "Validation par scan QR code à bord (ticket d'une heure)",
+      "Interface de contrôle pour les agents",
+      "Stack React, Node.js et MongoDB",
+      "Déploiement et industrialisation via Docker"
+    ],
+    "result": "Une application métier complète pour fluidifier l'achat et la validation des titres, tout en donnant aux agents un outil de contrôle clair."
   },
   {
     "id": 1,
@@ -519,7 +570,19 @@
     "date": "2023-12-19",
     "status": "online",
     "type": "Site web",
-    "interesting": true
+    "interesting": true,
+    "context": "Site vitrine pour un événement de karting organisé par AGS F1. L'univers devait transmettre l'énergie de la course, du kart à la F1, à un public potentiellement international.\nLe site ne pouvait pas se contenter d'une simple brochure : il devait engager et diffuser l'événement.",
+    "need": "Une expérience React moderne, réactive, avec traduction en temps réel et intégrations sociales pour élargir la portée de l'événement.\nLes visiteurs devaient comprendre l'événement rapidement et pouvoir explorer l'univers de façon interactive.",
+    "solution": "Développement d'un site React immersif, enrichi d'un module de traduction en temps réel et d'intégrations API tierces (TikTok, YourPlan).\nL'objectif était de croiser storytelling événementiel, performance front et diffusion multi-canaux.",
+    "features": [
+      "Vitrine événementielle moderne et responsive",
+      "Module de traduction en temps réel",
+      "Fonctionnalités interactives immersives",
+      "Intégration API TikTok",
+      "Intégration YourPlan",
+      "Expérience pensée pour un public international"
+    ],
+    "result": "Une présence digitale mémorable pour l'événement, capable de capturer l'esprit course et d'élargir la diffusion au-delà d'un simple site informatif."
   },
   {
     "id": 2,
@@ -596,7 +659,21 @@
     "date": "2023-08-25",
     "status": "online",
     "type": "Extension de navigateur",
-    "interesting": true
+    "interesting": true,
+    "context": "Les bannières cookies et overlays RGPD interrompent souvent la lecture, voire bloquent le contenu tant qu'aucun choix n'est fait. Cookie Remover est né de ce friction quotidienne sur Chrome et Edge.\nL'idée n'était pas seulement de masquer un bandeau, mais de donner un vrai contrôle à l'utilisateur.",
+    "need": "Une extension capable de nettoyer une page en un clic, tout en permettant d'ajouter des règles personnalisées par site (sélecteurs, actions, historique, exclusions).\nIl fallait aussi des réglages avancés : mode sombre, nettoyage agressif, import/export.",
+    "solution": "Extension navigateur qui injecte du JavaScript pour manipuler le DOM : nettoyage instantané, ciblage d'éléments par ID / classe / query selector, sélection visuelle, historique des actions et paramètres avancés.\nLes règles peuvent être exportées ou importées pour synchroniser la configuration entre appareils.",
+    "features": [
+      "Nettoyage en un clic des bannières cookies / overlays",
+      "Ajout d'actions personnalisées par élément HTML",
+      "Ciblage par ID, classe ou query selector",
+      "Sélection visuelle interactive dans la page",
+      "Liste des actions et historique détaillé",
+      "Mode sombre, nettoyage agressif et sites exclus",
+      "Import / export des paramètres",
+      "Compatibilité Chrome et Edge"
+    ],
+    "result": "Un outil pratique et personnalisable qui améliore réellement le confort de navigation, au-delà d'un simple bloqueur de bandeaux."
   },
   {
     "id": 3,
@@ -604,7 +681,7 @@
     "slug": "noctivibe",
     "description": "Noctvibe est une progressive web app (PWA) en PHP conçue pour simplifier l'organisation de soirées culinaires. L'application est née d'une expérience personnelle lors de l'organisation de soirées pizza en famille, où la coordination des préférences et des commandes était une tâche complexe et source de confusion.\n\nAvec \"Noctvibe\", l'organisation d'événements devient un jeu d'enfant. L'utilisateur peut créer un événement en spécifiant son titre, le type de repas (comme une pizza ou un menu personnalisé), le lieu, la date et la liste des invités. Unsplash est intégré pour ajouter une touche esthétique avec des photos thématiques, rendant l'invitation plus attrayante.\n\nUne fois l'événement créé, un lien d'invitation partageable permet aux invités d'accéder à la plateforme. Chaque invité sélectionne ses ingrédients préférés parmi une liste complète, offrant une personnalisation complète de sa commande. Les modifications de dernière minute sont également prises en compte, permettant aux invités de revenir sur leurs choix.\n\nDu côté de l'organisateur, \"Noctvibe\" offre une vue d'ensemble claire : une liste complète des ingrédients nécessaires et le détail de chaque commande, facilitant considérablement la préparation. Cette application est le reflet de ma capacité à transformer les défis du quotidien en solutions numériques élégantes et fonctionnelles, améliorant l'expérience de l'organisation d'événements tout en minimisant les tracas.",
     "image": "projects/webapp-noctivibe.png",
-    "link": "https://demo.noctivibe.fr",
+    "link": "https://noctivibe.fr",
     "github": "",
     "youtube": [],
     "technos": [
@@ -622,10 +699,23 @@
       "PHP",
       "MySQL"
     ],
-    "date": "2023-08-07",
+    "date": "2026-07-01",
     "status": "online",
     "type": "WebApp",
-    "interesting": true
+    "interesting": true,
+    "context": "Noctivibe est née d'un besoin personnel : organiser des soirées pizza en famille générait trop de confusion sur les préférences et les commandes.\nL'application devait transformer cette coordination informelle en parcours clair, aussi bien pour l'organisateur que pour les invités.",
+    "need": "Créer un événement (titre, type de repas, lieu, date, invités), partager un lien, laisser chacun composer sa commande, puis centraliser le résultat côté organisateur.\nLes modifications de dernière minute devaient rester possibles.",
+    "solution": "Progressive web app PHP permettant de créer un événement, d'inviter via un lien partageable et de collecter les choix d'ingrédients de chaque participant.\nUnsplash apporte une image thématique à l'invitation. L'organisateur dispose ensuite d'une vue consolidée des ingrédients et du détail des commandes.",
+    "features": [
+      "Création d'événement (titre, type de repas, lieu, date, invités)",
+      "Intégration Unsplash pour illustrer l'invitation",
+      "Lien d'invitation partageable",
+      "Sélection d'ingrédients par invité",
+      "Modification des choix jusqu'à la dernière minute",
+      "Vue organisateur : liste d'ingrédients et détail des commandes",
+      "Usage mobile via PWA"
+    ],
+    "result": "Un outil concret issu d'un problème du quotidien, qui simplifie l'organisation de soirées culinaires et réduit les allers-retours inutiles."
   },
   {
     "id": 17,
@@ -644,7 +734,19 @@
     "date": "2023-04-18",
     "status": "online",
     "type": "Visite virtuelle",
-    "interesting": true
+    "interesting": true,
+    "context": "En parallèle d'autres projets, j'ai développé une expertise en visites virtuelles 360° pour faire découvrir des établissements à distance. La captation se fait avec une Insta360, puis l'expérience est intégrée pour une navigation immersive.\nUn exemple marquant a été réalisé pour l'entreprise d'alternance, avec une dimension ludique ajoutée à la visite.",
+    "need": "Proposer plus qu'un simple rendu 360 : une expérience fluide, engageante, éventuellement gamifiée, utile pour portes ouvertes ou présentation d'espaces de travail.\nLes transitions et l'interactivité devaient tenir la route sur le web.",
+    "solution": "Captation 360 puis intégration de parcours immersifs avec animations entre points de vue. Pour l'entreprise d'alternance, ajout d'une chasse au trésor (peluches cachées) et d'un tableau des scores pour transformer la visite en expérience participative.",
+    "features": [
+      "Captation 360° avec Insta360",
+      "Navigation immersive entre les espaces",
+      "Transitions et animations soignées",
+      "Mini-jeux / chasse au trésor intégrée",
+      "Tableau des scores en fin de quête",
+      "Usage pour portes ouvertes ou présentation d'entreprise"
+    ],
+    "result": "Des visites virtuelles utiles et mémorables, qui allient captation, UX immersive et parfois gamification pour mieux faire découvrir un lieu."
   },
   {
     "id": 21,
@@ -668,7 +770,19 @@
     "date": "2023-03-21",
     "status": "online",
     "type": "Site Web",
-    "interesting": true
+    "interesting": true,
+    "context": "Eradion est le site de mon auto-entreprise, pensé comme vitrine de mes activités en développement web, visites virtuelles et production audiovisuelle.\nLe site devait à la fois présenter l'offre, publier de l'actualité et montrer des preuves de travail.",
+    "need": "Une base PHP / HTML / JavaScript propre, SEO-friendly, avec blog, portfolio et contact pour convertir les visiteurs en opportunités.\nLe design devait rester moderne et professionnel sans complexité inutile.",
+    "solution": "Site vitrine codé sur mesure avec attention au SEO, section actualités / blog, portfolio de réalisations (web et visites virtuelles) et parcours de contact.\nLa gestion des posts permet de publier régulièrement sans reconstruire le site.",
+    "features": [
+      "Vitrine multi-compétences (web, 360, audiovis)",
+      "Blog / actualités avec gestion de posts",
+      "Portfolio de réalisations",
+      "Optimisation SEO de base",
+      "Design moderne orienté confiance",
+      "Parcours de contact pour prospects et partenaires"
+    ],
+    "result": "Une présence pro qui pose l'offre Eradion, montre le travail réalisé et facilite la prise de contact."
   },
   {
     "id": 13,
@@ -696,7 +810,19 @@
     "date": "2023-01-16",
     "status": "online",
     "type": "Outil",
-    "interesting": false
+    "interesting": false,
+    "context": "Chez Edissyum, créer des signatures mail à chaque arrivée ou pour des événements ponctuels (cartes de vœux, etc.) était une tâche répétitive et chronophage.\nIl fallait industrialiser ce process sans perdre la personnalisation.",
+    "need": "Un formulaire simple pour saisir identité, rôle, téléphone et image, puis générer une signature adaptée à Thunderbird ou Outlook.\nLe livrable devait être immédiatement utilisable par glisser-déposer dans le client mail.",
+    "solution": "Outil PHP alimenté par un formulaire : génération d'un template de signature personnalisé selon le client mail choisi, puis téléchargement du fichier prêt à intégrer.\nL'outil a réduit le travail manuel tout en standardisant le rendu des signatures.",
+    "features": [
+      "Formulaire (pseudo, nom, prénom, rôle, téléphone, image)",
+      "Choix du format Thunderbird ou Outlook",
+      "Génération PHP d'un template de signature",
+      "Téléchargement prêt à glisser-déposer",
+      "Personnalisation pour événements ponctuels",
+      "Gain de temps sur l'onboarding et les campagnes internes"
+    ],
+    "result": "Un outil interne concret qui a accéléré et standardisé la création de signatures mail chez Edissyum."
   },
   {
     "id": 14,
@@ -717,7 +843,20 @@
     "date": "2023-01-10",
     "status": "online",
     "type": "WebApp",
-    "interesting": false
+    "interesting": false,
+    "context": "Atmosph'Air est une PWA étudiante conçue pour rendre la qualité de l'air compréhensible en temps réel, ville par ville, via l'API Atmosud.\nLe défi n'était pas seulement d'afficher une donnée : il fallait aussi gérer cache, performance et administration.",
+    "need": "Consulter la qualité de l'air, le polluant majoritaire et l'historique 30 jours, rechercher n'importe quelle ville, gérer des favoris, et optimiser les appels API.\nUn mode admin devait permettre de piloter le rafraîchissement des données.",
+    "solution": "PWA avec interface d'accueil animée, classements des bulletins consultés, fiches ville (ChartJS pour l'historique), favoris et recherche nationale.\nCôté perf : cache JSON quotidien, modes rapide / basique, cron PHP toutes les 8 heures et bouton admin pour forcer l'actualisation.",
+    "features": [
+      "Qualité de l'air en temps réel via API Atmosud",
+      "Fiche ville : polluant majoritaire et historique 30 jours (ChartJS)",
+      "Classement des bulletins les plus consultés",
+      "Recherche de villes et liste de favoris",
+      "Cache JSON et mode rapide pour limiter la bande passante",
+      "Cron PHP de rafraîchissement toutes les 8 heures",
+      "Panel admin avec actualisation manuelle"
+    ],
+    "result": "Une application informative et performante, qui montre la capacité à combiner UX claire, API tierce et stratégie de cache."
   },
   {
     "id": 10,
@@ -746,7 +885,22 @@
     "date": "2022-10-19",
     "status": "online",
     "type": "Site web",
-    "interesting": false
+    "interesting": false,
+    "context": "Calendry est une plateforme de réservation conçue pour les salons de coiffure et établissements de beauté. Elle couvre à la fois l'expérience client (prise de RDV) et l'exploitation quotidienne côté équipe.\nL'ambition était un outil métier complet, pas une simple page de contact.",
+    "need": "Côté client : choisir une prestation, un coiffeur et un créneau, recevoir une confirmation, gérer l'historique.\nCôté admin : planning temps réel, prestations, équipe, clients, SMS, statistiques et règles métier (annulation, fermetures, rappels).",
+    "solution": "Application web riche avec vitrine publique (galerie, catégories de prestations, infos salon) et back-office complet.\nLe calendrier admin, la gestion d'équipe, l'API SMS smspartner pour les rappels et les statistiques permettent de piloter le salon au quotidien.",
+    "features": [
+      "Vitrine salon : galerie, prestations par catégories, horaires, vidéos",
+      "Réservation client : prestation, coiffeur, créneau",
+      "Confirmations email et ajout au calendrier personnel",
+      "Historique, annulation et modification de rendez-vous",
+      "Calendrier admin temps réel + recherche / ajout manuel",
+      "Gestion prestations, catégories, icônes et équipe",
+      "Rappels SMS via API smspartner",
+      "Politiques d'annulation, fermetures et catalogue produits",
+      "Statistiques (réservations, popularité, activité clientèle)"
+    ],
+    "result": "Un outil métier bout-en-bout pour digitaliser la prise de rendez-vous et l'organisation d'un salon, côté client comme côté équipe."
   },
   {
     "id": 9,
@@ -775,7 +929,20 @@
     "date": "2022-09-25",
     "status": "online",
     "type": "Écran interactif",
-    "interesting": false
+    "interesting": false,
+    "context": "Funkylike est une application web de compteurs d'abonnés Facebook / Instagram en temps réel, pensée pour les commerçants qui veulent animer un écran en magasin ou en événement.\nLe produit devait combiner connexion aux API sociales, affichage spectaculaire et logique freemium.",
+    "need": "Connecter une page sociale, afficher un compteur live animé, personnaliser le fond, et distinguer comptes gratuits (pub) et premium (illimité, sans pub).\nL'admin devait pouvoir régler rafraîchissement, inactivité du menu et publicité.",
+    "solution": "App PHP / MySQL avec OAuth vers Facebook / Instagram, récupération du token puis des données (image, nom, abonnés). Affichage plein écran animé via la librairie flip.\nUne interface admin pilote la fréquence de refresh, le comportement UI et la monétisation freemium.",
+    "features": [
+      "Connexion Facebook / Instagram via API",
+      "Compteur d'abonnés en temps réel",
+      "Animation flip des chiffres",
+      "Personnalisation du fond d'écran par compteur",
+      "Affichage plein écran pour animation magasin / événement",
+      "Formules gratuites et premium",
+      "Admin : refresh, inactivité menu, gestion de la pub"
+    ],
+    "result": "Un dispositif marketing concret pour rendre visible la croissance d'audience et créer un effet d'incitation en temps réel."
   },
   {
     "id": 12,
@@ -798,7 +965,21 @@
     "date": "2022-09-10",
     "status": "online",
     "type": "Site web",
-    "interesting": false
+    "interesting": false,
+    "context": "Refonte complète du site corporate Edissyum pendant mon alternance. L'entreprise devait mieux présenter son expertise en GED et capture documentaire (MEM Courrier, Open Capture), ses références et ses actualités.\nLe site existant ne reflétait plus assez clairement l'offre ni l'image de l'entreprise.",
+    "need": "Une plateforme WordPress sur mesure : solutions, références, témoignages, blog, page entreprise (avec visite virtuelle et vidéo), carrières et formulaires.\nLe SEO et le suivi analytics faisaient partie du brief dès le départ.",
+    "solution": "Reconstruction WordPress / Elementor de A à Z, sans template figé. Contenu structuré par produit / service, blog d'actualité, espace recrutement, SEO soigné et Google Analytics.\nLe back-office WordPress permet ensuite à l'équipe de publier et mettre à jour sans friction.",
+    "features": [
+      "Pages solutions (MEM Courrier, Open Capture, etc.)",
+      "Références et témoignages clients",
+      "Blog / actualités",
+      "Page entreprise avec visite virtuelle et vidéo",
+      "Espace carrière et formulaire de recrutement",
+      "Formulaires de contact et d'inscription",
+      "SEO technique et Google Analytics",
+      "Administration WordPress / Elementor sur mesure"
+    ],
+    "result": "Un site corporate plus clair, administrable et aligné avec l'expertise Edissyum, capable de présenter l'offre et d'alimenter le recrutement / la génération de leads."
   },
   {
     "id": 6,
@@ -827,7 +1008,21 @@
     "date": "2022-01-21",
     "status": "online",
     "type": "WebApp",
-    "interesting": true
+    "interesting": true,
+    "context": "Facture est une PWA conçue pour aider les familles à suivre les dépenses des enfants avec validation parentale. L'outil fait le lien entre saisie côté enfant et décision côté parent.\nCe projet est distinct du logiciel de facturation micro-entreprise plus récent.",
+    "need": "Permettre aux enfants de déclarer une dépense (titre, description, montant, date, type, justificatif) et de demander un remboursement.\nLes parents doivent pouvoir accepter, refuser, payer partiellement et suivre plusieurs enfants depuis un même compte.",
+    "solution": "Progressive web app avec comptes liés parents / enfants, historique des décisions (accepté / refusé + motif) et gestion flexible des montants.\nL'app ne remplace pas la banque : elle organise la communication et la décision avant le paiement réel (virement, etc.).",
+    "features": [
+      "Comptes enfants liés aux comptes parents",
+      "Un parent peut gérer plusieurs enfants",
+      "Saisie détaillée des dépenses + justificatif",
+      "Demande de remboursement",
+      "Historique accepté / refusé avec motifs",
+      "Paiement total ou partiel, ajustement de montants",
+      "Vue parent multi-profils",
+      "Usage mobile via PWA"
+    ],
+    "result": "Un outil familial qui clarifie le suivi des dépenses et la validation parentale, sans prétendre gérer les flux bancaires eux-mêmes."
   },
   {
     "id": 7,
@@ -856,7 +1051,21 @@
     "date": "2021-09-22",
     "status": "online",
     "type": "WebApp",
-    "interesting": true
+    "interesting": true,
+    "context": "EDT est une PWA créée pour les étudiants de l'Université de Toulon afin de mieux consulter et organiser leur emploi du temps à partir d'Hyperplanning.\nLe calendrier officiel existait, mais l'expérience mobile et la personnalisation restaient limitées.",
+    "need": "Importer un ICS Hyperplanning, garder l'emploi du temps à jour, gérer plusieurs calendriers, changer de vues, filtrer (cours, salles, profs, matières) et ajouter des fonctions de vie étudiante (groupes, chat, tâches, carte étudiante).\nLes admins avaient aussi besoin d'un panel de suivi.",
+    "solution": "PWA PHP / MySQL branchée sur les fichiers ICS Hyperplanning. L'étudiant personnalise affichage, couleurs, plages horaires et filtres (dont un filtre entreprise pour l'alternance).\nDes groupes de classe ajoutent chat, liste de tâches et membres. Un panel admin surveille usage, connexions et peut diffuser des messages plein écran.",
+    "features": [
+      "Import et mise à jour d'emploi du temps via ICS Hyperplanning",
+      "Multi-calendriers et vues mois / semaine / jour",
+      "Personnalisation (plage horaire, couleurs, filtres)",
+      "Filtre entreprise pour alternants",
+      "Recherche cours / salles / professeurs / matières",
+      "Affichage rapide de la carte étudiante",
+      "Groupes : chat, tâches avec échéances, membres",
+      "Panel admin temps réel + messages utilisateurs"
+    ],
+    "result": "Un compagnon universitaire concret qui rend l'emploi du temps plus lisible, personnalisable et utile au quotidien étudiant."
   },
   {
     "id": 4,
@@ -884,7 +1093,19 @@
     "date": "2021-09-20",
     "status": "development",
     "type": "WebApp",
-    "interesting": false
+    "interesting": false,
+    "context": "Seamless vise à simplifier la validation des titres sur le réseau Mistral (bus et bateaux) à Toulon. L'expérience devait être quasi instantanée à bord, sans friction.\nLe projet se concentre sur le geste usager : valider, confirmer, pouvoir prouver son titre.",
+    "need": "Après connexion, un gros bouton de validation ; détection sur la cible à bord ; écran de confirmation ; historique des validations ; QR code pour le contrôleur.\nTout devait rester compréhensible en quelques secondes dans un contexte transport.",
+    "solution": "Application mobile centrée sur un parcours minimal : confirmation de voyage, validation sur cible, historique et QR de contrôle.\nL'UX privilégie la taille des actions et la clarté des retours plutôt que la densité fonctionnelle.",
+    "features": [
+      "Connexion usager",
+      "Bouton principal de confirmation de voyage",
+      "Validation sur cible à bord (bus / bateau)",
+      "Écran de confirmation clair",
+      "Historique des validations",
+      "QR code scannable par les contrôleurs"
+    ],
+    "result": "Une expérience de validation plus fluide et rassurante pour les usagers du réseau Mistral, pensée pour le terrain."
   },
   {
     "id": 18,
@@ -908,7 +1129,20 @@
     "date": "2020-02-18",
     "status": "online",
     "type": "Site web",
-    "interesting": false
+    "interesting": false,
+    "context": "Ancien portfolio expérimental imaginé comme un bureau macOS dans le navigateur. L'objectif était de rendre la découverte des projets ludique et mémorable, pas seulement informative.\nLe site devait donner l'impression d'un vrai environnement desktop.",
+    "need": "Reproduire barre de menu, fenêtres multi-tâches, dock / dossiers projets et webapps, et une personnalisation de fond d'écran persistante.\nChaque projet devait s'ouvrir comme une application.",
+    "solution": "Portfolio HTML / CSS / JavaScript / jQuery imitant macOS : fenêtres redimensionnables, dossiers Projets et Webapp, détails projet dans des fenêtres dédiées, et app Paramètres avec fond d'écran sauvegardé en local storage.",
+    "features": [
+      "Barre de menu style macOS",
+      "Gestion multi-fenêtres (agrandir, réduire, fermer)",
+      "Dossier Projets présenté comme apps iOS",
+      "Dossier Webapp avec redirections",
+      "Application Paramètres pour le fond d'écran",
+      "Persistance du fond via local storage",
+      "Expérience desktop-like dans le navigateur"
+    ],
+    "result": "Un portfolio différenciant qui montrait déjà un goût pour l'UI détaillée et les interactions riches, tout en servant de vitrine projets."
   },
   {
     "id": 20,
@@ -933,7 +1167,20 @@
     "date": "2019-12-18",
     "status": "development",
     "type": "WebApp",
-    "interesting": false
+    "interesting": false,
+    "context": "Qui-Est-Ce ? est une relecture web du jeu de déduction classique, réalisée en HTML / CSS / JavaScript pur. L'idée était d'offrir une partie rapide, claire et renouvelable à chaque lancement.\nLe projet fait partie de mes premiers pas sérieux en jeu navigateur.",
+    "need": "Générer un plateau de personnages aléatoires, permettre de poser des questions pour éliminer des candidats, suivre les succès, et conserver l'historique en local storage.\nLes animations et trophées devaient rester optionnels / consultables.",
+    "solution": "Jeu front pur avec accueil (jouer, crédits, paramètres, trophées), plateau régénéré à chaque partie, questions d'élimination et écran de victoire.\nSuccès et statistiques de parties sont persistés localement.",
+    "features": [
+      "Plateau de personnages généré aléatoirement",
+      "Questions pour éliminer les candidats",
+      "Progression jusqu'à l'identification finale",
+      "Écran de victoire et option rejouer",
+      "Paramètres d'animations",
+      "Trophées / succès (ex. 1 partie, 100 victoires)",
+      "Persistance local storage"
+    ],
+    "result": "Un jeu léger mais complet, qui travaille déduction, UX et logique front sans dépendre d'un framework."
   },
   {
     "id": 23,
@@ -958,7 +1205,20 @@
     "date": "2019-05-22",
     "status": "development",
     "type": "WebApp",
-    "interesting": false
+    "interesting": false,
+    "context": "MiniOS est l'un de mes premiers projets : une simulation d'OS accessible dans le navigateur, inspirée de Windows 10. Ce n'était pas un produit fini, mais un terrain d'apprentissage intensif sur le DOM et les interactions.\nL'expérience démarre même par un écran de veille avant d'accéder au bureau.",
+    "need": "Simuler connexion, bureau, menu démarrer, paramètres système, personnalisation et barre des tâches avec indicateurs familiers.\nChaque interaction devait aider à comprendre événements, états et affichages dynamiques.",
+    "solution": "Simulation front JavaScript avec page de veille, bureau, raccourcis, menu Power, paramètres (luminosité, mode nuit, couleurs inversées), gestion de compte et fond d'écran persisté.\nLa barre des tâches regroupe icônes cachées, batterie, réseau / mode avion, heure et calendrier.",
+    "features": [
+      "Écran de veille puis connexion au bureau",
+      "Interface inspirée de Windows 10",
+      "Menu Windows (Power, paramètres)",
+      "Réglages d'affichage (luminosité, nuit, inversion)",
+      "Gestion photo de profil et nom d'utilisateur",
+      "Fond d'écran personnalisable (local storage)",
+      "Barre des tâches : batterie, réseau, heure, calendrier"
+    ],
+    "result": "Un projet fondateur qui a structuré mon apprentissage front-end et mon intérêt pour les interfaces système simulées dans le navigateur."
   },
   {
     "id": 19,
@@ -983,6 +1243,19 @@
     "date": "2019-04-07",
     "status": "development",
     "type": "WebApp",
-    "interesting": false
+    "interesting": false,
+    "context": "GlucideCheck est mon tout premier projet de développement : une PWA pour aider au suivi du diabète au quotidien. Ce projet a joué un rôle direct dans mon choix de m'orienter vers le développement.\nMême s'il n'était pas encore parfaitement responsive, il répondait déjà à un besoin réel.",
+    "need": "Saisir une glycémie, obtenir une interprétation (optimal / hyperglycémie selon niveaux), estimer l'insuline nécessaire pour une cible, calculer les glucides d'un aliment, et personnaliser les paramètres (cible, impact d'une unité, langue, mode sombre).\nLes dernières saisies devaient rester accessibles rapidement.",
+    "solution": "PWA HTML / CSS / JavaScript avec page d'accueil de saisie, stockage local des dernières valeurs, onglet de calcul glucidique (règle de trois à partir des valeurs pour 100 g) et onglet paramètres persistés.\nCette démarche a ensuite inspiré l'application iOS native Glucide Check.",
+    "features": [
+      "Saisie de glycémie et interprétation du niveau",
+      "Recommandation d'insuline vers un taux cible",
+      "Historique rapide des dernières saisies (local storage)",
+      "Calcul de glucides à partir des infos nutritionnelles",
+      "Paramètres : cible, impact d'une unité, langue, mode sombre",
+      "Persistance des préférences en local storage",
+      "Socle PWA HTML / CSS / JavaScript"
+    ],
+    "result": "Un premier produit utile et formateur, qui a confirmé mon intérêt pour les outils numériques concrets et préparé le terrain à la version iOS native."
   }
 ]
