@@ -17,6 +17,15 @@ function getTechLabels(technos = []) {
     .slice(0, 2);
 }
 
+function formatCardDate(dateString) {
+  const date = new Date(`${dateString}T12:00:00`);
+  return date.toLocaleDateString("fr-FR", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  });
+}
+
 function ProjectCard({ project }) {
   const tags = getTechLabels(project.technos);
 
@@ -34,7 +43,12 @@ function ProjectCard({ project }) {
         )}
       </div>
       <div className="library-card-body">
-        <span className="library-card-type">{project.type}</span>
+        <div className="library-card-top">
+          <span className="library-card-type">{project.type}</span>
+          <time className="library-card-date" dateTime={project.date}>
+            {formatCardDate(project.date)}
+          </time>
+        </div>
         <h3>{project.name}</h3>
         <div className="library-card-meta">
           <div className="project-tags">
