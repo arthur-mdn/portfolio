@@ -38,7 +38,7 @@ function ProjectCard({ project }) {
             className="project-card-warning"
             title="Attention particulière requise"
           >
-            <FaTriangleExclamation size={12} />
+            <FaTriangleExclamation size={14} />
           </span>
         )}
       </div>
