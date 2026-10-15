@@ -66,7 +66,7 @@ const OUTSIDE = [
     text: (
       <>
         J&apos;aime transformer un problème quotidien en outil concret :{" "}
-        <Link href="/projet/fidelity-wallet">FidelityWallet</Link>,{" "}
+        <Link href="/projet/fidelity-wallet-ios-app">FidelityWallet</Link>,{" "}
         <Link href="/projet/logiciel-de-facturation">logiciel de facturation</Link>, et
         d&apos;autres produits personnels.
       </>

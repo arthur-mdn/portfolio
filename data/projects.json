@@ -127,7 +127,7 @@
   {
     "id": 37,
     "name": "FidelityWallet",
-    "slug": "fidelity-wallet",
+    "slug": "fidelity-wallet-ios-app",
     "description": "Application iOS permettant de regrouper ses cartes de fidélité directement sur son iPhone pour les retrouver rapidement au quotidien.\n\nL'application a été conçue nativement pour iOS avec une interface inspirée du nouveau langage visuel Liquid Glass d'iOS 26, afin de proposer une expérience moderne et parfaitement intégrée à l'écosystème Apple.",
     "image": "projects/fidelity-wallet.webp",
     "link": "",

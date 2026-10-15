@@ -478,7 +478,7 @@ export const SERVICES = [
           "Application macOS native pour préparer et animer des blind tests musicaux.",
       },
       {
-        slug: "fidelity-wallet",
+        slug: "fidelity-wallet-ios-app",
         proof:
           "Application iOS native pour centraliser ses cartes de fidélité au quotidien.",
       },
