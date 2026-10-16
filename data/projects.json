@@ -1786,7 +1786,7 @@
     "date": "2022-09-25",
     "status": "archived",
     "type": "Écran interactif",
-    "interesting": false,
+    "interesting": true,
     "context": "Le commanditaire souhaitait proposer des compteurs virtuels d’abonnés Facebook et Instagram, comme alternative aux boîtiers physiques existants. L’objectif était de les afficher dans des commerces ou lors d’événements pour encourager les visiteurs à s’abonner aux comptes présentés.\nFunkylike faisait partie de mes premières prestations de développement en freelance.",
     "need": "Livrer une application complète permettant de connecter des comptes sociaux, de récupérer leur nombre d’abonnés et de l’afficher de manière lisible sur une tablette ou une télévision. Le projet suivait un cahier des charges complet, avec personnalisation des compteurs et administration.",
     "solution": "L’utilisateur connecte une page Facebook ou un compte Instagram via les API correspondantes et les autorisations nécessaires. L’application récupère les informations du compte, notamment son nom, son image et son nombre d’abonnés.\nLe compteur s’affiche en plein écran sur une tablette ou un téléviseur, avec un fond personnalisable et une animation des chiffres réalisée avec la bibliothèque Flip. Les nombres sont actualisés toutes les cinq minutes.\nUne interface d’administration permet de régler le comportement de l’affichage, notamment le rafraîchissement, le masquage du menu après inactivité et les paramètres publicitaires prévus dans l’application.",

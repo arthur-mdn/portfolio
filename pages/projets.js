@@ -1,32 +1,9 @@
 import Head from "next/head";
 import Link from "next/link";
-import { useSyncExternalStore } from "react";
+import { useProjectsLibraryState } from "../components/ProjectsLibraryState";
 import { FaArrowRight, FaChevronDown, FaTriangleExclamation } from "react-icons/fa6";
 import projectsData from "../data/projects.json";
 import skillsData from "../data/skills.json";
-
-let otherProjectsOpen = false;
-const otherProjectsListeners = new Set();
-
-function getOtherProjectsOpen() {
-  return otherProjectsOpen;
-}
-
-function subscribeToOtherProjects(listener) {
-  otherProjectsListeners.add(listener);
-  return () => otherProjectsListeners.delete(listener);
-}
-
-function getServerOtherProjectsOpen() {
-  return false;
-}
-
-function rememberOtherProjects(event) {
-  const open = event.currentTarget.open;
-  if (open === getOtherProjectsOpen()) return;
-  otherProjectsOpen = open;
-  otherProjectsListeners.forEach((listener) => listener());
-}
 
 const skillMap = Object.fromEntries(
   skillsData.flatMap((category) =>
@@ -92,12 +69,7 @@ function ProjectCard({ project }) {
 }
 
 export default function Projets() {
-  // Render the restored height immediately, before Next.js restores scrolling.
-  const isOtherProjectsOpen = useSyncExternalStore(
-    subscribeToOtherProjects,
-    getOtherProjectsOpen,
-    getServerOtherProjectsOpen
-  );
+  const { otherProjectsOpen, setOtherProjectsOpen } = useProjectsLibraryState();
 
   const title = "Réalisations | Arthur Mondon — Développeur web freelance";
   const description =
@@ -156,7 +128,15 @@ export default function Projets() {
           </section>
 
           {otherProjects.length > 0 && (
-            <details className="projects-accordion" open={isOtherProjectsOpen} onToggle={rememberOtherProjects}>
+            <details
+              className="projects-accordion"
+              open={otherProjectsOpen}
+              onToggle={(event) => setOtherProjectsOpen(event.currentTarget.open)}
+              onClickCapture={(event) => {
+                // Save before a project link navigates, even if toggle is pending.
+                if (event.target.closest("a")) setOtherProjectsOpen(event.currentTarget.open);
+              }}
+            >
               <summary>
                 <span>
                   Autres projets
