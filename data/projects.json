@@ -29,7 +29,7 @@
       "Ajout des participants et attribution manuelle des points depuis le cockpit",
       "Fonctionnement hors ligne et interface native macOS inspirée de Liquid Glass"
     ],
-    "result": "L’application est distribuée en bêta publique gratuite et a déjà fait l’objet de plusieurs tests en soirée auprès de quelques utilisateurs. Cette phase permet de recueillir des retours avant une future commercialisation. Le site vitrine présente un aperçu de l’application.",
+    "result": "L’application est distribuée en bêta publique gratuite et a déjà fait l’objet de plusieurs tests en soirée auprès de quelques utilisateurs. Cette phase permet de recueillir des retours avant une future commercialisation. Le [site de BlindSet Studio](https://blindset.fr) présente un aperçu de l’application.",
     "summary": "Créer ses propres quiz musicaux et garder la main sur leur animation, dans une application macOS native utilisable hors ligne.",
     "facts": [
       {
@@ -54,13 +54,23 @@
     "roadmap": [
       "Connexion de buzzers physiques pour enrichir l’interaction avec les participants",
       "Assistance par IA pour faciliter la conception et la correction des quiz"
-    ]
+    ],
+    "relatedProjects": [
+      {
+        "slug": "buzzer-app",
+        "reason": "Utilisation simultanée possible : BlindSet Studio anime le quiz musical, tandis que Buzzer-App permet aux joueurs de buzzer depuis leur smartphone."
+      }
+    ],
+    "relatedServices": [
+      "applications-natives-ios-macos"
+    ],
+    "linkLabel": "Découvrir le site de BlindSet Studio"
   },
   {
     "id": 39,
     "name": "Karaoké & Propositions",
     "slug": "karaoke-and-propositions",
-    "description": "Webapp conçue pour les DJ et animateurs afin de gérer les demandes musicales du public pendant une soirée.\n\nDepuis leur téléphone, les invités parcourent le catalogue KaraFun, recherchent un morceau et transmettent leur demande de karaoké ou leur proposition musicale. Le DJ reçoit toutes les demandes en temps réel depuis son interface et peut les accepter, les refuser et organiser sa file d'attente sans interrompre son animation.",
+    "description": "Recevoir les demandes de karaoké et les suggestions musicales depuis un QR code, sans interrompre le DJ pendant sa prestation.\n\nPendant les soirées, les invités transmettaient leurs demandes musicales directement au DJ à l’oral. Ces interruptions perturbaient sa prestation et rendaient difficile le suivi de toutes les demandes. Le client souhaitait un moyen de les centraliser tout en restant disponible pour son animation.\n\nLes invités scannent un QR code disposé dans de petits cadres ou affiché sur l’écran de l’animateur. Après avoir choisi un morceau, ils renseignent leur nom et peuvent joindre un message personnalisé.\nLe mode karaoké s’appuie sur le catalogue public de KaraFun pour proposer des titres que le DJ pourra retrouver dans son logiciel. Le mode proposition musicale laisse au contraire saisir librement un titre et un interprète, sans restreindre les demandes à un catalogue.\nLe DJ reçoit les demandes par WebSocket dans son interface, où il peut les accepter, les refuser, les réordonner ou suspendre les propositions. L’application organise les demandes ; la lecture des morceaux reste gérée séparément par le DJ.",
     "image": "projects/karaoke-and-propositions.webp",
     "link": "",
     "github": "",
@@ -78,22 +88,56 @@
     "status": "online",
     "type": "WebApp",
     "interesting": true,
-    "context": "Les DJ ont besoin de recevoir et organiser les demandes musicales du public sans casser le rythme de la soirée.",
-    "need": "Une webapp temps réel : catalogue, demandes invités, file DJ et actions accepter/refuser.",
-    "solution": "Développement d'une application web synchronisée entre interface invités et interface DJ.",
+    "context": "Pendant les soirées, les invités transmettaient leurs demandes musicales directement au DJ à l’oral. Ces interruptions perturbaient sa prestation et rendaient difficile le suivi de toutes les demandes. Le client souhaitait un moyen de les centraliser tout en restant disponible pour son animation.",
+    "need": "Permettre au public de demander un karaoké ou de proposer un morceau depuis son téléphone, sans créer de compte. Côté DJ, il fallait une vue en temps réel pour organiser les demandes et adapter les parcours aux prestations proposées pendant la soirée.",
+    "solution": "Les invités scannent un QR code disposé dans de petits cadres ou affiché sur l’écran de l’animateur. Après avoir choisi un morceau, ils renseignent leur nom et peuvent joindre un message personnalisé.\nLe mode karaoké s’appuie sur le catalogue public de KaraFun pour proposer des titres que le DJ pourra retrouver dans son logiciel. Le mode proposition musicale laisse au contraire saisir librement un titre et un interprète, sans restreindre les demandes à un catalogue.\nLe DJ reçoit les demandes par WebSocket dans son interface, où il peut les accepter, les refuser, les réordonner ou suspendre les propositions. L’application organise les demandes ; la lecture des morceaux reste gérée séparément par le DJ.",
     "features": [
-      "Catalogue KaraFun côté invités",
-      "Demandes de karaoké et propositions",
-      "Interface DJ en temps réel",
-      "Gestion de file d'attente"
+      "Accès par QR code depuis un téléphone, sans compte invité",
+      "Deux parcours : recherche dans le catalogue karaoké ou proposition musicale en saisie libre",
+      "Titres populaires et recherche karaoké avec filtres par année, auteur, interprète et langue",
+      "Nom et message personnalisé associés à la demande",
+      "Gestion des doublons karaoké avec indication des morceaux en attente, acceptés, refusés ou déjà passés",
+      "Limitation des demandes pour réduire le spam et les abus",
+      "Réception en temps réel, acceptation, refus, réorganisation et suspension depuis l’interface DJ",
+      "Liens et QR codes distincts par prestation, avec proposition de redirection lorsqu’un mode est désactivé"
     ],
-    "result": "Un outil événementiel qui fluidifie l'interaction entre le public et le DJ."
+    "result": "L’application a été utilisée en conditions réelles par une centaine de participants, avec des retours très positifs. Elle donne au DJ une vue centralisée des demandes pour les suivre pendant sa prestation.\nUne commercialisation en libre-service n’est pas prévue à ce stade. La solution peut être déployée pour un autre client sur demande.",
+    "summary": "Recevoir les demandes de karaoké et les suggestions musicales depuis un QR code, sans interrompre le DJ pendant sa prestation.",
+    "facts": [
+      {
+        "label": "Origine",
+        "value": "Une demande client pour ses soirées"
+      },
+      {
+        "label": "Durée",
+        "value": "Environ deux semaines"
+      },
+      {
+        "label": "Intervention",
+        "value": "Conception et développement en solo"
+      },
+      {
+        "label": "Terrain",
+        "value": "Utilisé en soirée par une centaine de participants"
+      }
+    ],
+    "role": "J’ai réalisé seul l’ensemble de l’application en environ deux semaines : parcours invités, interface DJ, intégration du catalogue et synchronisation en temps réel. La solution est actuellement dédiée à un seul DJ ; un déploiement distinct peut être réalisé pour un autre client sur demande.",
+    "challenges": "Le premier enjeu était d’intégrer le catalogue KaraFun pour éviter les demandes de karaoké introuvables dans le logiciel du DJ. Le fichier CSV disponible publiquement sur le site KaraFun alimente une base centralisée. Sa mise à jour passe par le téléchargement du dernier fichier puis le lancement manuel d’un script d’import.\nLe second enjeu concernait la coexistence des deux prestations sur des sous-domaines distincts. Chaque parcours dispose de son QR code ; si une prestation est désactivée, le visiteur se voit proposer l’accès à celle qui reste disponible.",
+    "relatedProjects": [
+      {
+        "slug": "private-events-dj-mika",
+        "reason": "Un site vitrine et un constructeur d’événement pour préparer les demandes de devis."
+      }
+    ],
+    "relatedServices": [
+      "application-web-sur-mesure"
+    ]
   },
   {
     "id": 38,
     "name": "Élevage Hitch",
     "slug": "elevage-hitch",
-    "description": "Conception du site vitrine d'un élevage familial de chiens et de chats. Le site présente l'élevage, ses différentes races, ses reproducteurs et les animaux disponibles ou à venir.\n\nUne attention particulière a été portée à la gestion des animaux et des demandes de contact, avec des fiches structurées et des formulaires adaptés aux personnes souhaitant accueillir un futur compagnon.",
+    "description": "Un premier site pour un élevage familial, avec catalogue d’animaux et parcours de prise de contact jusqu’au rendez-vous sur place.\n\nInstallé à Sainte-Cécile-les-Vignes, dans le Vaucluse, l’élevage Hitch présentait jusque-là ses animaux uniquement sur Leboncoin et recevait les demandes depuis ses annonces. Ce premier site devait lui donner une présence indépendante et présenter son cadre familial, les conditions de vie des animaux et l’accompagnement proposé jusqu’à l’adoption.\nL’élevage accueille des chiens, notamment des bergers australiens et des Altdeutscher Schäferhund, ainsi que des chats Ragdoll, British Shorthair, British Longhair et Maine Coon.\n\nLe site associe une présentation de l’élevage à un catalogue d’animaux. Chaque fiche regroupe les photos et les informations utiles : sexe, date de naissance, caractère, parents, santé, disponibilité et prix. Les statuts permettent de distinguer les animaux disponibles, réservés ou adoptés ; les fiches restent consultables après l’adoption.\nUne demande envoyée depuis une fiche est liée à l’animal concerné et transmise par e-mail à l’éleveur. Depuis son administration, celui-ci peut donner suite et envoyer une invitation à choisir un créneau pour un premier entretien téléphonique.\nLe calendrier est synchronisé avec Google Agenda pour faciliter la prise de rendez-vous et éviter les chevauchements. Après l’entretien, l’éleveur décide de poursuivre ou non. Si le projet se poursuit, un nouvel e-mail invite le futur adoptant à réserver une visite sur place, qui peut aussi permettre de récupérer l’animal.",
     "image": "projects/elevage-hitch.webp",
     "link": "https://elevage-hitch.fr",
     "github": "",
@@ -112,16 +156,45 @@
     "status": "online",
     "type": "Site web",
     "interesting": true,
-    "context": "Un élevage familial avait besoin d'une vitrine claire pour présenter races, reproducteurs et animaux disponibles.",
-    "need": "Un site structuré avec fiches animaux et formulaires de contact adaptés.",
-    "solution": "Création d'un site vitrine orienté présentation de l'élevage et prise de contact.",
+    "context": "Installé à Sainte-Cécile-les-Vignes, dans le Vaucluse, l’élevage Hitch présentait jusque-là ses animaux uniquement sur Leboncoin et recevait les demandes depuis ses annonces. Ce premier site devait lui donner une présence indépendante et présenter son cadre familial, les conditions de vie des animaux et l’accompagnement proposé jusqu’à l’adoption.\nL’élevage accueille des chiens, notamment des bergers australiens et des Altdeutscher Schäferhund, ainsi que des chats Ragdoll, British Shorthair, British Longhair et Maine Coon.",
+    "need": "Permettre aux visiteurs de découvrir l’élevage et les animaux, puis de transmettre une demande contextualisée. Pour l’éleveur, l’enjeu était de gérer le catalogue en autonomie et d’organiser les échanges avec les futurs adoptants, depuis la première demande jusqu’à une visite sur place.",
+    "solution": "Le site associe une présentation de l’élevage à un catalogue d’animaux. Chaque fiche regroupe les photos et les informations utiles : sexe, date de naissance, caractère, parents, santé, disponibilité et prix. Les statuts permettent de distinguer les animaux disponibles, réservés ou adoptés ; les fiches restent consultables après l’adoption.\nUne demande envoyée depuis une fiche est liée à l’animal concerné et transmise par e-mail à l’éleveur. Depuis son administration, celui-ci peut donner suite et envoyer une invitation à choisir un créneau pour un premier entretien téléphonique.\nLe calendrier est synchronisé avec Google Agenda pour faciliter la prise de rendez-vous et éviter les chevauchements. Après l’entretien, l’éleveur décide de poursuivre ou non. Si le projet se poursuit, un nouvel e-mail invite le futur adoptant à réserver une visite sur place, qui peut aussi permettre de récupérer l’animal.",
     "features": [
-      "Présentation de l'élevage et des races",
-      "Fiches reproducteurs et animaux",
-      "Formulaires de contact adaptés",
-      "Parcours clair pour les adoptants"
+      "Catalogue de chiens et de chats avec fiches détaillées et photographies",
+      "Statuts disponible, réservé et adopté, avec conservation des fiches après adoption",
+      "Ajout et modification des animaux, des photos et des annonces de portées depuis WordPress",
+      "Formulaire de demande lié à un animal précis et notification par e-mail",
+      "Validation des demandes par l’éleveur depuis son espace administrateur",
+      "Invitation par e-mail à réserver un entretien téléphonique, puis une visite sur place",
+      "Planning synchronisé avec Google Agenda pour éviter les rendez-vous croisés",
+      "Administration métier développée dans un plugin WordPress sur mesure"
     ],
-    "result": "Une présence en ligne crédible qui facilite la découverte de l'élevage et les demandes de contact."
+    "result": "Le site est terminé et l’ensemble du parcours est disponible : gestion autonome du catalogue, traitement des demandes et réservation de rendez-vous. La cliente s’est montrée extrêmement satisfaite du rendu et du fonctionnement.\nL’élevage dispose désormais de son propre site, complété par une présence sur Google Maps et des actions de référencement pour faciliter sa découverte au-delà des annonces Leboncoin.",
+    "summary": "Un premier site pour un élevage familial, avec catalogue d’animaux et parcours de prise de contact jusqu’au rendez-vous sur place.",
+    "facts": [
+      {
+        "label": "Client",
+        "value": "Élevage familial Hitch"
+      },
+      {
+        "label": "Localisation",
+        "value": "Sainte-Cécile-les-Vignes · Vaucluse"
+      },
+      {
+        "label": "Intervention",
+        "value": "Conception, développement et photographies en solo"
+      },
+      {
+        "label": "Solution",
+        "value": "WordPress et plugin développé sur mesure"
+      }
+    ],
+    "role": "J’ai pris en charge seul l’ensemble du projet, de la conception à la réalisation du site, y compris les photographies. J’ai développé un plugin WordPress sur mesure pour la gestion des animaux, des demandes et du parcours de rendez-vous.\nJ’ai également travaillé le référencement, configuré le site dans Google Search Console, créé la fiche Google Business Profile pour sa présence sur Google Maps et effectué son référencement dans des moteurs de recherche spécialisés dans les élevages.",
+    "challenges": "Le principal enjeu était d’articuler les fiches animaux avec un parcours de demande et de rendez-vous qui laisse à l’éleveur la maîtrise de chaque étape. La synchronisation du planning avec Google Agenda facilite l’organisation des entretiens et des visites. L’administration spécifique rassemble ces actions dans l’environnement WordPress utilisé pour gérer le site.",
+    "relatedServices": [
+      "creation-site-internet"
+    ],
+    "linkLabel": "Visiter le site de l’élevage"
   },
   {
     "id": 29,
@@ -144,7 +217,7 @@
     "type": "Site web",
     "interesting": true,
     "context": "Private Events accompagne les mariages, anniversaires, soirées privées, événements d’entreprise et d’association dans les secteurs de Lyon, Montpellier et Toulon. Une partie des prospects découvre le DJ sur Bark : le site doit ensuite les rassurer sur son professionnalisme et les aider à préciser leur demande.\nL’ancien site tenait sur une seule page, avec une présentation vieillissante, une navigation confuse et une adaptation mobile incomplète. Il ne proposait aucun parcours pour préparer une demande de devis.",
-    "need": "Présenter clairement les prestations, montrer des réalisations réelles et leurs avis associés, puis recueillir les informations utiles au DJ avant son premier échange avec le prospect. Le parcours devait aussi convenir aux visiteurs qui ne connaissent pas encore leur date ou leur nombre d’invités.",
+    "need": "Présenter clairement les prestations, montrer des réalisations réelles et leurs avis associés, puis recueillir les informations utiles au DJ avant son premier échange avec le prospect. Le parcours devait aussi convenir aux visiteurs qui ne connaissent pas encore leur date ou leur nombre d’invités.\nPour approfondir la collecte d’informations avant une prestation, [Askéo](/projet/askeo) propose une approche complémentaire par formulaires personnalisés.",
     "solution": "Le site articule désormais un catalogue de prestations, des réalisations et des avis pour permettre aux visiteurs de se projeter. Le design a été affiné et les médias optimisés pour rendre la consultation plus agréable, notamment sur mobile.\nLe constructeur d’événement guide le visiteur jusqu’à l’envoi de sa demande. Le DJ reçoit un e-mail récapitulatif avec les coordonnées et les choix renseignés pour préparer un devis personnalisé. Aucun tarif estimatif n’est affiché.",
     "features": [
       "Type d’événement, date connue ou à préciser, lieu ou ville et nombre d’invités, avec possibilité d’indiquer une information encore inconnue",
@@ -176,13 +249,28 @@
       }
     ],
     "role": "J’ai mené seul l’ensemble de la refonte, de la définition du besoin aux maquettes, à l’intégration et à la mise en ligne. La construction s’est faite main dans la main avec le client, en intégrant progressivement ses éléments graphiques et ses contenus.\nJe prends aujourd’hui en charge l’hébergement, la maintenance et les évolutions, ainsi que l’ajout de prestations et de nouveaux avis.",
-    "challenges": "Le principal enjeu était de rendre une offre très variée compréhensible sans alourdir la préparation d’un événement. Le parcours distingue le contexte, l’équipement du lieu, les ambiances et les prestations pour recueillir une demande exploitable. L’optimisation des médias accompagne cette présentation plus complète."
+    "challenges": "Le principal enjeu était de rendre une offre très variée compréhensible sans alourdir la préparation d’un événement. Le parcours distingue le contexte, l’équipement du lieu, les ambiances et les prestations pour recueillir une demande exploitable. L’optimisation des médias accompagne cette présentation plus complète.",
+    "relatedProjects": [
+      {
+        "slug": "karaoke-and-propositions",
+        "reason": "Un outil pour centraliser les demandes musicales des invités pendant une soirée."
+      },
+      {
+        "slug": "askeo",
+        "reason": "Des formulaires personnalisés pour recueillir les informations nécessaires à la préparation d’une prestation événementielle."
+      }
+    ],
+    "relatedServices": [
+      "refonte-site-web",
+      "deploiement-maintenance"
+    ],
+    "linkLabel": "Visiter le site Private Events"
   },
   {
     "id": 37,
     "name": "FidelityWallet",
     "slug": "fidelity-wallet-ios-app",
-    "description": "Application iOS permettant de regrouper ses cartes de fidélité directement sur son iPhone pour les retrouver rapidement au quotidien.\n\nL'application a été conçue nativement pour iOS avec une interface inspirée du nouveau langage visuel Liquid Glass d'iOS 26, afin de proposer une expérience moderne et parfaitement intégrée à l'écosystème Apple.",
+    "description": "Ses cartes de fidélité à portée de main, dans une application iOS native sans publicité, sans compte et avec un stockage entièrement local.\n\nFidelityWallet est née d’un besoin personnel : retrouver simplement ses cartes de fidélité dans une application maintenue et agréable à utiliser. Les solutions essayées ne me convenaient plus, entre publicités, fonctionnalités promotionnelles envahissantes et interfaces vieillissantes.\nJ’ai choisi de créer une application centrée sur les cartes elles-mêmes, puis de la publier sur l’App Store pour la rendre accessible à d’autres utilisateurs.\n\nL’utilisateur ajoute une carte en scannant son code, en saisissant ses informations ou en important une image, puis l’associe à une enseigne. Il peut personnaliser son apparence, ajouter des notes et enregistrer un code PIN associé à la carte physique, conservé de manière sécurisée avec un accès protégé par l’authentification biométrique.\nLa recherche et les favoris facilitent l’accès aux cartes. Plusieurs présentations permettent d’adapter la bibliothèque à ses préférences ; le code peut ensuite être affiché en plein écran et la luminosité maximisée pour faciliter sa lecture en caisse.\nLes cartes restent stockées uniquement sur l’iPhone, sans synchronisation ni transfert vers un serveur tiers. Les fonctions de gestion et de consultation sont disponibles hors ligne ; Internet sert uniquement à actualiser le catalogue des enseignes. Des fonctions d’import et d’export permettent de transférer ses cartes à l’initiative de l’utilisateur.",
     "image": "projects/fidelity-wallet.webp",
     "link": "",
     "github": "",
@@ -196,16 +284,56 @@
     "status": "online",
     "type": "Application mobile",
     "interesting": true,
-    "context": "Besoin quotidien de retrouver rapidement ses cartes de fidélité sans accumuler les supports physiques.",
-    "need": "Une app iOS native simple pour centraliser et consulter ses cartes.",
-    "solution": "Développement d'une application iOS en Swift, avec une interface inspirée du langage Liquid Glass.",
+    "context": "FidelityWallet est née d’un besoin personnel : retrouver simplement ses cartes de fidélité dans une application maintenue et agréable à utiliser. Les solutions essayées ne me convenaient plus, entre publicités, fonctionnalités promotionnelles envahissantes et interfaces vieillissantes.\nJ’ai choisi de créer une application centrée sur les cartes elles-mêmes, puis de la publier sur l’App Store pour la rendre accessible à d’autres utilisateurs.",
+    "need": "Ajouter facilement ses cartes, les retrouver rapidement en magasin et présenter un code lisible au passage en caisse. L’application devait être utilisable dès l’installation, sans création de compte, avec des données conservées sur l’iPhone et une expérience native soignée.",
+    "solution": "L’utilisateur ajoute une carte en scannant son code, en saisissant ses informations ou en important une image, puis l’associe à une enseigne. Il peut personnaliser son apparence, ajouter des notes et enregistrer un code PIN associé à la carte physique, conservé de manière sécurisée avec un accès protégé par l’authentification biométrique.\nLa recherche et les favoris facilitent l’accès aux cartes. Plusieurs présentations permettent d’adapter la bibliothèque à ses préférences ; le code peut ensuite être affiché en plein écran et la luminosité maximisée pour faciliter sa lecture en caisse.\nLes cartes restent stockées uniquement sur l’iPhone, sans synchronisation ni transfert vers un serveur tiers. Les fonctions de gestion et de consultation sont disponibles hors ligne ; Internet sert uniquement à actualiser le catalogue des enseignes. Des fonctions d’import et d’export permettent de transférer ses cartes à l’initiative de l’utilisateur.",
     "features": [
-      "Regroupement des cartes de fidélité",
-      "Interface native iOS",
-      "Expérience inspirée Liquid Glass",
-      "Usage quotidien rapide"
+      "Ajout par scan de code, saisie manuelle ou import d’image, avec association à une enseigne",
+      "Prise en charge notamment des codes EAN-13, Code 128, PDF417, Aztec et QR code",
+      "Notes et code PIN associé à une carte, avec protection biométrique pour l’accès au PIN",
+      "Personnalisation des cartes : logos, dégradés, formes et motifs",
+      "Favoris, recherche rapide, archivage et suppression",
+      "Présentations en liste, bannière, grille, carte ou mini-carte",
+      "Code en plein écran et option de luminosité maximale pour le scan",
+      "Import et export des cartes, stockage local et utilisation hors ligne",
+      "Interface Liquid Glass, animations désactivables et disponibilité en sept langues : français, anglais, allemand, espagnol, italien, néerlandais et portugais"
     ],
-    "result": "Une app native qui illustre la capacité à produire une expérience Apple moderne et utile."
+    "result": "FidelityWallet est publiée sur l’App Store et utilisée dans mon quotidien. Les premiers retours de mes proches sont très positifs. Le projet concrétise une application iOS complète, de la conception de l’expérience à sa distribution publique.",
+    "summary": "Ses cartes de fidélité à portée de main, dans une application iOS native sans publicité, sans compte et avec un stockage entièrement local.",
+    "facts": [
+      {
+        "label": "Origine",
+        "value": "Un besoin personnel devenu une application publique"
+      },
+      {
+        "label": "Disponibilité",
+        "value": "Publiée sur l’App Store"
+      },
+      {
+        "label": "Intervention",
+        "value": "Conception et développement en solo"
+      },
+      {
+        "label": "Données",
+        "value": "Stockage local sur l’iPhone · sans compte"
+      }
+    ],
+    "role": "J’ai conçu et développé seul l’ensemble de l’application en Swift, du parcours d’ajout des cartes aux options de personnalisation, jusqu’à sa publication sur l’App Store. Le travail porte autant sur les usages pratiques en magasin que sur la qualité de l’interface native.",
+    "challenges": "L’enjeu était de combiner un accès rapide en magasin avec une interface personnalisable. Les favoris, la recherche, l’affichage plein écran et le réglage de luminosité répondent au moment du passage en caisse. Les différentes vues et les options visuelles permettent de personnaliser la bibliothèque, tandis que le stockage local évite d’imposer un compte ou une connexion pour utiliser ses cartes.",
+    "roadmap": [
+      "Ajout de widgets pour accéder plus rapidement à ses cartes",
+      "Prise en charge des raccourcis",
+      "Intégration à Apple Wallet"
+    ],
+    "relatedProjects": [
+      {
+        "slug": "glucide-check-app-ios",
+        "reason": "Un premier projet personnel en Swift, à l’origine de mon apprentissage du développement iOS."
+      }
+    ],
+    "relatedServices": [
+      "applications-natives-ios-macos"
+    ]
   },
   {
     "id": 8,
@@ -270,13 +398,18 @@
       }
     ],
     "role": "J’ai pris en charge l’ensemble du projet : interface d’affichage, espace de gestion, serveur, synchronisation, configuration du Raspberry Pi et installation. Le développement et les évolutions s’inscrivent dans un travail mené sur environ un an.",
-    "challenges": "Le projet devait concilier la simplicité de gestion pour les équipes et la continuité de l’affichage dans un lieu d’accueil. La synchronisation en temps réel supprime les transferts par clé USB ; les droits limités permettent de déléguer certaines mises à jour ; le fonctionnement local évite un écran vide lors d’une coupure réseau. Une connexion permanente reste nécessaire pour recevoir les nouveaux contenus, avec une liaison filaire privilégiée pour le boîtier."
+    "challenges": "Le projet devait concilier la simplicité de gestion pour les équipes et la continuité de l’affichage dans un lieu d’accueil. La synchronisation en temps réel supprime les transferts par clé USB ; les droits limités permettent de déléguer certaines mises à jour ; le fonctionnement local évite un écran vide lors d’une coupure réseau. Une connexion permanente reste nécessaire pour recevoir les nouveaux contenus, avec une liaison filaire privilégiée pour le boîtier.",
+    "relatedServices": [
+      "application-web-sur-mesure",
+      "deploiement-maintenance"
+    ],
+    "linkLabel": "Découvrir DisplayHub"
   },
   {
     "id": 36,
     "name": "Mariage Vidéobooth",
     "slug": "mariage-videobooth",
-    "description": "Webapp événementielle conçue autour d'un téléphone filaire vintage transformé en vidéobooth pour un mariage.\n\nUne tablette guide les invités à travers une expérience simple permettant d'enregistrer un message vidéo souvenir. Le téléphone physique apporte l'aspect ludique et rétro du dispositif, tandis que l'application prend en charge l'expérience numérique et la collecte des vidéos laissées par les invités.",
+    "description": "Alternative au photobooth : le vidéobooth associe un téléphone vintage et une tablette pour recueillir les messages vidéo des invités, même sans Internet.\n\nUn couple de mariés souhaitait recueillir des messages vidéo de ses invités pendant sa soirée. Le projet associe un téléphone vintage à une tablette : un objet familier et ludique pour laisser un souvenir personnel, avec une expérience guidée et un retour vidéo.\n\nL’invité s’installe devant la tablette, touche l’écran et lit une courte consigne avant de décrocher le combiné. Il lance puis arrête l’enregistrement depuis l’application. Le téléphone sert réellement de microphone, tandis que la webcam intégrée de la tablette capture l’image et que l’écran affiche le retour vidéo. Le décrochage ne déclenche aucune action automatique.\nLes vidéos sont conservées localement sur la tablette, ce qui permet une utilisation entièrement hors ligne. Lorsqu’une connexion est disponible, les fichiers peuvent être synchronisés vers un cloud privé. Une galerie privée et l’envoi des vidéos après l’événement permettent ensuite de transmettre les souvenirs aux mariés.",
     "image": "projects/mariage-videobooth.webp",
     "link": "",
     "github": "",
@@ -292,22 +425,50 @@
     "status": "online",
     "type": "WebApp",
     "interesting": true,
-    "context": "Pour un mariage, besoin d'un dispositif ludique permettant aux invités de laisser des messages vidéo.",
-    "need": "Une webapp simple, guidée sur tablette, associée à un téléphone vintage pour créer l’expérience.",
-    "solution": "Conception d'une expérience numérique événementielle couplée à un objet physique rétro.",
+    "context": "Un couple de mariés souhaitait recueillir des messages vidéo de ses invités pendant sa soirée. Le projet associe un téléphone vintage à une tablette : un objet familier et ludique pour laisser un souvenir personnel, avec une expérience guidée et un retour vidéo.",
+    "need": "Permettre aux invités d’enregistrer facilement un message, avec une prise de son adaptée au bruit d’une soirée et une collecte des vidéos indépendante de la connexion Internet. Le dispositif devait pouvoir être installé pour l’événement puis réutilisé.",
+    "solution": "L’invité s’installe devant la tablette, touche l’écran et lit une courte consigne avant de décrocher le combiné. Il lance puis arrête l’enregistrement depuis l’application. Le téléphone sert réellement de microphone, tandis que la webcam intégrée de la tablette capture l’image et que l’écran affiche le retour vidéo. Le décrochage ne déclenche aucune action automatique.\nLes vidéos sont conservées localement sur la tablette, ce qui permet une utilisation entièrement hors ligne. Lorsqu’une connexion est disponible, les fichiers peuvent être synchronisés vers un cloud privé. Une galerie privée et l’envoi des vidéos après l’événement permettent ensuite de transmettre les souvenirs aux mariés.",
     "features": [
-      "Parcours guidé sur tablette",
-      "Enregistrement de messages vidéo",
-      "Dispositif téléphone vintage",
-      "Collecte centralisée des souvenirs"
+      "Parcours guidé sur tablette avec courte consigne et retour vidéo",
+      "Téléphone vintage adapté avec microphone soudé dans le combiné et raccordé à la tablette",
+      "Démarrage et arrêt manuels de l’enregistrement depuis l’application",
+      "Capture vidéo par la webcam intégrée de la tablette",
+      "Durée des messages réglée à une minute, ajustable à deux minutes selon le besoin",
+      "Aucune limite applicative au nombre de messages enregistrés",
+      "Stockage local et fonctionnement entièrement hors ligne",
+      "Synchronisation vers un cloud privé lorsqu’une connexion est disponible, galerie privée et remise des vidéos après l’événement"
     ],
-    "result": "Une activation événementielle mémorable, à la fois physique et numérique."
+    "result": "Le dispositif a été utilisé lors d’un mariage et a permis de recueillir environ 50 vidéos, avec d’excellents retours. Il est réutilisable et peut être proposé à d’autres clients pour leurs événements.",
+    "summary": "Alternative au photobooth : le vidéobooth associe un téléphone vintage et une tablette pour recueillir les messages vidéo des invités, même sans Internet.",
+    "facts": [
+      {
+        "label": "Origine",
+        "value": "Une demande d’un couple de mariés"
+      },
+      {
+        "label": "Intervention",
+        "value": "Application, adaptation du téléphone et installation en solo"
+      },
+      {
+        "label": "Terrain",
+        "value": "Environ 50 vidéos recueillies lors d’un mariage"
+      },
+      {
+        "label": "Usage",
+        "value": "Dispositif réutilisable pour d’autres événements"
+      }
+    ],
+    "role": "J’ai réalisé seul l’ensemble du dispositif : développement de l’application, adaptation du téléphone, intégration du microphone et installation. J’ai notamment soudé un microphone de qualité à l’intérieur du combiné pour capter la voix au plus près et limiter le bruit ambiant.",
+    "challenges": "Le projet associait une interface numérique à un objet physique utilisé dans une ambiance de fête. L’intégration du microphone dans le combiné permet de rapprocher la prise de son de la voix pour limiter les bruits environnants. Le stockage local assure la collecte des messages sans dépendre d’un accès Internet pendant la soirée.",
+    "relatedServices": [
+      "application-web-sur-mesure"
+    ]
   },
   {
     "id": 35,
     "name": "Askéo",
     "slug": "askeo",
-    "description": "Plateforme de création de formulaires pensée comme une alternative simple à Google Forms. Askéo permet de construire ses propres formulaires, de les partager et de centraliser les réponses depuis une interface dédiée.\n\nLe projet couvre toute la chaîne, de la création du formulaire jusqu'à la consultation et à l'exploitation des réponses.",
+    "description": "Créer et partager des formulaires personnalisés dans une interface moderne, puis centraliser les réponses pour préparer ses prestations ou ses projets.\n\nAskéo est né de la demande d’un client qui souhaitait envoyer des formulaires préconstruits pour réunir les informations nécessaires à ses prestations événementielles. Un questionnaire destiné à préparer un mariage permet, par exemple, à un DJ de cerner les besoins des futurs mariés avant la prestation.\nCe besoin initial a donné naissance à une plateforme généraliste, utilisable pour des inscriptions, des questionnaires et d’autres collectes d’informations.\n\nLe créateur compose son formulaire à partir de différents types de questions, les réordonne et organise le parcours en étapes. Il peut ainsi adapter le questionnaire aux informations attendues, qu’il s’agisse de coordonnées, de choix de prestations ou de fichiers à transmettre.\nLe formulaire est accessible par un lien public, sans compte pour le répondant. Le créateur retrouve ensuite les réponses complètes comme les réponses partielles dans son espace et dispose de statistiques sur certaines questions pour en faciliter la lecture.",
     "image": "projects/askeo-thumbnail.webp",
     "link": "",
     "github": "",
@@ -325,22 +486,61 @@
     "status": "online",
     "type": "WebApp",
     "interesting": true,
-    "context": "Besoin d’une alternative simple à Google Forms pour créer, partager et exploiter des formulaires.",
-    "need": "Une plateforme complète : construction, partage et consultation des réponses.",
-    "solution": "Développement d'une webapp de formulaires avec interface de création et back-office de réponses.",
+    "context": "Askéo est né de la demande d’un client qui souhaitait envoyer des formulaires préconstruits pour réunir les informations nécessaires à ses prestations événementielles. Un questionnaire destiné à préparer un mariage permet, par exemple, à un DJ de cerner les besoins des futurs mariés avant la prestation.\nCe besoin initial a donné naissance à une plateforme généraliste, utilisable pour des inscriptions, des questionnaires et d’autres collectes d’informations.",
+    "need": "Proposer une interface claire et moderne pour préparer ses questions, partager un formulaire et consulter les réponses au même endroit. Le répondant devait pouvoir accéder au questionnaire depuis un simple lien public, sans créer de compte.",
+    "solution": "Le créateur compose son formulaire à partir de différents types de questions, les réordonne et organise le parcours en étapes. Il peut ainsi adapter le questionnaire aux informations attendues, qu’il s’agisse de coordonnées, de choix de prestations ou de fichiers à transmettre.\nLe formulaire est accessible par un lien public, sans compte pour le répondant. Le créateur retrouve ensuite les réponses complètes comme les réponses partielles dans son espace et dispose de statistiques sur certaines questions pour en faciliter la lecture.",
     "features": [
-      "Création de formulaires",
-      "Partage et collecte de réponses",
-      "Interface dédiée d’exploitation",
-      "Chaîne complète de bout en bout"
+      "Création de formulaires personnalisés et partage par lien public",
+      "Organisation des questions et construction de parcours en plusieurs étapes",
+      "Champs texte court, zone de texte, nombre, date et heure",
+      "Choix unique, choix multiples et liste déroulante",
+      "Champs URL, e-mail, téléphone et adresse",
+      "Ajout de fichiers et d’images",
+      "Questions de pourcentage, d’évaluation et de couleur",
+      "Réponse sans création de compte",
+      "Consultation des réponses complètes et partielles, avec statistiques sur certaines questions"
     ],
-    "result": "Un outil métier clair pour créer et exploiter des formulaires sans dépendre de solutions génériques."
+    "result": "Askéo est accessible publiquement et gratuitement. La plateforme est utilisée par de nombreuses personnes et bénéficie de très bons retours. Elle permet de centraliser les informations recueillies, depuis la préparation d’une prestation événementielle jusqu’à des usages plus généraux de questionnaires et d’inscriptions.",
+    "summary": "Créer et partager des formulaires personnalisés dans une interface moderne, puis centraliser les réponses pour préparer ses prestations ou ses projets.",
+    "facts": [
+      {
+        "label": "Origine",
+        "value": "Une demande client dans l’événementiel"
+      },
+      {
+        "label": "Durée",
+        "value": "Environ un mois"
+      },
+      {
+        "label": "Intervention",
+        "value": "Conception et développement en solo"
+      },
+      {
+        "label": "Disponibilité",
+        "value": "Accessible au public gratuitement"
+      }
+    ],
+    "role": "J’ai conçu et développé seul la plateforme en environ un mois, de l’éditeur de formulaires à leur affichage public et à la consultation des réponses. Le travail s’est concentré sur la simplicité d’utilisation, la clarté de l’interface, les performances et la sécurité.",
+    "challenges": "Le principal enjeu était de rendre un éditeur polyvalent facile à prendre en main. La diversité des types de questions devait rester compatible avec une interface claire, une organisation simple du parcours et une consultation efficace des réponses. La performance et la sécurité faisaient également partie des exigences de réalisation.",
+    "roadmap": [
+      "Ajout d’une date de fermeture des formulaires",
+      "Protection de l’accès à un formulaire par mot de passe"
+    ],
+    "relatedProjects": [
+      {
+        "slug": "private-events-dj-mika",
+        "reason": "Un autre parcours de collecte des besoins, intégré à un site de DJ."
+      }
+    ],
+    "relatedServices": [
+      "application-web-sur-mesure"
+    ]
   },
   {
     "id": 34,
     "name": "CallMeMaybe",
     "slug": "callmemaybe",
-    "description": "Projet étudiant réalisé pour répondre aux besoins internes d'une agence de casting. L'outil permet d'organiser des entretiens audio avec les candidats, d'enregistrer les échanges puis de les retranscrire automatiquement grâce à Whisper.\n\nL'intelligence artificielle analyse ensuite l'entretien afin de générer une fiche candidat structurée et personnalisée avec GPT-4, exportable au format PDF. L'objectif était de transformer un appel en une fiche exploitable par l'agence avec un minimum de traitement manuel.",
+    "description": "Un prototype qui transforme un entretien audio en fiche candidat, puis permet de la corriger en langage naturel avec une IA.\n\nDans le cadre d’un projet étudiant, une agence de casting a commandé une preuve de concept pour faciliter le traitement de ses entretiens candidats. Le temps de réalisation était limité à trois jours : l’objectif était de démontrer un parcours fonctionnel, de l’appel à la génération d’une fiche candidat.\n\nL’administrateur crée une salle d’appel et partage son lien au candidat. Celui-ci rejoint l’entretien directement dans le navigateur, sans créer de compte. Le candidat est informé de l’enregistrement oralement et par une indication à l’écran.\nL’audio est transmis à Whisper pour la transcription. GPT-4 produit ensuite un résumé et extrait les informations nécessaires à une fiche candidat, exportable en PDF.\nUne interface de conversation permet de demander des modifications en langage naturel. L’historique des échanges conserve le contexte : après une correction du nom de famille, l’utilisateur peut demander d’appliquer la même correction à l’adresse e-mail sans reformuler toute l’instruction.",
     "image": "projects/callmemaybe-thumbnail.webp",
     "link": "",
     "github": "",
@@ -358,22 +558,49 @@
     "status": "online",
     "type": "WebApp",
     "interesting": true,
-    "context": "Une agence de casting avait besoin d'accélérer le traitement des entretiens audio candidats.",
-    "need": "Enregistrer, retranscrire et transformer un appel en fiche candidat structurée.",
-    "solution": "Webapp intégrant Whisper pour la transcription et GPT-4 pour la génération de fiches PDF.",
+    "context": "Dans le cadre d’un projet étudiant, une agence de casting a commandé une preuve de concept pour faciliter le traitement de ses entretiens candidats. Le temps de réalisation était limité à trois jours : l’objectif était de démontrer un parcours fonctionnel, de l’appel à la génération d’une fiche candidat.",
+    "need": "Réduire le travail de reprise des échanges en transcrivant l’audio, en résumant l’entretien et en extrayant les informations utiles à une fiche structurée. L’utilisateur devait ensuite pouvoir corriger cette fiche facilement avant de l’exporter.",
+    "solution": "L’administrateur crée une salle d’appel et partage son lien au candidat. Celui-ci rejoint l’entretien directement dans le navigateur, sans créer de compte. Le candidat est informé de l’enregistrement oralement et par une indication à l’écran.\nL’audio est transmis à Whisper pour la transcription. GPT-4 produit ensuite un résumé et extrait les informations nécessaires à une fiche candidat, exportable en PDF.\nUne interface de conversation permet de demander des modifications en langage naturel. L’historique des échanges conserve le contexte : après une correction du nom de famille, l’utilisateur peut demander d’appliquer la même correction à l’adresse e-mail sans reformuler toute l’instruction.",
     "features": [
-      "Entretiens audio organisés",
-      "Transcription automatique Whisper",
-      "Analyse et fiche candidat GPT-4",
-      "Export PDF"
+      "Création d’une salle d’appel et partage d’un lien d’invitation",
+      "Accès du candidat dans le navigateur, sans création de compte",
+      "Entretien audio avec information du candidat sur l’enregistrement",
+      "Transcription de l’audio avec Whisper",
+      "Résumé et extraction des informations par GPT-4 pour générer une fiche candidat",
+      "Correction de la fiche par conversation en langage naturel, avec historique et prise en compte du contexte",
+      "Export de la fiche au format PDF"
     ],
-    "result": "Un pipeline qui transforme un appel en fiche exploitable avec peu de traitement manuel."
+    "result": "Le prototype a été présenté et testé avec l’agence sur des entretiens réels. L’agence s’est montrée impressionnée par les fonctionnalités intégrées dans un délai aussi court.\nLa solution n’a toutefois pas été retenue : le besoin final portait sur la transcription d’appels téléphoniques classiques, alors que le prototype faisait passer les entretiens par une salle d’appel web. Le projet a permis de démontrer la faisabilité de la génération et de la correction assistée de fiches candidats.",
+    "summary": "Un prototype qui transforme un entretien audio en fiche candidat, puis permet de la corriger en langage naturel avec une IA.",
+    "facts": [
+      {
+        "label": "Cadre",
+        "value": "Commande d’une agence de casting · projet étudiant"
+      },
+      {
+        "label": "Durée",
+        "value": "Trois jours"
+      },
+      {
+        "label": "Équipe",
+        "value": "Réalisé en binôme avec un autre étudiant"
+      },
+      {
+        "label": "Livrable",
+        "value": "Prototype de faisabilité testé avec l’agence"
+      }
+    ],
+    "role": "J’ai travaillé en binôme avec un autre étudiant pour concevoir et réaliser ce prototype en trois jours. Ce délai très court imposait de concentrer le travail sur la démonstration du concept et l’intégration des fonctionnalités essentielles.",
+    "challenges": "Le principal défi consistait à intégrer la chaîne appel, transcription, génération de fiche et corrections conversationnelles dans une application web en seulement trois jours. Le prototype privilégie la validation de ce fonctionnement ; une refonte serait nécessaire pour en faire un produit abouti.",
+    "relatedServices": [
+      "application-web-sur-mesure"
+    ]
   },
   {
     "id": 33,
     "name": "Logiciel de facturation",
     "slug": "logiciel-de-facturation",
-    "description": "Outil de gestion développé pour les besoins de ma micro-entreprise. Il permet de créer et gérer clients, prestations, devis et factures depuis une interface centralisée, puis de générer les documents nécessaires à mon activité.\n\nLe logiciel est utilisé en interne et n’est pas accessible publiquement. Un accès de démonstration peut être accordé sur invitation.",
+    "description": "Créer ses devis et factures, suivre leur statut et centraliser les documents par client et par projet dans un espace web personnalisé.\n\nJe préparais mes devis et factures à partir de modèles Word et Publisher. La répétition des saisies rendait ce travail fastidieux et je ne trouvais pas de solution gratuite qui me convienne. J’ai développé mon propre outil pour générer les documents et les retrouver au même endroit.\nInitialement conçu pour ma micro-entreprise, le logiciel est aujourd’hui utilisé par plusieurs entrepreneurs, avec des documents personnalisés selon leur activité.\n\nL’utilisateur crée ses clients et ses projets, renseigne les prestations et leurs prix, puis génère ses devis et factures au format PDF. Les documents prennent en charge la numérotation, les acomptes, les soldes, les avoirs et les remises, ainsi que la mention de TVA non applicable utilisée dans mon activité.\nLes statuts permettent de suivre les documents, leur acceptation et les paiements. Un tableau de bord présente le chiffre d’affaires, les factures en attente et les impayés, avec recherche et filtres pour retrouver les informations. L’envoi des documents et les relances restent effectués par l’utilisateur.\nL’application web est hébergée et accessible avec authentification. Chaque entrepreneur personnalise les informations affichées sur ses documents : nom, SIRET, logo, slogan, adresse, téléphone, couleurs et coordonnées bancaires.\n\nUn accès peut être fourni sur demande pour découvrir l’outil. Le lien d’accès n’est pas public.",
     "image": "projects/logiciel-de-facturation.webp",
     "link": "",
     "github": "",
@@ -391,22 +618,61 @@
     "status": "private",
     "type": "Logiciel",
     "interesting": true,
-    "context": "Besoin d'un outil interne pour gérer clients, devis et factures sans dépendre d'un logiciel trop générique.",
-    "need": "Une interface centralisée pour créer, suivre et générer les documents de facturation.",
-    "solution": "Développement d'un logiciel métier sur mesure, utilisé en interne pour le quotidien de la micro-entreprise.",
+    "context": "Je préparais mes devis et factures à partir de modèles Word et Publisher. La répétition des saisies rendait ce travail fastidieux et je ne trouvais pas de solution gratuite qui me convienne. J’ai développé mon propre outil pour générer les documents et les retrouver au même endroit.\nInitialement conçu pour ma micro-entreprise, le logiciel est aujourd’hui utilisé par plusieurs entrepreneurs, avec des documents personnalisés selon leur activité.",
+    "need": "Simplifier la création des devis et factures, suivre les paiements et centraliser les dossiers. L’organisation devait permettre de rattacher des projets à chaque client, puis d’y regrouper les documents correspondants.",
+    "solution": "L’utilisateur crée ses clients et ses projets, renseigne les prestations et leurs prix, puis génère ses devis et factures au format PDF. Les documents prennent en charge la numérotation, les acomptes, les soldes, les avoirs et les remises, ainsi que la mention de TVA non applicable utilisée dans mon activité.\nLes statuts permettent de suivre les documents, leur acceptation et les paiements. Un tableau de bord présente le chiffre d’affaires, les factures en attente et les impayés, avec recherche et filtres pour retrouver les informations. L’envoi des documents et les relances restent effectués par l’utilisateur.\nL’application web est hébergée et accessible avec authentification. Chaque entrepreneur personnalise les informations affichées sur ses documents : nom, SIRET, logo, slogan, adresse, téléphone, couleurs et coordonnées bancaires.",
     "features": [
-      "Gestion clients et prestations",
-      "Création de devis et factures",
-      "Génération de documents",
-      "Usage interne avec démo sur invitation"
+      "Gestion des clients et des projets avec documents associés à chaque dossier",
+      "Création de devis et de factures à partir des prestations et des prix",
+      "Génération automatique de documents PDF avec numérotation",
+      "Gestion des acomptes, soldes, avoirs et remises",
+      "Mention de TVA non applicable pour les documents concernés",
+      "Suivi des statuts, de l’acceptation des documents et des paiements",
+      "Tableau de bord du chiffre d’affaires, des factures en attente et des impayés",
+      "Recherche et filtres pour retrouver les dossiers et les documents",
+      "Personnalisation des informations d’entreprise, de l’identité visuelle et des coordonnées bancaires"
     ],
-    "result": "Un outil métier adapté à mon activité, distinct de la PWA Factures et Dépenses plus ancienne."
+    "result": "L’outil est utilisé et maintenu depuis environ un an, et a déjà été adapté à plusieurs professionnels. Dans mon activité, le bénéfice principal est la centralisation des dossiers et la génération des devis et factures depuis un même espace, sans repartir d’un modèle bureautique à chaque document.\nUn accès peut être fourni sur demande pour découvrir l’outil. Le lien d’accès n’est pas public.",
+    "summary": "Créer ses devis et factures, suivre leur statut et centraliser les documents par client et par projet dans un espace web personnalisé.",
+    "facts": [
+      {
+        "label": "Origine",
+        "value": "Les besoins de ma micro-entreprise"
+      },
+      {
+        "label": "Intervention",
+        "value": "Conception et développement en solo"
+      },
+      {
+        "label": "Utilisateurs",
+        "value": "Plusieurs entrepreneurs"
+      },
+      {
+        "label": "Suivi",
+        "value": "Outil maintenu depuis environ un an"
+      }
+    ],
+    "role": "J’ai réalisé l’ensemble de l’application et j’en assure les évolutions et la maintenance depuis environ un an. L’adaptation à d’autres professionnels comprend la personnalisation des informations d’entreprise et de la présentation des documents. Une attention particulière est portée à la sécurité des accès et à l’intégrité des données.",
+    "challenges": "Le principal enjeu était de remplacer des modèles de documents isolés par une organisation cohérente entre clients, projets et facturation. La génération des PDF réduit les manipulations répétitives, tandis que la personnalisation permet d’adapter l’outil à plusieurs entrepreneurs. La sécurité des données et leur intégrité restent des priorités de maintenance.",
+    "roadmap": [
+      "En bêta : partage d’un projet au client par lien d’accès et code PIN, pour consulter ses documents, les informations de paiement et l’état du dossier, avec un parcours de signature"
+    ],
+    "relatedProjects": [
+      {
+        "slug": "askeo",
+        "reason": "Un outil de formulaires pour recueillir les informations nécessaires à une prestation."
+      }
+    ],
+    "relatedServices": [
+      "application-web-sur-mesure"
+    ],
+    "accessOnRequest": true
   },
   {
     "id": 32,
     "name": "Studer - WebApp Tinder pour étudiants",
     "slug": "studer-tinder-mmi",
-    "description": "Lors de la \"Wild Work Week\" à l'université de Toulon, j'ai participé à un projet étudiant visant à valoriser la formation MMI (Métiers du Multimédia et de l'Internet) et les travaux réalisés par les étudiants. Au sein de mon équipe, composée de créateurs numériques et de communicants, j'étais le seul développeur. Notre mission était de créer une expérience web interactive et innovante en un temps très limité de seulement 3 jours.\n\nLe résultat de cette intense collaboration est \"Studer\", une application web inspirée par Tinder, où l'objectif est de \"matcher\" avec le parcours MMI préféré de l'utilisateur, qu'il s'agisse de création, développement ou communication. Cette approche ludique et interactive permet de mettre en lumière les divers aspects et spécialisations de la formation MMI de manière engageante.\n\nL'application \"Studer\" est structurée autour de la fonctionnalité principale de \"cards\", qui présentent les réalisations des étudiants du groupe. Les utilisateurs peuvent glisser les cartes vers la droite ou la gauche pour liker ou disliker chaque projet. Cette interaction n'est pas seulement ludique; elle permet également d'incrémenter un score invisible qui calcule les préférences de l'utilisateur en fonction de ses réactions aux différents projets.\n\nEn plus de la navigation parmi les projets, les utilisateurs peuvent cliquer sur une carte pour accéder à plus de détails sur chaque réalisation. Ils peuvent en apprendre davantage sur le projet, poser des questions via un chatbot intégré et interagir de manière plus approfondie avec le contenu présenté.\n\nÀ la fin de l'expérience, l'application révèle les résultats de compatibilité, indiquant le parcours MMI — création, développement, ou communication — qui correspond le mieux aux préférences de l'utilisateur, basées sur ses interactions avec les projets. Ce résultat est accompagné d'options pour contacter les étudiants responsables des travaux qui ont le plus intéressé l'utilisateur, facilitant ainsi des échanges plus personnalisés et ciblés.",
+    "description": "Découvrir les projets étudiants par le swipe pour explorer les parcours MMI, dans une PWA développée en trois jours.\n\nPendant la Wild Work Week à l’Université de Toulon, notre équipe devait proposer une manière de présenter les projets étudiants et d’aider les lycéens à découvrir les parcours MMI : création, développement et communication. Le concept s’inspire du swipe de Tinder, avec des cartes à parcourir pour explorer les réalisations et exprimer ses préférences.\n\nL’utilisateur parcourt des cartes de projets étudiants et peut les aimer, les écarter ou les passer. Chaque projet présente une description, des images, son type, sa difficulté et sa durée de réalisation.\nLes réactions alimentent un calcul de compatibilité qui fait émerger les parcours MMI correspondant aux préférences du visiteur. Les cartes et leurs animations donnent à la découverte des projets un rythme adapté à une consultation interactive.",
     "image": "projects/studer.png",
     "link": "",
     "github": "https://github.com/arthur-mdn/Studer",
@@ -423,25 +689,51 @@
     ],
     "tags": [],
     "date": "2024-05-16",
-    "status": "online",
+    "status": "archived",
     "type": "WebApp",
     "interesting": true,
-    "context": "Pendant la Wild Work Week à l'université de Toulon, l'objectif était de valoriser la formation MMI et les projets étudiants de façon ludique.",
-    "need": "Une expérience web engageante, réalisable en peu de temps, pour faire découvrir les parcours création, développement et communication.",
-    "solution": "Création d'une webapp inspirée de Tinder : swipe de projets étudiants, scoring invisible et révélation du parcours le plus compatible.",
+    "context": "Pendant la Wild Work Week à l’Université de Toulon, notre équipe devait proposer une manière de présenter les projets étudiants et d’aider les lycéens à découvrir les parcours MMI : création, développement et communication. Le concept s’inspire du swipe de Tinder, avec des cartes à parcourir pour explorer les réalisations et exprimer ses préférences.",
+    "need": "Transformer la découverte de la formation en une expérience interactive : consulter les projets, réagir à chacun et obtenir un résultat de compatibilité avec les parcours. L’ensemble devait être prêt à présenter en seulement trois jours.",
+    "solution": "L’utilisateur parcourt des cartes de projets étudiants et peut les aimer, les écarter ou les passer. Chaque projet présente une description, des images, son type, sa difficulté et sa durée de réalisation.\nLes réactions alimentent un calcul de compatibilité qui fait émerger les parcours MMI correspondant aux préférences du visiteur. Les cartes et leurs animations donnent à la découverte des projets un rythme adapté à une consultation interactive.",
     "features": [
-      "Interface de swipe type cards",
-      "Détail des projets étudiants",
-      "Logique de compatibilité par parcours",
-      "Expérience interactive pensée pour un événement court"
+      "PWA de découverte des projets étudiants et des parcours MMI",
+      "Navigation par cartes avec gestes de swipe inspirés de Tinder",
+      "Actions aimer, ne pas aimer ou passer un projet",
+      "Fiches avec description, images, type, difficulté et durée de réalisation",
+      "Calcul et présentation d’un résultat de compatibilité avec les parcours",
+      "Interface animée et application déployée avec Docker"
     ],
-    "result": "Une démonstration concrète de ce que la formation MMI produit, présentée sous une forme mémorable et participative."
+    "result": "Studer a été présenté lors d’une soutenance orale, avec projection et utilisation de l’application en temps réel devant un jury. Les enseignants ont accueilli chaleureusement le projet et souligné la qualité du rendu obtenu dans un délai aussi court.\nLe code reste disponible sur GitHub. L’application n’est plus accessible en ligne et n’a pas été maintenue depuis le projet.",
+    "summary": "Découvrir les projets étudiants par le swipe pour explorer les parcours MMI, dans une PWA développée en trois jours.",
+    "facts": [
+      {
+        "label": "Cadre",
+        "value": "Wild Work Week · Université de Toulon"
+      },
+      {
+        "label": "Public",
+        "value": "Lycéens découvrant les parcours MMI"
+      },
+      {
+        "label": "Durée",
+        "value": "Trois jours"
+      },
+      {
+        "label": "Mon rôle",
+        "value": "Seul développeur au sein de l’équipe"
+      }
+    ],
+    "role": "J’étais le seul développeur dans une équipe comprenant des personnes chargées du design. J’ai intégré la PWA et pris en charge l’interface, le serveur, les données, la logique de calcul des résultats, la sécurité, la conteneurisation avec Docker et le déploiement.",
+    "challenges": "Le délai de trois jours imposait de coordonner rapidement design et développement tout en intégrant les contenus. Les principaux défis concernaient les gestes de swipe, les animations, le calcul des résultats et l’assemblage d’une application fonctionnelle pour la soutenance. Ces contraintes ont conduit à privilégier la démonstration ; une remise à niveau serait nécessaire pour reprendre le projet aujourd’hui.",
+    "relatedServices": [
+      "application-web-sur-mesure"
+    ]
   },
   {
     "id": 31,
     "name": "Glucide Check - App iOS",
     "slug": "glucide-check-app-ios",
-    "description": "Mon projet récent, \"Glucide-Check,\" est une application native iOS que j'ai développée en Swift. C'est mon premier projet d'application native mobile, conçu comme une aide précieuse pour les personnes diabétiques. L'application se compose de trois onglets principaux, chacun offrant des fonctionnalités essentielles pour la gestion de la glycémie.\n\nLe premier onglet permet aux utilisateurs de saisir leur glycémie actuelle et de calculer le nombre d'unités d'insuline nécessaires pour atteindre un taux de glycémie optimal. De plus, en cas d'hypoglycémie, l'application peut également calculer le nombre de carrés de sucre à consommer pour remonter la glycémie. Le second onglet offre un outil de \"calcul en croix\", utile pour estimer le nombre de glucides dans une portion d'un aliment. Les utilisateurs saisissent la valeur des glucides pour 100g, ainsi que la quantité qu'ils souhaitent manger, et l'application calcule le nombre total de glucides dans la portion.\n\nLe troisième onglet est dédié au paramétrage. Ici, les utilisateurs peuvent entrer des informations personnelles comme leur prénom, date de naissance, sexe, et poids, ce qui m'a permis de m'entraîner à la saisie de différents types de données. Les utilisateurs peuvent également définir des paramètres personnalisés, comme l'influence de l'insuline sur la glycémie, l'influence d'un carré de sucre, et la cible de glycémie souhaitée (taux minimal et maximal). En outre, l'application offre des options de personnalisation pour le mode sombre (clair, sombre, ou en accord avec le système d'exploitation) et permet de changer la langue de l'application.",
+    "description": "Une application personnelle pour apprendre Swift en portant sur iPhone les calculs et paramètres de ma première version web GlucideCheck.\n\nGlucide Check est la suite native iOS de mon ancienne application web GlucideCheck. J’ai entrepris ce projet personnel pour apprendre Swift et retrouver sur iPhone les fonctions de calcul et de personnalisation développées dans la première version.\n\nL’application est organisée en trois onglets. Le premier permet de saisir une glycémie et d’effectuer des calculs à partir des valeurs de référence personnelles : cible, effet renseigné d’une unité d’insuline et effet renseigné d’un morceau de sucre. Les résultats dépendent des paramètres définis par l’utilisateur.\nLe deuxième onglet calcule la quantité de glucides d’une portion à partir de la valeur pour 100 grammes et de la quantité consommée. Le troisième rassemble les paramètres personnels, les valeurs de référence et les préférences d’affichage.\nDes contrôles de saisie et des explications accompagnent les champs pour limiter les erreurs de saisie. Les données sont conservées uniquement sur l’iPhone, sans création de compte.",
     "image": "projects/glucide-check-app-ios.png",
     "link": "",
     "github": "https://github.com/arthur-mdn/GlucideCheck-iOS",
@@ -452,19 +744,52 @@
     ],
     "tags": [],
     "date": "2024-05-04",
-    "status": "online",
+    "status": "private",
     "type": "Application mobile",
     "interesting": true,
-    "context": "Premier projet d'application native iOS, pensé comme une aide pour les personnes diabétiques dans le suivi quotidien des glucides.",
-    "need": "Une application mobile simple, fiable et native, centrée sur le calcul et le suivi des apports glucidiques.",
-    "solution": "Développement d'une application iOS en Swift, avec une interface claire orientée usage quotidien.",
+    "context": "Glucide Check est la suite native iOS de [mon ancienne application web GlucideCheck](/projet/glucidecheck). J’ai entrepris ce projet personnel pour apprendre Swift et retrouver sur iPhone les fonctions de calcul et de personnalisation développées dans la première version.",
+    "need": "Adapter ces fonctions à une interface mobile native, avec des paramètres modifiables par l’utilisateur et des explications pour accompagner les saisies. Le projet est destiné à mon usage personnel et n’a pas été distribué publiquement.",
+    "solution": "L’application est organisée en trois onglets. Le premier permet de saisir une glycémie et d’effectuer des calculs à partir des valeurs de référence personnelles : cible, effet renseigné d’une unité d’insuline et effet renseigné d’un morceau de sucre. Les résultats dépendent des paramètres définis par l’utilisateur.\nLe deuxième onglet calcule la quantité de glucides d’une portion à partir de la valeur pour 100 grammes et de la quantité consommée. Le troisième rassemble les paramètres personnels, les valeurs de référence et les préférences d’affichage.\nDes contrôles de saisie et des explications accompagnent les champs pour limiter les erreurs de saisie. Les données sont conservées uniquement sur l’iPhone, sans création de compte.",
     "features": [
-      "Calcul d'apports glucidiques",
-      "Interface native iOS",
-      "Parcours utilisateur simplifié",
-      "Application pensée pour un usage récurrent"
+      "Saisie de glycémie et calculs fondés sur les valeurs de référence renseignées par l’utilisateur",
+      "Paramètres modifiables pour la cible glycémique et les effets renseignés de l’insuline et du sucre",
+      "Calcul des glucides d’une portion à partir des informations nutritionnelles pour 100 grammes",
+      "Contrôles de saisie et explications associées aux champs",
+      "Sauvegarde locale des données et des préférences sur l’iPhone, sans compte",
+      "Réglages d’apparence : mode clair, sombre ou selon le système",
+      "Choix de la langue de l’application"
     ],
-    "result": "Une première application native qui illustre la capacité à sortir du web pour répondre à un besoin métier mobile précis."
+    "result": "Une application native fonctionnelle pour mon usage personnel, qui prolonge mon premier projet web et marque mes débuts en Swift. Elle n’a pas été distribuée publiquement ; son intérêt dans le portfolio tient au travail de développement iOS, aux formulaires paramétrables et au stockage local.",
+    "summary": "Une application personnelle pour apprendre Swift en portant sur iPhone les calculs et paramètres de ma première version web GlucideCheck.",
+    "facts": [
+      {
+        "label": "Cadre",
+        "value": "Projet personnel d’apprentissage"
+      },
+      {
+        "label": "Technologie",
+        "value": "Application iOS native en Swift"
+      },
+      {
+        "label": "Intervention",
+        "value": "Conception et développement en solo"
+      },
+      {
+        "label": "Diffusion",
+        "value": "Usage personnel · non distribuée publiquement"
+      }
+    ],
+    "role": "J’ai réalisé seul l’ensemble de l’application en Swift. Ce premier projet natif m’a permis de travailler la navigation, les formulaires, les contrôles de saisie et la sauvegarde des préférences, ainsi que les options de langue et d’apparence.",
+    "challenges": "Le principal apport du projet était le passage du web au développement natif iOS. Il fallait reconstruire les interactions en Swift, organiser les écrans et relier les calculs à des paramètres persistants, tout en rendant les formulaires compréhensibles.",
+    "relatedServices": [
+      "applications-natives-ios-macos"
+    ],
+    "relatedProjects": [
+      {
+        "slug": "glucidecheck",
+        "reason": "La première version web du projet, à l’origine de son adaptation native sur iPhone."
+      }
+    ]
   },
   {
     "id": 30,
@@ -540,7 +865,7 @@
     "id": 28,
     "name": "Save The Turtles",
     "slug": "save-the-turtles",
-    "description": "Save the Turtles est une initiative passionnante alliant la technologie Unity à la puissance de Python, spécifiquement en utilisant la bibliothèque YOLOv8 pour la reconnaissance et la localisation des joueurs à travers une caméra, telle que la webcam d'un ordinateur. Ce jeu interactif est conçu pour être projeté sur un mur, où les joueurs utilisent des mouvements physiques capturés par la caméra pour interagir avec le jeu, créant ainsi une expérience immersive sans l'usage traditionnel de clavier ou de souris.\n\nLa calibration et le traitement d'image, essentiels pour aligner précisément l'interaction dans l'espace de jeu, sont gérés via OpenCV. Cette étape est cruciale pour assurer que les mouvements des joueurs dans l'espace physique correspondent de manière fluide et précise aux actions dans le jeu. La détection des joueurs et la localisation des mains sont réalisées grâce à YOLOv8, permettant de suivre dynamiquement les mouvements des joueurs et d'intégrer ces informations dans le jeu Unity.\n\nLa communication entre Python et Unity est établie via des sockets, facilitant une interaction en temps réel entre la capture des mouvements et leur répercussion dans le jeu. Cette synergie entre les deux plateformes est fondamentale pour le gameplay interactif de \"Save the Turtles\".\n\nLe concept du jeu est à la fois ludique et éducatif. Les joueurs sont chargés de protéger des tortues virtuelles se déplaçant de la gauche vers la droite de l'écran, en les sauvant des crabes qui tentent de les attaquer. À l'aide d'une main virtuelle et d'une épuisette, les joueurs attrapent les crabes pour assurer la sécurité des tortues. Le jeu comporte un système de vies, avec des tortues perdant une vie à chaque fois qu'elles sont touchées par un crabe, et le jeu se termine lorsque toutes les vies sont perdues.\n\nL'aspect visuel du jeu, y compris le logo, les indicateurs de vie, et la scène 3D, a été entièrement conçu par moi. La gestion des apparitions aléatoires des tortues et des crabes, ainsi que le système de scoring, ajoutent une dimension supplémentaire au jeu, offrant une expérience riche et engageante.\n\nCe projet est inspiré d'un événement réel où une tortue protégée a pondu hors de son habitat habituel, un événement qui a été protégé par les autorités locales. \"Save the Turtles\" rend hommage à cet événement, sensibilisant les joueurs à la protection des espèces menacées.\n\nLe projet est open source, disponible sur GitHub, accompagné de vidéos explicatives sur YouTube présentant à la fois les coulisses du développement et une démonstration du jeu. Cette initiative personnelle illustre mon aptitude à fusionner créativité, technologie, et engagement écologique dans le développement de solutions de divertissement innovantes et significatives. C'est un projet universitaire qui a été réalisé dans le cadre de ma 3ème année du Bachelor BUT MMI (Métiers du Multimédia et de l'Internet) spécialisation Dév, à l'université de Toulon, Campus Porte d'Italie. Ce projet démontre ma capacité à appliquer mes compétences techniques à des projets concrets et engageants.",
+    "description": "Un jeu projeté où les mouvements des mains permettent de protéger des tortues caouannes, conçu pour sensibiliser les visiteurs du parc national de Port-Cros.\n\nLe brief universitaire demandait de concevoir un dispositif interactif de sensibilisation pour le parc national de Port-Cros, près de Toulon. Le choix du dispositif était libre : j’ai proposé un jeu projeté, contrôlé par les mouvements du joueur, autour de la protection des tortues caouannes.\nLe sujet s’inspirait d’un événement d’actualité à l’époque du projet : une ponte sur une plage publique avait nécessité sa fermeture pour protéger les œufs. Cette situation a servi de point de départ à une expérience destinée aux visiteurs du parc.\n\nLe joueur protège des tortues contre des crabes en déplaçant des épuisettes virtuelles avec ses mains. Le jeu est conçu pour une seule personne, avec un système de vies, de score et d’apparitions aléatoires.\nUne caméra placée face à la surface de projection repère la personne et les points de son corps avec YOLOv8. Seules les positions des mains sont utilisées pour piloter les épuisettes dans Unity. Le script Python transmet ces positions au jeu par sockets.\nAvant la partie, des marqueurs ArUco sont projetés sur les bords de l’écran. La calibration avec OpenCV permet de faire correspondre les coordonnées de la caméra à celles de la surface de jeu et d’adapter cette correspondance au placement du dispositif.",
     "image": "projects/save_the_turtles.png",
     "link": "",
     "github": "https://github.com/arthur-mdn/UnityPythonInteractiveGame_SaveTheTurtles",
@@ -571,23 +896,51 @@
       "Unity"
     ],
     "date": "2024-02-16",
-    "status": "online",
+    "status": "archived",
     "type": "Jeu vidéo",
     "interesting": true,
-    "context": "Save the Turtles est un projet universitaire de 3e année BUT MMI (spécialisation développement) à l'Université de Toulon. L'idée : un jeu immersif projeté sur mur, sans clavier ni souris, où les joueurs interagissent par leurs mouvements.\nLe projet s'inspire d'un événement réel de protection d'une tortue, et mêle jeu, technique et sensibilisation écologique.",
-    "need": "Capturer les joueurs via webcam, calibrer l'espace de jeu, détecter les mains et transmettre ces interactions à Unity en temps réel.\nIl fallait une expérience fluide, compréhensible immédiatement, et suffisamment robuste pour une démonstration publique.",
-    "solution": "Pipeline hybride Python / Unity : OpenCV pour la calibration et le traitement d'image, YOLOv8 pour la détection des joueurs et des mains, sockets pour la communication temps réel avec Unity.\nLe gameplay charge les joueurs de protéger des tortues contre des crabes à l'aide d'une épuisette virtuelle, avec vies, scoring et apparitions aléatoires. Toute la direction artistique (logo, UI, scène 3D) a été conçue pour le projet.",
+    "context": "Le brief universitaire demandait de concevoir un dispositif interactif de sensibilisation pour le parc national de Port-Cros, près de Toulon. Le choix du dispositif était libre : j’ai proposé un jeu projeté, contrôlé par les mouvements du joueur, autour de la protection des tortues caouannes.\nLe sujet s’inspirait d’un événement d’actualité à l’époque du projet : une ponte sur une plage publique avait nécessité sa fermeture pour protéger les œufs. Cette situation a servi de point de départ à une expérience destinée aux visiteurs du parc.",
+    "need": "Proposer une interaction immédiatement compréhensible, sans clavier ni souris, pour aborder la protection des tortues par le jeu. Le dispositif devait faire correspondre les mouvements réels des mains avec les actions sur la surface projetée, avec une réactivité suffisante pour jouer naturellement.",
+    "solution": "Le joueur protège des tortues contre des crabes en déplaçant des épuisettes virtuelles avec ses mains. Le jeu est conçu pour une seule personne, avec un système de vies, de score et d’apparitions aléatoires.\nUne caméra placée face à la surface de projection repère la personne et les points de son corps avec YOLOv8. Seules les positions des mains sont utilisées pour piloter les épuisettes dans Unity. Le script Python transmet ces positions au jeu par sockets.\nAvant la partie, des marqueurs ArUco sont projetés sur les bords de l’écran. La calibration avec OpenCV permet de faire correspondre les coordonnées de la caméra à celles de la surface de jeu et d’adapter cette correspondance au placement du dispositif.",
     "features": [
-      "Projection murale immersive sans périphériques classiques",
-      "Calibration et traitement d'image via OpenCV",
-      "Détection joueurs / mains avec YOLOv8",
-      "Communication Python ↔ Unity par sockets",
-      "Gameplay éducatif : protéger les tortues des crabes",
-      "Système de vies, scoring et apparitions aléatoires",
-      "Direction artistique complète (logo, indicateurs, scène 3D)",
-      "Open source GitHub + vidéos YouTube (coulisses et démo)"
+      "Jeu solo projeté, contrôlé par les mouvements des mains sans clavier ni souris",
+      "Protection des tortues contre les crabes à l’aide d’épuisettes virtuelles",
+      "Détection de la personne et des points du corps avec YOLOv8, avec exploitation des positions des mains",
+      "Calibration par marqueurs ArUco projetés sur les bords de la surface de jeu",
+      "Traitement et transformation des coordonnées avec Python et OpenCV",
+      "Transmission des positions à Unity par sockets",
+      "Système de vies, score et apparitions aléatoires",
+      "Univers visuel construit avec des ressources low-poly gratuites",
+      "Code source et vidéos de démonstration disponibles"
     ],
-    "result": "Un jeu interactif original qui démontre la capacité à croiser vision par ordinateur, Unity et game design autour d'un sujet engagé. Le projet reste consultable en open source avec ses démonstrations vidéo."
+    "result": "Le dispositif a été abouti en trois semaines et a reçu des retours très enthousiastes du jury et des joueurs. Une installation publique était envisageable, mais n’a pas été réalisée.\nLe projet n’est plus maintenu. Les vidéos et le code restent disponibles pour découvrir son fonctionnement ou relancer le jeu.",
+    "summary": "Un jeu projeté où les mouvements des mains permettent de protéger des tortues caouannes, conçu pour sensibiliser les visiteurs du parc national de Port-Cros.",
+    "facts": [
+      {
+        "label": "Cadre",
+        "value": "Projet universitaire de sensibilisation pour Port-Cros"
+      },
+      {
+        "label": "Durée",
+        "value": "Trois semaines"
+      },
+      {
+        "label": "Intervention",
+        "value": "Conception et réalisation entièrement en solo"
+      },
+      {
+        "label": "Dispositif",
+        "value": "Jeu solo · projection et détection par caméra"
+      }
+    ],
+    "role": "J’ai conçu et réalisé seul l’ensemble du projet en trois semaines : jeu Unity, script de détection Python, calibration, communication entre les programmes et intégration visuelle. J’ai utilisé des ressources graphiques gratuites issues d’un pack low-poly pour construire l’univers du jeu.",
+    "challenges": "Le principal défi était de limiter la latence entre la détection par le script Python et le déplacement des épuisettes dans Unity. Il fallait éviter les décalages qui rendent l’interaction difficile. La calibration constituait l’autre point essentiel : la caméra doit faire face à la projection, puis les marqueurs permettent d’ajuster la correspondance entre l’espace capturé et le jeu.",
+    "relatedProjects": [
+      {
+        "slug": "visites-virtuelles",
+        "reason": "Des expériences 360° avec une chasse au trésor intégrée à une visite d’entreprise."
+      }
+    ]
   },
   {
     "id": 25,
@@ -646,13 +999,17 @@
       }
     ],
     "role": "J’ai réalisé seul le front-end, le serveur, le traitement des données et le déploiement. Cette prise en charge complète m’a permis d’articuler le travail d’interface avec la gestion des tickets côté serveur.",
-    "challenges": "Le principal enjeu était de coordonner une interface fidèle à la référence avec les changements d’état du ticket côté serveur. Le parcours relie sélection, scan et consultation dans une expérience continue, avec une attention portée à la fluidité sur mobile."
+    "challenges": "Le principal enjeu était de coordonner une interface fidèle à la référence avec les changements d’état du ticket côté serveur. Le parcours relie sélection, scan et consultation dans une expérience continue, avec une attention portée à la fluidité sur mobile.",
+    "relatedServices": [
+      "application-web-sur-mesure"
+    ],
+    "linkLabel": "Ouvrir la démonstration"
   },
   {
     "id": 1,
     "name": "Du Kart à la F1",
     "slug": "du-kart-a-la-f1",
-    "description": "Création d'un site vitrine moderne et réactif pour un événement de karting organisé par AGS F1. Ce site, développé avec expertise en React, offre une expérience utilisateur fluide et captivante. Il se distingue par son module de traduction en temps réel, garantissant une accessibilité globale et une communication sans frontières. En outre, le site est enrichi de fonctionnalités interactives qui engagent et captivent les visiteurs, les immergeant pleinement dans l'univers passionnant du karting. L'intégration d'API tierces, telles que TikTok et YourPlan, ajoute une dimension supplémentaire, permettant une interaction dynamique et une diffusion plus large de l'événement. Ce projet illustre ma capacité à fusionner technologie de pointe et créativité pour créer des expériences digitales mémorables et efficaces, renforçant la présence en ligne de l'événement de karting et capturant l'essence du frisson de la course, du kart à la F1.",
+    "description": "Une landing page événementielle pour découvrir les sélections de karting, explorer les circuits partenaires et s’inscrire pour tenter de conduire une F1.\n\nDu Kart à la F1 est un événement qui permet à des passionnés de karting de participer à des sélections pour tenter de conduire une Formule 1. Dans le cadre d’une commande freelance, le site devait présenter l’événement, son programme, les pistes accueillant les sélections, les prix à gagner et les partenaires.\n\nLa page rassemble le programme, les prix à gagner et les partenaires. Une carte de France interactive situe les circuits accueillant les sélections : un clic sur une piste permet d’en afficher le tracé.\nLe changement de langue est piloté par un sélecteur dans la barre supérieure. Deux fichiers de traduction JSON, avec des textes préparés à l’avance, permettent de changer instantanément la langue de l’interface.\nDes vidéos TikTok sont intégrées à la page. Un module YourPlan embarqué en iframe donne accès à la billetterie, aux inscriptions et au planning. La landing page ne nécessite pas de serveur applicatif dédié pour ces fonctions.",
     "image": "projects/site-web-dukartalaf1.png",
     "link": "https://kart.mondon.pro",
     "github": "https://github.com/arthur-mdn/kartf1",
@@ -675,24 +1032,50 @@
     "status": "online",
     "type": "Site web",
     "interesting": true,
-    "context": "Site vitrine pour un événement de karting organisé par AGS F1. L'univers devait transmettre l'énergie de la course, du kart à la F1, à un public potentiellement international.\nLe site ne pouvait pas se contenter d'une simple brochure : il devait engager et diffuser l'événement.",
-    "need": "Une expérience React moderne, réactive, avec traduction en temps réel et intégrations sociales pour élargir la portée de l'événement.\nLes visiteurs devaient comprendre l'événement rapidement et pouvoir explorer l'univers de façon interactive.",
-    "solution": "Développement d'un site React immersif, enrichi d'un module de traduction en temps réel et d'intégrations API tierces (TikTok, YourPlan).\nL'objectif était de croiser storytelling événementiel, performance front et diffusion multi-canaux.",
+    "context": "Du Kart à la F1 est un événement qui permet à des passionnés de karting de participer à des sélections pour tenter de conduire une Formule 1. Dans le cadre d’une commande freelance, le site devait présenter l’événement, son programme, les pistes accueillant les sélections, les prix à gagner et les partenaires.",
+    "need": "Donner aux visiteurs les informations nécessaires pour comprendre le déroulement de l’événement et s’inscrire, tout en respectant fidèlement une maquette fournie. La page devait également proposer deux langues et intégrer les contenus vidéo ainsi que la billetterie.",
+    "solution": "La page rassemble le programme, les prix à gagner et les partenaires. Une carte de France interactive situe les circuits accueillant les sélections : un clic sur une piste permet d’en afficher le tracé.\nLe changement de langue est piloté par un sélecteur dans la barre supérieure. Deux fichiers de traduction JSON, avec des textes préparés à l’avance, permettent de changer instantanément la langue de l’interface.\nDes vidéos TikTok sont intégrées à la page. Un module YourPlan embarqué en iframe donne accès à la billetterie, aux inscriptions et au planning. La landing page ne nécessite pas de serveur applicatif dédié pour ces fonctions.",
     "features": [
-      "Vitrine événementielle moderne et responsive",
-      "Module de traduction en temps réel",
-      "Fonctionnalités interactives immersives",
-      "Intégration API TikTok",
-      "Intégration YourPlan",
-      "Expérience pensée pour un public international"
+      "Présentation du programme, des prix à gagner et des partenaires",
+      "Carte de France interactive des circuits partenaires avec affichage du tracé au clic",
+      "Interface en deux langues avec sélecteur et traductions préparées dans des fichiers JSON",
+      "Intégration de vidéos TikTok",
+      "Module de billetterie, d’inscription et de planning intégré en iframe",
+      "Intégration fidèle à une maquette fournie et adaptation des ressources graphiques",
+      "Déploiement avec Docker"
     ],
-    "result": "Une présence digitale mémorable pour l'événement, capable de capturer l'esprit course et d'élargir la diffusion au-delà d'un simple site informatif."
+    "result": "Le site a été utilisé pour l’événement et a reçu d’excellents retours du commanditaire et des visiteurs. Le client m’a recontacté pour préparer une nouvelle version destinée à l’édition suivante.\nL’événement étant terminé, le site reste consultable à titre de réalisation sur mon domaine personnel, depuis le lien de cette fiche.",
+    "summary": "Une landing page événementielle pour découvrir les sélections de karting, explorer les circuits partenaires et s’inscrire pour tenter de conduire une F1.",
+    "facts": [
+      {
+        "label": "Cadre",
+        "value": "Commande client en freelance"
+      },
+      {
+        "label": "Mon rôle",
+        "value": "Intégration et déploiement en solo"
+      },
+      {
+        "label": "Design",
+        "value": "Maquette fournie par le client"
+      },
+      {
+        "label": "Suivi",
+        "value": "Nouvelle version demandée pour l’édition suivante"
+      }
+    ],
+    "role": "J’ai réalisé seul l’intégration de la landing page en React à partir de la maquette du client, en respectant précisément le design prévu. J’ai aussi retravaillé certains éléments fournis, notamment par la vectorisation de logos, et pris en charge le déploiement avec Docker.",
+    "challenges": "L’enjeu était de traduire fidèlement la maquette en une page fonctionnelle tout en intégrant la carte interactive, les deux langues et les modules externes. Certains éléments graphiques ont dû être retravaillés pour être exploitables dans le site, notamment les logos à vectoriser.",
+    "relatedServices": [
+      "creation-site-internet"
+    ],
+    "linkLabel": "Consulter la version conservée du site"
   },
   {
     "id": 2,
     "name": "Buzzer-App",
     "slug": "buzzer-app",
-    "description": "Présentation de \"Buzzer App\", mon projet innovant qui transforme vos soirées en moments de jeu interactif et dynamique. Cette application progressive web en React + Vite, MongoDB et Socket.io offre une expérience de buzzer en temps réel, idéale pour animer des jeux comme les blind tests. Inspirée d'une situation réelle où la détermination du joueur le plus rapide était source de confusion, j'ai conçu cette solution universelle compatible Android et iOS, sans les contraintes des connexions WiFi ou Bluetooth.\n\nLe design, inspiré des jeux vidéo, est à la fois attrayant et fonctionnel. Avec une gestion de serveur intégrée, les utilisateurs peuvent rejoindre ou créer des sessions de jeu, et même gérer les participants. Des options de personnalisation, telles que le réglage des points pour gagner, l'ajout ou le retrait de points pour les réponses, et la possibilité de rendre le serveur public ou privé, enrichissent l'expérience.\n\nL'aspect communautaire est renforcé par la visibilité en ligne des membres, le suivi des scores, et la facilité de partage des serveurs de jeu via QR code ou lien direct. La première connexion invite à créer un profil personnalisé avec nom et photo, modifiables ultérieurement dans les paramètres, mais aussi de changer le thème de leur App en modifiant le fond d'écran, stocké en local storage, pour une expérience encore plus personnalisable.",
+    "description": "Des buzzers sur smartphone pour départager les joueurs en direct, sans publicité ni compte, avec des parties testées à plus de 60 participants simultanés.\n\nLors de soirées personnelles, je cherchais un outil gratuit, sans publicité et sans inscription pour départager le premier joueur à répondre à un blind test ou à un quiz. Buzzer-App est née de ce besoin de disposer de buzzers accessibles sur les téléphones des participants, avec une gestion en temps réel.\n\nLe joueur rejoint une partie par QR code ou lien et renseigne simplement un pseudo, sans créer de compte. Les parties publiques apparaissent dans un catalogue ; les parties privées n’y sont pas listées.\nL’animateur ouvre l’accès aux buzzers. Le premier appui reçu côté serveur bloque les autres, puis l’animateur valide ou refuse la réponse et attribue les points. Une mauvaise réponse peut entraîner un malus ou une réouverture des buzzers aux autres joueurs.\nL’application utilise React/Vite, un serveur Node.js, MongoDB et Socket.io pour la synchronisation. Une connexion Internet est nécessaire, mais chaque participant peut utiliser son propre réseau. Un joueur déconnecté apparaît hors ligne ; en rechargeant la page, il est reconnu et rejoint à nouveau la partie grâce à sa session.",
     "image": "projects/buzzer-app.png",
     "link": "https://buzzer-app.fr",
     "github": "https://github.com/arthur-mdn/buzzer-app",
@@ -723,22 +1106,55 @@
     "status": "online",
     "type": "WebApp",
     "interesting": true,
-    "context": "Besoin d'un outil ludique pour animer des quiz et blind-tests en soirée, avec plusieurs participants connectés en temps réel.",
-    "need": "Une application web interactive, simple à lancer, capable de gérer buzzers, scores et synchronisation entre appareils.",
-    "solution": "Développement d'une progressive web app React/Vite avec backend Node.js, MongoDB et Socket.io pour le temps réel.",
+    "context": "Lors de soirées personnelles, je cherchais un outil gratuit, sans publicité et sans inscription pour départager le premier joueur à répondre à un blind test ou à un quiz. Buzzer-App est née de ce besoin de disposer de buzzers accessibles sur les téléphones des participants, avec une gestion en temps réel.",
+    "need": "Rejoindre rapidement une partie, identifier le premier appui et donner à l’animateur la maîtrise de la validation des réponses et des points. Les joueurs devaient pouvoir utiliser leur propre connexion Internet, sans dépendre d’un réseau Wi-Fi commun.",
+    "solution": "Le joueur rejoint une partie par QR code ou lien et renseigne simplement un pseudo, sans créer de compte. Les parties publiques apparaissent dans un catalogue ; les parties privées n’y sont pas listées.\nL’animateur ouvre l’accès aux buzzers. Le premier appui reçu côté serveur bloque les autres, puis l’animateur valide ou refuse la réponse et attribue les points. Une mauvaise réponse peut entraîner un malus ou une réouverture des buzzers aux autres joueurs.\nL’application utilise React/Vite, un serveur Node.js, MongoDB et Socket.io pour la synchronisation. Une connexion Internet est nécessaire, mais chaque participant peut utiliser son propre réseau. Un joueur déconnecté apparaît hors ligne ; en rechargeant la page, il est reconnu et rejoint à nouveau la partie grâce à sa session.",
     "features": [
-      "Buzzers synchronisés en temps réel",
-      "Gestion de parties et de scores",
-      "Interface responsive pour mobile et desktop",
-      "Architecture temps réel via Socket.io"
+      "Accès par QR code ou lien avec un simple pseudo, sans inscription",
+      "Parties publiques répertoriées dans un catalogue ou privées non listées",
+      "Ouverture des buzzers par l’animateur et blocage après le premier appui reçu côté serveur",
+      "Validation ou refus des réponses, attribution des points et malus éventuels",
+      "Réouverture des buzzers aux autres joueurs après une réponse refusée",
+      "Gestion des participants, des scores et de l’objectif de points",
+      "Synchronisation en temps réel avec Socket.io",
+      "Indication des joueurs hors ligne et reprise de session après rechargement de la page",
+      "Connexion possible depuis des réseaux différents, dont le réseau mobile"
     ],
-    "result": "Un outil prêt à l'emploi pour transformer une soirée en expérience de jeu interactive, déployable facilement."
+    "result": "Buzzer-App a été testée avec plus de 60 joueurs simultanés et a reçu des retours extrêmement positifs sur l’expérience d’utilisation. L’application est toujours maintenue et mise à jour.\nElle se concentre sur les buzzers et le suivi de partie : les questions et l’animation sont prises en charge par l’animateur.",
+    "summary": "Des buzzers sur smartphone pour départager les joueurs en direct, sans publicité ni compte, avec des parties testées à plus de 60 participants simultanés.",
+    "facts": [
+      {
+        "label": "Origine",
+        "value": "Un besoin pour des soirées personnelles"
+      },
+      {
+        "label": "Durée",
+        "value": "Environ deux mois"
+      },
+      {
+        "label": "Intervention",
+        "value": "Conception et développement en solo"
+      },
+      {
+        "label": "Terrain",
+        "value": "Plus de 60 joueurs simultanés testés"
+      }
+    ],
+    "role": "J’ai entièrement conçu et développé l’application seul sur environ deux mois. J’en assure toujours la maintenance et les mises à jour. L’application peut être utilisée en même temps que [BlindSet Studio](/projet/blindset-studio) : BlindSet anime le quiz musical et Buzzer-App permet de départager les joueurs.",
+    "challenges": "Le principal enjeu était de garder un état de partie cohérent entre l’animateur et les téléphones : ouverture des buzzers, identification du premier appui, blocage des autres et mise à jour des scores. La reprise de session permet aussi de retrouver un joueur après une déconnexion sans lui imposer une nouvelle inscription.",
+    "linkLabel": "Ouvrir Buzzer-App",
+    "relatedProjects": [
+      {
+        "slug": "blindset-studio",
+        "reason": "Utilisation simultanée possible : BlindSet Studio anime le quiz musical, tandis que Buzzer-App permet aux joueurs de buzzer depuis leur smartphone."
+      }
+    ]
   },
   {
     "id": 26,
     "name": "Cookie Remover",
     "slug": "cookie-remover",
-    "description": "Cookie Remover est une extension de navigateur que j'ai développée pour Chrome et Edge, destinée à simplifier la navigation en ligne en supprimant automatiquement les bannières de cookies et les mentions légales RGPD. Cette extension est spécialement conçue pour les utilisateurs qui souhaitent une expérience de navigation plus fluide et sans interruption, en particulier sur les sites qui bloquent le contenu si les cookies ne sont pas acceptés.\n\nL'extension comporte plusieurs fonctionnalités clés :\n\nNettoyage en un clic : Un bouton permet aux utilisateurs de nettoyer instantanément la page actuelle en supprimant toutes les bannières de cookies et autres pop-ups. Cette action est réalisée en injectant du JavaScript directement dans le navigateur pour manipuler le DOM.\n\nOnglet 'Ajouter' pour Personnalisation : Les utilisateurs peuvent ajouter des actions spécifiques pour différents éléments HTML d'une page. Ils peuvent choisir de cibler ces éléments par ID, classe, ou Query Selector. Les actions possibles incluent cacher l'élément, ajouter ou supprimer une classe, ou ajouter du style directement.\n\nSélection Rapide : Cette fonctionnalité facilite la sélection d'éléments HTML directement dans le navigateur, avec une visualisation interactive pour une meilleure précision.\n\nListe des Actions : L'extension maintient une liste des actions personnalisées créées par l'utilisateur, avec des détails tels que le sélecteur, l'action effectuée, la date d'ajout, et le site web concerné.\n\nHistorique : L'onglet historique enregistre chaque action réalisée par l'extension, offrant une transparence totale sur les modifications apportées aux pages web visitées.\n\nParamètres : Les utilisateurs peuvent activer un mode sombre, choisir des options de nettoyage plus agressives, gérer l'historique pour optimiser les performances, et gérer les sites exclus du nettoyage automatique. L'extension permet également d'exporter et d'importer des paramètres pour une personnalisation aisée entre différents appareils.\n\nCookie Remover est un exemple de ma capacité à créer des outils numériques innovants et utiles, conçus pour améliorer l'expérience utilisateur sur le web. Cette extension représente mon engagement à résoudre les problèmes courants rencontrés par les utilisateurs de navigateurs internet, en offrant une solution personnalisable et efficace.",
+    "description": "Une extension Chromium pour masquer les éléments gênants et appliquer ses propres règles de style pendant la navigation.\n\nCookie Remover est né de mon envie de masquer les bannières de cookies intempestives et d’adapter les pages à mes besoins de navigation. Le projet était aussi l’occasion d’apprendre à développer une extension pour les navigateurs basés sur Chromium.\nJ’ai choisi de construire un outil personnalisable pour agir précisément sur les éléments visuels qui me gênaient.\n\nUn mode de sélection visuelle permet de désigner manuellement un élément HTML et de créer une règle adaptée au site. L’extension détecte ensuite les éléments enregistrés pour appliquer automatiquement les actions prévues : masquage, modification de classes ou ajout de styles CSS.\nCes styles permettent notamment de rétablir le défilement vertical lorsqu’une fenêtre superposée a été masquée mais que la page reste bloquée. Une vérification en boucle permet de réappliquer les règles lorsque les éléments réapparaissent.\nL’action porte sur l’affichage et les styles de la page : masquer une bannière ne correspond pas à exprimer un choix de consentement.",
     "image": "projects/cookie-remover.png",
     "link": "",
     "github": "https://github.com/arthur-mdn/cookie-remover",
@@ -753,37 +1169,55 @@
       "HTML",
       "CSS",
       "JavaScript",
-      "JS",
-      "React",
-      "NodeJS",
-      "Socket.io",
-      "MongoDB",
-      "GIT"
+      "Extension Chromium",
+      "Git"
     ],
     "date": "2023-08-25",
-    "status": "online",
+    "status": "archived",
     "type": "Extension de navigateur",
     "interesting": true,
-    "context": "Les bannières cookies et overlays RGPD interrompent souvent la lecture, voire bloquent le contenu tant qu'aucun choix n'est fait. Cookie Remover est né de ce friction quotidienne sur Chrome et Edge.\nL'idée n'était pas seulement de masquer un bandeau, mais de donner un vrai contrôle à l'utilisateur.",
-    "need": "Une extension capable de nettoyer une page en un clic, tout en permettant d'ajouter des règles personnalisées par site (sélecteurs, actions, historique, exclusions).\nIl fallait aussi des réglages avancés : mode sombre, nettoyage agressif, import/export.",
-    "solution": "Extension navigateur qui injecte du JavaScript pour manipuler le DOM : nettoyage instantané, ciblage d'éléments par ID / classe / query selector, sélection visuelle, historique des actions et paramètres avancés.\nLes règles peuvent être exportées ou importées pour synchroniser la configuration entre appareils.",
+    "context": "Cookie Remover est né de mon envie de masquer les bannières de cookies intempestives et d’adapter les pages à mes besoins de navigation. Le projet était aussi l’occasion d’apprendre à développer une extension pour les navigateurs basés sur Chromium.\nJ’ai choisi de construire un outil personnalisable pour agir précisément sur les éléments visuels qui me gênaient.",
+    "need": "Sélectionner un élément dans une page, enregistrer une règle et la réappliquer automatiquement lors des visites suivantes. Le masquage devait pouvoir être complété par des corrections CSS : retirer une bannière ne suffit pas si la page conserve un défilement bloqué.",
+    "solution": "Un mode de sélection visuelle permet de désigner manuellement un élément HTML et de créer une règle adaptée au site. L’extension détecte ensuite les éléments enregistrés pour appliquer automatiquement les actions prévues : masquage, modification de classes ou ajout de styles CSS.\nCes styles permettent notamment de rétablir le défilement vertical lorsqu’une fenêtre superposée a été masquée mais que la page reste bloquée. Une vérification en boucle permet de réappliquer les règles lorsque les éléments réapparaissent.\nL’action porte sur l’affichage et les styles de la page : masquer une bannière ne correspond pas à exprimer un choix de consentement.",
     "features": [
-      "Nettoyage en un clic des bannières cookies / overlays",
-      "Ajout d'actions personnalisées par élément HTML",
-      "Ciblage par ID, classe ou query selector",
-      "Sélection visuelle interactive dans la page",
-      "Liste des actions et historique détaillé",
-      "Mode sombre, nettoyage agressif et sites exclus",
-      "Import / export des paramètres",
-      "Compatibilité Chrome et Edge"
+      "Sélection visuelle d’un élément directement dans la page pour créer une règle",
+      "Ciblage par ID, classe ou sélecteur CSS",
+      "Application automatique des règles enregistrées et nettoyage à la demande",
+      "Masquage d’éléments, ajout ou retrait de classes et application de styles CSS personnalisés",
+      "Correction du défilement bloqué après le masquage d’une fenêtre superposée",
+      "Vérification répétée pour traiter les éléments qui réapparaissent",
+      "Gestion des règles par site, historique des actions et exclusions",
+      "Mode sombre, réglages de nettoyage et import/export de la configuration",
+      "Conception pour les navigateurs basés sur Chromium"
     ],
-    "result": "Un outil pratique et personnalisable qui améliore réellement le confort de navigation, au-delà d'un simple bloqueur de bandeaux."
+    "result": "L’extension m’a beaucoup servi et a également été utilisée par plusieurs personnes, avec d’excellents retours sur la richesse des fonctions. Depuis mon passage à Safari, je ne l’utilise plus et le projet n’est plus maintenu. Le code reste disponible sur GitHub.",
+    "summary": "Une extension Chromium pour masquer les éléments gênants et appliquer ses propres règles de style pendant la navigation.",
+    "facts": [
+      {
+        "label": "Cadre",
+        "value": "Besoin personnel et apprentissage des extensions"
+      },
+      {
+        "label": "Durée",
+        "value": "Plusieurs mois"
+      },
+      {
+        "label": "Intervention",
+        "value": "Conception et développement en solo"
+      },
+      {
+        "label": "État actuel",
+        "value": "Projet non maintenu · code disponible sur GitHub"
+      }
+    ],
+    "role": "J’ai conçu et développé seul l’extension sur plusieurs mois, du mode de sélection dans les pages à la gestion des règles, de leur historique et des réglages de nettoyage.",
+    "challenges": "Le principal défi était de rendre les règles suffisamment flexibles pour s’adapter à des pages différentes, y compris lorsque leurs éléments réapparaissent. Le projet demande aujourd’hui une refonte, notamment pour améliorer les performances et vérifier la compatibilité avec les versions récentes des navigateurs."
   },
   {
     "id": 3,
     "name": "Noctivibe",
     "slug": "noctivibe",
-    "description": "Noctvibe est une progressive web app (PWA) en NextJS conçue pour simplifier l'organisation de soirées culinaires. L'application est née d'une expérience personnelle lors de l'organisation de soirées pizza en famille, où la coordination des préférences et des commandes était une tâche complexe et source de confusion.\n\nAvec \"Noctvibe\", l'organisation d'événements devient un jeu d'enfant. L'utilisateur peut créer un événement en spécifiant son titre, le type de repas (comme une pizza ou un menu personnalisé), le lieu, la date et la liste des invités. Unsplash est intégré pour ajouter une touche esthétique avec des photos thématiques, rendant l'invitation plus attrayante.\n\nUne fois l'événement créé, un lien d'invitation partageable permet aux invités d'accéder à la plateforme. Chaque invité sélectionne ses ingrédients préférés parmi une liste complète, offrant une personnalisation complète de sa commande. Les modifications de dernière minute sont également prises en compte, permettant aux invités de revenir sur leurs choix.\n\nDu côté de l'organisateur, \"Noctvibe\" offre une vue d'ensemble claire : une liste complète des ingrédients nécessaires et le détail de chaque commande, facilitant considérablement la préparation. Cette application est le reflet de ma capacité à transformer les défis du quotidien en solutions numériques élégantes et fonctionnelles, améliorant l'expérience de l'organisation d'événements tout en minimisant les tracas.",
+    "description": "Organiser un repas entre proches, recueillir les commandes et retrouver les ingrédients et la liste de courses actualisés en temps réel.\n\nNoctivibe est née de soirées pizza en famille où la collecte des préférences et des commandes devenait difficile à suivre. Le projet s’est élargi à d’autres repas : burgers, kebabs, tacos ou types de repas entièrement personnalisés.\nL’application est aujourd’hui accessible publiquement et gratuitement, avec l’objectif de simplifier la préparation des repas partagés.\n\nL’organisateur crée une soirée et prépare les choix à partir de catalogues d’ingrédients prédéfinis qu’il peut personnaliser : ajout, modification ou suppression d’éléments, adaptation des menus et des quantités, ou création d’un nouveau type de repas.\nUn lien d’invitation commun est partagé aux invités. Chacun sélectionne son profil, compose sa commande et peut signaler des allergies, des préférences alimentaires ou de cuisson. Il est également possible de commander pour plusieurs personnes et de revenir modifier ses choix.\nLa console de l’organisateur affiche les commandes individuelles, le total des ingrédients, les quantités et la liste de courses. Les modifications des invités y apparaissent en temps réel.",
     "image": "projects/noctivibe-thumbnail.webp",
     "link": "https://noctivibe.fr",
     "github": "",
@@ -807,56 +1241,118 @@
     "status": "online",
     "type": "WebApp",
     "interesting": true,
-    "context": "Noctivibe est née d'un besoin personnel : organiser des soirées pizza en famille générait trop de confusion sur les préférences et les commandes.\nL'application devait transformer cette coordination informelle en parcours clair, aussi bien pour l'organisateur que pour les invités.",
-    "need": "Créer un événement (titre, type de repas, lieu, date, invités), partager un lien, laisser chacun composer sa commande, puis centraliser le résultat côté organisateur.\nLes modifications de dernière minute devaient rester possibles.",
-    "solution": "Progressive web app NextJS permettant de créer un événement, d'inviter via un lien partageable et de collecter les choix d'ingrédients de chaque participant.\nUnsplash apporte une image thématique à l'invitation. L'organisateur dispose ensuite d'une vue consolidée des ingrédients et du détail des commandes.",
+    "context": "Noctivibe est née de soirées pizza en famille où la collecte des préférences et des commandes devenait difficile à suivre. Le projet s’est élargi à d’autres repas : burgers, kebabs, tacos ou types de repas entièrement personnalisés.\nL’application est aujourd’hui accessible publiquement et gratuitement, avec l’objectif de simplifier la préparation des repas partagés.",
+    "need": "Permettre à chacun de composer sa commande et de modifier ses choix, tout en donnant à l’organisateur une vue consolidée des ingrédients et des quantités à prévoir. Les changements de dernière minute devaient être visibles sans recopier les demandes ni recalculer manuellement la liste de courses.",
+    "solution": "L’organisateur crée une soirée et prépare les choix à partir de catalogues d’ingrédients prédéfinis qu’il peut personnaliser : ajout, modification ou suppression d’éléments, adaptation des menus et des quantités, ou création d’un nouveau type de repas.\nUn lien d’invitation commun est partagé aux invités. Chacun sélectionne son profil, compose sa commande et peut signaler des allergies, des préférences alimentaires ou de cuisson. Il est également possible de commander pour plusieurs personnes et de revenir modifier ses choix.\nLa console de l’organisateur affiche les commandes individuelles, le total des ingrédients, les quantités et la liste de courses. Les modifications des invités y apparaissent en temps réel.",
     "features": [
-      "Création d'événement (titre, type de repas, lieu, date, invités)",
-      "Intégration Unsplash pour illustrer l'invitation",
-      "Lien d'invitation partageable",
-      "Sélection d'ingrédients par invité",
-      "Modification des choix jusqu'à la dernière minute",
-      "Vue organisateur : liste d'ingrédients et détail des commandes",
-      "Usage mobile via PWA"
+      "Organisation de soirées pizza, burger, kebab, tacos ou repas personnalisés",
+      "Catalogues d’ingrédients prédéfinis et personnalisables",
+      "Création et adaptation des menus et des quantités",
+      "Lien d’invitation partagé et sélection du profil de chaque invité",
+      "Composition et modification des commandes, y compris pour plusieurs personnes",
+      "Prise en compte des allergies et des préférences alimentaires ou de cuisson",
+      "Vue des commandes individuelles et synthèse des ingrédients avec quantités et liste de courses",
+      "Actualisation en temps réel de la console organisateur",
+      "Application publique gratuite développée avec React et Next.js"
     ],
-    "result": "Un outil concret issu d'un problème du quotidien, qui simplifie l'organisation de soirées culinaires et réduit les allers-retours inutiles."
+    "result": "Environ une centaine de soirées ont été organisées avec Noctivibe, avec d’excellents retours. L’application reste publique, gratuite, régulièrement mise à jour et maintenue depuis environ deux ans.",
+    "summary": "Organiser un repas entre proches, recueillir les commandes et retrouver les ingrédients et la liste de courses actualisés en temps réel.",
+    "facts": [
+      {
+        "label": "Origine",
+        "value": "Un besoin personnel pour les soirées pizza"
+      },
+      {
+        "label": "Accès",
+        "value": "Application publique gratuite"
+      },
+      {
+        "label": "Terrain",
+        "value": "Environ une centaine de soirées organisées"
+      },
+      {
+        "label": "Suivi",
+        "value": "Développement en solo · maintenance depuis deux ans"
+      }
+    ],
+    "role": "J’ai conçu et développé seul l’ensemble de l’application. Je la maintiens depuis environ deux ans, avec des mises à jour régulières et de nombreuses améliorations, dont une refonte de la version PHP initiale vers React et Next.js.",
+    "challenges": "Le projet devait garder une préparation simple tout en permettant de personnaliser les repas et les commandes. La vue consolidée et son actualisation en temps réel permettent à l’organisateur de suivre les changements sans perdre le détail des choix individuels. La refonte de PHP vers React et Next.js s’inscrit dans l’évolution continue de l’application.",
+    "relatedServices": [
+      "application-web-sur-mesure"
+    ],
+    "linkLabel": "Ouvrir Noctivibe"
   },
   {
     "id": 17,
     "name": "Création de Visites Virtuelles",
     "slug": "visites-virtuelles",
-    "description": "\nParallèlement à mes autres projets, j'ai développé une expertise dans la création de visites virtuelles, en utilisant une caméra 360 Insta360 pour capturer des images et intégrer une expérience immersive de navigation dans divers établissements. Ce projet combine technologie avancée et créativité pour offrir des expériences interactives uniques.\n\nUn exemple marquant est la visite virtuelle que j'ai réalisée pour l'entreprise où je réalise mon alternance. J'ai innové en intégrant des éléments ludiques tels qu'une chasse au trésor, où les participants doivent trouver des peluches cachées dans différents endroits de l'entreprise. Cette quête, en plus d'être divertissante, permet aux participants de s'engager activement avec l'environnement virtuel. À la fin de la chasse, les participants peuvent s'inscrire dans un tableau des scores, ajoutant un élément de compétition amusant à l'expérience.\n\nLes visites virtuelles que je crée offrent de nombreux avantages. Elles permettent aux utilisateurs d'explorer des lieux à distance, ce qui est particulièrement utile pour des événements comme les journées portes ouvertes ou la présentation d'espaces de travail. Les transitions soignées et les animations entre les différents points de vue assurent une expérience utilisateur fluide et agréable. De plus, l'ajout de mini-jeux ou d'activités interactives accroît l'engagement et l'intérêt des utilisateurs.\n\nCes visites virtuelles sont des outils polyvalents et précieux pour toute entreprise ou institution souhaitant promouvoir ses espaces de manière innovante et interactive. Elles démontrent ma capacité à fusionner la photographie, la technologie et la conception de jeux pour créer des expériences numériques captivantes et mémorables.",
+    "description": "Faire découvrir des lieux à distance grâce à des visites 360° interactives, de la prise de vue à l’hébergement, avec des expériences sur mesure.\n\nJ’ai réalisé des visites virtuelles pour plusieurs entreprises et lieux : un EHPAD, une entreprise privée, un salon de coiffure, un hôtel et plusieurs appartements, notamment à Toulon, Carpentras, Malaucène et Montpellier. Chaque visite permet de découvrir les espaces à distance, avec un parcours adapté au lieu.\nPour une entreprise, la découverte a également pris la forme d’une chasse au trésor intégrée aux panoramas.\n\nLes panoramas sont reliés par des boutons de navigation intégrés aux prises de vue. Les déplacements entre les positions sont animés pour garder un parcours fluide. Une barre inférieure réunit les vignettes et les titres des vues pour rejoindre directement un espace. L’interface s’adapte aux écrans et à la navigation tactile.\nDans la visite de l’entreprise, j’ai développé des interactions spécifiques pour une chasse au trésor : les visiteurs recherchent et sélectionnent les mascottes présentes dans les panoramas. Une fois toutes les mascottes trouvées, ils accèdent à une surprise et peuvent s’inscrire à un tableau des scores.",
     "image": "projects/visites_virtuelles.png",
     "link": "https://visites.eradion.fr",
     "github": "",
     "youtube": [],
-    "technos": [],
+    "technos": [
+      501
+    ],
     "tags": [
-      "3D Modeling",
-      "Web Development"
+      "Visite virtuelle 360°",
+      "3DVista Virtual Tour",
+      "Insta360",
+      "Développement web"
     ],
     "date": "2023-04-18",
     "status": "online",
     "type": "Visite virtuelle",
     "interesting": true,
-    "context": "En parallèle d'autres projets, j'ai développé une expertise en visites virtuelles 360° pour faire découvrir des établissements à distance. La captation se fait avec une Insta360, puis l'expérience est intégrée pour une navigation immersive.\nUn exemple marquant a été réalisé pour l'entreprise d'alternance, avec une dimension ludique ajoutée à la visite.",
-    "need": "Proposer plus qu'un simple rendu 360 : une expérience fluide, engageante, éventuellement gamifiée, utile pour portes ouvertes ou présentation d'espaces de travail.\nLes transitions et l'interactivité devaient tenir la route sur le web.",
-    "solution": "Captation 360 puis intégration de parcours immersifs avec animations entre points de vue. Pour l'entreprise d'alternance, ajout d'une chasse au trésor (peluches cachées) et d'un tableau des scores pour transformer la visite en expérience participative.",
+    "context": "J’ai réalisé des visites virtuelles pour plusieurs entreprises et lieux : un EHPAD, une entreprise privée, un salon de coiffure, un hôtel et plusieurs appartements, notamment à Toulon, Carpentras, Malaucène et Montpellier. Chaque visite permet de découvrir les espaces à distance, avec un parcours adapté au lieu.\nPour une entreprise, la découverte a également pris la forme d’une chasse au trésor intégrée aux panoramas.",
+    "need": "Permettre aux visiteurs de se repérer et de parcourir les espaces simplement, depuis un ordinateur ou un appareil tactile. Selon le projet, la visite peut aussi accueillir des interactions spécifiques pour encourager l’exploration.",
+    "solution": "Les panoramas sont reliés par des boutons de navigation intégrés aux prises de vue. Les déplacements entre les positions sont animés pour garder un parcours fluide. Une barre inférieure réunit les vignettes et les titres des vues pour rejoindre directement un espace. L’interface s’adapte aux écrans et à la navigation tactile.\nDans la visite de l’entreprise, j’ai développé des interactions spécifiques pour une chasse au trésor : les visiteurs recherchent et sélectionnent les mascottes présentes dans les panoramas. Une fois toutes les mascottes trouvées, ils accèdent à une surprise et peuvent s’inscrire à un tableau des scores.",
     "features": [
-      "Captation 360° avec Insta360",
-      "Navigation immersive entre les espaces",
-      "Transitions et animations soignées",
-      "Mini-jeux / chasse au trésor intégrée",
-      "Tableau des scores en fin de quête",
-      "Usage pour portes ouvertes ou présentation d'entreprise"
+      "Captation 360°, préparation du parcours et retouche des images",
+      "Navigation entre les panoramas par boutons intégrés aux vues",
+      "Transitions animées entre les positions",
+      "Barre inférieure de navigation avec vignettes et titres des vues",
+      "Interface responsive et navigation tactile",
+      "Intégration avec 3DVista Virtual Tour",
+      "Développements sur mesure, dont une chasse aux mascottes dans les panoramas",
+      "Surprise de fin de parcours et inscription à un tableau des scores pour la chasse au trésor",
+      "Hébergement des visites"
     ],
-    "result": "Des visites virtuelles utiles et mémorables, qui allient captation, UX immersive et parfois gamification pour mieux faire découvrir un lieu."
+    "result": "Les visites ont été très bien reçues pour leur rendu professionnel et soigné. Elles restent accessibles et je propose toujours cette prestation, de la préparation des prises de vue à l’hébergement de la visite.",
+    "summary": "Faire découvrir des lieux à distance grâce à des visites 360° interactives, de la prise de vue à l’hébergement, avec des expériences sur mesure.",
+    "facts": [
+      {
+        "label": "Lieux réalisés",
+        "value": "Entreprises, EHPAD, salon de coiffure, hôtel et appartements"
+      },
+      {
+        "label": "Secteur",
+        "value": "Provence"
+      },
+      {
+        "label": "Outil",
+        "value": "3DVista Virtual Tour et développements sur mesure"
+      },
+      {
+        "label": "Intervention",
+        "value": "Réalisation complète en solo · prestation toujours proposée"
+      }
+    ],
+    "role": "Je prends en charge seul l’ensemble de la réalisation : préparation du parcours, prises de vue avec une caméra Insta360, retouches, conception de l’interface, intégration des interactions et hébergement. Les visites sont construites avec le logiciel professionnel 3DVista Virtual Tour, complété par du code sur mesure lorsque le projet le nécessite.",
+    "challenges": "Le travail consiste à relier la captation des lieux à une navigation claire : choix des positions, préparation du parcours, retouches et organisation des accès entre les vues. Les interactions développées sur mesure permettent d’adapter l’expérience au projet, comme pour la chasse aux mascottes intégrée à la visite d’entreprise.",
+    "relatedProjects": [
+      {
+        "slug": "save-the-turtles",
+        "reason": "Une autre expérience interactive : un jeu projeté, piloté par les mouvements des mains."
+      }
+    ],
+    "linkLabel": "Explorer les visites virtuelles"
   },
   {
     "id": 21,
     "name": "Eradion.fr",
     "slug": "eradion",
-    "description": "Eradion est le site web de mon auto-entreprise, un projet personnel qui reflète mes compétences et ma passion pour le développement web, la création de visites virtuelles et la production audiovisuelle. J'ai codé ce site en PHP, HTML et JavaScript, avec une attention particulière portée à l'optimisation SEO pour assurer une bonne visibilité en ligne.\n\nLe design du site est moderne et professionnel, reflétant mon expertise dans ces domaines. La section actualités, qui comprend un blog, permet de mettre à jour les visiteurs sur les dernières tendances, projets et réalisations. La gestion des posts est intégrée, permettant un partage régulier de contenu pertinent et engageant.\n\nEn plus des actualités, le site présente un portfolio de mes travaux antérieurs, avec une mise en avant de divers projets en visites virtuelles et en développement web. Cela donne aux visiteurs un aperçu concret de mes compétences et de mon expérience dans ces domaines.\n\n\"Eradion\" sert non seulement de vitrine pour mon travail, mais aussi comme un moyen de connecter avec des clients potentiels et des partenaires. Le site illustre ma capacité à combiner la créativité avec la technologie pour créer des solutions numériques uniques, et ma détermination à fournir des services de haute qualité dans le domaine du développement web et de la production audiovisuelle.",
+    "description": "L’ancienne vitrine de ma micro-entreprise, développée sur mesure en PHP avec un CMS personnalisé pour gérer les réalisations et le blog.\n\nEradion est le nom commercial de ma micro-entreprise, toujours utilisé pour mon activité freelance en développement web et applications natives. Cette ancienne vitrine s’adressait à tout public et avait pour objectif principal de présenter mes réalisations.\n\nLe site a été développé entièrement sur mesure en PHP, HTML, CSS et JavaScript. Un CMS personnalisé permettait d’administrer le blog et les projets, d’ajouter les contenus et de faire évoluer la présentation des réalisations.\nUn formulaire de contact complétait cette vitrine pour permettre aux visiteurs de me joindre au sujet de leurs besoins.\nLes visites virtuelles 360° constituent un autre exemple de réalisation proposée dans le cadre de mon activité.",
     "image": "projects/eradion.png",
     "link": "https://eradion.fr",
     "github": "",
@@ -872,21 +1368,52 @@
       "Web Development"
     ],
     "date": "2023-03-21",
-    "status": "online",
+    "status": "archived",
     "type": "Site Web",
     "interesting": true,
-    "context": "Eradion est le site de mon auto-entreprise, pensé comme vitrine de mes activités en développement web, visites virtuelles et production audiovisuelle.\nLe site devait à la fois présenter l'offre, publier de l'actualité et montrer des preuves de travail.",
-    "need": "Une base PHP / HTML / JavaScript propre, SEO-friendly, avec blog, portfolio et contact pour convertir les visiteurs en opportunités.\nLe design devait rester moderne et professionnel sans complexité inutile.",
-    "solution": "Site vitrine codé sur mesure avec attention au SEO, section actualités / blog, portfolio de réalisations (web et visites virtuelles) et parcours de contact.\nLa gestion des posts permet de publier régulièrement sans reconstruire le site.",
+    "context": "Eradion est le nom commercial de ma micro-entreprise, toujours utilisé pour mon activité freelance en développement web et applications natives. Cette ancienne vitrine s’adressait à tout public et avait pour objectif principal de présenter mes réalisations.",
+    "need": "Disposer d’un site indépendant pour montrer mes projets et permettre la prise de contact, avec une administration permettant de publier et de modifier les contenus sans intervenir directement dans les pages.",
+    "solution": "Le site a été développé entièrement sur mesure en PHP, HTML, CSS et JavaScript. Un CMS personnalisé permettait d’administrer le blog et les projets, d’ajouter les contenus et de faire évoluer la présentation des réalisations.\nUn formulaire de contact complétait cette vitrine pour permettre aux visiteurs de me joindre au sujet de leurs besoins.\nLes [visites virtuelles 360°](/projet/visites-virtuelles) constituent un autre exemple de réalisation proposée dans le cadre de mon activité.",
     "features": [
-      "Vitrine multi-compétences (web, 360, audiovis)",
-      "Blog / actualités avec gestion de posts",
-      "Portfolio de réalisations",
-      "Optimisation SEO de base",
-      "Design moderne orienté confiance",
-      "Parcours de contact pour prospects et partenaires"
+      "Vitrine de l’activité freelance et présentation des réalisations",
+      "Développement sur mesure en PHP, HTML, CSS et JavaScript",
+      "CMS personnalisé pour ajouter et modifier les contenus",
+      "Administration du blog et des projets",
+      "Formulaire de contact",
+      "Travail d’optimisation pour le référencement"
     ],
-    "result": "Une présence pro qui pose l'offre Eradion, montre le travail réalisé et facilite la prise de contact."
+    "result": "Cette première vitrine a accompagné la présentation de mon activité sous le nom Eradion. La version décrite ici n’est plus en ligne telle quelle : le site actuel sert de transition pour orienter les visiteurs vers mon portfolio personnel. Le nom commercial Eradion reste celui de ma micro-entreprise.",
+    "summary": "L’ancienne vitrine de ma micro-entreprise, développée sur mesure en PHP avec un CMS personnalisé pour gérer les réalisations et le blog.",
+    "facts": [
+      {
+        "label": "Identité",
+        "value": "Eradion · nom commercial toujours utilisé"
+      },
+      {
+        "label": "Durée",
+        "value": "Plusieurs mois"
+      },
+      {
+        "label": "Intervention",
+        "value": "Conception et développement en solo"
+      },
+      {
+        "label": "État actuel",
+        "value": "Ancienne vitrine · transition vers le portfolio personnel"
+      }
+    ],
+    "role": "J’ai réalisé seul l’ensemble du site sur plusieurs mois, y compris son identité visuelle, ses textes, ses médias et son développement. J’ai également travaillé l’optimisation du site pour sa visibilité dans les moteurs de recherche.",
+    "challenges": "Le projet consistait à construire à la fois la vitrine publique et les outils nécessaires à sa gestion. Le CMS personnalisé permettait de centraliser la publication des articles et des projets tout en gardant la maîtrise du développement du site.",
+    "relatedServices": [
+      "creation-site-internet"
+    ],
+    "linkLabel": "Visiter le site de transition Eradion",
+    "relatedProjects": [
+      {
+        "slug": "visites-virtuelles",
+        "reason": "Une prestation proposée dans le cadre de mon activité : captation 360°, navigation interactive et expériences sur mesure."
+      }
+    ]
   },
   {
     "id": 13,
@@ -1113,7 +1640,7 @@
     "status": "online",
     "type": "WebApp",
     "interesting": false,
-    "context": "Facture est une PWA conçue pour aider les familles à suivre les dépenses des enfants avec validation parentale. L'outil fait le lien entre saisie côté enfant et décision côté parent.\nCe projet est distinct du logiciel de facturation micro-entreprise plus récent.",
+    "context": "Facture est une PWA conçue pour aider les familles à suivre les dépenses des enfants avec validation parentale. L'outil fait le lien entre saisie côté enfant et décision côté parent.\nCe projet est distinct du [logiciel de facturation pour micro-entreprise](/projet/logiciel-de-facturation), plus récent.",
     "need": "Permettre aux enfants de déclarer une dépense (titre, description, montant, date, type, justificatif) et de demander un remboursement.\nLes parents doivent pouvoir accepter, refuser, payer partiellement et suivre plusieurs enfants depuis un même compte.",
     "solution": "Progressive web app avec comptes liés parents / enfants, historique des décisions (accepté / refusé + motif) et gestion flexible des montants.\nL'app ne remplace pas la banque : elle organise la communication et la décision avant le paiement réel (virement, etc.).",
     "features": [
@@ -1126,7 +1653,13 @@
       "Vue parent multi-profils",
       "Usage mobile via PWA"
     ],
-    "result": "Un outil familial qui clarifie le suivi des dépenses et la validation parentale, sans prétendre gérer les flux bancaires eux-mêmes."
+    "result": "Un outil familial qui clarifie le suivi des dépenses et la validation parentale, sans prétendre gérer les flux bancaires eux-mêmes.",
+    "relatedProjects": [
+      {
+        "slug": "logiciel-de-facturation",
+        "reason": "Un autre outil de gestion, destiné aux entrepreneurs : clients, projets, devis et factures, avec génération de documents PDF."
+      }
+    ]
   },
   {
     "id": 7,
@@ -1350,7 +1883,7 @@
     "interesting": false,
     "context": "GlucideCheck est mon tout premier projet de développement : une PWA pour aider au suivi du diabète au quotidien. Ce projet a joué un rôle direct dans mon choix de m'orienter vers le développement.\nMême s'il n'était pas encore parfaitement responsive, il répondait déjà à un besoin réel.",
     "need": "Saisir une glycémie, obtenir une interprétation (optimal / hyperglycémie selon niveaux), estimer l'insuline nécessaire pour une cible, calculer les glucides d'un aliment, et personnaliser les paramètres (cible, impact d'une unité, langue, mode sombre).\nLes dernières saisies devaient rester accessibles rapidement.",
-    "solution": "PWA HTML / CSS / JavaScript avec page d'accueil de saisie, stockage local des dernières valeurs, onglet de calcul glucidique (règle de trois à partir des valeurs pour 100 g) et onglet paramètres persistés.\nCette démarche a ensuite inspiré l'application iOS native Glucide Check.",
+    "solution": "PWA HTML / CSS / JavaScript avec page d'accueil de saisie, stockage local des dernières valeurs, onglet de calcul glucidique (règle de trois à partir des valeurs pour 100 g) et onglet paramètres persistés.\nCette démarche a ensuite inspiré [l’application iOS native Glucide Check](/projet/glucide-check-app-ios).",
     "features": [
       "Saisie de glycémie et interprétation du niveau",
       "Recommandation d'insuline vers un taux cible",
@@ -1360,6 +1893,13 @@
       "Persistance des préférences en local storage",
       "Socle PWA HTML / CSS / JavaScript"
     ],
-    "result": "Un premier produit utile et formateur, qui a confirmé mon intérêt pour les outils numériques concrets et préparé le terrain à la version iOS native."
+    "result": "Un premier produit utile et formateur, qui a confirmé mon intérêt pour les outils numériques concrets et préparé le terrain à la version iOS native.",
+    "linkLabel": "Ouvrir la version web historique",
+    "relatedProjects": [
+      {
+        "slug": "glucide-check-app-ios",
+        "reason": "La suite du projet sur iPhone, développée en Swift pour adapter les calculs et les paramètres à une interface native."
+      }
+    ]
   }
 ]

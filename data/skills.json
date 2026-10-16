@@ -274,5 +274,27 @@
         ]
       }
     ]
+  },
+  {
+    "id": 5,
+    "name": "Autres",
+    "skills": [
+      {
+        "id": 501,
+        "name": "3DVista",
+        "description": "3DVista Virtual Tour",
+        "keywords": [
+          "3DVista",
+          "3DVista Virtual Tour",
+          "Visite virtuelle 360°"
+        ],
+        "links": [
+          {
+            "alt": "Logo 3DVista",
+            "url": "logos/3dvista.webp"
+          }
+        ]
+      }
+    ]
   }
 ]

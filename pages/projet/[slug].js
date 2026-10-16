@@ -3,15 +3,34 @@ import Head from "next/head";
 import Image from "next/image";
 import projectsData from "../../data/projects.json";
 import skillsData from "../../data/skills.json";
+import { getServiceBySlug } from "../../data/services";
 import {
-  FaBan,
   FaGithub,
   FaLink,
+  FaArrowRight,
+  FaArrowUpRightFromSquare,
   FaArrowUp,
   FaArrowDown,
   FaTriangleExclamation,
 } from "react-icons/fa6";
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
+
+function ProjectInlineLink({ href, children }) {
+  const isExternal = /^https?:\/\//.test(href || "");
+  return (
+    <Link
+      href={href || "#"}
+      className="project-inline-link"
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
+      title={isExternal ? "S’ouvre dans un nouvel onglet" : undefined}
+    >
+      {isExternal ? <FaArrowUpRightFromSquare aria-hidden="true" /> : <FaLink aria-hidden="true" />}
+      {children}
+    </Link>
+  );
+}
 
 export async function getStaticPaths() {
   const paths = projectsData.map((project) => ({
@@ -37,7 +56,16 @@ function ProjectPage({ project }) {
     )
     .filter(Boolean);
 
-  const hasLinks = project.github || project.link || project.youtube?.length;
+  const relatedProjects = (project.relatedProjects || [])
+    .map(({ slug, reason }) => {
+      const related = projectsData.find((item) => item.slug === slug);
+      return related && related.slug !== project.slug ? { ...related, reason } : null;
+    })
+    .filter(Boolean);
+  const relatedServices = (project.relatedServices || [])
+    .map(getServiceBySlug)
+    .filter(Boolean);
+  const hasLinks = project.github || project.link || project.accessOnRequest;
   const hasCaseStudy = Boolean(
     project.context || project.need || project.solution || project.result
   );
@@ -166,7 +194,14 @@ function ProjectPage({ project }) {
                       .split(/\n+/)
                       .filter(Boolean)
                       .map((paragraph, index) => (
-                        <p key={`${section.key}-${index}`}>{paragraph}</p>
+                        <ReactMarkdown
+                          key={`${section.key}-${index}`}
+                          allowedElements={["p", "a"]}
+                          components={{ a: ProjectInlineLink }}
+                          unwrapDisallowed
+                        >
+                          {paragraph}
+                        </ReactMarkdown>
                       ))}
                     {section.items?.length > 0 && (
                       <ul>
@@ -206,8 +241,8 @@ function ProjectPage({ project }) {
             </div>
           </div>
 
-          <div className="case-block" style={{ marginTop: "1.5rem" }}>
-            <h2>Liens</h2>
+          {hasLinks && <div className="case-block" style={{ marginTop: "1.5rem" }}>
+            <h2>Découvrir le projet</h2>
             <div className="fr g0-5" style={{ marginTop: "0.75rem", flexWrap: "wrap" }}>
               {project.github && (
                 <Link
@@ -217,7 +252,7 @@ function ProjectPage({ project }) {
                   className="button github"
                 >
                   <FaGithub />
-                  GitHub
+                  Consulter le code sur GitHub
                 </Link>
               )}
               {project.link && (
@@ -227,17 +262,17 @@ function ProjectPage({ project }) {
                   rel="noopener noreferrer"
                   className="button linkedin"
                 >
-                  <FaLink />
-                  Voir le projet
+                  <FaArrowUpRightFromSquare aria-hidden="true" />
+                  {project.linkLabel || "Voir le projet"}
                 </Link>
               )}
-              {!hasLinks && (
-                <p className="fr ai-c g0-5" style={{ color: "red", fontWeight: "bold" }}>
-                  <FaBan /> Aucun lien public disponible.
-                </p>
+              {project.accessOnRequest && (
+                <Link href="/contact" className="btn btn-secondary">
+                  <FaLink aria-hidden="true" /> Demander un accès
+                </Link>
               )}
             </div>
-          </div>
+          </div>}
 
           {project.youtube?.length > 0 && (
             <div className="case-block" style={{ marginTop: "1.5rem" }}>
@@ -267,7 +302,47 @@ function ProjectPage({ project }) {
             </div>
           )}
 
-          <div style={{ marginTop: "2.5rem" }}>
+          {relatedProjects.length > 0 && (
+            <section className="case-block" style={{ marginTop: "2rem" }}>
+              <h2>Projets liés</h2>
+              <div className="project-related-grid">
+                {relatedProjects.map((related) => (
+                  <Link key={related.slug} href={`/projet/${related.slug}`} className="project-related-card">
+                    <div className="project-related-thumbnail">
+                      <Image
+                        src={`/${related.image}`}
+                        alt=""
+                        fill
+                        sizes="(max-width: 600px) calc(100vw - 3rem), 280px"
+                        style={{ objectFit: "cover" }}
+                      />
+                    </div>
+                    <div className="project-related-body">
+                      <span className="project-related-type">{related.type}</span>
+                      <h3>{related.name}</h3>
+                      <p>{related.reason}</p>
+                      <span className="project-related-action">Découvrir le projet <FaArrowRight aria-hidden="true" /></span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
+          <div className="case-block project-services" style={{ marginTop: "2.5rem" }}>
+            {relatedServices.length > 0 && (
+              <>
+                <h2>Pour un projet similaire</h2>
+                <p>Retrouvez les prestations correspondant à ce type de réalisation.</p>
+                <ul className="project-service-links">
+                  {relatedServices.map((service) => (
+                    <li key={service.slug}>
+                      <ProjectInlineLink href={`/services/${service.slug}`}>{service.title}</ProjectInlineLink>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
             <Link href="/contact" className="btn btn-primary">
               Un projet similaire ? Parlons-en
             </Link>

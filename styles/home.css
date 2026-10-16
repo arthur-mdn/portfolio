@@ -1138,12 +1138,145 @@ a:hover {
   margin-top: 0.75rem;
 }
 
+.case-block .project-inline-link {
+  color: var(--green);
+  background: var(--green-pastel);
+  border-radius: 0.4rem;
+  padding: 0.1em 0.4em;
+  font-weight: 600;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.project-inline-link svg {
+  display: inline-block;
+  width: 0.85em;
+  height: 0.85em;
+  margin-right: 0.35em;
+  vertical-align: -0.05em;
+}
+
+.case-block .project-inline-link:hover {
+  color: var(--green-dark);
+  background: #d4eddf;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.project-inline-link:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .case-block .project-inline-link {
+    transition: none;
+  }
+}
+
 .case-block ul {
   margin: 0.5rem 0 0;
   padding: 0 0 0 1.1rem;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+}
+
+.project-related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-related-card {
+  display: grid;
+  grid-template-columns: minmax(120px, 30%) minmax(0, 1fr);
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.project-related-thumbnail {
+  position: relative;
+  min-height: 170px;
+  background: var(--green-pastel);
+}
+
+.project-related-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  min-width: 0;
+  padding: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .project-related-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .project-related-thumbnail {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+.project-related-type {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.project-related-card h3 {
+  color: var(--text);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.project-related-card p {
+  margin: 0;
+}
+
+.project-related-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  color: var(--green);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.project-related-card:hover {
+  background: var(--green-pastel);
+  border-color: var(--green);
+}
+
+.project-related-card:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+
+.case-block .project-service-links {
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+  gap: 0.75rem;
+}
+
+.project-services .btn {
+  margin-top: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-related-card {
+    transition: none;
+  }
 }
 
 .site-footer {
