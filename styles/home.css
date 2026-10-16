@@ -1067,6 +1067,46 @@ a:hover {
   gap: 0.45rem;
 }
 
+.project-summary {
+  color: var(--text);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  max-width: 70ch;
+}
+
+.project-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem 2rem;
+  padding: 1.5rem;
+  margin: 0 0 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+
+.project-facts dt {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-bottom: 0.35rem;
+}
+
+.project-facts dd {
+  color: var(--text);
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .project-facts {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 1.1rem;
+    gap: 1rem;
+  }
+}
+
 .case-grid {
   display: grid;
   gap: 1.5rem;
@@ -1074,8 +1114,11 @@ a:hover {
 }
 
 .case-block {
+  min-width: 0;
+  max-width: none;
+  margin: 0;
   border-top: 1px solid var(--border);
-  padding-top: 1.25rem;
+  padding: 1.25rem 0 0;
 }
 
 .case-block h2 {
@@ -1096,8 +1139,8 @@ a:hover {
 }
 
 .case-block ul {
-  margin-top: 0.5rem;
-  padding-left: 1.15rem;
+  margin: 0.5rem 0 0;
+  padding: 0 0 0 1.1rem;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;

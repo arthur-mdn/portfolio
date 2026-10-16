@@ -3,7 +3,7 @@
     "id": 40,
     "name": "BlindSet Studio",
     "slug": "blindset-studio",
-    "description": "Application macOS dédiée à la création et à l'animation de blind tests et de quiz musicaux personnalisés.\n\nBlindSet Studio permet de préparer ses quiz, gérer sa bibliothèque musicale, personnaliser les extraits et appliquer différents effets audio. Pendant l'animation, l'application pilote un écran public distinct afin de diffuser les questions, réponses et différents temps du jeu aux participants.",
+    "description": "Créer ses propres quiz musicaux et garder la main sur leur animation, dans une application macOS native utilisable hors ligne.\n\nBlindSet Studio est né d’un besoin concret en animation musicale : les catalogues imposés limitaient le choix des morceaux et le déroulement des quiz laissait trop peu de contrôle à l’animateur.\nJ’ai choisi de développer un produit destiné aux DJ, aux animateurs et à toute personne souhaitant préparer ses propres quiz musicaux, avec l’objectif de le commercialiser à terme.\n\nAvant la prestation, l’utilisateur importe ses fichiers audio, prépare les questions, choisit les extraits et leur point de départ, puis renseigne quatre propositions et la bonne réponse.\nPendant la soirée, il lance le quiz préparé et contrôle sa progression : présentation du mode de jeu, énoncé, propositions puis réponse. Le déroulement peut être piloté manuellement ou automatisé.\nDeux vues distinctes séparent le cockpit de l’animateur et la fenêtre destinée au public. Cette dernière peut être placée sur un second écran ou un projecteur, avec une présentation visuelle et sonore dédiée.",
     "image": "projects/blindset-studio.webp",
     "link": "https://blindset.fr",
     "github": "",
@@ -17,16 +17,44 @@
     "status": "online",
     "type": "Application macOS",
     "interesting": true,
-    "context": "Besoin d'un outil desktop pour préparer et animer des blind tests musicaux avec un écran public dédié.",
-    "need": "Une application macOS native pour gérer bibliothèque, extraits, effets et diffusion live.",
-    "solution": "Développement d'une app macOS en Swift, centrée sur la préparation des quiz et le pilotage d'un écran public.",
+    "context": "BlindSet Studio est né d’un besoin concret en animation musicale : les catalogues imposés limitaient le choix des morceaux et le déroulement des quiz laissait trop peu de contrôle à l’animateur.\nJ’ai choisi de développer un produit destiné aux DJ, aux animateurs et à toute personne souhaitant préparer ses propres quiz musicaux, avec l’objectif de le commercialiser à terme.",
+    "need": "Permettre de construire un quiz de A à Z à partir de sa propre bibliothèque musicale, puis décider en soirée du moment où afficher les propositions et révéler la réponse. L’outil devait proposer une interface moderne et rester utilisable sans connexion Internet.",
+    "solution": "Avant la prestation, l’utilisateur importe ses fichiers audio, prépare les questions, choisit les extraits et leur point de départ, puis renseigne quatre propositions et la bonne réponse.\nPendant la soirée, il lance le quiz préparé et contrôle sa progression : présentation du mode de jeu, énoncé, propositions puis réponse. Le déroulement peut être piloté manuellement ou automatisé.\nDeux vues distinctes séparent le cockpit de l’animateur et la fenêtre destinée au public. Cette dernière peut être placée sur un second écran ou un projecteur, avec une présentation visuelle et sonore dédiée.",
     "features": [
-      "Préparation de quiz musicaux",
-      "Gestion de bibliothèque et extraits",
-      "Effets audio",
-      "Pilotage écran public pendant l’animation"
+      "Création de quiz personnalisés depuis les fichiers audio de l’ordinateur",
+      "Choix du point de départ des extraits, de quatre propositions et de la bonne réponse",
+      "Modes blind test classique, extrait accéléré, ralenti, inversé, tonalité modifiée et culture musicale",
+      "Pilotage manuel des étapes ou déroulement automatique",
+      "Cockpit animateur et fenêtre publique distincte pour second écran ou projecteur",
+      "Ajout des participants et attribution manuelle des points depuis le cockpit",
+      "Fonctionnement hors ligne et interface native macOS inspirée de Liquid Glass"
     ],
-    "result": "Un outil natif macOS pensé pour animer des blind tests de façon fluide et personnalisée."
+    "result": "L’application est distribuée en bêta publique gratuite et a déjà fait l’objet de plusieurs tests en soirée auprès de quelques utilisateurs. Cette phase permet de recueillir des retours avant une future commercialisation. Le site vitrine présente un aperçu de l’application.",
+    "summary": "Créer ses propres quiz musicaux et garder la main sur leur animation, dans une application macOS native utilisable hors ligne.",
+    "facts": [
+      {
+        "label": "Origine",
+        "value": "Un besoin terrain en animation musicale"
+      },
+      {
+        "label": "Public",
+        "value": "DJ, animateurs et créateurs de quiz"
+      },
+      {
+        "label": "Intervention",
+        "value": "Conception et développement en solo"
+      },
+      {
+        "label": "Disponibilité",
+        "value": "Bêta publique gratuite"
+      }
+    ],
+    "role": "J’ai conçu et développé l’ensemble de l’application, du parcours de préparation au cockpit d’animation et à l’affichage public. Les tests en soirée et les retours des premiers utilisateurs servent aujourd’hui à orienter les évolutions de la bêta.",
+    "challenges": "L’enjeu central est de donner à l’animateur une maîtrise précise du rythme tout en proposant au public une présentation lisible et soignée. La séparation du cockpit et de l’écran public permet de préparer et piloter les étapes sans exposer les commandes ni les réponses à l’avance. L’utilisation de fichiers locaux rend l’animation indépendante d’une connexion Internet.",
+    "roadmap": [
+      "Connexion de buzzers physiques pour enrichir l’interaction avec les participants",
+      "Assistance par IA pour faciliter la conception et la correction des quiz"
+    ]
   },
   {
     "id": 39,
@@ -99,7 +127,7 @@
     "id": 29,
     "name": "Private Events - DJ Mika",
     "slug": "private-events-dj-mika",
-    "description": "Refonte complète du site Private Events pour DJ Mika, réalisée le 13 juin 2026. Le projet a été entièrement reconstruit côté architecture, style et référencement, afin d'offrir une vitrine plus claire, plus rapide et mieux adaptée à la conversion.\n\nLe site présente les prestations de DJ et karaoké pour événements privés et soirées d'entreprise, avec une expérience mobile-first et un parcours de contact simplifié. Un constructeur d'événement a également été ajouté pour faciliter la demande de devis : les visiteurs précisent le type d'événement, le contexte et leurs besoins avant d'envoyer leur demande.",
+    "description": "Une refonte complète pour rassurer les prospects et transformer leurs idées d’événements en demandes de devis structurées.\n\nPrivate Events accompagne les mariages, anniversaires, soirées privées, événements d’entreprise et d’association dans les secteurs de Lyon, Montpellier et Toulon. Une partie des prospects découvre le DJ sur Bark : le site doit ensuite les rassurer sur son professionnalisme et les aider à préciser leur demande.\nL’ancien site tenait sur une seule page, avec une présentation vieillissante, une navigation confuse et une adaptation mobile incomplète. Il ne proposait aucun parcours pour préparer une demande de devis.\n\nLe site articule désormais un catalogue de prestations, des réalisations et des avis pour permettre aux visiteurs de se projeter. Le design a été affiné et les médias optimisés pour rendre la consultation plus agréable, notamment sur mobile.\nLe constructeur d’événement guide le visiteur jusqu’à l’envoi de sa demande. Le DJ reçoit un e-mail récapitulatif avec les coordonnées et les choix renseignés pour préparer un devis personnalisé. Aucun tarif estimatif n’est affiché.",
     "image": "projects/private-events-thumbnail.webp",
     "link": "https://privateevents.fr",
     "github": "https://github.com/arthur-mdn/privateevents.fr",
@@ -115,16 +143,40 @@
     "status": "online",
     "type": "Site web",
     "interesting": true,
-    "context": "DJ Mika avait besoin d'une présence en ligne plus moderne, mieux référencée et capable de convertir plus facilement les demandes d'événements.",
-    "need": "Une refonte complète du site : architecture, design, SEO et un parcours de devis plus guidé.",
-    "solution": "Reconstruction du site avec une nouvelle structure, un style mis à jour, une base SEO technique propre et un constructeur d'événement pour préparer les demandes de devis.",
+    "context": "Private Events accompagne les mariages, anniversaires, soirées privées, événements d’entreprise et d’association dans les secteurs de Lyon, Montpellier et Toulon. Une partie des prospects découvre le DJ sur Bark : le site doit ensuite les rassurer sur son professionnalisme et les aider à préciser leur demande.\nL’ancien site tenait sur une seule page, avec une présentation vieillissante, une navigation confuse et une adaptation mobile incomplète. Il ne proposait aucun parcours pour préparer une demande de devis.",
+    "need": "Présenter clairement les prestations, montrer des réalisations réelles et leurs avis associés, puis recueillir les informations utiles au DJ avant son premier échange avec le prospect. Le parcours devait aussi convenir aux visiteurs qui ne connaissent pas encore leur date ou leur nombre d’invités.",
+    "solution": "Le site articule désormais un catalogue de prestations, des réalisations et des avis pour permettre aux visiteurs de se projeter. Le design a été affiné et les médias optimisés pour rendre la consultation plus agréable, notamment sur mobile.\nLe constructeur d’événement guide le visiteur jusqu’à l’envoi de sa demande. Le DJ reçoit un e-mail récapitulatif avec les coordonnées et les choix renseignés pour préparer un devis personnalisé. Aucun tarif estimatif n’est affiché.",
     "features": [
-      "Refonte complète architecture et design",
-      "Optimisation SEO technique",
-      "Constructeur d'événement pour devis",
-      "Parcours mobile-first orienté conversion"
+      "Type d’événement, date connue ou à préciser, lieu ou ville et nombre d’invités, avec possibilité d’indiquer une information encore inconnue",
+      "Prise en compte de la sonorisation et de l’éclairage déjà sur place pour distinguer une prestation complète d’une intervention sur équipement existant",
+      "Choix des ambiances musicales : généraliste, festive, années 80, années 2000 ou musiques actuelles",
+      "Sélection des prestations : DJ, sonorisation, micros, karaoké, quiz, blind test, photo et vidéobooth, photographe ou diaporama",
+      "Options complémentaires : musiciens, artistes, magie, hypnose, mentalisme, effets de scène, décoration et services pour l’événement",
+      "Informations complémentaires et coordonnées regroupées dans un e-mail adressé au DJ",
+      "Catalogue de réalisations et avis associés pour appuyer la présentation des prestations"
     ],
-    "result": "Une vitrine plus professionnelle, plus visible, et un parcours de contact plus simple pour les événements privés."
+    "result": "Le client a particulièrement apprécié le professionnalisme de la nouvelle présentation. Les réalisations et les avis donnent aux prospects des exemples concrets avant la prise de contact.\nDes améliorations de performance et de visibilité ont été observées, notamment dans Google Search Console.",
+    "summary": "Une refonte complète pour rassurer les prospects et transformer leurs idées d’événements en demandes de devis structurées.",
+    "facts": [
+      {
+        "label": "Client",
+        "value": "Private Events · DJ indépendant"
+      },
+      {
+        "label": "Durée",
+        "value": "Environ deux semaines"
+      },
+      {
+        "label": "Intervention",
+        "value": "Conception et réalisation en solo"
+      },
+      {
+        "label": "Suivi",
+        "value": "Hébergement, maintenance et évolutions"
+      }
+    ],
+    "role": "J’ai mené seul l’ensemble de la refonte, de la définition du besoin aux maquettes, à l’intégration et à la mise en ligne. La construction s’est faite main dans la main avec le client, en intégrant progressivement ses éléments graphiques et ses contenus.\nJe prends aujourd’hui en charge l’hébergement, la maintenance et les évolutions, ainsi que l’ajout de prestations et de nouveaux avis.",
+    "challenges": "Le principal enjeu était de rendre une offre très variée compréhensible sans alourdir la préparation d’un événement. Le parcours distingue le contexte, l’équipement du lieu, les ambiances et les prestations pour recueillir une demande exploitable. L’optimisation des médias accompagne cette présentation plus complète."
   },
   {
     "id": 37,
@@ -159,7 +211,7 @@
     "id": 8,
     "name": "DisplayHub",
     "slug": "displayhub",
-    "description": "DisplayHub est un système d'affichage dynamique basé sur Raspberry Pi, conçu pour diffuser des informations pratiques et visuelles sur un écran. Il affiche une page web animée avec logo, météo, date, directives de navigation, slider photo et bandeau d'informations.\n\nUn panel administratif permet d'ajouter, modifier ou supprimer directives, orientations de flèches, photos et icônes. Le système inclut un mode sombre programmable, la gestion d'horaires d'affichage et une intégration météo en temps réel.\n\nCe dispositif illustre la capacité à concevoir une solution d'affichage interactive, utile au quotidien et administrable sans complexité.",
+    "description": "Un affichage d’accueil pilotable à distance, conçu pour remplacer les mises à jour par clé USB et simplifier l’orientation des visiteurs.\n\nÀ l’accueil d’un EHPAD, l’écran doit aider les visiteurs à trouver le secrétariat, les chambres ou les toilettes, tout en diffusant des photos et des informations pratiques. La solution précédente nécessitait des manipulations complexes avec une clé USB pour actualiser les contenus.\nDisplayHub est né de ce besoin : mettre à jour l’affichage à distance, simplement et sans intervenir physiquement derrière le téléviseur. Le principe peut s’appliquer à d’autres lieux d’accueil.\n\nDisplayHub est une application web progressive dont l’affichage se synchronise en temps réel par WebSocket avec l’espace de gestion. Un Raspberry Pi connecté au téléviseur lance automatiquement la page en mode kiosque. Un téléviseur capable d’afficher une page web en mode kiosque constitue une autre possibilité d’installation.\nL’utilisateur crée son compte puis scanne le QR code affiché sur l’écran à associer. Il peut ensuite personnaliser ses contenus depuis un navigateur sur smartphone ou ordinateur.\nEn cas de perte du réseau, la PWA continue d’afficher le contenu disponible localement, sans recevoir de mises à jour. Une icône discrète signale la déconnexion et l’espace de gestion indique que l’écran est hors ligne. Après le rétablissement du courant, le Raspberry Pi redémarre automatiquement sur l’affichage.",
     "image": "projects/displayhub-thumbnail.webp",
     "link": "https://displayhub.fr",
     "github": "",
@@ -184,16 +236,41 @@
     "status": "online",
     "type": "Écran interactif",
     "interesting": true,
-    "context": "Besoin d'un écran d'aide à la navigation capable d'afficher des informations utiles et actualisées en continu.",
-    "need": "Un système d'affichage dynamique, administrable, avec météo, directives et contenus visuelle.",
-    "solution": "Développement d'une interface web animée déployée sur Raspberry Pi, avec back-office et programmation horaire.",
+    "context": "À l’accueil d’un EHPAD, l’écran doit aider les visiteurs à trouver le secrétariat, les chambres ou les toilettes, tout en diffusant des photos et des informations pratiques. La solution précédente nécessitait des manipulations complexes avec une clé USB pour actualiser les contenus.\nDisplayHub est né de ce besoin : mettre à jour l’affichage à distance, simplement et sans intervenir physiquement derrière le téléviseur. Le principe peut s’appliquer à d’autres lieux d’accueil.",
+    "need": "Permettre aux équipes de modifier les directions, les images et les informations depuis un smartphone ou un ordinateur, avec des droits adaptés à chaque utilisateur. L’affichage devait aussi reprendre automatiquement après une coupure de courant et rester consultable lors d’une perte de réseau.",
+    "solution": "DisplayHub est une application web progressive dont l’affichage se synchronise en temps réel par WebSocket avec l’espace de gestion. Un Raspberry Pi connecté au téléviseur lance automatiquement la page en mode kiosque. Un téléviseur capable d’afficher une page web en mode kiosque constitue une autre possibilité d’installation.\nL’utilisateur crée son compte puis scanne le QR code affiché sur l’écran à associer. Il peut ensuite personnaliser ses contenus depuis un navigateur sur smartphone ou ordinateur.\nEn cas de perte du réseau, la PWA continue d’afficher le contenu disponible localement, sans recevoir de mises à jour. Une icône discrète signale la déconnexion et l’espace de gestion indique que l’écran est hors ligne. Après le rétablissement du courant, le Raspberry Pi redémarre automatiquement sur l’affichage.",
     "features": [
-      "Affichage dynamique multi-contenus",
-      "Panel administratif",
-      "Mode sombre programmable",
-      "Météo en temps réel"
+      "Association d’un écran au compte utilisateur par QR code et gestion de plusieurs écrans",
+      "Modification en temps réel du nom, du logo, des icônes et des directions avec flèches",
+      "Galerie photo pour alimenter le diaporama de l’écran d’accueil",
+      "Widget météo activable avec choix de la ville",
+      "Programmation des plages horaires du mode sombre et du texte défilant",
+      "Ajout d’utilisateurs et restriction des droits, par exemple à la galerie photo pour le secrétariat",
+      "Commandes à distance sur les installations compatibles : extinction, redémarrage et localisation",
+      "Affichage local en cas de coupure réseau, indication de déconnexion et redémarrage automatique du boîtier après une coupure de courant"
     ],
-    "result": "Un écran d'information autonome, clair et simple à maintenir au quotidien."
+    "result": "DisplayHub a été utilisé pendant plus de six mois dans un EHPAD, sans problème détecté sur cette période et avec un retour très satisfaisant. Une dizaine d’écrans sont actuellement gérés au total.\nUn déploiement dans un second établissement est prévu. L’objectif est désormais de proposer cette solution à d’autres structures ayant besoin d’un affichage d’accueil facile à administrer.",
+    "summary": "Un affichage d’accueil pilotable à distance, conçu pour remplacer les mises à jour par clé USB et simplifier l’orientation des visiteurs.",
+    "facts": [
+      {
+        "label": "Premier usage",
+        "value": "Accueil d’un EHPAD"
+      },
+      {
+        "label": "Intervention",
+        "value": "Conception, développement et installation en solo"
+      },
+      {
+        "label": "Terrain",
+        "value": "Plus de six mois d’utilisation dans un EHPAD"
+      },
+      {
+        "label": "Parc actuel",
+        "value": "Une dizaine d’écrans gérés"
+      }
+    ],
+    "role": "J’ai pris en charge l’ensemble du projet : interface d’affichage, espace de gestion, serveur, synchronisation, configuration du Raspberry Pi et installation. Le développement et les évolutions s’inscrivent dans un travail mené sur environ un an.",
+    "challenges": "Le projet devait concilier la simplicité de gestion pour les équipes et la continuité de l’affichage dans un lieu d’accueil. La synchronisation en temps réel supprime les transferts par clé USB ; les droits limités permettent de déléguer certaines mises à jour ; le fonctionnement local évite un écran vide lors d’une coupure réseau. Une connexion permanente reste nécessaire pour recevoir les nouveaux contenus, avec une liaison filaire privilégiée pour le boîtier."
   },
   {
     "id": 36,
@@ -516,12 +593,12 @@
     "id": 25,
     "name": "Réseau Mistral",
     "slug": "reseau-mistral",
-    "description": "Ce projet est une application web complexe et multifonctionnelle pour la validation des titres de transport, utilisée pour les bus et les bateaux. Développée avec React et Node.js, cette application est également gérée via Docker, offrant ainsi une solution robuste et scalable.\n\nL'application permet aux utilisateurs de se créer un compte et d'associer plusieurs profils à ce compte, ce qui est particulièrement utile pour les familles ou les groupes. Une fois inscrits, les utilisateurs ont la possibilité d'acheter différents types de tickets selon leurs besoins de voyage. Les tickets sont diversifiés, comprenant des options pour les voyages terrestres (bus) et maritimes (bateaux), ainsi que des abonnements, tels que des tickets hebdomadaires, offrant une flexibilité et une commodité maximales.\n\nL'un des aspects les plus innovants de l'application est la fonction de scan de QR code. Lorsqu'un utilisateur monte dans un bus, il peut scanner un QR code spécifique à ce véhicule, ce qui valide un ticket d'une heure. Cette fonctionnalité rend l'utilisation des transports en commun plus efficace et plus pratique, réduisant le besoin de tickets physiques et accélérant le processus d'embarquement.\n\nEn plus de la vente et de la validation des tickets, l'application est équipée d'une interface de contrôle pour les agents de contrôle des transports. Cette interface permet de vérifier facilement la validité des tickets des passagers, assurant ainsi la conformité et la sécurité du système de transport.\n\nCe projet, impliquant React, Node.js et MongoDB pour la gestion des données, est un exemple de mon expertise en matière de développement de solutions web complètes et modernes. Il démontre ma capacité à créer des applications fonctionnelles et conviviales, tout en répondant aux besoins spécifiques d'un secteur d'activité tel que le transport public. La gestion via Docker assure une mise en œuvre et un déploiement efficaces, soulignant mon engagement à adopter des technologies de pointe pour offrir des solutions performantes et évolutives.",
+    "description": "Une application web de billetterie, du choix d’un ticket au scan de QR code, avec une interface pensée pour un usage mobile.\n\nCe projet personnel étudiant prend pour référence une application de validation des titres de transport sur un réseau de bus et de bateaux. que j’utilisais au quotidien. Il explore les parcours de billetterie des bus et bateaux, avec une attention particulière à la fidélité visuelle et à la fluidité des interactions.\n\nL’application associe React pour l’interface, Node.js pour le serveur et MongoDB pour les données, avec un déploiement via Docker. Elle couvre le cycle du ticket, depuis sa sélection jusqu’à l’affichage de son état après activation.\nLe lecteur reconnaît les QR codes présents dans les bus et bateaux. Les transactions et les tickets restent fictifs, sans collecte de données bancaires.",
     "image": "projects/reseau-mistral.webp",
     "link": "https://reseau-mistral.mondon.pro",
     "github": "https://github.com/arthur-mdn/reseau-mistral",
     "youtube": [],
-    "disclaimer": "Ce projet est une <strong>simulation</strong> à des fins <strong>éducatives et démonstratives</strong> de l'application de validation de tickets de transports <strong>M-Tickets - Réseau mistral</strong> pour Toulon Métropole. Conçue pour mettre en valeur mes aptitudes en React et Node.js. <strong>Son usage dans un contexte réel ou quotidien est strictement interdit</strong>. Cette application n'a aucun lien avec l'application originale et <strong>ne doit pas être utilisée</strong> comme telle. Tous les éléments de propriété intellectuelle appartiennent à leurs détenteurs respectifs. <strong>Je décline toute responsabilité</strong> en cas d'utilisation inappropriée de cette simulation. Une bannière d'avertissement est continuellement visible sur le site, servant de rappel des conditions d'utilisation afin de prévenir tout emploi illicite de l'application.",
+    "disclaimer": "Projet personnel de <strong>démonstration, sans lien officiel avec Réseau Mistral</strong>. Paiements et tickets sont fictifs : ils ne permettent pas de voyager. Un bandeau de démonstration reste visible en permanence dans l’application. Les éléments de propriété intellectuelle appartiennent à leurs détenteurs respectifs.",
     "technos": [
       101,
       102,
@@ -537,18 +614,39 @@
     "status": "online",
     "type": "WebApp",
     "interesting": true,
-    "context": "Application web destinée à la validation des titres de transport sur un réseau de bus et de bateaux. Le produit devait couvrir à la fois l'usager (achat, validation) et le contrôle (vérification).\nL'architecture devait rester robuste et déployable proprement, d'où l'usage de Docker.",
-    "need": "Permettre la création de comptes multi-profils (familles / groupes), l'achat de tickets et abonnements, la validation via QR code à bord, et un espace de contrôle pour les agents.\nLe parcours devait rester simple malgré la complexité métier transport.",
-    "solution": "WebApp complète React / Node.js / MongoDB, déployée avec Docker. Les usagers gèrent leurs profils et tickets ; le scan QR à bord valide un ticket d'une heure. Une interface dédiée permet aux agents de contrôler la validité des titres.\nL'ensemble couvre le cycle vente → validation → contrôle dans une seule application.",
+    "context": "Ce projet personnel étudiant prend pour référence une application de validation des titres de transport sur un réseau de bus et de bateaux, que j’utilisais au quotidien. Réseau Mistral. Il explore les parcours de billetterie des bus et bateaux, avec une attention particulière à la fidélité visuelle et à la fluidité des interactions.",
+    "need": "Concevoir un parcours cohérent autour du ticket : sélection, achat simulé, scan de QR code, activation et écran de contrôle. Chaque étape devait être simple à comprendre et agréable à utiliser sur mobile.",
+    "solution": "L’application associe React pour l’interface, Node.js pour le serveur et MongoDB pour les données, avec un déploiement via Docker. Elle couvre le cycle du ticket, depuis sa sélection jusqu’à l’affichage de son état après activation.\nLe lecteur reconnaît les QR codes présents dans les bus et bateaux. Les transactions et les tickets restent fictifs, sans collecte de données bancaires.",
     "features": [
-      "Comptes utilisateurs avec profils multiples (familles / groupes)",
-      "Achat de tickets bus / bateau et abonnements",
-      "Validation par scan QR code à bord (ticket d'une heure)",
-      "Interface de contrôle pour les agents",
-      "Stack React, Node.js et MongoDB",
-      "Déploiement et industrialisation via Docker"
+      "Interface mobile inspirée du parcours de billetterie de référence",
+      "Sélection et achat simulé de tickets",
+      "Scan de QR code et activation du ticket",
+      "Consultation de l’état du ticket et écran de contrôle",
+      "Gestion des données avec Node.js et MongoDB",
+      "Déploiement de l’application avec Docker"
     ],
-    "result": "Une application métier complète pour fluidifier l'achat et la validation des titres, tout en donnant aux agents un outil de contrôle clair."
+    "result": "Une application full-stack accessible publiquement qui met en valeur mon travail d’interface et ma capacité à développer un parcours complet. Les retours informels ont souligné la fluidité et la qualité de la réalisation visuelle.",
+    "summary": "Une application web de billetterie, du choix d’un ticket au scan de QR code, avec une interface pensée pour un usage mobile.",
+    "facts": [
+      {
+        "label": "Cadre",
+        "value": "Projet personnel étudiant"
+      },
+      {
+        "label": "Objectif",
+        "value": "Conception d’un parcours de billetterie full-stack"
+      },
+      {
+        "label": "Intervention",
+        "value": "Interface, serveur, données et déploiement en solo"
+      },
+      {
+        "label": "Accès",
+        "value": "Démonstration publique · données fictives"
+      }
+    ],
+    "role": "J’ai réalisé seul le front-end, le serveur, le traitement des données et le déploiement. Cette prise en charge complète m’a permis d’articuler le travail d’interface avec la gestion des tickets côté serveur.",
+    "challenges": "Le principal enjeu était de coordonner une interface fidèle à la référence avec les changements d’état du ticket côté serveur. Le parcours relie sélection, scan et consultation dans une expérience continue, avec une attention portée à la fluidité sur mobile."
   },
   {
     "id": 1,

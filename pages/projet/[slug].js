@@ -48,6 +48,7 @@ function ProjectPage({ project }) {
   };
 
   const metaDescription = (
+    project.summary ||
     project.context ||
     project.description ||
     ""
@@ -125,6 +126,19 @@ function ProjectPage({ project }) {
             {formatDate(project.date)} · Arthur Mondon
           </p>
 
+          {project.summary && <p className="project-summary">{project.summary}</p>}
+
+          {project.facts?.length > 0 && (
+            <dl className="project-facts">
+              {project.facts.map((fact) => (
+                <div key={fact.label}>
+                  <dt>{fact.label}</dt>
+                  <dd>{fact.value}</dd>
+                </div>
+              ))}
+            </dl>
+          )}
+
           {project.disclaimer && (
             <div className="PP_disclaimer fr g1 ai-c">
               <FaTriangleExclamation size="2rem" />
@@ -134,60 +148,33 @@ function ProjectPage({ project }) {
 
           {hasCaseStudy ? (
             <div className="case-grid">
-              {project.context && (
-                <div className="case-block">
-                  <h2>Contexte</h2>
-                  {String(project.context)
-                    .split(/\n+/)
-                    .filter(Boolean)
-                    .map((paragraph) => (
-                      <p key={paragraph.slice(0, 40)}>{paragraph}</p>
-                    ))}
-                </div>
-              )}
-              {project.need && (
-                <div className="case-block">
-                  <h2>Besoin</h2>
-                  {String(project.need)
-                    .split(/\n+/)
-                    .filter(Boolean)
-                    .map((paragraph) => (
-                      <p key={paragraph.slice(0, 40)}>{paragraph}</p>
-                    ))}
-                </div>
-              )}
-              {project.solution && (
-                <div className="case-block">
-                  <h2>Solution</h2>
-                  {String(project.solution)
-                    .split(/\n+/)
-                    .filter(Boolean)
-                    .map((paragraph) => (
-                      <p key={paragraph.slice(0, 40)}>{paragraph}</p>
-                    ))}
-                </div>
-              )}
-              {project.features?.length > 0 && (
-                <div className="case-block">
-                  <h2>Fonctionnalités</h2>
-                  <ul>
-                    {project.features.map((feature) => (
-                      <li key={feature}>{feature}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-              {project.result && (
-                <div className="case-block">
-                  <h2>Résultat</h2>
-                  {String(project.result)
-                    .split(/\n+/)
-                    .filter(Boolean)
-                    .map((paragraph) => (
-                      <p key={paragraph.slice(0, 40)}>{paragraph}</p>
-                    ))}
-                </div>
-              )}
+              {[
+                { key: "context", title: "Le point de départ", content: project.context },
+                { key: "need", title: "Les objectifs", content: project.need },
+                { key: "role", title: "Mon intervention", content: project.role },
+                { key: "solution", title: "La solution", content: project.solution },
+                { key: "features", title: "Les fonctionnalités", items: project.features },
+                { key: "challenges", title: "Les enjeux et les choix", content: project.challenges },
+                { key: "result", title: "Les résultats et l’usage actuel", content: project.result },
+                { key: "roadmap", title: "Les évolutions envisagées", items: project.roadmap },
+              ]
+                .filter((section) => section.content || section.items?.length)
+                .map((section) => (
+                  <section className="case-block" key={section.key}>
+                    <h2>{section.title}</h2>
+                    {section.content && String(section.content)
+                      .split(/\n+/)
+                      .filter(Boolean)
+                      .map((paragraph, index) => (
+                        <p key={`${section.key}-${index}`}>{paragraph}</p>
+                      ))}
+                    {section.items?.length > 0 && (
+                      <ul>
+                        {section.items.map((item) => <li key={item}>{item}</li>)}
+                      </ul>
+                    )}
+                  </section>
+                ))}
             </div>
           ) : (
             <div className="case-block">
