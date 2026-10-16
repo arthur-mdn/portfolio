@@ -1,5 +1,163 @@
 [
   {
+    "id": 41,
+    "name": "Burger Maker",
+    "slug": "burger-maker",
+    "summary": "Préparer, assembler et servir des burgers à temps : un jeu de cuisine développé avec Godot, avec dix niveaux de difficulté progressive.",
+    "description": "Préparer, assembler et servir des burgers à temps : un jeu de cuisine développé avec Godot, avec dix niveaux de difficulté progressive.\n\nBurger Maker a été réalisé en solo dans le cadre d’un module de 35 heures en Master 2 à MyDigitalSchool Montpellier, le 9 avril 2026. Le brief imposait l’utilisation de Godot et la création d’une boucle de gameplay et de son expérience utilisateur, avec un choix libre du concept. J’ai proposé un jeu de cuisine où des clients attendent leur burger à la fenêtre de service.\n\nChaque commande apparaît sur un ticket avec son propre compte à rebours et une indication visuelle de l’urgence. Le joueur prend les ingrédients dans les distributeurs, surveille leur cuisson, découpe les légumes et assemble le burger sur un emplacement dédié avant de le déposer à la fenêtre de service.\nLes ingrédients se manipulent en maintenant le clic gauche, puis en le relâchant à l’emplacement souhaité. Les garnitures peuvent être empilées dans l’ordre voulu, à condition d’utiliser un pain inférieur et un pain supérieur. Les ingrédients ratés peuvent être jetés à la poubelle.\nPour réussir un niveau, il faut livrer suffisamment de commandes valides avant la fin du temps global, sans dépasser la limite d’erreurs. Les réussites débloquent le niveau suivant ; les niveaux accessibles et les meilleurs scores sont sauvegardés.",
+    "image": "projects/godot-burger-maker-thumbnail.webp",
+    "link": "",
+    "github": "https://github.com/arthur-mdn/Godot-Burger-Maker",
+    "youtube": [],
+    "technos": [
+      405
+    ],
+    "tags": [
+      "Godot",
+      "Jeu vidéo",
+      "3D",
+      "Gestion du temps"
+    ],
+    "date": "2026-04-09",
+    "status": "archived",
+    "type": "Jeu vidéo",
+    "interesting": true,
+    "facts": [
+      {
+        "label": "Cadre",
+        "value": "Module de Master 2 · MyDigitalSchool Montpellier"
+      },
+      {
+        "label": "Temps alloué",
+        "value": "35 heures"
+      },
+      {
+        "label": "Intervention",
+        "value": "Conception et réalisation entièrement en solo"
+      },
+      {
+        "label": "Moteur",
+        "value": "Godot"
+      }
+    ],
+    "context": "Burger Maker a été réalisé en solo dans le cadre d’un module de 35 heures en Master 2 à MyDigitalSchool Montpellier, le 9 avril 2026. Le brief imposait l’utilisation de Godot et la création d’une boucle de gameplay et de son expérience utilisateur, avec un choix libre du concept. J’ai proposé un jeu de cuisine où des clients attendent leur burger à la fenêtre de service.",
+    "need": "Construire une boucle de jeu complète autour de la préparation, de l’assemblage et du service des commandes, tout en découvrant Godot dans un temps très limité. La difficulté augmente avec davantage de commandes, plus d’éléments à préparer et des délais de plus en plus courts.",
+    "solution": "Chaque commande apparaît sur un ticket avec son propre compte à rebours et une indication visuelle de l’urgence. Le joueur prend les ingrédients dans les distributeurs, surveille leur cuisson, découpe les légumes et assemble le burger sur un emplacement dédié avant de le déposer à la fenêtre de service.\nLes ingrédients se manipulent en maintenant le clic gauche, puis en le relâchant à l’emplacement souhaité. Les garnitures peuvent être empilées dans l’ordre voulu, à condition d’utiliser un pain inférieur et un pain supérieur. Les ingrédients ratés peuvent être jetés à la poubelle.\nPour réussir un niveau, il faut livrer suffisamment de commandes valides avant la fin du temps global, sans dépasser la limite d’erreurs. Les réussites débloquent le niveau suivant ; les niveaux accessibles et les meilleurs scores sont sauvegardés.",
+    "features": [
+      "Dix niveaux progressifs, du burger steak simple aux recettes les plus garnies",
+      "Commandes en temps réel avec compte à rebours par ticket et urgence visuelle",
+      "Chaîne de production avec distributeurs, plaques de cuisson, planches à découper et emplacements d’assemblage",
+      "Manipulation des ingrédients par clic maintenu et relâchement",
+      "Empilement libre des garnitures avec pain inférieur et supérieur obligatoires",
+      "États de cuisson cru, cuit et brûlé à surveiller",
+      "Découpe obligatoire de la tomate, de la salade et de l’oignon",
+      "Retour immédiat au service : validation, erreur et flash lumineux",
+      "Objectifs de commandes, limite d’erreurs et déblocage des niveaux",
+      "Sauvegarde des niveaux débloqués et des meilleurs scores"
+    ],
+    "controlsTable": {
+      "headers": [
+        "Action",
+        "Contrôle"
+      ],
+      "rows": [
+        [
+          "Prendre un ingrédient",
+          "Maintenir le clic gauche sur l’objet"
+        ],
+        [
+          "Déplacer",
+          "Maintenir le clic : l’ingrédient suit le curseur"
+        ],
+        [
+          "Poser ou déposer",
+          "Relâcher le clic à l’emplacement voulu"
+        ],
+        [
+          "Assembler un burger",
+          "Empiler les ingrédients sur un emplacement bleu"
+        ],
+        [
+          "Servir une commande",
+          "Déposer le burger complet à la fenêtre de service"
+        ],
+        [
+          "Se débarrasser d’un raté",
+          "Déposer l’élément dans la poubelle"
+        ]
+      ]
+    },
+    "progressionTable": {
+      "headers": [
+        "Niveau",
+        "Nom",
+        "Nouveauté"
+      ],
+      "rows": [
+        [
+          "1",
+          "Premier flip",
+          "Steak et pain"
+        ],
+        [
+          "2",
+          "Fromage fondant",
+          "Fromage"
+        ],
+        [
+          "3",
+          "Enchaînement",
+          "Rythme plus soutenu"
+        ],
+        [
+          "4",
+          "Salade croquante",
+          "Découpe"
+        ],
+        [
+          "5",
+          "Tomate fraîche",
+          "Tomate"
+        ],
+        [
+          "6",
+          "Service rapide",
+          "Deux plaques et davantage d’emplacements"
+        ],
+        [
+          "7",
+          "Oignon piquant",
+          "Oignon"
+        ],
+        [
+          "8",
+          "Sans répit",
+          "Tous les ingrédients, pression maximale"
+        ],
+        [
+          "9",
+          "Tout feu tout flamme",
+          "Recettes XXL"
+        ],
+        [
+          "10",
+          "Maître burger",
+          "L’épreuve finale"
+        ]
+      ]
+    },
+    "result": "Le jeu a été très apprécié des autres élèves qui l’ont testé. Le jury s’est montré extrêmement satisfait du résultat obtenu en seulement 35 heures.\nLe projet est terminé et n’est plus maintenu. Le code source est public sur GitHub, où une version téléchargeable du jeu est également disponible.",
+    "credits": "Les assets 3D proviennent du pack [KayKit Restaurant Bits](https://kaylousberg.itch.io/restaurant-bits), créé par Kay Lousberg.",
+    "relatedProjects": [
+      {
+        "slug": "save-the-turtles",
+        "reason": "Un autre jeu interactif de mon parcours universitaire, réalisé avec Unity et Python et piloté par les mouvements des mains."
+      }
+    ],
+    "role": "J’ai conçu et réalisé seul l’ensemble du jeu en 35 heures : gameplay, expérience utilisateur, commandes, préparation des ingrédients, assemblage, progression et sauvegarde. Après avoir utilisé Unity et Construct, ce module constituait ma première expérience avec Godot.\nJ’ai d’abord consolidé la logique d’empilement et les interactions avec des sprites temporaires simples, avant de les remplacer par les assets 3D du kit KayKit une fois la base du jeu fonctionnelle.",
+    "challenges": "Le principal défi était de produire un prototype jouable rapidement tout en apprenant un moteur imposé. Pour concentrer le travail sur le fonctionnement du jeu, j’ai séparé la validation des mécaniques de leur présentation visuelle : d’abord l’empilement avec des sprites temporaires, puis l’intégration des assets 3D.\nLa progression augmente la pression sur plusieurs axes : nombre de commandes, variété des ingrédients à préparer et réduction du temps disponible. Des tests avec les autres élèves ont permis de confronter le jeu à de vrais joueurs pendant le module."
+  },
+  {
     "id": 40,
     "name": "BlindSet Studio",
     "slug": "blindset-studio",
@@ -939,6 +1097,10 @@
       {
         "slug": "visites-virtuelles",
         "reason": "Des expériences 360° avec une chasse au trésor intégrée à une visite d’entreprise."
+      },
+      {
+        "slug": "burger-maker",
+        "reason": "Un jeu de cuisine développé avec Godot, centré sur la préparation des commandes et la progression sur dix niveaux."
       }
     ]
   },

@@ -182,11 +182,14 @@ function ProjectPage({ project }) {
                 { key: "role", title: "Mon intervention", content: project.role },
                 { key: "solution", title: "La solution", content: project.solution },
                 { key: "features", title: "Les fonctionnalités", items: project.features },
+                { key: "controls", title: "Comment jouer", table: project.controlsTable },
+                { key: "progression", title: "La progression", table: project.progressionTable },
                 { key: "challenges", title: "Les enjeux et les choix", content: project.challenges },
                 { key: "result", title: "Les résultats et l’usage actuel", content: project.result },
+                { key: "credits", title: "Crédits", content: project.credits },
                 { key: "roadmap", title: "Les évolutions envisagées", items: project.roadmap },
               ]
-                .filter((section) => section.content || section.items?.length)
+                .filter((section) => section.content || section.items?.length || section.table?.rows?.length)
                 .map((section) => (
                   <section className="case-block" key={section.key}>
                     <h2>{section.title}</h2>
@@ -207,6 +210,25 @@ function ProjectPage({ project }) {
                       <ul>
                         {section.items.map((item) => <li key={item}>{item}</li>)}
                       </ul>
+                    )}
+                    {section.table?.rows?.length > 0 && (
+                      <div className="project-table-wrapper" role="region" aria-label={section.title} tabIndex={0}>
+                        <table className="project-table" aria-label={section.title}>
+                          <thead>
+                            <tr>
+                              {section.table.headers.map((header) => <th key={header} scope="col">{header}</th>)}
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {section.table.rows.map((row) => (
+                              <tr key={row[0]}>
+                                <th scope="row">{row[0]}</th>
+                                {row.slice(1).map((cell, index) => <td key={index}>{cell}</td>)}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
                     )}
                   </section>
                 ))}

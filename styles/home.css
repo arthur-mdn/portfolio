@@ -1190,6 +1190,52 @@ a:hover {
   margin-top: 1rem;
 }
 
+.project-table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+  margin-top: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+
+.project-table-wrapper:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.project-table th,
+.project-table td {
+  padding: 0.8rem 1rem;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-table thead {
+  color: var(--green-dark);
+  background: var(--green-pastel);
+}
+
+.project-table tbody th {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.project-table td {
+  color: var(--text-secondary);
+}
+
+.project-table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
 .project-related-card {
   display: grid;
   grid-template-columns: minmax(120px, 30%) minmax(0, 1fr);

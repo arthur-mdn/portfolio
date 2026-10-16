@@ -272,6 +272,21 @@
             "url": "logos/unity.svg"
           }
         ]
+      },
+      {
+        "id": 405,
+        "name": "Godot",
+        "description": "Godot Engine",
+        "keywords": [
+          "Godot",
+          "Godot Engine"
+        ],
+        "links": [
+          {
+            "alt": "Logo Godot Engine",
+            "url": "logos/godot.svg"
+          }
+        ]
       }
     ]
   },
