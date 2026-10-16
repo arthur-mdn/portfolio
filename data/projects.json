@@ -1763,9 +1763,9 @@
     "id": 9,
     "name": "Funkylike",
     "slug": "funkylike",
-    "description": "Funkylike est une application web que j'ai développée, offrant un service de compteur en temps réel des abonnés sur Facebook et Instagram. Utilisant PHP et MySQL, cette application permet aux utilisateurs de se connecter, d'accéder à leur profil et de choisir entre différentes formules d'abonnement, avec des options gratuites et payantes.\n\nLes utilisateurs peuvent intégrer une page Facebook ou Instagram en se connectant via l'API respective. Après connexion et autorisation, un token est généré, permettant de récupérer en temps réel des informations telles que l'image de la page, le nom, et surtout, le nombre d'abonnés. Ces données sont ensuite affichées sur la page d'accueil de l'utilisateur avec une mise en page dynamique.\n\nChaque compteur peut être personnalisé avec un fond d'écran différent. Sur la page d'accueil, le compteur s'affiche en plein écran, montrant le nom de la page Facebook ou Instagram, le logo correspondant, et le nombre d'abonnés en temps réel grâce à la librairie \"flip\", qui anime le changement des chiffres.\n\nFunkylike comprend également une interface d'administration avancée. Les administrateurs peuvent modifier la fréquence de rafraîchissement des compteurs, définir une période d'inactivité après laquelle la barre de menu se cache, et gérer la publicité pour les comptes gratuits. Les utilisateurs premium bénéficient de fonctionnalités supplémentaires, telles que l'absence de publicité et un nombre illimité de compteurs.\n\nCette application est particulièrement utile pour les commerçants souhaitant encourager les abonnements en temps réel. Elle permet aux clients de voir le nombre d'abonnés augmenter instantanément, créant un effet incitatif. Avec ses différentes formules, de la version gratuite avec publicité à la version premium sans limite et sans publicité, Funkylike offre une flexibilité adaptée aux besoins de chaque utilisateur. Ce projet démontre ma capacité à développer des solutions web interactives et utiles pour le marketing et la promotion en ligne.",
-    "image": "projects/funkylike.png",
-    "link": "https://app.funkylike.com",
+    "description": "Des compteurs d’abonnés Facebook et Instagram affichés sur tablette ou télévision, conçus comme une alternative aux boîtiers physiques.\n\nLe commanditaire souhaitait proposer des compteurs virtuels d’abonnés Facebook et Instagram, comme alternative aux boîtiers physiques existants. L’objectif était de les afficher dans des commerces ou lors d’événements pour encourager les visiteurs à s’abonner aux comptes présentés.\nFunkylike faisait partie de mes premières prestations de développement en freelance.\n\nL’utilisateur connecte une page Facebook ou un compte Instagram via les API correspondantes et les autorisations nécessaires. L’application récupère les informations du compte, notamment son nom, son image et son nombre d’abonnés.\nLe compteur s’affiche en plein écran sur une tablette ou un téléviseur, avec un fond personnalisable et une animation des chiffres réalisée avec la bibliothèque Flip. Les nombres sont actualisés toutes les cinq minutes.\nUne interface d’administration permet de régler le comportement de l’affichage, notamment le rafraîchissement, le masquage du menu après inactivité et les paramètres publicitaires prévus dans l’application.\n\nL’application complète et fonctionnelle a été livrée au commanditaire. Des retours positifs concernant son utilisation en commerces et lors d’événements ont été présentés sur le site Funkylike.\nMa mission est terminée et je ne maintiens plus le projet. L’exploitation et le suivi du service relèvent du commanditaire ; je ne peux pas confirmer son état actuel.",
+    "image": "projects/funkylike-thumbnail.webp",
+    "link": "https://funkylike.com",
     "github": "",
     "youtube": [],
     "technos": [
@@ -1784,22 +1784,53 @@
       "MySQL"
     ],
     "date": "2022-09-25",
-    "status": "online",
+    "status": "archived",
     "type": "Écran interactif",
     "interesting": false,
-    "context": "Funkylike est une application web de compteurs d'abonnés Facebook / Instagram en temps réel, pensée pour les commerçants qui veulent animer un écran en magasin ou en événement.\nLe produit devait combiner connexion aux API sociales, affichage spectaculaire et logique freemium.",
-    "need": "Connecter une page sociale, afficher un compteur live animé, personnaliser le fond, et distinguer comptes gratuits (pub) et premium (illimité, sans pub).\nL'admin devait pouvoir régler rafraîchissement, inactivité du menu et publicité.",
-    "solution": "App PHP / MySQL avec OAuth vers Facebook / Instagram, récupération du token puis des données (image, nom, abonnés). Affichage plein écran animé via la librairie flip.\nUne interface admin pilote la fréquence de refresh, le comportement UI et la monétisation freemium.",
+    "context": "Le commanditaire souhaitait proposer des compteurs virtuels d’abonnés Facebook et Instagram, comme alternative aux boîtiers physiques existants. L’objectif était de les afficher dans des commerces ou lors d’événements pour encourager les visiteurs à s’abonner aux comptes présentés.\nFunkylike faisait partie de mes premières prestations de développement en freelance.",
+    "need": "Livrer une application complète permettant de connecter des comptes sociaux, de récupérer leur nombre d’abonnés et de l’afficher de manière lisible sur une tablette ou une télévision. Le projet suivait un cahier des charges complet, avec personnalisation des compteurs et administration.",
+    "solution": "L’utilisateur connecte une page Facebook ou un compte Instagram via les API correspondantes et les autorisations nécessaires. L’application récupère les informations du compte, notamment son nom, son image et son nombre d’abonnés.\nLe compteur s’affiche en plein écran sur une tablette ou un téléviseur, avec un fond personnalisable et une animation des chiffres réalisée avec la bibliothèque Flip. Les nombres sont actualisés toutes les cinq minutes.\nUne interface d’administration permet de régler le comportement de l’affichage, notamment le rafraîchissement, le masquage du menu après inactivité et les paramètres publicitaires prévus dans l’application.",
     "features": [
-      "Connexion Facebook / Instagram via API",
-      "Compteur d'abonnés en temps réel",
-      "Animation flip des chiffres",
-      "Personnalisation du fond d'écran par compteur",
-      "Affichage plein écran pour animation magasin / événement",
-      "Formules gratuites et premium",
-      "Admin : refresh, inactivité menu, gestion de la pub"
+      "Connexion aux comptes Facebook et Instagram via leurs API",
+      "Récupération du nom, de l’image et du nombre d’abonnés du compte",
+      "Actualisation des compteurs toutes les cinq minutes",
+      "Affichage plein écran sur tablette ou télévision",
+      "Animation Flip lors du changement des chiffres",
+      "Personnalisation du fond de chaque compteur",
+      "Administration du rafraîchissement, de l’inactivité du menu et des paramètres publicitaires"
     ],
-    "result": "Un dispositif marketing concret pour rendre visible la croissance d'audience et créer un effet d'incitation en temps réel."
+    "result": "L’application complète et fonctionnelle a été livrée au commanditaire. Des retours positifs concernant son utilisation en commerces et lors d’événements ont été présentés sur le site Funkylike.\nMa mission est terminée et je ne maintiens plus le projet. L’exploitation et le suivi du service relèvent du commanditaire ; je ne peux pas confirmer son état actuel.",
+    "summary": "Des compteurs d’abonnés Facebook et Instagram affichés sur tablette ou télévision, conçus comme une alternative aux boîtiers physiques.",
+    "facts": [
+      {
+        "label": "Cadre",
+        "value": "L’une de mes premières missions freelance"
+      },
+      {
+        "label": "Durée",
+        "value": "Plusieurs mois"
+      },
+      {
+        "label": "Intervention",
+        "value": "Conception et développement entièrement en solo"
+      },
+      {
+        "label": "Suivi",
+        "value": "Mission terminée · maintenance non assurée par mes soins"
+      }
+    ],
+    "role": "J’ai réalisé seul l’application sur plusieurs mois, de sa conception à son développement en PHP et MySQL. Ma mission consistait à livrer une solution complète et fonctionnelle.\nLe commanditaire a pris en charge la mise en place et l’exploitation de son système d’abonnement, avec une offre gratuite et une offre premium. Je suis le créateur de l’application, mais je n’interviens plus dans sa maintenance ni dans son exploitation actuelle.",
+    "challenges": "Le projet demandait de réaliser seul un cahier des charges complet sur plusieurs mois. L’obtention des autorisations auprès de Facebook a représenté une difficulté importante avant de pouvoir exploiter les données nécessaires aux compteurs.",
+    "linkLabel": "Consulter le site Funkylike",
+    "relatedServices": [
+      "application-web-sur-mesure"
+    ],
+    "relatedProjects": [
+      {
+        "slug": "displayhub",
+        "reason": "Une autre solution d’affichage sur télévision, pour diffuser des directions, des photos et des informations pilotables à distance."
+      }
+    ]
   },
   {
     "id": 12,
