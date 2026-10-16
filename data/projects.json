@@ -430,7 +430,7 @@
     "slug": "fidelity-wallet-ios-app",
     "description": "Ses cartes de fidélité à portée de main, dans une application iOS native sans publicité, sans compte et avec un stockage entièrement local.\n\nFidelityWallet est née d’un besoin personnel : retrouver simplement ses cartes de fidélité dans une application maintenue et agréable à utiliser. Les solutions essayées ne me convenaient plus, entre publicités, fonctionnalités promotionnelles envahissantes et interfaces vieillissantes.\nJ’ai choisi de créer une application centrée sur les cartes elles-mêmes, puis de la publier sur l’App Store pour la rendre accessible à d’autres utilisateurs.\n\nL’utilisateur ajoute une carte en scannant son code, en saisissant ses informations ou en important une image, puis l’associe à une enseigne. Il peut personnaliser son apparence, ajouter des notes et enregistrer un code PIN associé à la carte physique, conservé de manière sécurisée avec un accès protégé par l’authentification biométrique.\nLa recherche et les favoris facilitent l’accès aux cartes. Plusieurs présentations permettent d’adapter la bibliothèque à ses préférences ; le code peut ensuite être affiché en plein écran et la luminosité maximisée pour faciliter sa lecture en caisse.\nLes cartes restent stockées uniquement sur l’iPhone, sans synchronisation ni transfert vers un serveur tiers. Les fonctions de gestion et de consultation sont disponibles hors ligne ; Internet sert uniquement à actualiser le catalogue des enseignes. Des fonctions d’import et d’export permettent de transférer ses cartes à l’initiative de l’utilisateur.",
     "image": "projects/fidelity-wallet.webp",
-    "link": "",
+    "link": "https://apps.apple.com/us/app/fidelitywallet/id6823131361",
     "github": "",
     "youtube": [],
     "technos": [
@@ -491,7 +491,8 @@
     ],
     "relatedServices": [
       "applications-natives-ios-macos"
-    ]
+    ],
+    "linkLabel": "Télécharger sur l’App Store"
   },
   {
     "id": 8,

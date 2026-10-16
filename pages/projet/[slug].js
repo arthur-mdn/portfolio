@@ -5,6 +5,7 @@ import projectsData from "../../data/projects.json";
 import skillsData from "../../data/skills.json";
 import { getServiceBySlug } from "../../data/services";
 import {
+  FaApple,
   FaGithub,
   FaLink,
   FaArrowRight,
@@ -284,7 +285,9 @@ function ProjectPage({ project }) {
                   rel="noopener noreferrer"
                   className="button linkedin"
                 >
-                  <FaArrowUpRightFromSquare aria-hidden="true" />
+                  {/^https:\/\/apps\.apple\.com\//i.test(project.link)
+                    ? <FaApple aria-hidden="true" />
+                    : <FaArrowUpRightFromSquare aria-hidden="true" />}
                   {project.linkLabel || "Voir le projet"}
                 </Link>
               )}
