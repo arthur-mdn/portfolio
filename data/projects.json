@@ -39,10 +39,11 @@
     "youtube": [],
     "technos": [
       105,
-      109,
+      106,
       201,
       108,
-      401
+      401,
+      402
     ],
     "tags": [],
     "date": "2026-09-09",
@@ -70,8 +71,12 @@
     "github": "",
     "youtube": [],
     "technos": [
-      105,
-      109,
+      403,
+      202,
+      101,
+      102,
+      103,
+      301,
       401
     ],
     "tags": [],
@@ -95,18 +100,15 @@
     "name": "Private Events - DJ Mika",
     "slug": "private-events-dj-mika",
     "description": "Refonte complète du site Private Events pour DJ Mika, réalisée le 13 juin 2026. Le projet a été entièrement reconstruit côté architecture, style et référencement, afin d'offrir une vitrine plus claire, plus rapide et mieux adaptée à la conversion.\n\nLe site présente les prestations de DJ et karaoké pour événements privés et soirées d'entreprise, avec une expérience mobile-first et un parcours de contact simplifié. Un constructeur d'événement a également été ajouté pour faciliter la demande de devis : les visiteurs précisent le type d'événement, le contexte et leurs besoins avant d'envoyer leur demande.",
-    "image": "projects/private-events.webp",
+    "image": "projects/private-events-thumbnail.webp",
     "link": "https://privateevents.fr",
     "github": "https://github.com/arthur-mdn/privateevents.fr",
     "youtube": [],
     "technos": [
-      101,
-      102,
-      103,
       105,
       106,
-      109,
-      401
+      401,
+      402
     ],
     "tags": [],
     "date": "2026-06-13",
@@ -158,24 +160,25 @@
     "name": "DisplayHub",
     "slug": "displayhub",
     "description": "DisplayHub est un système d'affichage dynamique basé sur Raspberry Pi, conçu pour diffuser des informations pratiques et visuelles sur un écran. Il affiche une page web animée avec logo, météo, date, directives de navigation, slider photo et bandeau d'informations.\n\nUn panel administratif permet d'ajouter, modifier ou supprimer directives, orientations de flèches, photos et icônes. Le système inclut un mode sombre programmable, la gestion d'horaires d'affichage et une intégration météo en temps réel.\n\nCe dispositif illustre la capacité à concevoir une solution d'affichage interactive, utile au quotidien et administrable sans complexité.",
-    "image": "projects/displayhub.webp",
+    "image": "projects/displayhub-thumbnail.webp",
     "link": "https://displayhub.fr",
     "github": "",
     "youtube": [],
     "technos": [
-      101,
-      102,
-      103,
-      202,
-      301
+      105,
+      106,
+      201,
+      302,
+      401,
+      402
     ],
     "tags": [
-      "HTML",
-      "CSS",
+      "Vite",
+      "React",
       "JavaScript",
-      "JS",
-      "PHP",
-      "MySQL"
+      "Docker",
+      "Raspberry Pi",
+      "MongoDB"
     ],
     "date": "2025-11-06",
     "status": "online",
@@ -203,7 +206,7 @@
     "youtube": [],
     "technos": [
       105,
-      109,
+      106,
       201,
       401
     ],
@@ -228,7 +231,7 @@
     "name": "Askéo",
     "slug": "askeo",
     "description": "Plateforme de création de formulaires pensée comme une alternative simple à Google Forms. Askéo permet de construire ses propres formulaires, de les partager et de centraliser les réponses depuis une interface dédiée.\n\nLe projet couvre toute la chaîne, de la création du formulaire jusqu'à la consultation et à l'exploitation des réponses.",
-    "image": "projects/askeo.webp",
+    "image": "projects/askeo-thumbnail.webp",
     "link": "",
     "github": "",
     "youtube": [],
@@ -236,8 +239,9 @@
       105,
       109,
       201,
-      303,
-      401
+      302,
+      401,
+      402
     ],
     "tags": [],
     "date": "2025-07-11",
@@ -260,16 +264,17 @@
     "name": "CallMeMaybe",
     "slug": "callmemaybe",
     "description": "Projet étudiant réalisé pour répondre aux besoins internes d'une agence de casting. L'outil permet d'organiser des entretiens audio avec les candidats, d'enregistrer les échanges puis de les retranscrire automatiquement grâce à Whisper.\n\nL'intelligence artificielle analyse ensuite l'entretien afin de générer une fiche candidat structurée et personnalisée avec GPT-4, exportable au format PDF. L'objectif était de transformer un appel en une fiche exploitable par l'agence avec un minimum de traitement manuel.",
-    "image": "projects/callmemaybe.webp",
+    "image": "projects/callmemaybe-thumbnail.webp",
     "link": "",
     "github": "",
     "youtube": [],
     "technos": [
       105,
-      109,
+      106,
       201,
       204,
-      401
+      401,
+      402
     ],
     "tags": [],
     "date": "2025-06-25",
@@ -298,10 +303,11 @@
     "youtube": [],
     "technos": [
       105,
-      109,
+      106,
       201,
-      303,
-      401
+      302,
+      401,
+      402
     ],
     "tags": [],
     "date": "2025-04-08",
@@ -679,17 +685,17 @@
     "id": 3,
     "name": "Noctivibe",
     "slug": "noctivibe",
-    "description": "Noctvibe est une progressive web app (PWA) en PHP conçue pour simplifier l'organisation de soirées culinaires. L'application est née d'une expérience personnelle lors de l'organisation de soirées pizza en famille, où la coordination des préférences et des commandes était une tâche complexe et source de confusion.\n\nAvec \"Noctvibe\", l'organisation d'événements devient un jeu d'enfant. L'utilisateur peut créer un événement en spécifiant son titre, le type de repas (comme une pizza ou un menu personnalisé), le lieu, la date et la liste des invités. Unsplash est intégré pour ajouter une touche esthétique avec des photos thématiques, rendant l'invitation plus attrayante.\n\nUne fois l'événement créé, un lien d'invitation partageable permet aux invités d'accéder à la plateforme. Chaque invité sélectionne ses ingrédients préférés parmi une liste complète, offrant une personnalisation complète de sa commande. Les modifications de dernière minute sont également prises en compte, permettant aux invités de revenir sur leurs choix.\n\nDu côté de l'organisateur, \"Noctvibe\" offre une vue d'ensemble claire : une liste complète des ingrédients nécessaires et le détail de chaque commande, facilitant considérablement la préparation. Cette application est le reflet de ma capacité à transformer les défis du quotidien en solutions numériques élégantes et fonctionnelles, améliorant l'expérience de l'organisation d'événements tout en minimisant les tracas.",
-    "image": "projects/noctivibe.webp",
+    "description": "Noctvibe est une progressive web app (PWA) en NextJS conçue pour simplifier l'organisation de soirées culinaires. L'application est née d'une expérience personnelle lors de l'organisation de soirées pizza en famille, où la coordination des préférences et des commandes était une tâche complexe et source de confusion.\n\nAvec \"Noctvibe\", l'organisation d'événements devient un jeu d'enfant. L'utilisateur peut créer un événement en spécifiant son titre, le type de repas (comme une pizza ou un menu personnalisé), le lieu, la date et la liste des invités. Unsplash est intégré pour ajouter une touche esthétique avec des photos thématiques, rendant l'invitation plus attrayante.\n\nUne fois l'événement créé, un lien d'invitation partageable permet aux invités d'accéder à la plateforme. Chaque invité sélectionne ses ingrédients préférés parmi une liste complète, offrant une personnalisation complète de sa commande. Les modifications de dernière minute sont également prises en compte, permettant aux invités de revenir sur leurs choix.\n\nDu côté de l'organisateur, \"Noctvibe\" offre une vue d'ensemble claire : une liste complète des ingrédients nécessaires et le détail de chaque commande, facilitant considérablement la préparation. Cette application est le reflet de ma capacité à transformer les défis du quotidien en solutions numériques élégantes et fonctionnelles, améliorant l'expérience de l'organisation d'événements tout en minimisant les tracas.",
+    "image": "projects/noctivibe-thumbnail.webp",
     "link": "https://noctivibe.fr",
     "github": "",
     "youtube": [],
     "technos": [
-      101,
-      102,
-      103,
-      202,
-      301
+      105,
+      109,
+      302,
+      401,
+      402
     ],
     "tags": [
       "HTML",
@@ -705,7 +711,7 @@
     "interesting": true,
     "context": "Noctivibe est née d'un besoin personnel : organiser des soirées pizza en famille générait trop de confusion sur les préférences et les commandes.\nL'application devait transformer cette coordination informelle en parcours clair, aussi bien pour l'organisateur que pour les invités.",
     "need": "Créer un événement (titre, type de repas, lieu, date, invités), partager un lien, laisser chacun composer sa commande, puis centraliser le résultat côté organisateur.\nLes modifications de dernière minute devaient rester possibles.",
-    "solution": "Progressive web app PHP permettant de créer un événement, d'inviter via un lien partageable et de collecter les choix d'ingrédients de chaque participant.\nUnsplash apporte une image thématique à l'invitation. L'organisateur dispose ensuite d'une vue consolidée des ingrédients et du détail des commandes.",
+    "solution": "Progressive web app NextJS permettant de créer un événement, d'inviter via un lien partageable et de collecter les choix d'ingrédients de chaque participant.\nUnsplash apporte une image thématique à l'invitation. L'organisateur dispose ensuite d'une vue consolidée des ingrédients et du détail des commandes.",
     "features": [
       "Création d'événement (titre, type de repas, lieu, date, invités)",
       "Intégration Unsplash pour illustrer l'invitation",
