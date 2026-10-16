@@ -1554,43 +1554,81 @@
   },
   {
     "id": 13,
-    "name": "Générateur de Signatures Email",
+    "name": "MailSignatures",
     "slug": "generateur-de-signatures-email",
-    "description": "Lors de mon alternance chez Edissyum, j'ai été confronté à la tâche répétitive de créer des signatures mail personnalisées pour chaque nouvel arrivant ou événement spécifique, comme l'ajout de cartes de vœux en fin d'année. Pour résoudre ce défi, j'ai développé un générateur de signatures mail innovant, conçu pour automatiser et simplifier ce processus.\n\nCe générateur est basé sur un formulaire utilisateur dans lequel on peut entrer des informations telles que le pseudo, le nom, le prénom, le rôle dans l'entreprise, le numéro de téléphone, ainsi que l'option d'intégrer une image. L'une des caractéristiques clés de cet outil est la capacité de choisir le type de signature souhaité, adapté soit pour Thunderbird, soit pour Outlook.\n\nUne fois le formulaire soumis, le générateur, alimenté par PHP en arrière-plan, crée un template d'email personnalisé. Il intègre automatiquement les informations fournies dans le formulaire, générant ainsi une signature mail prête à l'emploi. L'utilisateur peut alors simplement télécharger cette signature et la glisser-déposer dans le dossier de signatures de son application de messagerie.\n\nCe projet, développé en PHP, est un exemple parfait de la manière dont je peux apporter des solutions numériques pratiques et efficaces pour optimiser les processus administratifs. Le générateur de signatures mail a non seulement amélioré l'efficacité au sein d'Edissyum, mais a également démontré mon aptitude à innover et à résoudre des problèmes courants par des moyens technologiques.",
-    "image": "projects/mailgenerator.png",
+    "description": "Créer une signature mail personnalisée avec aperçu en temps réel, puis l’exporter pour Outlook, Thunderbird ou au format HTML.\n\nMailSignatures a été réalisé dans le cadre de mon alternance chez Edissyum Consulting, à Carpentras. L’entreprise devait préparer des signatures personnalisées pour les nouveaux employés et les adapter à ses communications au fil de l’année.\nL’ajout d’une illustration pour un événement à venir ou une période comme Noël impliquait des manipulations répétitives. L’objectif était de rendre ces changements simples, tout en conservant une présentation cohérente des coordonnées.\n\nL’utilisateur renseigne ses coordonnées dans une interface simplifiée et visualise sa signature en temps réel. Il peut y ajouter une illustration pour mettre en avant un événement ou une communication saisonnière.\nAu clic sur la génération, l’application prépare le fichier à télécharger selon le format choisi : Outlook, Thunderbird ou HTML pur. Pour Outlook, une archive ZIP permet de récupérer les fichiers à placer dans le dossier des signatures. Des explications accompagnent l’installation dans les différents clients de messagerie.\nUn espace d’administration permet d’ajouter de nouvelles images d’illustration afin de préparer les prochaines signatures sans refaire manuellement leur mise en page.",
+    "image": "projects/mailsignatures-thumbnail.webp",
     "link": "",
-    "github": "",
+    "github": "https://github.com/arthur-mdn/mailgenerator",
     "youtube": [],
     "technos": [
+      105,
+      106,
       101,
       102,
       103,
-      107,
-      202
+      402,
+      401
     ],
     "tags": [
+      "React",
+      "Vite",
+      "JavaScript",
       "HTML",
       "CSS",
-      "JavaScript",
-      "JS",
-      "PHP"
+      "Docker",
+      "Git"
     ],
-    "date": "2023-01-16",
+    "date": "2025-04-30",
     "status": "online",
-    "type": "Outil",
-    "interesting": false,
-    "context": "Chez Edissyum, créer des signatures mail à chaque arrivée ou pour des événements ponctuels (cartes de vœux, etc.) était une tâche répétitive et chronophage.\nIl fallait industrialiser ce process sans perdre la personnalisation.",
-    "need": "Un formulaire simple pour saisir identité, rôle, téléphone et image, puis générer une signature adaptée à Thunderbird ou Outlook.\nLe livrable devait être immédiatement utilisable par glisser-déposer dans le client mail.",
-    "solution": "Outil PHP alimenté par un formulaire : génération d'un template de signature personnalisé selon le client mail choisi, puis téléchargement du fichier prêt à intégrer.\nL'outil a réduit le travail manuel tout en standardisant le rendu des signatures.",
+    "type": "WebApp",
+    "interesting": true,
+    "context": "MailSignatures a été réalisé dans le cadre de mon alternance chez Edissyum Consulting, à Carpentras. L’entreprise devait préparer des signatures personnalisées pour les nouveaux employés et les adapter à ses communications au fil de l’année.\nL’ajout d’une illustration pour un événement à venir ou une période comme Noël impliquait des manipulations répétitives. L’objectif était de rendre ces changements simples, tout en conservant une présentation cohérente des coordonnées.",
+    "need": "Permettre à l’utilisateur de personnaliser ses coordonnées, de choisir une illustration et de vérifier immédiatement le résultat. La signature devait ensuite être exportée dans un format adapté au client de messagerie, avec des explications pour l’installer.",
+    "solution": "L’utilisateur renseigne ses coordonnées dans une interface simplifiée et visualise sa signature en temps réel. Il peut y ajouter une illustration pour mettre en avant un événement ou une communication saisonnière.\nAu clic sur la génération, l’application prépare le fichier à télécharger selon le format choisi : Outlook, Thunderbird ou HTML pur. Pour Outlook, une archive ZIP permet de récupérer les fichiers à placer dans le dossier des signatures. Des explications accompagnent l’installation dans les différents clients de messagerie.\nUn espace d’administration permet d’ajouter de nouvelles images d’illustration afin de préparer les prochaines signatures sans refaire manuellement leur mise en page.",
     "features": [
-      "Formulaire (pseudo, nom, prénom, rôle, téléphone, image)",
-      "Choix du format Thunderbird ou Outlook",
-      "Génération PHP d'un template de signature",
-      "Téléchargement prêt à glisser-déposer",
-      "Personnalisation pour événements ponctuels",
-      "Gain de temps sur l'onboarding et les campagnes internes"
+      "Personnalisation des coordonnées depuis une interface simplifiée",
+      "Aperçu de la signature en temps réel",
+      "Ajout d’illustrations pour les événements et les communications saisonnières",
+      "Administration du catalogue d’images d’illustration",
+      "Génération et téléchargement de la signature à la demande",
+      "Exports adaptés à Outlook et Thunderbird, ou au format HTML pur",
+      "Archive ZIP pour installer les fichiers de signature dans Outlook",
+      "Instructions d’installation adaptées aux clients de messagerie",
+      "Interface refondue avec React et Vite"
     ],
-    "result": "Un outil interne concret qui a accéléré et standardisé la création de signatures mail chez Edissyum."
+    "result": "L’application est toujours en production et les utilisateurs se montrent très satisfaits de son utilité. Elle évite de reconstruire manuellement les signatures à chaque arrivée d’un employé et simplifie les changements d’illustrations liés aux événements ou aux saisons.",
+    "summary": "Créer une signature mail personnalisée avec aperçu en temps réel, puis l’exporter pour Outlook, Thunderbird ou au format HTML.",
+    "facts": [
+      {
+        "label": "Cadre",
+        "value": "Alternance chez Edissyum Consulting"
+      },
+      {
+        "label": "Localisation",
+        "value": "Carpentras · Vaucluse"
+      },
+      {
+        "label": "Refonte",
+        "value": "Migration de PHP et jQuery vers React et Vite"
+      },
+      {
+        "label": "Usage",
+        "value": "Application toujours en production"
+      }
+    ],
+    "role": "J’ai développé le générateur et réalisé sa refonte technique : la version initiale reposait sur du PHP et jQuery, remplacés par une interface React et Vite. Le projet couvre la personnalisation, l’aperçu en temps réel, l’export des signatures et l’administration des illustrations.",
+    "challenges": "Le projet devait concilier une personnalisation simple et des exports adaptés aux différents clients de messagerie. La refonte de PHP et jQuery vers React et Vite a permis de retravailler l’interface autour de l’aperçu en temps réel, tout en conservant le parcours de génération et d’installation des signatures.",
+    "relatedServices": [
+      "application-web-sur-mesure",
+      "refonte-site-web"
+    ],
+    "relatedProjects": [
+      {
+        "slug": "logiciel-de-facturation",
+        "reason": "Un autre outil métier de génération de documents personnalisés, pour centraliser les clients, les devis et les factures."
+      }
+    ]
   },
   {
     "id": 14,
