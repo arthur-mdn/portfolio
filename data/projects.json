@@ -1634,9 +1634,9 @@
     "id": 14,
     "name": "Atmosph'air - PWA Qualité de l'Air",
     "slug": "atmosphair-pwa-qualite-de-l-air",
-    "description": "Atmosph'Air est un projet étudiant que j'ai développé, une progressive web app conçue pour fournir des informations en temps réel sur la qualité de l'air dans différentes villes. Cette application utilise l'API d'Atmosud pour calculer et afficher ces données, offrant aux utilisateurs une interface intuitive et informative.\n\nSur la page d'accueil, les utilisateurs sont accueillis par des animations engageantes et un classement des trois bulletins les plus consultés, avec le nombre total de consultations. En cliquant sur une ville, comme Toulon par exemple, l'application affiche la qualité de l'air actuelle, le polluant majoritaire, et l'évolution de la qualité de l'air sur les 30 derniers jours, représentée par un graphique créé avec ChartJS.\n\nLes utilisateurs ont la possibilité de rechercher leur ville parmi toutes les villes de France disponibles dans l'API d'Atmosphère. Ils peuvent également ajouter des villes à leur liste de favoris, ce qui permet un accès rapide à la qualité de l'air de ces villes depuis la page d'accueil.\n\nLe mode administrateur de l'application offre des fonctionnalités avancées pour gérer la récupération des données. Il existe un \"mode rapide\", qui économise la bande passante en utilisant des données mises en cache, et un \"mode basique\". Pour optimiser les performances, l'application met à jour quotidiennement le cache en requêtant l'API pour obtenir les données au format JSON, qui sont ensuite stockées et utilisées pour les recherches, évitant ainsi les délais associés aux requêtes API en temps réel.\n\nL'application est également équipée d'un script PHP exécuté par une tâche cron, qui actualise toutes les 8 heures les données de la qualité de l'air de chaque ville et les stocke dans le cache JSON. Un bouton permet aux administrateurs de forcer manuellement cette actualisation des données.\n\nAtmosph'Air est un exemple de ma capacité à créer des solutions numériques utiles et innovantes, en combinant des technologies web modernes pour offrir une expérience utilisateur enrichissante et informative, tout en mettant l'accent sur l'optimisation des performances et la facilité d'utilisation.",
+    "description": "Une PWA étudiante pour consulter des mesures réelles de qualité de l’air, réalisée en PHP lors de ma première intégration d’API.\n\nAtmosph’Air a été réalisé dans le cadre de mon Bachelor à l’Université de Toulon, en spécialisation développement web. Le sujet étudiant et l’utilisation de l’API AtmoSud étaient imposés. L’application devait présenter des mesures réelles de qualité de l’air dans une interface web consultable sur mobile.\n\nLes fiches des villes présentent les mesures issues de l’API, le polluant majoritaire et un historique illustré avec Chart.js. La recherche permet de consulter une ville et la liste de favoris facilite l’accès aux lieux suivis.\nLes données des villes favorites sont actualisées toutes les huit heures. Lorsqu’un utilisateur recherche une ville spécifique, l’application interroge l’API au moment de la recherche, puis stocke les informations récupérées. Ce fonctionnement associe une mise à jour programmée des favoris et une actualisation à la demande.\n\nUne première expérience complète d’intégration d’API dans une PWA, réalisée en solo sur environ une semaine. Le projet n’est plus maintenu et son accès public a été supprimé.",
     "image": "projects/atmosphair.png",
-    "link": "https://atmosphair.mondon.pro/",
+    "link": "",
     "github": "",
     "youtube": [],
     "technos": [
@@ -1647,28 +1647,49 @@
     ],
     "tags": [],
     "date": "2023-01-10",
-    "status": "online",
+    "status": "archived",
     "type": "WebApp",
     "interesting": false,
-    "context": "Atmosph'Air est une PWA étudiante conçue pour rendre la qualité de l'air compréhensible en temps réel, ville par ville, via l'API Atmosud.\nLe défi n'était pas seulement d'afficher une donnée : il fallait aussi gérer cache, performance et administration.",
-    "need": "Consulter la qualité de l'air, le polluant majoritaire et l'historique 30 jours, rechercher n'importe quelle ville, gérer des favoris, et optimiser les appels API.\nUn mode admin devait permettre de piloter le rafraîchissement des données.",
-    "solution": "PWA avec interface d'accueil animée, classements des bulletins consultés, fiches ville (ChartJS pour l'historique), favoris et recherche nationale.\nCôté perf : cache JSON quotidien, modes rapide / basique, cron PHP toutes les 8 heures et bouton admin pour forcer l'actualisation.",
+    "context": "Atmosph’Air a été réalisé dans le cadre de mon Bachelor à l’Université de Toulon, en spécialisation développement web. Le sujet étudiant et l’utilisation de l’API AtmoSud étaient imposés. L’application devait présenter des mesures réelles de qualité de l’air dans une interface web consultable sur mobile.",
+    "need": "Permettre de rechercher une ville, de consulter les informations de qualité de l’air disponibles et de retrouver rapidement les villes favorites. La récupération des données devait combiner une actualisation périodique et des requêtes déclenchées lors d’une recherche.",
+    "solution": "Les fiches des villes présentent les mesures issues de l’API, le polluant majoritaire et un historique illustré avec Chart.js. La recherche permet de consulter une ville et la liste de favoris facilite l’accès aux lieux suivis.\nLes données des villes favorites sont actualisées toutes les huit heures. Lorsqu’un utilisateur recherche une ville spécifique, l’application interroge l’API au moment de la recherche, puis stocke les informations récupérées. Ce fonctionnement associe une mise à jour programmée des favoris et une actualisation à la demande.",
     "features": [
-      "Qualité de l'air en temps réel via API Atmosud",
-      "Fiche ville : polluant majoritaire et historique 30 jours (ChartJS)",
-      "Classement des bulletins les plus consultés",
-      "Recherche de villes et liste de favoris",
-      "Cache JSON et mode rapide pour limiter la bande passante",
-      "Cron PHP de rafraîchissement toutes les 8 heures",
-      "Panel admin avec actualisation manuelle"
+      "Consultation de mesures réelles de qualité de l’air issues de l’API imposée",
+      "Recherche parmi les villes disponibles dans la source de données",
+      "Fiches ville avec polluant majoritaire et historique sur 30 jours visualisé avec Chart.js",
+      "Liste de villes favorites",
+      "Actualisation des favoris toutes les huit heures",
+      "Requête à l’API et stockage des informations lors de la recherche d’une ville",
+      "Application web progressive développée en PHP, HTML, CSS et JavaScript"
     ],
-    "result": "Une application informative et performante, qui montre la capacité à combiner UX claire, API tierce et stratégie de cache."
+    "result": "Une première expérience complète d’intégration d’API dans une PWA, réalisée en solo sur environ une semaine. Le projet n’est plus maintenu et son accès public a été supprimé.",
+    "summary": "Une PWA étudiante pour consulter des mesures réelles de qualité de l’air, réalisée en PHP lors de ma première intégration d’API.",
+    "facts": [
+      {
+        "label": "Cadre",
+        "value": "Bachelor · Université de Toulon · spécialisation développement web"
+      },
+      {
+        "label": "Durée",
+        "value": "Environ une semaine"
+      },
+      {
+        "label": "Intervention",
+        "value": "Réalisation entièrement en solo"
+      },
+      {
+        "label": "État actuel",
+        "value": "Non maintenue · accès public supprimé"
+      }
+    ],
+    "role": "J’ai réalisé seul cette PWA en PHP sur une courte semaine. Il s’agissait de ma première intégration d’une API dans une application : récupération des données, exploitation des réponses et présentation des informations à l’utilisateur.",
+    "challenges": "Le principal apprentissage était l’intégration d’une API externe dans un temps de réalisation court. Le projet m’a permis de travailler le passage des données reçues à une interface lisible, ainsi que l’articulation entre mises à jour périodiques et requêtes à la demande."
   },
   {
     "id": 10,
     "name": "Calendry",
     "slug": "calendry",
-    "description": "Calendry est un projet web que j'ai développé pour la gestion de réservations en ligne pour un salon de coiffure ou un établissement de beauté. Ce site offre une interface utilisateur riche et une expérience administrateur complète, rendant la prise de rendez-vous et la gestion du salon efficaces et intuitives.\n\nLa page d'accueil présente le nom du salon, une galerie de photos, et une liste détaillée des prestations classées par catégories (coiffure homme/femme, barbe, etc.), ainsi que des informations sur le salon, sa localisation, ses horaires et des vidéos de présentation. Le côté administrateur permet de visualiser en temps réel les réservations sur un calendrier, avec la possibilité d'ajouter ou de rechercher manuellement des rendez-vous.\n\nLes administrateurs peuvent gérer les prestations, créer de nouvelles catégories, modifier ou supprimer des offres existantes, et attribuer des icônes aux catégories. La gestion de l'équipe est également facilitée, permettant de définir les informations des coiffeurs, leurs horaires, leurs compétences, et leurs jours de travail.\n\nLe système de calendrier est hautement personnalisable, permettant de définir les politiques d'annulation, les rappels de rendez-vous, les conditions de réservation, et de planifier les fermetures pour congés ou jours fériés. Les paramètres du salon incluent les horaires, l'adresse, les informations de contact, et l'affichage de produits dans un catalogue interactif.\n\nL'API \"smspartner\" est utilisée pour la gestion des SMS, permettant l'envoi de rappels aux clients, avec un suivi détaillé des messages envoyés. Le menu client offre la possibilité de gérer les informations des clients, d'envoyer des communications directes, et de visualiser ou de modifier les réservations.\n\nDu côté client, l'utilisateur peut choisir une prestation, un coiffeur, et un créneau horaire. Les confirmations de réservation sont envoyées par email, avec la possibilité d'ajouter l'événement au calendrier personnel. Un historique de réservation est disponible, ainsi que des options pour annuler ou modifier les rendez-vous.\n\nEnfin, la page de statistiques offre une vue d'ensemble des performances du salon, avec des données sur les réservations, les prestations et prestataires populaires, et l'activité clientèle.\n\n\"Calendry\" est un exemple de ma capacité à développer des solutions web complètes, alliant fonctionnalité, esthétique, et facilité d'utilisation, pour optimiser la gestion et l'expérience client dans le secteur de la beauté et du bien-être.",
+    "description": "Une solution de réservation sur mesure pour un salon de coiffure à Toulon, avec planning paramétrable et rappels de rendez-vous par SMS.\n\nUn salon de coiffure à Toulon souhaitait disposer de sa propre solution de prise de rendez-vous, avec un fonctionnement inspiré de Planity, mais financée par une prestation ponctuelle plutôt que par un abonnement à une plateforme de réservation. Calendry a été réalisé dans le cadre de cette commande freelance.\n\nLa vitrine présente les prestations, les informations pratiques et les visuels du salon. Le parcours de réservation permet de choisir une prestation, un membre de l’équipe et un créneau disponible. Les confirmations sont envoyées par e-mail, avec un historique et des possibilités de modification ou d’annulation du rendez-vous.\nL’espace administrateur centralise le planning, les prestations, les membres de l’équipe, les clients et les statistiques. Les règles de disponibilité et de réservation sont paramétrables pour tenir compte de l’organisation du salon et éviter les créneaux incompatibles ou les réservations simultanées.\nL’intégration de SMS Partner permet d’envoyer des rappels de rendez-vous aux clients. L’ensemble a été développé avec PHP, MySQL, HTML, CSS et JavaScript.\n\nCalendry a été utilisé par le salon de coiffure, avec de bons retours. Le projet a constitué une expérience concrète de conception d’un outil métier et de prise de rendez-vous sur mesure.\nLe salon ayant cessé son activité, le site n’est plus utilisé et le projet n’est plus maintenu.",
     "image": "projects/calendry.png",
     "link": "",
     "github": "",
@@ -1689,24 +1710,54 @@
       "MySQL"
     ],
     "date": "2022-10-19",
-    "status": "online",
+    "status": "archived",
     "type": "Site web",
     "interesting": false,
-    "context": "Calendry est une plateforme de réservation conçue pour les salons de coiffure et établissements de beauté. Elle couvre à la fois l'expérience client (prise de RDV) et l'exploitation quotidienne côté équipe.\nL'ambition était un outil métier complet, pas une simple page de contact.",
-    "need": "Côté client : choisir une prestation, un coiffeur et un créneau, recevoir une confirmation, gérer l'historique.\nCôté admin : planning temps réel, prestations, équipe, clients, SMS, statistiques et règles métier (annulation, fermetures, rappels).",
-    "solution": "Application web riche avec vitrine publique (galerie, catégories de prestations, infos salon) et back-office complet.\nLe calendrier admin, la gestion d'équipe, l'API SMS smspartner pour les rappels et les statistiques permettent de piloter le salon au quotidien.",
+    "context": "Un salon de coiffure à Toulon souhaitait disposer de sa propre solution de prise de rendez-vous, avec un fonctionnement inspiré de Planity, mais financée par une prestation ponctuelle plutôt que par un abonnement à une plateforme de réservation. Calendry a été réalisé dans le cadre de cette commande freelance.",
+    "need": "Permettre aux clients de choisir une prestation, un coiffeur et un créneau, tout en donnant au salon la maîtrise de son planning, de ses prestations et de ses rappels. Les disponibilités devaient prendre en compte les durées des prestations, les horaires de l’équipe, les pauses, les fermetures et les réservations existantes.",
+    "solution": "La vitrine présente les prestations, les informations pratiques et les visuels du salon. Le parcours de réservation permet de choisir une prestation, un membre de l’équipe et un créneau disponible. Les confirmations sont envoyées par e-mail, avec un historique et des possibilités de modification ou d’annulation du rendez-vous.\nL’espace administrateur centralise le planning, les prestations, les membres de l’équipe, les clients et les statistiques. Les règles de disponibilité et de réservation sont paramétrables pour tenir compte de l’organisation du salon et éviter les créneaux incompatibles ou les réservations simultanées.\nL’intégration de [SMS Partner](https://www.smspartner.fr/) permet d’envoyer des rappels de rendez-vous aux clients. L’ensemble a été développé avec PHP, MySQL, HTML, CSS et JavaScript.",
     "features": [
-      "Vitrine salon : galerie, prestations par catégories, horaires, vidéos",
-      "Réservation client : prestation, coiffeur, créneau",
-      "Confirmations email et ajout au calendrier personnel",
-      "Historique, annulation et modification de rendez-vous",
-      "Calendrier admin temps réel + recherche / ajout manuel",
-      "Gestion prestations, catégories, icônes et équipe",
-      "Rappels SMS via API smspartner",
-      "Politiques d'annulation, fermetures et catalogue produits",
-      "Statistiques (réservations, popularité, activité clientèle)"
+      "Vitrine du salon avec galerie, prestations par catégories et informations pratiques",
+      "Réservation par prestation, coiffeur et créneau disponible",
+      "Prise en compte des durées, horaires, pauses, fermetures et rendez-vous existants",
+      "Confirmations par e-mail et ajout au calendrier personnel",
+      "Historique des réservations, modification et annulation des rendez-vous",
+      "Calendrier administrateur avec ajout et recherche manuels de rendez-vous",
+      "Gestion des prestations, de l’équipe, des clients et des règles de réservation",
+      "Rappels de rendez-vous par SMS via SMS Partner",
+      "Statistiques sur les réservations, les prestations et l’activité clientèle"
     ],
-    "result": "Un outil métier bout-en-bout pour digitaliser la prise de rendez-vous et l'organisation d'un salon, côté client comme côté équipe."
+    "result": "Calendry a été utilisé par le salon de coiffure, avec de bons retours. Le projet a constitué une expérience concrète de conception d’un outil métier et de prise de rendez-vous sur mesure.\nLe salon ayant cessé son activité, le site n’est plus utilisé et le projet n’est plus maintenu.",
+    "summary": "Une solution de réservation sur mesure pour un salon de coiffure à Toulon, avec planning paramétrable et rappels de rendez-vous par SMS.",
+    "facts": [
+      {
+        "label": "Cadre",
+        "value": "Commande freelance pour un salon réel"
+      },
+      {
+        "label": "Localisation",
+        "value": "Toulon"
+      },
+      {
+        "label": "Intervention",
+        "value": "Design et développement entièrement en solo"
+      },
+      {
+        "label": "État actuel",
+        "value": "Non maintenu · salon fermé"
+      }
+    ],
+    "role": "J’ai réalisé seul le projet, avec carte blanche pour le design et une intégration autonome. Cette réalisation a aussi été l’occasion de découvrir et de prendre en main les technologies utilisées à cette période, tout en construisant un outil destiné à un usage réel dans le salon.",
+    "challenges": "Le principal défi était de prendre en main de nouvelles technologies tout en réalisant seul une solution complète, du design à l’intégration. La gestion du planning demandait d’articuler les paramètres du salon et les disponibilités de l’équipe pour proposer des créneaux cohérents.",
+    "relatedServices": [
+      "application-web-sur-mesure"
+    ],
+    "relatedProjects": [
+      {
+        "slug": "elevage-hitch",
+        "reason": "Un autre parcours de rendez-vous sur mesure : demandes liées aux animaux, validation par l’éleveur et créneaux synchronisés avec Google Agenda."
+      }
+    ]
   },
   {
     "id": 9,
