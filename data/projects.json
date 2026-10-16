@@ -951,39 +951,6 @@
     ]
   },
   {
-    "id": 30,
-    "name": "Programme Atlas",
-    "slug": "site-vitrine-atlas-programme",
-    "description": "J'ai récemment développé un site web sous WordPress pour un programme de sport personnalisé appelé \"Atlas\". Ce programme est un ensemble complet axé sur la musculation, la nutrition et le bien-être, conçu pour s'adapter aux besoins individuels des utilisateurs. Le site vise à promouvoir un corps esthétique et en pleine santé, tout en encourageant l'épanouissement physique et mental. Atlas est conçu pour rendre la transformation physique plus accessible et agréable, que ce soit pour les débutants ou les personnes déjà familiarisées avec ces disciplines.\n\nLa page d'accueil du site offre un aperçu du programme, mettant en avant ses principaux aspects et ses avantages. Elle inclut également des avis clients et des liens vers les réseaux sociaux. Une page dédiée explore en détail les différents thèmes abordés, notamment les plans d'entraînement, les plans nutritionnels et les plans de bien-être.\n\nLe site présente également une page de transformations, qui met en lumière les réussites des participants au programme, ainsi qu'une page de contact pour les visiteurs souhaitant en savoir plus ou poser des questions. Les utilisateurs ont la possibilité de mettre le programme Atlas dans leur panier et de payer directement sur le site, ce qui facilite l'inscription et l'accès au programme.",
-    "image": "projects/site-web-programme-atlas.png",
-    "link": "",
-    "github": "",
-    "youtube": [],
-    "technos": [
-      101,
-      102,
-      103,
-      403
-    ],
-    "tags": [],
-    "date": "2024-04-12",
-    "status": "online",
-    "type": "Site Web",
-    "interesting": false,
-    "context": "Atlas est un programme de sport personnalisé axé sur la musculation, la nutrition et le bien-être. L'objectif du site était de rendre cette transformation physique plus accessible, aussi bien pour les débutants que pour les pratiquants déjà familiers de ces disciplines.\nLe projet devait à la fois présenter l'univers Atlas et convaincre les visiteurs de s'inscrire au programme.",
-    "need": "Une vitrine WordPress claire pour expliquer l'offre, montrer des preuves concrètes (avis, transformations) et permettre l'achat / l'inscription directement en ligne.\nLe parcours devait rester simple : comprendre le programme, se rassurer, puis passer à l'action.",
-    "solution": "Développement d'un site WordPress structuré autour de l'offre Atlas : page d'accueil orientée bénéfices, pages thématiques (entraînement, nutrition, bien-être), page transformations et contact.\nLe panier et le paiement en ligne ont été intégrés pour fluidifier l'accès au programme sans friction inutile.",
-    "features": [
-      "Page d'accueil avec aperçu du programme, avis clients et réseaux sociaux",
-      "Pages dédiées aux plans d'entraînement, nutrition et bien-être",
-      "Page transformations pour mettre en avant les résultats des participants",
-      "Page contact pour les questions et demandes d'information",
-      "Parcours panier / paiement pour s'inscrire directement au programme",
-      "Administration WordPress pour faire évoluer les contenus"
-    ],
-    "result": "Une vitrine commerciale cohérente avec l'univers Atlas, capable de présenter l'offre en détail et de convertir les visiteurs intéressés en inscriptions."
-  },
-  {
     "id": 24,
     "name": "Site Portfolio",
     "slug": "site-portfolio",
@@ -1103,7 +1070,14 @@
         "slug": "burger-maker",
         "reason": "Un jeu de cuisine développé avec Godot, centré sur la préparation des commandes et la progression sur dix niveaux."
       }
-    ]
+    ],
+    "solutionImage": {
+      "src": "projects/interactive-wall-game.png",
+      "width": 686,
+      "height": 686,
+      "alt": "Test de suivi des mains face au mur de projection, avec un marqueur de calibration et les positions des mains repérées en couleur.",
+      "caption": "Test de calibration et de détection : les positions des mains sont repérées dans la zone projetée avant de piloter les épuisettes du jeu."
+    }
   },
   {
     "id": 25,
@@ -1871,9 +1845,9 @@
     "id": 4,
     "name": "Seamless Réseau Mistral Toulon",
     "slug": "seamless-reseau-mistral-toulon",
-    "description": "Seamless est un projet sur lequel j'ai travaillé, visant à simplifier la validation des titres de transport pour le réseau de bus et de bateaux Mistral à Toulon. Cette application mobile offre une solution pratique et rapide pour les usagers des transports en commun.\n\nL'interface utilisateur de Seamless est conçue pour être intuitive et facile à utiliser. Après connexion, l'utilisateur se voit présenter un gros bouton pour confirmer son voyage. Lorsque l'appareil est placé sur la cible spécifique présente dans les bus et bateaux, l'application valide le voyage et affiche un écran de confirmation. Cette fonctionnalité assure une expérience de validation de titre de transport sans effort et sécurisée.\n\nEn plus de la fonction de validation, l'application inclut un onglet \"Contrôle\" où les utilisateurs peuvent voir l'historique de toutes leurs validations. Ils ont également la possibilité d'afficher un QR code, que les contrôleurs peuvent scanner pour vérifier la validité du ticket. Cela facilite les contrôles et rend l'expérience utilisateur plus fluide.\n\nCe projet illustre mon engagement à développer des solutions mobiles qui améliorent l'expérience quotidienne des utilisateurs, en mettant l'accent sur la facilité d'utilisation, la sécurité et l'efficacité. Seamless transforme l'interaction avec les services de transport en commun, en rendant le processus de validation des titres de transport aussi simple et fluide que possible.",
+    "description": "Seamless est un projet sur lequel j'ai travaillé, visant à simplifier la validation des titres de transport pour le réseau de bus et de bateaux Mistral à Toulon. Cette application mobile offre une solution pratique et rapide pour les usagers des transports en commun.\n\nL'interface utilisateur de Seamless est conçue pour être intuitive et facile à utiliser. Après connexion, l'utilisateur se voit présenter un gros bouton pour confirmer son voyage. Lorsque l'appareil est placé sur la cible spécifique présente dans les bus et bateaux, l'application valide le voyage et affiche un écran de confirmation. Cette fonctionnalité assure une expérience de validation de titre de transport sans effort et sécurisée.\n\nEn plus de la fonction de validation, l'application inclut un onglet \"Contrôle\" où les utilisateurs peuvent voir l'historique de toutes leurs validations. Ils ont également la possibilité d'afficher un QR code, que les contrôleurs peuvent scanner pour vérifier la validité du ticket. Cela facilite les contrôles et rend l'expérience utilisateur plus fluide.\n\nCe projet illustre mon engagement à développer des solutions mobiles qui améliorent l'expérience quotidienne des utilisateurs, en mettant l'accent sur la facilité d'utilisation, la sécurité et l'efficacité. Seamless transforme l'interaction avec les services de transport en commun, en rendant le processus de validation des titres de transport aussi simple et fluide que possible.\n\nSeamless n’est plus disponible et n’est plus maintenu. Il est remplacé par le projet Réseau Mistral, une démonstration de billetterie avec des tickets fictifs.",
     "image": "projects/seamless.png",
-    "link": "https://seamless.mondon.pro/",
+    "link": "",
     "github": "",
     "youtube": [],
     "technos": [
@@ -1891,7 +1865,7 @@
       "MySQL"
     ],
     "date": "2021-09-20",
-    "status": "development",
+    "status": "archived",
     "type": "WebApp",
     "interesting": false,
     "context": "Seamless vise à simplifier la validation des titres sur le réseau Mistral (bus et bateaux) à Toulon. L'expérience devait être quasi instantanée à bord, sans friction.\nLe projet se concentre sur le geste usager : valider, confirmer, pouvoir prouver son titre.",
@@ -1905,7 +1879,14 @@
       "Historique des validations",
       "QR code scannable par les contrôleurs"
     ],
-    "result": "Une expérience de validation plus fluide et rassurante pour les usagers du réseau Mistral, pensée pour le terrain."
+    "result": "Seamless n’est plus disponible et n’est plus maintenu. Le projet remplaçant, [Réseau Mistral](/projet/reseau-mistral), propose une démonstration de billetterie avec achat simulé, scan de QR code et gestion de tickets fictifs.",
+    "summary": "Ancien projet de validation de tickets, désormais indisponible et non maintenu. Le projet Réseau Mistral lui succède.",
+    "relatedProjects": [
+      {
+        "slug": "reseau-mistral",
+        "reason": "Le projet remplaçant : une démonstration de billetterie avec achat simulé, scan de QR code et gestion de tickets fictifs."
+      }
+    ]
   },
   {
     "id": 18,

@@ -206,7 +206,7 @@ function ArticlePage({ article }) {
                                     required
                                 />
                             </div>
-                            <button type={"submit"}>Ajouter un commentaire</button>
+                            <button type={"submit"} className="btn btn-primary">Ajouter un commentaire</button>
                         </form>
                     </div>
                 </div>

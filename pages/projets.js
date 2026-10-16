@@ -1,8 +1,32 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useSyncExternalStore } from "react";
 import { FaArrowRight, FaChevronDown, FaTriangleExclamation } from "react-icons/fa6";
 import projectsData from "../data/projects.json";
 import skillsData from "../data/skills.json";
+
+let otherProjectsOpen = false;
+const otherProjectsListeners = new Set();
+
+function getOtherProjectsOpen() {
+  return otherProjectsOpen;
+}
+
+function subscribeToOtherProjects(listener) {
+  otherProjectsListeners.add(listener);
+  return () => otherProjectsListeners.delete(listener);
+}
+
+function getServerOtherProjectsOpen() {
+  return false;
+}
+
+function rememberOtherProjects(event) {
+  const open = event.currentTarget.open;
+  if (open === getOtherProjectsOpen()) return;
+  otherProjectsOpen = open;
+  otherProjectsListeners.forEach((listener) => listener());
+}
 
 const skillMap = Object.fromEntries(
   skillsData.flatMap((category) =>
@@ -68,6 +92,13 @@ function ProjectCard({ project }) {
 }
 
 export default function Projets() {
+  // Render the restored height immediately, before Next.js restores scrolling.
+  const isOtherProjectsOpen = useSyncExternalStore(
+    subscribeToOtherProjects,
+    getOtherProjectsOpen,
+    getServerOtherProjectsOpen
+  );
+
   const title = "Réalisations | Arthur Mondon — Développeur web freelance";
   const description =
     "Sites vitrines, applications web et outils sur mesure conçus par Arthur Mondon, développeur web freelance dans le Vaucluse.";
@@ -125,7 +156,7 @@ export default function Projets() {
           </section>
 
           {otherProjects.length > 0 && (
-            <details className="projects-accordion">
+            <details className="projects-accordion" open={isOtherProjectsOpen} onToggle={rememberOtherProjects}>
               <summary>
                 <span>
                   Autres projets

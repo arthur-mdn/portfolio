@@ -10,8 +10,8 @@ import {
   FaLink,
   FaArrowRight,
   FaArrowUpRightFromSquare,
-  FaArrowUp,
-  FaArrowDown,
+  FaChevronUp,
+  FaChevronDown,
   FaTriangleExclamation,
 } from "react-icons/fa6";
 import Link from "next/link";
@@ -143,7 +143,7 @@ function ProjectPage({ project }) {
               className={isImageExpanded ? "expanded" : ""}
             />
             <div className="indicator">
-              {isImageExpanded ? <FaArrowUp /> : <FaArrowDown />}
+              {isImageExpanded ? <FaChevronUp /> : <FaChevronDown />}
             </div>
           </div>
 
@@ -181,7 +181,7 @@ function ProjectPage({ project }) {
                 { key: "context", title: "Le point de départ", content: project.context },
                 { key: "need", title: "Les objectifs", content: project.need },
                 { key: "role", title: "Mon intervention", content: project.role },
-                { key: "solution", title: "La solution", content: project.solution },
+                { key: "solution", title: "La solution", content: project.solution, image: project.solutionImage },
                 { key: "features", title: "Les fonctionnalités", items: project.features },
                 { key: "controls", title: "Comment jouer", table: project.controlsTable },
                 { key: "progression", title: "La progression", table: project.progressionTable },
@@ -207,6 +207,18 @@ function ProjectPage({ project }) {
                           {paragraph}
                         </ReactMarkdown>
                       ))}
+                    {section.image && (
+                      <figure className="project-figure">
+                        <Image
+                          src={`/${section.image.src}`}
+                          alt={section.image.alt}
+                          width={section.image.width}
+                          height={section.image.height}
+                          sizes="(max-width: 600px) calc(100vw - 3rem), 560px"
+                        />
+                        {section.image.caption && <figcaption>{section.image.caption}</figcaption>}
+                      </figure>
+                    )}
                     {section.items?.length > 0 && (
                       <ul>
                         {section.items.map((item) => <li key={item}>{item}</li>)}
