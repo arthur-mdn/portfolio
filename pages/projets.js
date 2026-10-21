@@ -4,6 +4,7 @@ import { useProjectsLibraryState } from "../components/ProjectsLibraryState";
 import { FaArrowRight, FaChevronDown, FaTriangleExclamation } from "react-icons/fa6";
 import projectsData from "../data/projects.json";
 import skillsData from "../data/skills.json";
+import { PROJECT_FILTERS, getProjectCategory } from "../data/projectPresentation";
 
 const skillMap = Object.fromEntries(
   skillsData.flatMap((category) =>
@@ -69,17 +70,19 @@ function ProjectCard({ project }) {
 }
 
 export default function Projets() {
-  const { otherProjectsOpen, setOtherProjectsOpen } = useProjectsLibraryState();
+  const { otherProjectsOpen, setOtherProjectsOpen, category, setCategory } = useProjectsLibraryState();
 
   const title = "Réalisations | Arthur Mondon — Développeur web freelance";
   const description =
     "Sites vitrines, applications web et outils sur mesure conçus par Arthur Mondon, développeur web freelance dans le Vaucluse.";
 
-  const interestingProjects = [...projectsData]
+  const filteredProjects = projectsData.filter((project) => category === "all" || getProjectCategory(project) === category);
+
+  const interestingProjects = [...filteredProjects]
     .filter((project) => project.interesting)
     .sort((a, b) => b.date.localeCompare(a.date));
 
-  const otherProjects = [...projectsData]
+  const otherProjects = [...filteredProjects]
     .filter((project) => !project.interesting)
     .sort((a, b) => b.date.localeCompare(a.date));
 
@@ -115,7 +118,16 @@ export default function Projets() {
             </p>
           </div>
 
-          <section className="projects-page-section">
+          <div className="project-filters" role="group" aria-label="Filtrer les projets par type">
+            {PROJECT_FILTERS.map((filter) => (
+              <button key={filter.id} aria-pressed={category === filter.id} onClick={() => setCategory(filter.id)}>
+                {filter.label}
+                <span>{projectsData.filter((project) => filter.id === "all" || getProjectCategory(project) === filter.id).length}</span>
+              </button>
+            ))}
+          </div>
+
+          {interestingProjects.length > 0 && <section className="projects-page-section">
             <div className="projects-page-heading">
               <h2>Mis en avant</h2>
               <p>{interestingProjects.length}</p>
@@ -125,7 +137,7 @@ export default function Projets() {
                 <ProjectCard key={project.id} project={project} />
               ))}
             </div>
-          </section>
+          </section>}
 
           {otherProjects.length > 0 && (
             <details

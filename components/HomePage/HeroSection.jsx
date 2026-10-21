@@ -16,9 +16,9 @@ function HeroSection() {
             <span className="accent">solutions web.</span>
           </h1>
           <p className="hero-text fade-up fade-up-delay-2">
-            J&apos;accompagne entreprises et porteurs de projets de l&apos;idée à
-            la mise en ligne, avec une maîtrise du développement, de
-            l&apos;interface et du déploiement.
+            Sites internet, applications métier et logiciels sur mesure.
+            De la conception au déploiement, un seul interlocuteur pour
+            donner vie à votre projet.
           </p>
           <div className="hero-actions fade-up fade-up-delay-3">
             <Link href="/#realisations" className="btn btn-primary">

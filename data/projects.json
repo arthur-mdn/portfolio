@@ -162,7 +162,7 @@
     "name": "BlindSet Studio",
     "slug": "blindset-studio",
     "description": "Créer ses propres quiz musicaux et garder la main sur leur animation, dans une application macOS native utilisable hors ligne.\n\nBlindSet Studio est né d’un besoin concret en animation musicale : les catalogues imposés limitaient le choix des morceaux et le déroulement des quiz laissait trop peu de contrôle à l’animateur.\nJ’ai choisi de développer un produit destiné aux DJ, aux animateurs et à toute personne souhaitant préparer ses propres quiz musicaux, avec l’objectif de le commercialiser à terme.\n\nAvant la prestation, l’utilisateur importe ses fichiers audio, prépare les questions, choisit les extraits et leur point de départ, puis renseigne quatre propositions et la bonne réponse.\nPendant la soirée, il lance le quiz préparé et contrôle sa progression : présentation du mode de jeu, énoncé, propositions puis réponse. Le déroulement peut être piloté manuellement ou automatisé.\nDeux vues distinctes séparent le cockpit de l’animateur et la fenêtre destinée au public. Cette dernière peut être placée sur un second écran ou un projecteur, avec une présentation visuelle et sonore dédiée.",
-    "image": "projects/blindset-studio.webp",
+    "image": "projects/blindset-studio-thumbnail.webp",
     "link": "https://blindset.fr",
     "github": "",
     "youtube": [],
@@ -832,7 +832,7 @@
     "name": "Studer - WebApp Tinder pour étudiants",
     "slug": "studer-tinder-mmi",
     "description": "Découvrir les projets étudiants par le swipe pour explorer les parcours MMI, dans une PWA développée en trois jours.\n\nPendant la Wild Work Week à l’Université de Toulon, notre équipe devait proposer une manière de présenter les projets étudiants et d’aider les lycéens à découvrir les parcours MMI : création, développement et communication. Le concept s’inspire du swipe de Tinder, avec des cartes à parcourir pour explorer les réalisations et exprimer ses préférences.\n\nL’utilisateur parcourt des cartes de projets étudiants et peut les aimer, les écarter ou les passer. Chaque projet présente une description, des images, son type, sa difficulté et sa durée de réalisation.\nLes réactions alimentent un calcul de compatibilité qui fait émerger les parcours MMI correspondant aux préférences du visiteur. Les cartes et leurs animations donnent à la découverte des projets un rythme adapté à une consultation interactive.",
-    "image": "projects/studer.png",
+    "image": "projects/mmistuder-thumbnail.webp",
     "link": "",
     "github": "https://github.com/arthur-mdn/Studer",
     "youtube": [],
@@ -954,38 +954,73 @@
     "id": 24,
     "name": "Site Portfolio",
     "slug": "site-portfolio",
-    "description": "Mon site portfolio, actuellement accessible en ligne, est une vitrine de mon parcours professionnel en tant que développeur web. Réalisé en React et Vite, ce site reflète et affiche ma maîtrise de diverses technologies. Il présente une interface utilisateur intuitive et moderne, conçue pour offrir une expérience fluide aux visiteurs souhaitant explorer mon univers professionnel.\n\nSur ce site, je mets en avant mes projets publics, chacun accompagné d'une description, des technologies utilisées, et des liens vers des ressources supplémentaires comme GitHub ou des démonstrations en ligne. Cette section permet aux visiteurs de se plonger dans mes travaux, reflétant ma capacité à mener à bien des projets variés et complexes.\n\nIl est également possible pour les visiteurs de télécharger directement mon CV, offrant ainsi un accès immédiat à mes qualifications et à mon parcours professionnel. De plus, le site intègre un formulaire de contact, facilitant la communication avec les clients potentiels, les employeurs ou les collaborateurs intéressés par mon profil et mes services.\n\nL'esthétique et la performance du site, grâce à l'utilisation de React et Vite, témoignent de mon engagement à offrir une expérience utilisateur de qualité. Le design est à la fois élégant et fonctionnel, et le site est optimisé pour une navigation rapide et réactive. En rendant le code source du site disponible dans un repository public, je démontre également mon intérêt pour la transparence et le partage de connaissances avec la communauté des développeurs.\n\nEn résumé, mon site portfolio est non seulement une représentation de mes compétences techniques et de mon expérience en développement web, mais aussi une plateforme interactive où les visiteurs peuvent découvrir mon univers professionnel, mes réalisations, et entrer en contact avec moi. C'est un outil essentiel dans ma démarche de mise en valeur de mon profil professionnel et de connexion avec le monde du développement web. Mon site portfolio, qui se veut être le miroir de mon parcours en tant que développeur web, a récemment connu une évolution significative. En plus de la version initiale développée avec React et Vite, le projet a été réintégré en utilisant Next.js en combinaison avec React. Cette transition vers Next.js a été motivée par la volonté d'améliorer l'optimisation SEO du site, en particulier pour intégrer le Server-Side Rendering (SSR) des métadonnées dans l'en-tête de chaque page. Cette amélioration technique vise à renforcer la visibilité et l'accessibilité du site dans les moteurs de recherche, ce qui est essentiel pour atteindre un public plus large.\n\nCette démarche illustre non seulement mon engagement à adopter les meilleures pratiques en matière de développement web, mais aussi ma capacité à évoluer et à réagir aux exigences changeantes du domaine, tout en cherchant constamment à améliorer l'expérience utilisateur et la performance du site. Les deux versions du site, celle basée sur Vite/React et la nouvelle version avec Next/React, sont accessibles sur mon repository GitHub. Cette coexistence offre une transparence totale sur mon processus de développement et souligne mon aptitude à maîtriser différentes approches et technologies dans la réalisation de projets web.",
-    "image": "projects/site-portfolio.png",
+    "description": "Un portfolio pour présenter ma pluridisciplinarité, mes réalisations et mes services, entièrement repensé et mis en ligne le 1er novembre 2026.\n\nMon portfolio rassemble mon parcours, mes services et mes réalisations pour m’adresser aux clients freelance, aux recruteurs et aux personnes souhaitant collaborer avec moi. Cette version, mise en ligne le 1er novembre 2026, met particulièrement en avant ma pluridisciplinarité : développement web, applications natives et expériences interactives.\nLe site a évolué d’une première version React/Vite vers Next.js, notamment pour disposer du contenu et des métadonnées dans le HTML rendu avant l’exécution du JavaScript côté navigateur.\n\nLa bibliothèque distingue les projets mis en avant des autres réalisations. Chaque fiche présente le contexte, les fonctionnalités, les technologies et, selon les informations disponibles, mon intervention, les choix de conception et les résultats. Des liens contextuels et des projets associés permettent de découvrir des réalisations complémentaires.\nLe site réunit également des pages de services, mon parcours, mes compétences, un blog, le téléchargement du CV et un formulaire de contact. La présentation s’adapte aux différentes tailles d’écran.\nAvec Next.js, les fiches projets, les pages de services et les articles sont générés statiquement : leur contenu et leurs métadonnées sont présents dans le HTML initial. Un sitemap et des images de partage complètent cette structure pour faciliter la découverte et la présentation des pages.",
+    "image": "projects/portfolio-thumbnail.webp",
     "link": "",
     "github": "https://github.com/arthur-mdn/portfolio",
     "youtube": [],
     "technos": [
+      105,
+      109,
       101,
       102,
       103,
-      105,
-      106,
-      109,
-      401
+      401,
+      402
     ],
-    "tags": [],
-    "date": "2024-02-20",
+    "tags": [
+      "React",
+      "Next.js",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Git",
+      "Docker"
+    ],
+    "date": "2026-11-01",
     "status": "online",
     "type": "Site web",
     "interesting": true,
-    "context": "Ce site portfolio sert de vitrine à mon parcours de développeur web. La première version a été construite en React / Vite, puis le projet a évolué vers Next.js pour renforcer le SEO via le rendu côté serveur des métadonnées.\nL'enjeu était de présenter clairement mon profil, mes projets et un moyen de contact, tout en restant techniquement exemplaire.",
-    "need": "Une plateforme moderne, rapide et évolutive pour exposer mes réalisations, permettre le téléchargement du CV et faciliter la prise de contact.\nIl fallait aussi pouvoir itérer sur la stack (Vite puis Next) sans perdre la lisibilité du parcours visiteur.",
-    "solution": "Conception d'un portfolio React avec une interface sobre centrée sur les projets, les technologies et le contact. Chaque projet peut être détaillé avec liens GitHub ou démos.\nLa migration vers Next.js a ensuite permis d'améliorer le référencement et la structure des pages, tout en conservant l'esprit du site. Les deux versions restent accessibles sur GitHub.",
+    "context": "Mon portfolio rassemble mon parcours, mes services et mes réalisations pour m’adresser aux clients freelance, aux recruteurs et aux personnes souhaitant collaborer avec moi. Cette version, mise en ligne le 1er novembre 2026, met particulièrement en avant ma pluridisciplinarité : développement web, applications natives et expériences interactives.\nLe site a évolué d’une première version React/Vite vers Next.js, notamment pour disposer du contenu et des métadonnées dans le HTML rendu avant l’exécution du JavaScript côté navigateur.",
+    "need": "Rendre un parcours varié compréhensible, montrer les projets et les compétences mobilisées, puis permettre au visiteur d’identifier les services qui correspondent à son besoin ou de prendre contact. La nouvelle présentation devait aussi faciliter la mise à jour des fiches et leur découverte dans les moteurs de recherche.",
+    "solution": "La bibliothèque distingue les projets mis en avant des autres réalisations. Chaque fiche présente le contexte, les fonctionnalités, les technologies et, selon les informations disponibles, mon intervention, les choix de conception et les résultats. Des liens contextuels et des projets associés permettent de découvrir des réalisations complémentaires.\nLe site réunit également des pages de services, mon parcours, mes compétences, un blog, le téléchargement du CV et un formulaire de contact. La présentation s’adapte aux différentes tailles d’écran.\nAvec Next.js, les fiches projets, les pages de services et les articles sont générés statiquement : leur contenu et leurs métadonnées sont présents dans le HTML initial. Un sitemap et des images de partage complètent cette structure pour faciliter la découverte et la présentation des pages.",
     "features": [
-      "Présentation du parcours et des compétences",
-      "Galerie de projets avec descriptions, technos et liens",
-      "Téléchargement direct du CV",
-      "Formulaire de contact",
-      "Design responsive et performance soignée",
-      "Évolution Vite/React puis Next.js pour le SEO / SSR des métadonnées",
-      "Code source public pour transparence"
+      "Présentation du parcours, des services et de compétences pluridisciplinaires",
+      "Bibliothèque de projets avec sélection mise en avant et autres réalisations",
+      "Fiches détaillées avec technologies, liens, images et projets associés",
+      "Miniatures de projets réalisées à la main",
+      "Maillage interne entre les réalisations et les services correspondants",
+      "Blog, formulaire de contact et téléchargement du CV",
+      "Présentation responsive",
+      "Prérendu HTML avec Next.js et génération statique des fiches et articles",
+      "Métadonnées, sitemap et images de partage"
     ],
-    "result": "Une vitrine professionnelle interactive, techniquement à jour, qui synthétise mon profil et oriente naturellement vers le contact ou l'exploration des projets."
+    "result": "Mise en ligne le 1er novembre 2026, cette version présente mon travail et la diversité des projets que je conçois et développe. Les fiches enrichies, les miniatures réalisées à la main et la navigation entre réalisations et services donnent un aperçu plus complet de mes compétences. Je continue à faire évoluer le portfolio et à actualiser ses contenus au fil de mon activité.",
+    "summary": "Un portfolio pour présenter ma pluridisciplinarité, mes réalisations et mes services, entièrement repensé et mis en ligne le 1er novembre 2026.",
+    "facts": [
+      {
+        "label": "Objectif",
+        "value": "Présenter mon profil aux clients, recruteurs et collaborateurs"
+      },
+      {
+        "label": "Intervention",
+        "value": "Conception et réalisation entièrement en solo"
+      },
+      {
+        "label": "Nouvelle version",
+        "value": "Mise en ligne le 1er novembre 2026"
+      },
+      {
+        "label": "Technologie",
+        "value": "React et Next.js"
+      }
+    ],
+    "role": "J’ai réalisé seul l’ensemble du portfolio : identité graphique, design, textes, développement, hébergement et maintenance. Les miniatures de présentation des projets sont réalisées à la main. Je fais évoluer le site et tente de garder les contenus à jour au fil de mes réalisations.",
+    "challenges": "L’enjeu central est de rendre lisible une activité pluridisciplinaire sans perdre le visiteur dans la quantité de projets. La nouvelle version s’appuie sur une sélection de réalisations, des fiches plus précises et des liens vers les services pour guider la découverte. L’évolution de React/Vite vers Next.js répond aussi au besoin de disposer de pages et de métadonnées prérendues.",
+    "relatedServices": [
+      "creation-site-internet",
+      "refonte-site-web"
+    ]
   },
   {
     "id": 28,
@@ -1147,9 +1182,9 @@
     "name": "Du Kart à la F1",
     "slug": "du-kart-a-la-f1",
     "description": "Une landing page événementielle pour découvrir les sélections de karting, explorer les circuits partenaires et s’inscrire pour tenter de conduire une F1.\n\nDu Kart à la F1 est un événement qui permet à des passionnés de karting de participer à des sélections pour tenter de conduire une Formule 1. Dans le cadre d’une commande freelance, le site devait présenter l’événement, son programme, les pistes accueillant les sélections, les prix à gagner et les partenaires.\n\nLa page rassemble le programme, les prix à gagner et les partenaires. Une carte de France interactive situe les circuits accueillant les sélections : un clic sur une piste permet d’en afficher le tracé.\nLe changement de langue est piloté par un sélecteur dans la barre supérieure. Deux fichiers de traduction JSON, avec des textes préparés à l’avance, permettent de changer instantanément la langue de l’interface.\nDes vidéos TikTok sont intégrées à la page. Un module YourPlan embarqué en iframe donne accès à la billetterie, aux inscriptions et au planning. La landing page ne nécessite pas de serveur applicatif dédié pour ces fonctions.",
-    "image": "projects/site-web-dukartalaf1.png",
+    "image": "projects/dukartalaf1-thumbnail.webp",
     "link": "https://kart.mondon.pro",
-    "github": "https://github.com/arthur-mdn/kartf1",
+    "github": "https://github.com/arthur-mdn/dukartalaf1.com",
     "youtube": [],
     "technos": [
       101,
@@ -1292,7 +1327,7 @@
     "name": "Cookie Remover",
     "slug": "cookie-remover",
     "description": "Une extension Chromium pour masquer les éléments gênants et appliquer ses propres règles de style pendant la navigation.\n\nCookie Remover est né de mon envie de masquer les bannières de cookies intempestives et d’adapter les pages à mes besoins de navigation. Le projet était aussi l’occasion d’apprendre à développer une extension pour les navigateurs basés sur Chromium.\nJ’ai choisi de construire un outil personnalisable pour agir précisément sur les éléments visuels qui me gênaient.\n\nUn mode de sélection visuelle permet de désigner manuellement un élément HTML et de créer une règle adaptée au site. L’extension détecte ensuite les éléments enregistrés pour appliquer automatiquement les actions prévues : masquage, modification de classes ou ajout de styles CSS.\nCes styles permettent notamment de rétablir le défilement vertical lorsqu’une fenêtre superposée a été masquée mais que la page reste bloquée. Une vérification en boucle permet de réappliquer les règles lorsque les éléments réapparaissent.\nL’action porte sur l’affichage et les styles de la page : masquer une bannière ne correspond pas à exprimer un choix de consentement.",
-    "image": "projects/cookie-remover.png",
+    "image": "projects/cookie-remover-thumbnail.webp",
     "link": "",
     "github": "https://github.com/arthur-mdn/cookie-remover",
     "youtube": [],
@@ -1834,9 +1869,9 @@
   },
   {
     "id": 12,
-    "name": "Refonte du Site Web sous Wordpress",
+    "name": "Edissyum — Refonte du site WordPress",
     "slug": "edissyum-wordpress",
-    "description": "La refonte complète du site web Edissyum pour mon alternance chez Edissyum, réalisée sur WordPress. Ce projet a été une opportunité de démontrer mes compétences en développement web et en gestion de contenu, ainsi que ma capacité à créer une plateforme en ligne qui met en valeur les services et l'expertise d'Edissyum dans le domaine de la gestion électronique de documents.\n\nLe site refondu présente nos solutions spécialisées, notamment MEM Courrier et Open Capture, en mettant l'accent sur notre expertise en solutions logicielles libres et en capture documentaire. Le site comprend des sections dédiées à nos références, des témoignages clients, ainsi que des formulaires de contact et d'inscription. Une partie importante du site est consacrée à un blog d'actualité, fournissant des informations régulières sur nos activités et nos domaines d'expertise.\n\nUne page dédiée à l'entreprise offre un aperçu de l'histoire d'Edissyum, incluant une visite virtuelle des bureaux que j'ai réalisée, ainsi qu'une vidéo de présentation. Chaque produit et service est détaillé sur des pages spécifiques, et une section carrière propose des informations sur les opportunités d'emploi et un formulaire de recrutement.\n\nLe site fonctionne sous WordPress avec Elementor, et a été conçu sans utiliser de template prédéfini. J'ai opté pour une approche personnalisée, en construisant le site de A à Z sur Elementor. L'accent a été mis sur l'optimisation SEO pour assurer une visibilité maximale sur les moteurs de recherche, et l'intégration de Google Analytics permet de suivre et d'analyser le trafic du site.\n\nLe panel administratif de WordPress facilite la gestion du contenu, permettant l'ajout de blogs, d'actualités et la modification de divers éléments du site. Ce projet illustre non seulement mes compétences techniques en matière de développement web, mais aussi ma capacité à créer des plateformes en ligne attrayantes et fonctionnelles qui reflètent fidèlement l'image et les valeurs d'une entreprise.",
+    "description": "Refonte complète du site d’Edissyum Consulting sur une base WordPress saine, personnalisée et facile à administrer par les équipes.\n\nRéalisée pendant mon alternance chez Edissyum Consulting, cette mission répondait au vieillissement du site de l’entreprise, qui n’avait pas été mis à jour depuis plusieurs années. Les extensions WordPress s’étaient accumulées, avec des composants obsolètes ou non maintenus : une simple mise à jour ne suffisait plus.\nL’entreprise souhaitait conserver WordPress pour la gestion des articles et parce que les employés chargés des contenus maîtrisaient déjà cet outil.\n\nLe site a été reconstruit sur une base WordPress saine, avec un template personnalisé, du code et des styles spécifiques ainsi que des modules développés sur mesure. Cette approche permettait de répondre aux besoins du site en évitant d’accumuler des extensions pour chaque ajustement.\nLes contenus présentent les solutions de GED et de capture documentaire, dont MEM Courrier et Open Capture, les références, les témoignages, les actualités et le recrutement. La mise en page s’adapte aux mobiles, tablettes et ordinateurs, tandis que WordPress permet aux équipes de continuer à alimenter les articles et les pages.\nLa visite virtuelle des bureaux et la vidéo de présentation, également réalisées par mes soins, ont été intégrées au site. Leur réalisation relevait de missions distinctes de cette refonte.",
     "image": "projects/edissyum.png",
     "link": "https://edissyum.com",
     "github": "",
@@ -1854,26 +1889,59 @@
     "status": "online",
     "type": "Site web",
     "interesting": false,
-    "context": "Refonte complète du site corporate Edissyum pendant mon alternance. L'entreprise devait mieux présenter son expertise en GED et capture documentaire (MEM Courrier, Open Capture), ses références et ses actualités.\nLe site existant ne reflétait plus assez clairement l'offre ni l'image de l'entreprise.",
-    "need": "Une plateforme WordPress sur mesure : solutions, références, témoignages, blog, page entreprise (avec visite virtuelle et vidéo), carrières et formulaires.\nLe SEO et le suivi analytics faisaient partie du brief dès le départ.",
-    "solution": "Reconstruction WordPress / Elementor de A à Z, sans template figé. Contenu structuré par produit / service, blog d'actualité, espace recrutement, SEO soigné et Google Analytics.\nLe back-office WordPress permet ensuite à l'équipe de publier et mettre à jour sans friction.",
+    "context": "Réalisée pendant mon alternance chez Edissyum Consulting, cette mission répondait au vieillissement du site de l’entreprise, qui n’avait pas été mis à jour depuis plusieurs années. Les extensions WordPress s’étaient accumulées, avec des composants obsolètes ou non maintenus : une simple mise à jour ne suffisait plus.\nL’entreprise souhaitait conserver WordPress pour la gestion des articles et parce que les employés chargés des contenus maîtrisaient déjà cet outil.",
+    "need": "Repartir d’une base propre, moderniser la présentation des solutions et de l’entreprise, et conserver une administration familière aux équipes. La refonte devait limiter les extensions superflues et aboutir à un site responsive, personnalisé et livré clé en main.",
+    "solution": "Le site a été reconstruit sur une base WordPress saine, avec un template personnalisé, du code et des styles spécifiques ainsi que des modules développés sur mesure. Cette approche permettait de répondre aux besoins du site en évitant d’accumuler des extensions pour chaque ajustement.\nLes contenus présentent les solutions de GED et de capture documentaire, dont MEM Courrier et Open Capture, les références, les témoignages, les actualités et le recrutement. La mise en page s’adapte aux mobiles, tablettes et ordinateurs, tandis que WordPress permet aux équipes de continuer à alimenter les articles et les pages.\nLa visite virtuelle des bureaux et la vidéo de présentation, également réalisées par mes soins, ont été intégrées au site. Leur réalisation relevait de missions distinctes de cette refonte.",
     "features": [
-      "Pages solutions (MEM Courrier, Open Capture, etc.)",
+      "Présentation des solutions, produits et services de l’entreprise",
       "Références et témoignages clients",
-      "Blog / actualités",
-      "Page entreprise avec visite virtuelle et vidéo",
+      "Blog et actualités administrables sous WordPress",
+      "Template personnalisé, styles spécifiques et modules sur mesure",
+      "Éléments visuels réalisés pour la refonte",
+      "Interface responsive sur mobile, tablette et ordinateur",
+      "Page entreprise avec intégration d’une visite virtuelle et d’une vidéo",
       "Espace carrière et formulaire de recrutement",
-      "Formulaires de contact et d'inscription",
-      "SEO technique et Google Analytics",
-      "Administration WordPress / Elementor sur mesure"
+      "Formulaires de contact et d’inscription",
+      "SEO et suivi du trafic avec Google Analytics"
     ],
-    "result": "Un site corporate plus clair, administrable et aligné avec l'expertise Edissyum, capable de présenter l'offre et d'alimenter le recrutement / la génération de leads."
+    "result": "Un site responsive et livré clé en main, avec une base WordPress assainie, une présentation modernisée et une gestion des contenus accessible aux équipes. Le projet a été validé par le dirigeant. Le site est aujourd’hui maintenu et modifié par la société.",
+    "summary": "Refonte complète du site d’Edissyum Consulting sur une base WordPress saine, personnalisée et facile à administrer par les équipes.",
+    "role": "J’ai mené seul l’ensemble de la refonte sur plusieurs mois : conception, personnalisation du template, développement, styles, création des éléments visuels et livraison. Je disposais d’une carte blanche et de la confiance de l’entreprise, avec une validation par le dirigeant.",
+    "challenges": "Reconstruire un site vieillissant sans reproduire l’accumulation d’extensions qui compliquait son entretien. Il fallait concilier une présentation entièrement modernisée, des besoins spécifiques traités par du code personnalisé et la continuité d’usage de WordPress pour les employés.",
+    "facts": [
+      {
+        "label": "Cadre",
+        "value": "Alternance chez Edissyum Consulting"
+      },
+      {
+        "label": "Durée",
+        "value": "Plusieurs mois"
+      },
+      {
+        "label": "Intervention",
+        "value": "Refonte entièrement réalisée en solo"
+      },
+      {
+        "label": "Gestion actuelle",
+        "value": "Maintenance et évolutions assurées par la société"
+      }
+    ],
+    "relatedServices": [
+      "refonte-site-web",
+      "creation-site-internet"
+    ],
+    "relatedProjects": [
+      {
+        "slug": "visites-virtuelles",
+        "reason": "La visite virtuelle des bureaux d’Edissyum, intégrée au site, fait partie de mes réalisations de visites immersives. Une mission distincte de la refonte WordPress."
+      }
+    ]
   },
   {
     "id": 6,
     "name": "PWA Factures et Dépenses",
     "slug": "factures-et-depenses",
-    "description": "\"Facture\" est une progressive web app innovante que j'ai conçue pour simplifier la gestion des dépenses des enfants, tout en impliquant les parents dans le processus. Cette application sert de pont numérique entre les enfants et leurs parents, offrant une solution transparente et efficace pour la gestion financière familiale.\n\nDans \"Facture\", les comptes enfants sont liés à ceux des parents, avec la possibilité pour un parent de gérer plusieurs enfants. Les enfants peuvent saisir leurs dépenses en détaillant le titre, la description, le montant, la date et le type de dépense. Ils ont également la possibilité d'ajouter un justificatif d'achat et de demander un remboursement.\n\nL'application offre un historique clair où les enfants peuvent voir si leurs dépenses ont été acceptées ou refusées, avec les raisons associées. Du côté des parents, \"Facture\" permet de gérer les dépenses de manière flexible : acceptation ou refus de dépenses multiples, paiement total ou partiel, déduction ou ajout de montants spécifiques.\n\nLes parents ont accès aux profils de tous leurs enfants, pouvant examiner et gérer les dépenses de chacun individuellement. Bien que l'application ne gère pas directement les transactions financières, elle facilite la communication et la prise de décision en matière de finances familiales, avec la possibilité de réaliser les paiements via d'autres moyens, comme les virements bancaires.\n\n\"Facture\" illustre mon engagement à créer des solutions numériques qui répondent aux besoins quotidiens des familles, en combinant fonctionnalité, facilité d'utilisation et une approche centrée sur l'utilisateur pour une gestion financière familiale plus organisée et transparente.\n\n\n\n\n\n\n",
+    "description": "Déclarer une dépense, joindre un justificatif et suivre son remboursement dans une PWA partagée entre enfants et parents.\n\nFactures et Dépenses est né d’un besoin dans ma famille : suivre les dépenses des enfants et les remboursements décidés par leurs parents. L’application a également été partagée avec des amis et des proches qui l’ont utilisée au quotidien.\nCe projet familial est distinct du logiciel de facturation pour micro-entreprise, conçu plus tard pour gérer les devis et les factures de mon activité.\n\nLes membres de la famille sont reliés par invitation e-mail avec validation du parent. Plusieurs parents peuvent suivre un même enfant, et un parent peut retrouver les dépenses de plusieurs enfants depuis son compte.\nPour déclarer une dépense, l’enfant renseigne un titre, un montant, un type et une date. Il peut ajouter une description et un fichier servant de preuve d’achat. Les parents sont notifiés et sélectionnent les dépenses qu’ils souhaitent accepter ou refuser.\nLe montant retenu peut correspondre à la totalité de la dépense ou à un pourcentage, avec des ajustements ou des déductions. L’historique permet de suivre les décisions et les montants à rembourser. L’application organise ce suivi ; les transferts d’argent sont réalisés séparément.\n\nL’application a été très utilisée au quotidien dans ma famille, puis partagée avec des amis et des proches. Les retours ont été excellents sur son utilité et ses fonctionnalités.\nLe lien public reste disponible, mais le projet n’est plus maintenu.",
     "image": "projects/facture.png",
     "link": "https://facture.mondon.pro/",
     "github": "",
@@ -1889,42 +1957,67 @@
       "HTML",
       "CSS",
       "JavaScript",
-      "JS",
-      "React",
+      "PHP",
       "MySQL"
     ],
     "date": "2022-01-21",
-    "status": "online",
+    "status": "archived",
     "type": "WebApp",
     "interesting": false,
-    "context": "Facture est une PWA conçue pour aider les familles à suivre les dépenses des enfants avec validation parentale. L'outil fait le lien entre saisie côté enfant et décision côté parent.\nCe projet est distinct du [logiciel de facturation pour micro-entreprise](/projet/logiciel-de-facturation), plus récent.",
-    "need": "Permettre aux enfants de déclarer une dépense (titre, description, montant, date, type, justificatif) et de demander un remboursement.\nLes parents doivent pouvoir accepter, refuser, payer partiellement et suivre plusieurs enfants depuis un même compte.",
-    "solution": "Progressive web app avec comptes liés parents / enfants, historique des décisions (accepté / refusé + motif) et gestion flexible des montants.\nL'app ne remplace pas la banque : elle organise la communication et la décision avant le paiement réel (virement, etc.).",
+    "context": "Factures et Dépenses est né d’un besoin dans ma famille : suivre les dépenses des enfants et les remboursements décidés par leurs parents. L’application a également été partagée avec des amis et des proches qui l’ont utilisée au quotidien.\nCe projet familial est distinct du [logiciel de facturation pour micro-entreprise](/projet/logiciel-de-facturation), conçu plus tard pour gérer les devis et les factures de mon activité.",
+    "need": "Donner aux enfants un moyen de déclarer leurs dépenses et d’en suivre le traitement, tout en permettant aux parents de choisir les montants à rembourser. L’organisation devait permettre à plusieurs parents de suivre les mêmes enfants et à chaque parent de gérer plusieurs enfants.",
+    "solution": "Les membres de la famille sont reliés par invitation e-mail avec validation du parent. Plusieurs parents peuvent suivre un même enfant, et un parent peut retrouver les dépenses de plusieurs enfants depuis son compte.\nPour déclarer une dépense, l’enfant renseigne un titre, un montant, un type et une date. Il peut ajouter une description et un fichier servant de preuve d’achat. Les parents sont notifiés et sélectionnent les dépenses qu’ils souhaitent accepter ou refuser.\nLe montant retenu peut correspondre à la totalité de la dépense ou à un pourcentage, avec des ajustements ou des déductions. L’historique permet de suivre les décisions et les montants à rembourser. L’application organise ce suivi ; les transferts d’argent sont réalisés séparément.",
     "features": [
-      "Comptes enfants liés aux comptes parents",
-      "Un parent peut gérer plusieurs enfants",
-      "Saisie détaillée des dépenses + justificatif",
-      "Demande de remboursement",
-      "Historique accepté / refusé avec motifs",
-      "Paiement total ou partiel, ajustement de montants",
-      "Vue parent multi-profils",
-      "Usage mobile via PWA"
+      "Invitations par e-mail et validation des liens familiaux par le parent",
+      "Plusieurs parents pour un même enfant et plusieurs enfants par parent",
+      "Déclaration avec titre, montant, type et date",
+      "Description et justificatif d’achat facultatifs",
+      "Notifications aux parents lors des demandes",
+      "Sélection des dépenses à accepter ou à refuser",
+      "Remboursement prévu total ou partiel, calcul en pourcentage et ajustement des montants",
+      "Historique des décisions et suivi des remboursements",
+      "Interface PWA pour une utilisation sur mobile"
     ],
-    "result": "Un outil familial qui clarifie le suivi des dépenses et la validation parentale, sans prétendre gérer les flux bancaires eux-mêmes.",
+    "result": "L’application a été très utilisée au quotidien dans ma famille, puis partagée avec des amis et des proches. Les retours ont été excellents sur son utilité et ses fonctionnalités.\nLe lien public reste disponible, mais le projet n’est plus maintenu.",
     "relatedProjects": [
       {
         "slug": "logiciel-de-facturation",
         "reason": "Un autre outil de gestion, destiné aux entrepreneurs : clients, projets, devis et factures, avec génération de documents PDF."
       }
+    ],
+    "summary": "Déclarer une dépense, joindre un justificatif et suivre son remboursement dans une PWA partagée entre enfants et parents.",
+    "facts": [
+      {
+        "label": "Origine",
+        "value": "Un besoin personnel et familial"
+      },
+      {
+        "label": "Intervention",
+        "value": "Conception et développement entièrement en solo"
+      },
+      {
+        "label": "Usage",
+        "value": "Utilisation quotidienne en famille et par des proches"
+      },
+      {
+        "label": "État actuel",
+        "value": "Lien public disponible · application non maintenue"
+      }
+    ],
+    "role": "J’ai réalisé seul l’ensemble de l’application : comptes et liens familiaux, déclaration des dépenses, justificatifs, notifications, validation et suivi des remboursements. Le projet a été développé avec PHP, MySQL, HTML, CSS et JavaScript.",
+    "challenges": "L’enjeu était de représenter les liens entre plusieurs parents et enfants et de garder un suivi compréhensible des dépenses. La gestion des validations et des montants partiels permet d’adapter chaque remboursement à la décision des parents, sans perdre l’historique de la demande.",
+    "linkLabel": "Consulter l’application historique",
+    "relatedServices": [
+      "application-web-sur-mesure"
     ]
   },
   {
     "id": 7,
     "name": "EDT - PWA Emploi du Temps Université",
     "slug": "edt-pwa-emploi-du-temps-universite",
-    "description": "\n\"EDT\" est une progressive web app que j'ai conçue pour améliorer la gestion de l'emploi du temps des étudiants à l'Université de Toulon, en utilisant PHP et MySQL. Cette application s'interface avec hyperplanning, un outil de planification académique, pour offrir une expérience utilisateur personnalisée et efficace.\n\nL'application permet aux étudiants de récupérer et de gérer leur emploi du temps en téléchargeant le fichier ICS depuis hyperplanning. Chaque requête assure que l'emploi du temps est constamment mis à jour. Les utilisateurs peuvent ajouter plusieurs calendriers, les modifier, et choisir entre différentes vues (mois, semaine, jour). Ils peuvent également personnaliser le calendrier, comme la plage horaire d'affichage, la couleur par défaut des événements, et activer des filtres spécifiques. Par exemple, un filtre \"entreprise\" pour les étudiants en alternance, permettant de différencier facilement les jours de cours des jours en entreprise.\n\nLa page d'accueil affiche le calendrier selon les paramètres choisis, avec des options pour changer la vue ou ajouter des événements personnels. La fonction de recherche permet de filtrer les cours, les salles, les noms des professeurs, ou les matières. De plus, un bouton pratique sur la page d'accueil permet aux étudiants d'afficher rapidement leur carte d'étudiant pour un accès facile à l'université.\n\n\"EDT\" propose également une fonctionnalité de groupe, permettant aux étudiants de rejoindre ou de créer des groupes de classe. Au sein de ces groupes, ils peuvent accéder à un chat, une liste de tâches (comme les contrôles et les devoirs) avec des dates butoirs, et visualiser la liste des membres du groupe, avec l'option de le quitter.\n\nPour les administrateurs, l'application offre un panel de contrôle en temps réel pour surveiller l'utilisation de l'application, le nombre d'utilisateurs, les dernières connexions et le nombre de calendriers. Ils peuvent également envoyer des messages aux utilisateurs, qui s'affichent en plein écran lors du lancement de l'application.\n\n\"EDT\" est une démonstration de ma capacité à créer des solutions numériques intuitives et fonctionnelles, visant à améliorer l'expérience universitaire et à faciliter la gestion du temps pour les étudiants.",
+    "description": "Un emploi du temps étudiant consultable et personnalisable, avec recherche des cours, filtres colorés et devoirs partagés en groupe.\n\nEDT est né d’un besoin personnel pendant mes études à l’Université de Toulon. L’application web de l’école ne permettait pas de rechercher un cours ou un professeur et proposait peu de personnalisation. Je voulais consulter mon emploi du temps plus facilement et distinguer visuellement les journées de cours des périodes en entreprise.\nCe défi personnel a ensuite été partagé avec les autres étudiants.\n\nChaque étudiant dispose de son propre compte et ajoute son lien ICS Hyperplanning. L’emploi du temps récupéré est mis en cache pendant une heure : lorsqu’il est consulté et que la version enregistrée est trop ancienne, elle est actualisée automatiquement. Un rafraîchissement forcé reste possible à la demande.\nL’interface propose plusieurs calendriers et des vues jour, semaine ou mois. La recherche porte notamment sur le nom des cours et des professeurs. Les filtres et les couleurs personnalisées permettent, par exemple, de distinguer les cours des journées en entreprise pour les alternants.\nLes groupes de classe réunissent les étudiants invités autour d’un chat et de tâches partagées, avec les devoirs à faire, les examens à prévoir et leurs échéances. Un espace administrateur permet de suivre l’utilisation et de diffuser des messages aux utilisateurs.\n\nL’application a été utilisée par une vingtaine d’étudiants, avec des retours satisfaits sur son utilité. Elle apportait une recherche et une personnalisation absentes de l’outil utilisé auparavant.\nLe projet n’est plus maintenu et son accès public a été retiré.",
     "image": "projects/edt.png",
-    "link": "https://edt.mondon.pro",
+    "link": "",
     "github": "",
     "youtube": [],
     "technos": [
@@ -1943,69 +2036,48 @@
       "MySQL"
     ],
     "date": "2021-09-22",
-    "status": "online",
-    "type": "WebApp",
-    "interesting": false,
-    "context": "EDT est une PWA créée pour les étudiants de l'Université de Toulon afin de mieux consulter et organiser leur emploi du temps à partir d'Hyperplanning.\nLe calendrier officiel existait, mais l'expérience mobile et la personnalisation restaient limitées.",
-    "need": "Importer un ICS Hyperplanning, garder l'emploi du temps à jour, gérer plusieurs calendriers, changer de vues, filtrer (cours, salles, profs, matières) et ajouter des fonctions de vie étudiante (groupes, chat, tâches, carte étudiante).\nLes admins avaient aussi besoin d'un panel de suivi.",
-    "solution": "PWA PHP / MySQL branchée sur les fichiers ICS Hyperplanning. L'étudiant personnalise affichage, couleurs, plages horaires et filtres (dont un filtre entreprise pour l'alternance).\nDes groupes de classe ajoutent chat, liste de tâches et membres. Un panel admin surveille usage, connexions et peut diffuser des messages plein écran.",
-    "features": [
-      "Import et mise à jour d'emploi du temps via ICS Hyperplanning",
-      "Multi-calendriers et vues mois / semaine / jour",
-      "Personnalisation (plage horaire, couleurs, filtres)",
-      "Filtre entreprise pour alternants",
-      "Recherche cours / salles / professeurs / matières",
-      "Affichage rapide de la carte étudiante",
-      "Groupes : chat, tâches avec échéances, membres",
-      "Panel admin temps réel + messages utilisateurs"
-    ],
-    "result": "Un compagnon universitaire concret qui rend l'emploi du temps plus lisible, personnalisable et utile au quotidien étudiant."
-  },
-  {
-    "id": 4,
-    "name": "Seamless Réseau Mistral Toulon",
-    "slug": "seamless-reseau-mistral-toulon",
-    "description": "Seamless est un projet sur lequel j'ai travaillé, visant à simplifier la validation des titres de transport pour le réseau de bus et de bateaux Mistral à Toulon. Cette application mobile offre une solution pratique et rapide pour les usagers des transports en commun.\n\nL'interface utilisateur de Seamless est conçue pour être intuitive et facile à utiliser. Après connexion, l'utilisateur se voit présenter un gros bouton pour confirmer son voyage. Lorsque l'appareil est placé sur la cible spécifique présente dans les bus et bateaux, l'application valide le voyage et affiche un écran de confirmation. Cette fonctionnalité assure une expérience de validation de titre de transport sans effort et sécurisée.\n\nEn plus de la fonction de validation, l'application inclut un onglet \"Contrôle\" où les utilisateurs peuvent voir l'historique de toutes leurs validations. Ils ont également la possibilité d'afficher un QR code, que les contrôleurs peuvent scanner pour vérifier la validité du ticket. Cela facilite les contrôles et rend l'expérience utilisateur plus fluide.\n\nCe projet illustre mon engagement à développer des solutions mobiles qui améliorent l'expérience quotidienne des utilisateurs, en mettant l'accent sur la facilité d'utilisation, la sécurité et l'efficacité. Seamless transforme l'interaction avec les services de transport en commun, en rendant le processus de validation des titres de transport aussi simple et fluide que possible.\n\nSeamless n’est plus disponible et n’est plus maintenu. Il est remplacé par le projet Réseau Mistral, une démonstration de billetterie avec des tickets fictifs.",
-    "image": "projects/seamless.png",
-    "link": "",
-    "github": "",
-    "youtube": [],
-    "technos": [
-      101,
-      102,
-      103,
-      202,
-      301
-    ],
-    "tags": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "JS",
-      "MySQL"
-    ],
-    "date": "2021-09-20",
     "status": "archived",
     "type": "WebApp",
     "interesting": false,
-    "context": "Seamless vise à simplifier la validation des titres sur le réseau Mistral (bus et bateaux) à Toulon. L'expérience devait être quasi instantanée à bord, sans friction.\nLe projet se concentre sur le geste usager : valider, confirmer, pouvoir prouver son titre.",
-    "need": "Après connexion, un gros bouton de validation ; détection sur la cible à bord ; écran de confirmation ; historique des validations ; QR code pour le contrôleur.\nTout devait rester compréhensible en quelques secondes dans un contexte transport.",
-    "solution": "Application mobile centrée sur un parcours minimal : confirmation de voyage, validation sur cible, historique et QR de contrôle.\nL'UX privilégie la taille des actions et la clarté des retours plutôt que la densité fonctionnelle.",
+    "context": "EDT est né d’un besoin personnel pendant mes études à l’Université de Toulon. L’application web de l’école ne permettait pas de rechercher un cours ou un professeur et proposait peu de personnalisation. Je voulais consulter mon emploi du temps plus facilement et distinguer visuellement les journées de cours des périodes en entreprise.\nCe défi personnel a ensuite été partagé avec les autres étudiants.",
+    "need": "Importer son emploi du temps depuis Hyperplanning, retrouver rapidement un cours ou un enseignant et adapter les couleurs et les vues à ses besoins. Des espaces de classe devaient aussi permettre de partager les devoirs à faire et les examens à préparer.",
+    "solution": "Chaque étudiant dispose de son propre compte et ajoute son lien ICS Hyperplanning. L’emploi du temps récupéré est mis en cache pendant une heure : lorsqu’il est consulté et que la version enregistrée est trop ancienne, elle est actualisée automatiquement. Un rafraîchissement forcé reste possible à la demande.\nL’interface propose plusieurs calendriers et des vues jour, semaine ou mois. La recherche porte notamment sur le nom des cours et des professeurs. Les filtres et les couleurs personnalisées permettent, par exemple, de distinguer les cours des journées en entreprise pour les alternants.\nLes groupes de classe réunissent les étudiants invités autour d’un chat et de tâches partagées, avec les devoirs à faire, les examens à prévoir et leurs échéances. Un espace administrateur permet de suivre l’utilisation et de diffuser des messages aux utilisateurs.",
     "features": [
-      "Connexion usager",
-      "Bouton principal de confirmation de voyage",
-      "Validation sur cible à bord (bus / bateau)",
-      "Écran de confirmation clair",
-      "Historique des validations",
-      "QR code scannable par les contrôleurs"
+      "Import de l’emploi du temps à partir d’un lien ICS Hyperplanning",
+      "Cache d’une heure avec actualisation automatique à la consultation et rafraîchissement forcé possible",
+      "Recherche dans les cours, matières, salles et noms des professeurs",
+      "Gestion de plusieurs calendriers et vues jour, semaine ou mois",
+      "Personnalisation des couleurs, des plages horaires et des filtres",
+      "Distinction visuelle des cours et des journées en entreprise",
+      "Compte personnel pour chaque étudiant et accès rapide à la carte étudiante",
+      "Groupes de classe créés par l’administrateur et accessibles sur invitation",
+      "Chat, partage des devoirs et des examens, avec échéances",
+      "Administration du suivi d’utilisation et des messages aux étudiants"
     ],
-    "result": "Seamless n’est plus disponible et n’est plus maintenu. Le projet remplaçant, [Réseau Mistral](/projet/reseau-mistral), propose une démonstration de billetterie avec achat simulé, scan de QR code et gestion de tickets fictifs.",
-    "summary": "Ancien projet de validation de tickets, désormais indisponible et non maintenu. Le projet Réseau Mistral lui succède.",
-    "relatedProjects": [
+    "result": "L’application a été utilisée par une vingtaine d’étudiants, avec des retours satisfaits sur son utilité. Elle apportait une recherche et une personnalisation absentes de l’outil utilisé auparavant.\nLe projet n’est plus maintenu et son accès public a été retiré.",
+    "summary": "Un emploi du temps étudiant consultable et personnalisable, avec recherche des cours, filtres colorés et devoirs partagés en groupe.",
+    "facts": [
       {
-        "slug": "reseau-mistral",
-        "reason": "Le projet remplaçant : une démonstration de billetterie avec achat simulé, scan de QR code et gestion de tickets fictifs."
+        "label": "Origine",
+        "value": "Projet étudiant personnel · Université de Toulon"
+      },
+      {
+        "label": "Intervention",
+        "value": "Conception et développement entièrement en solo"
+      },
+      {
+        "label": "Utilisation",
+        "value": "Environ vingt étudiants"
+      },
+      {
+        "label": "État actuel",
+        "value": "Non maintenue · accès public retiré"
       }
+    ],
+    "role": "J’ai conçu et développé seul l’ensemble de l’application avec PHP, MySQL, HTML, CSS et JavaScript : import des calendriers, recherche, personnalisation, comptes personnels, groupes et administration. Je créais manuellement les groupes de classe, puis les étudiants les rejoignaient sur invitation.",
+    "challenges": "Le projet consistait à transformer un calendrier ICS en un outil adapté aux besoins du quotidien étudiant. Il fallait articuler la fraîcheur des données avec un cache d’une heure, proposer une recherche utile et rendre la personnalisation lisible, tout en ajoutant les échanges et les tâches partagées des groupes de classe.",
+    "relatedServices": [
+      "application-web-sur-mesure"
     ]
   },
   {

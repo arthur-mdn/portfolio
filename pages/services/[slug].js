@@ -6,18 +6,16 @@ import { getServiceBySlug, SERVICES } from "../../data/services";
 import ServiceHero from "@/components/Services/ServiceHero";
 import ServiceFaq from "@/components/Services/ServiceFaq";
 import ServiceRelated from "@/components/Services/ServiceRelated";
-import ArchitectureDiagram from "@/components/Services/ArchitectureDiagram";
-import BeforeAfter from "@/components/Services/BeforeAfter";
-import DeployPipeline from "@/components/Services/DeployPipeline";
-import NativeStack from "@/components/Services/NativeStack";
-import SiteMockup from "@/components/Services/SiteMockup";
+import ServiceDeliverableVisual from "@/components/Services/ServiceDeliverableVisual";
+import ServiceClosingVisual from "@/components/Services/ServiceClosingVisual";
+import { FiMonitor, FiUser, FiGrid, FiLink, FiRefreshCw, FiSmartphone, FiLayout, FiFileText, FiEdit, FiMail, FiShoppingBag, FiBarChart, FiSearch, FiZap, FiServer, FiLock, FiDatabase, FiActivity, FiCode, FiLayers, FiDownload, FiSettings, FiHardDrive } from "react-icons/fi";
 
-const CTA_VISUALS = {
-  site: SiteMockup,
-  architecture: ArchitectureDiagram,
-  beforeAfter: BeforeAfter,
-  pipeline: DeployPipeline,
-  native: NativeStack,
+const OFFER_ICONS = {
+  site: [FiMonitor, FiLayout, FiEdit, FiMail, FiShoppingBag, FiBarChart],
+  architecture: [FiMonitor, FiUser, FiGrid, FiLink, FiRefreshCw, FiSmartphone],
+  beforeAfter: [FiSearch, FiLayout, FiZap, FiCode, FiRefreshCw, FiFileText],
+  pipeline: [FiServer, FiLayers, FiLock, FiDatabase, FiActivity, FiSettings],
+  native: [FiSmartphone, FiMonitor, FiLayout, FiHardDrive, FiLink, FiDownload],
 };
 
 export async function getStaticPaths() {
@@ -49,7 +47,7 @@ export async function getStaticProps({ params }) {
 }
 
 export default function ServicePage({ service, related }) {
-  const CtaVisual = CTA_VISUALS[service.visualType] || SiteMockup;
+  const offerIcons = OFFER_ICONS[service.visualType] || OFFER_ICONS.site;
 
   return (
     <>
@@ -99,12 +97,16 @@ export default function ServicePage({ service, related }) {
                 <h2>Ce que je propose</h2>
               </div>
               <ul className="svc-offer-grid">
-                {service.offerings.map((item) => (
-                  <li key={item.title || item}>
-                    <h3>{item.title || item}</h3>
-                    {item.text && <p>{item.text}</p>}
-                  </li>
-                ))}
+                {service.offerings.map((item, index) => {
+                  const Icon = offerIcons[index % offerIcons.length];
+                  return (
+                    <li key={item.title || item}>
+                      <Icon className="svc-offer-icon" aria-hidden="true" />
+                      <h3>{item.title || item}</h3>
+                      {item.text && <p>{item.text}</p>}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </section>
@@ -116,8 +118,9 @@ export default function ServicePage({ service, related }) {
                 <h2>Ce que vous y gagnez</h2>
               </div>
               <div className="svc-benefits">
-                {service.benefits.map((item) => (
+                {service.benefits.map((item, index) => (
                   <div key={item.title} className="svc-benefit">
+                    <span className="svc-benefit-num" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
                     <h3>{item.title}</h3>
                     <p>{item.text}</p>
                   </div>
@@ -132,11 +135,12 @@ export default function ServicePage({ service, related }) {
                 <p className="section-label">Inclus</p>
                 <h2>Ce qui est compris</h2>
               </div>
-              <ul className="svc-check-list">
-                {service.includes.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+              <div className={`svc-deliverables svc-deliverables-${service.visualType}`}>
+                <ul className="svc-check-list">
+                  {service.includes.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+                <ServiceDeliverableVisual type={service.visualType} />
+              </div>
             </div>
           </section>
 
@@ -190,7 +194,7 @@ export default function ServicePage({ service, related }) {
                 </div>
               </div>
               <div className="svc-cta-visual" aria-hidden="true">
-                <CtaVisual />
+                <ServiceClosingVisual service={service} />
               </div>
             </div>
           </div>

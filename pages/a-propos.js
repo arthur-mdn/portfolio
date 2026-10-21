@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight, FaDownload } from "react-icons/fa6";
 
@@ -15,7 +16,7 @@ const TIMELINE = [
   },
   {
     year: "2023 → 2026",
-    title: "De plus en plus proche de la production",
+    title: "Déploiement et gestion d’applications professionnelles",
     text: "Docker, Linux, déploiements, migrations, support et supervision d'applications en conditions réelles.",
   },
   {
@@ -109,15 +110,21 @@ export default function AboutPage() {
 
       <main className="page-shell">
         <div className="container">
-          <div className="about-page-hero">
+          <div className="about-page-hero about-page-hero-portrait">
+            <div>
             <p className="section-label">À propos</p>
-            <h1>Un parcours produit, du web au native</h1>
+            <h1>Arthur, développeur du web aux apps natives.</h1>
             <p>
               Je suis Arthur Mondon, développeur full-stack freelance basé dans
               le Vaucluse. Je construis des sites, des applications web et des
               apps natives iOS/macOS, avec la mise en production et le suivi
               dans la durée.
             </p>
+            </div>
+            <figure className="about-portrait">
+              <Image src="/others/arthur-mondon.png" alt="Arthur Mondon, développeur freelance dans le Vaucluse" width={400} height={400} priority sizes="(max-width: 700px) 240px, 320px" />
+              <figcaption>Arthur Mondon · Vaucluse</figcaption>
+            </figure>
           </div>
 
           <section className="svc-section" style={{ paddingTop: 0 }}>

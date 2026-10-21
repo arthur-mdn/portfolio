@@ -1,6 +1,14 @@
 import Link from "next/link";
 import { SERVICES } from "../../data/services";
 
+const DESCRIPTIONS = {
+  site: "Une présence en ligne claire qui inspire confiance et facilite le contact.",
+  architecture: "Des outils adaptés à votre métier pour simplifier le quotidien.",
+  beforeAfter: "Un site plus clair, plus rapide et adapté à vos objectifs actuels.",
+  pipeline: "Votre application en ligne, avec une infrastructure maîtrisée.",
+  native: "Des applications iPhone et Mac pensées pour leurs utilisateurs.",
+};
+
 function ExpertiseSection() {
   return (
     <section className="expertise" id="services">
@@ -23,7 +31,7 @@ function ExpertiseSection() {
                 {service.num}
               </span>
               <h3>{service.shortTitle}</h3>
-              <p>{service.intro}</p>
+              <p>{DESCRIPTIONS[service.visualType] || service.intro}</p>
             </Link>
           ))}
         </div>

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import projectsData from "../../data/projects.json";
@@ -10,12 +9,12 @@ import {
   FaLink,
   FaArrowRight,
   FaArrowUpRightFromSquare,
-  FaChevronUp,
-  FaChevronDown,
   FaTriangleExclamation,
 } from "react-icons/fa6";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
+import ProjectGallery from "../../components/ProjectGallery";
+import { PROJECT_VISUALS, getProjectContext } from "../../data/projectPresentation";
 
 function ProjectInlineLink({ href, children }) {
   const isExternal = /^https?:\/\//.test(href || "");
@@ -47,7 +46,7 @@ export async function getStaticProps({ params }) {
 }
 
 function ProjectPage({ project }) {
-  const [isImageExpanded, setIsImageExpanded] = useState(false);
+  const presentation = PROJECT_VISUALS[project.slug];
 
   const projectSkills = project.technos
     .map((techId) =>
@@ -134,28 +133,25 @@ function ProjectPage({ project }) {
       </Head>
 
       <main className="page-shell">
-        <div className="container" style={{ maxWidth: "960px" }}>
-          <div className="PP_img" style={{ maxWidth: "100%", marginBottom: "1.5rem" }}>
-            <img
-              src={`/${project.image}`}
-              alt={project.name}
-              onClick={() => setIsImageExpanded(!isImageExpanded)}
-              className={isImageExpanded ? "expanded" : ""}
-            />
-            <div className="indicator">
-              {isImageExpanded ? <FaChevronUp /> : <FaChevronDown />}
+        <div className="container" style={{ maxWidth: "1200px" }}>
+          <Link href="/projets" className="project-back">← Toutes les réalisations</Link>
+          <header className="project-case-hero">
+            <div>
+              <p className="section-label">{project.type} · {getProjectContext(project)}</p>
+              <h1>{project.name}</h1>
+              {presentation?.status && <span className="project-status">{presentation.status}</span>}
+              {project.summary && <p className="project-summary">{project.summary}</p>}
+              <p className="project-case-date">{formatDate(project.date)} · Arthur Mondon</p>
+              <div className="hero-actions">
+                {presentation?.gallery && <a href="#project-gallery-title" className="btn btn-primary">Voir l’application <FaArrowRight aria-hidden="true" /></a>}
+                {project.link && <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">{project.linkLabel || "Voir le projet"} <FaArrowUpRightFromSquare aria-hidden="true" /></a>}
+                {project.accessOnRequest && <Link href="/contact" className="btn btn-secondary">Demander un accès</Link>}
+              </div>
             </div>
-          </div>
-
-          <p className="section-label">{project.type}</p>
-          <h1 className="section-title" style={{ marginBottom: "0.5rem" }}>
-            {project.name}
-          </h1>
-          <p style={{ color: "var(--text-secondary)", marginBottom: "1.5rem" }}>
-            {formatDate(project.date)} · Arthur Mondon
-          </p>
-
-          {project.summary && <p className="project-summary">{project.summary}</p>}
+            <div className="project-case-visual">
+              <Image src={presentation?.hero.src || `/${project.image}`} alt={presentation?.hero.alt || project.name} width={presentation?.hero.width || 1600} height={presentation?.hero.height || 1000} sizes="(max-width: 800px) 90vw, 580px" priority />
+            </div>
+          </header>
 
           {project.facts?.length > 0 && (
             <dl className="project-facts">
@@ -185,14 +181,13 @@ function ProjectPage({ project }) {
                 { key: "features", title: "Les fonctionnalités", items: project.features },
                 { key: "controls", title: "Comment jouer", table: project.controlsTable },
                 { key: "progression", title: "La progression", table: project.progressionTable },
-                { key: "challenges", title: "Les enjeux et les choix", content: project.challenges },
                 { key: "result", title: "Les résultats et l’usage actuel", content: project.result },
                 { key: "credits", title: "Crédits", content: project.credits },
                 { key: "roadmap", title: "Les évolutions envisagées", items: project.roadmap },
               ]
                 .filter((section) => section.content || section.items?.length || section.table?.rows?.length)
                 .map((section) => (
-                  <section className="case-block" key={section.key}>
+                  <section className={`case-block case-block-${section.key}`} key={section.key}>
                     <h2>{section.title}</h2>
                     {section.content && String(section.content)
                       .split(/\n+/)
@@ -243,6 +238,7 @@ function ProjectPage({ project }) {
                         </table>
                       </div>
                     )}
+                    {section.key === "features" && presentation?.gallery && <ProjectGallery items={presentation.gallery} />}
                   </section>
                 ))}
             </div>
@@ -258,7 +254,9 @@ function ProjectPage({ project }) {
             </div>
           )}
 
-          <div className="case-block" style={{ marginTop: "1.5rem" }}>
+          <details className="case-block project-technical" style={{ marginTop: "1.5rem" }}>
+            <summary>Les choix techniques et les technologies</summary>
+            {project.challenges && <ReactMarkdown allowedElements={["p", "a"]} components={{ a: ProjectInlineLink }} unwrapDisallowed>{project.challenges}</ReactMarkdown>}
             <h2>Technologies</h2>
             <div className="fr g0-5 PP_technos" style={{ marginTop: "0.75rem" }}>
               {projectSkills.map((skill) => (
@@ -274,7 +272,7 @@ function ProjectPage({ project }) {
                 </div>
               ))}
             </div>
-          </div>
+          </details>
 
           {hasLinks && <div className="case-block" style={{ marginTop: "1.5rem" }}>
             <h2>Découvrir le projet</h2>
