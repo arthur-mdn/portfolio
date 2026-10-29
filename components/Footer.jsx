@@ -40,7 +40,7 @@ function Footer() {
               GitHub
             </Link>
             <Link
-              href="/others/CV_Arthur_Mondon_2024.pdf"
+              href="/others/CV_Arthur_Mondon_2026.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
