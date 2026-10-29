@@ -893,7 +893,7 @@
     "name": "Glucide Check - App iOS",
     "slug": "glucide-check-app-ios",
     "description": "Une application personnelle pour apprendre Swift en portant sur iPhone les calculs et paramètres de ma première version web GlucideCheck.\n\nGlucide Check est la suite native iOS de mon ancienne application web GlucideCheck. J’ai entrepris ce projet personnel pour apprendre Swift et retrouver sur iPhone les fonctions de calcul et de personnalisation développées dans la première version.\n\nL’application est organisée en trois onglets. Le premier permet de saisir une glycémie et d’effectuer des calculs à partir des valeurs de référence personnelles : cible, effet renseigné d’une unité d’insuline et effet renseigné d’un morceau de sucre. Les résultats dépendent des paramètres définis par l’utilisateur.\nLe deuxième onglet calcule la quantité de glucides d’une portion à partir de la valeur pour 100 grammes et de la quantité consommée. Le troisième rassemble les paramètres personnels, les valeurs de référence et les préférences d’affichage.\nDes contrôles de saisie et des explications accompagnent les champs pour limiter les erreurs de saisie. Les données sont conservées uniquement sur l’iPhone, sans création de compte.",
-    "image": "projects/glucide-check-app-ios.png",
+    "image": "projects/glucidecheck-thumbnail.webp",
     "link": "",
     "github": "https://github.com/arthur-mdn/GlucideCheck-iOS",
     "youtube": [],
