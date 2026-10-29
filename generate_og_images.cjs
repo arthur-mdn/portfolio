@@ -1,9 +1,8 @@
 const { Jimp, loadFont, measureText, measureTextHeight } = require("jimp");
 const { SANS_16_BLACK, SANS_32_BLACK } = require("jimp/fonts");
-const { readFileSync, mkdirSync, existsSync } = require("fs");
-const { execFileSync } = require("child_process");
-const { tmpdir } = require("os");
+const { readFileSync, mkdirSync } = require("fs");
 const path = require("path");
+const sharp = require("sharp");
 
 const projects = JSON.parse(readFileSync("data/projects.json"));
 const articles = JSON.parse(readFileSync("data/articles.json"));
@@ -37,18 +36,8 @@ async function readImageForJimp(publicRelativePath) {
     return Jimp.read(absolute);
   }
 
-  const tempPng = path.join(
-    tmpdir(),
-    `og-src-${path.basename(publicRelativePath, path.extname(publicRelativePath))}-${Date.now()}.png`
-  );
-  execFileSync("sips", ["-s", "format", "png", absolute, "--out", tempPng]);
-  const image = await Jimp.read(tempPng);
-  try {
-    require("fs").unlinkSync(tempPng);
-  } catch {
-    // ignore cleanup errors
-  }
-  return image;
+  const pngBuffer = await sharp(absolute).png().toBuffer();
+  return Jimp.read(pngBuffer);
 }
 
 async function generateOGImages() {
