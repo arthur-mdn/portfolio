@@ -6,7 +6,7 @@ import skillsData from "../../data/skills.json";
 const FEATURED_SLUGS = [
   "private-events-dj-mika",
   "blindset-studio",
-  "karaoke-and-propositions",
+  "buzzer-app",
   "fidelity-wallet-ios-app",
 ];
 
