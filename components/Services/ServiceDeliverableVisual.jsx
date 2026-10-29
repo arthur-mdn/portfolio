@@ -135,11 +135,35 @@ export default function ServiceDeliverableVisual({ type }) {
   return (
     <div className="deliverable-site">
       <p className="section-label">Du grand écran au mobile</p>
-      <div className="deliverable-browser" aria-hidden="true">
-        <div className="deliverable-browser-bar"><span /><span /><span /></div>
-        <div><small>Votre activité</small><h3>Une offre claire.<br />Un contact simple.</h3><p>Le bon message, au bon endroit.</p><strong>Demander un devis <FiArrowRight /></strong></div>
+      <div className="deliverable-devices" aria-hidden="true">
+        <div className="deliverable-browser">
+          <div className="deliverable-browser-bar">
+            <span /><span /><span />
+            <div className="deliverable-browser-url" />
+          </div>
+          <div className="deliverable-browser-body">
+            <small>Votre activité</small>
+            <h3>Une offre claire.<br />Un contact simple.</h3>
+            <p>Le bon message, au bon endroit.</p>
+            <strong>Demander un devis <FiArrowRight /></strong>
+            <div className="deliverable-browser-cols">
+              <i /><i /><i />
+            </div>
+          </div>
+        </div>
+        <div className="deliverable-phone">
+          <div className="deliverable-phone-notch" />
+          <div className="deliverable-phone-screen">
+            <small />
+            <b />
+            <b />
+            <em />
+            <div className="deliverable-phone-cards">
+              <i /><i />
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="deliverable-phone" aria-hidden="true"><FiSmartphone /><span>La même clarté,<br />sur mobile.</span></div>
       <p>Vos visiteurs retrouvent les informations essentielles, quel que soit leur écran.</p>
     </div>
   );

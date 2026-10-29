@@ -78,17 +78,28 @@
 .deliverable-native > div { padding: 1.25rem 0; display: grid; grid-template-columns: 44px 1fr; gap: .3rem .75rem; }
 .deliverable-native > div > svg { grid-row: 1 / 4; width: 32px; height: 32px; color: var(--green); }
 .deliverable-native span { color: var(--green); font-size: .8rem; margin-top: .4rem; }
-.deliverable-site { position: relative; padding-right: 2rem; }
-.deliverable-browser { border: 1px solid #cbdfd3; border-radius: 12px; background: white; margin: 1rem 0 2.5rem; overflow: hidden; }
-.deliverable-browser-bar { display: flex; gap: 5px; padding: .75rem 1rem; background: #edf4ef; }
-.deliverable-browser-bar span { width: 6px; height: 6px; border-radius: 50%; background: #9dbdac; }
-.deliverable-browser > div:last-child { padding: 1.5rem; }
-.deliverable-browser small { color: var(--green); }
-.deliverable-browser h3 { font-size: 1.65rem; line-height: 1.2; margin: 1rem 0; letter-spacing: -.04em; }
-.deliverable-browser p { color: var(--text-secondary); font-size: .85rem; }
-.deliverable-browser strong { display: inline-flex; gap: .5rem; background: var(--green-dark); color: white; padding: .7rem; font-size: .75rem; border-radius: 6px; margin-top: 1rem; }
-.deliverable-phone { position: absolute; right: 0; top: 160px; display: grid; place-items: center; gap: 1rem; width: 112px; height: 180px; padding: 1rem .4rem; text-align: center; background: #e7f7ec; border: 5px solid var(--green-dark); border-radius: 20px; font-size: .75rem; }
-.deliverable-phone svg { width: 28px; height: 28px; color: var(--green); }
+.deliverable-site { position: relative; }
+.deliverable-devices { position: relative; margin: 1.1rem 0 1.75rem; padding: 0 0 1.5rem; }
+.deliverable-browser { border: 1px solid var(--border); border-radius: 14px; background: #fff; overflow: hidden; box-shadow: 0 14px 32px rgba(8, 19, 31, .06); margin-right: 2.5rem; }
+.deliverable-browser-bar { display: flex; align-items: center; gap: 5px; padding: .7rem .9rem; background: #edf4ef; border-bottom: 1px solid #d7e6dc; }
+.deliverable-browser-bar span { width: 7px; height: 7px; border-radius: 50%; background: #9dbdac; flex-shrink: 0; }
+.deliverable-browser-url { flex: 1; height: .7rem; margin-left: .55rem; border-radius: 999px; background: #fff; border: 1px solid #d7e6dc; }
+.deliverable-browser-body { padding: 1.35rem 1.4rem 1.5rem; }
+.deliverable-browser small { color: var(--green); font-size: .75rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.deliverable-browser h3 { font-size: 1.45rem; line-height: 1.2; margin: .7rem 0 .55rem; letter-spacing: -.04em; }
+.deliverable-browser p { color: var(--text-secondary); font-size: .85rem; margin: 0; max-width: 28ch; }
+.deliverable-browser strong { display: inline-flex; align-items: center; gap: .45rem; background: var(--green-dark); color: white; padding: .55rem .75rem; font-size: .72rem; border-radius: 8px; margin-top: 1rem; }
+.deliverable-browser-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: .55rem; margin-top: 1.15rem; }
+.deliverable-browser-cols i { display: block; height: 2.4rem; border-radius: 8px; background: #e8f3ec; }
+.deliverable-phone { position: absolute; right: 0; bottom: 0; width: 5.75rem; height: 11rem; background: #08131f; border-radius: 1.15rem; padding: .4rem; box-shadow: 0 18px 36px rgba(8, 19, 31, .22); z-index: 2; }
+.deliverable-phone-notch { width: 2.1rem; height: .28rem; border-radius: 999px; background: #2a3542; margin: .2rem auto .4rem; }
+.deliverable-phone-screen { background: linear-gradient(180deg, #f3f9f5 0%, #e8f3ec 100%); border-radius: .7rem; height: calc(100% - .75rem); padding: .55rem .45rem; display: flex; flex-direction: column; gap: .35rem; }
+.deliverable-phone-screen > small { display: block; width: 42%; height: .28rem; border-radius: 999px; background: rgba(8, 122, 75, .35); }
+.deliverable-phone-screen > b { display: block; height: .38rem; border-radius: 4px; background: rgba(0, 63, 49, .22); width: 78%; }
+.deliverable-phone-screen > b:nth-of-type(2) { width: 55%; }
+.deliverable-phone-screen > em { display: block; width: 3.1rem; height: .85rem; border-radius: 6px; background: var(--green-dark); margin: .15rem 0 .2rem; font-style: normal; }
+.deliverable-phone-cards { display: grid; gap: .3rem; margin-top: auto; }
+.deliverable-phone-cards i { display: block; height: 1.55rem; border-radius: 6px; background: #fff; box-shadow: 0 1px 0 rgba(8, 19, 31, .04); }
 .deliverable-comparison,
 .deliverable-compare-stage,
 .svc-ba-photos,
@@ -107,6 +118,8 @@
 .deliverable-compare-handle::before { left: .45rem; border-right: 6px solid var(--green-dark); }
 .deliverable-compare-handle::after { right: .45rem; border-left: 6px solid var(--green-dark); }
 
+.svc-hero-photo { padding: 0; overflow: hidden; min-height: 0; background: #edf2ef; }
+.svc-hero-photo img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: center; }
 .svc-ba-photos { display: block; padding: 0; overflow: hidden; }
 .svc-ba-stage { position: relative; width: 100%; aspect-ratio: 16 / 10; background: #edf2ef; touch-action: none; cursor: ew-resize; outline: none; }
 .svc-ba-stage:focus-visible { box-shadow: inset 0 0 0 3px var(--green); }
@@ -148,6 +161,9 @@
   .svc-benefit-num { font-size: 3rem; margin-bottom: .8rem; }
   .deliverable-modules, .deliverable-infra, .deliverable-native { padding-left: 1.25rem; }
   .deliverable-compare-stage-photos { aspect-ratio: 4 / 3; }
+  .deliverable-browser { margin-right: 1.75rem; }
+  .deliverable-browser h3 { font-size: 1.25rem; }
+  .deliverable-phone { width: 5.1rem; height: 9.8rem; border-radius: 1rem; }
   .project-case-hero .section-label { line-height: 1.7; }
 }
 @media (prefers-reduced-motion: reduce) {
