@@ -64,7 +64,7 @@ export default function ServicePage({ service, related }) {
           property="og:url"
           content={`https://mondon.pro/services/${service.slug}`}
         />
-        <meta property="og:image" content="https://mondon.pro/others/preview.png" />
+        <meta property="og:image" content="https://mondon.pro/others/preview.webp" />
       </Head>
 
       <main className="svc-page">

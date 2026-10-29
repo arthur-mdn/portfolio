@@ -100,11 +100,11 @@ export default function Projets() {
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content="https://mondon.pro/others/preview.png" />
+        <meta property="og:image" content="https://mondon.pro/others/preview.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content="https://mondon.pro/others/preview.png" />
+        <meta name="twitter:image" content="https://mondon.pro/others/preview.webp" />
       </Head>
 
       <main className="page-shell">

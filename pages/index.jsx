@@ -54,7 +54,7 @@ export default function HomePage() {
     name: "Arthur Mondon — Développeur full-stack freelance",
     description,
     url: "https://mondon.pro",
-    image: "https://mondon.pro/others/preview.png",
+    image: "https://mondon.pro/others/preview.webp",
     telephone: "+33783520757",
     areaServed: [
       { "@type": "AdministrativeArea", name: "Vaucluse" },
@@ -97,14 +97,14 @@ export default function HomePage() {
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content="https://mondon.pro/others/preview.png" />
+        <meta property="og:image" content="https://mondon.pro/others/preview.webp" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="mondon.pro" />
         <meta property="twitter:url" content="https://mondon.pro" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content="https://mondon.pro/others/preview.png" />
+        <meta name="twitter:image" content="https://mondon.pro/others/preview.webp" />
 
         <script
           type="application/ld+json"

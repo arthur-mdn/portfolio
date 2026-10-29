@@ -17,7 +17,7 @@ export default function ServicesHub() {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content="https://mondon.pro/services" />
-        <meta property="og:image" content="https://mondon.pro/others/preview.png" />
+        <meta property="og:image" content="https://mondon.pro/others/preview.webp" />
       </Head>
 
       <main className="page-shell">

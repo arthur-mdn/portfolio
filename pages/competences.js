@@ -26,7 +26,7 @@ export default function Competences() {
                 <meta property="og:title" content="Découvrez Mes Compétences : Arthur Mondon"/>
                 <meta property="og:description"
                       content="Plongez dans mon univers de compétences en développement web. De la conception frontend à l'architecture backend, en passant par la gestion de bases de données et l'utilisation d'outils modernes de développement."/>
-                <meta property="og:image" content="https://mondon.pro/others/preview.png"/>
+                <meta property="og:image" content="https://mondon.pro/others/preview.webp"/>
 
                 {/* Twitter Meta Tags */}
                 <meta name="twitter:card" content="summary_large_image"/>
@@ -35,7 +35,7 @@ export default function Competences() {
                 <meta name="twitter:title" content="Arthur Mondon : Découvrez Mes Compétences"/>
                 <meta name="twitter:description"
                       content="Je vous présente mon éventail de compétences en développement web. Découvrez comment je combine créativité et expertise technique pour créer des solutions web innovantes."/>
-                <meta name="twitter:image" content="https://mondon.pro/others/preview.png"/>
+                <meta name="twitter:image" content="https://mondon.pro/others/preview.webp"/>
             </Head>
 
             <SkillsSection/>
