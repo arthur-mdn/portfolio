@@ -1,4 +1,6 @@
-import { useState } from "react";
+"use client";
+
+import { useCallback, useRef, useState } from "react";
 import { FiMonitor, FiSmartphone, FiCheck, FiArrowRight, FiServer, FiLock, FiDatabase } from "react-icons/fi";
 
 const MODULES = [
@@ -7,22 +9,95 @@ const MODULES = [
   { name: "Connexions", text: "Vos outils échangent leurs données sans ressaisie manuelle.", rows: ["Formulaires", "API de vos outils", "Notifications"] },
 ];
 
-export default function ServiceDeliverableVisual({ type }) {
-  const [module, setModule] = useState(0);
+function BeforeAfterCompare() {
   const [split, setSplit] = useState(50);
+  const stageRef = useRef(null);
+  const dragging = useRef(false);
 
-  if (type === "beforeAfter") return (
+  const updateFromClientX = useCallback((clientX) => {
+    const stage = stageRef.current;
+    if (!stage) return;
+    const rect = stage.getBoundingClientRect();
+    const next = ((clientX - rect.left) / rect.width) * 100;
+    setSplit(Math.min(100, Math.max(0, next)));
+  }, []);
+
+  const onPointerDown = (event) => {
+    dragging.current = true;
+    event.currentTarget.setPointerCapture?.(event.pointerId);
+    updateFromClientX(event.clientX);
+  };
+
+  const onPointerMove = (event) => {
+    if (!dragging.current) return;
+    updateFromClientX(event.clientX);
+  };
+
+  const onPointerUp = () => {
+    dragging.current = false;
+  };
+
+  return (
     <div className="deliverable-comparison">
-      <p className="section-label">Exemple de structure · illustration</p>
-      <div className="deliverable-compare-stage">
-        <div className="deliverable-after"><span>Après</span><h3>Une activité clairement présentée.</h3><p>Une offre lisible, un parcours simple.</p><strong>Parlons de votre projet →</strong></div>
-        <div className="deliverable-before" style={{ clipPath: `inset(0 ${100 - split}% 0 0)` }}><span>Avant</span><h3>Bienvenue sur notre site</h3><p>Actualités · Liens · Nos partenaires · Informations · Notre entreprise</p><div>Une offre difficile à repérer parmi les contenus.</div></div>
-        <div className="deliverable-compare-line" style={{ left: `${split}%` }} aria-hidden="true">↔</div>
+      <p className="section-label">Exemple réel · Edissyum</p>
+      <div
+        ref={stageRef}
+        className="deliverable-compare-stage deliverable-compare-stage-photos"
+        role="slider"
+        tabIndex={0}
+        aria-label="Comparer avant et après la refonte"
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={Math.round(split)}
+        aria-valuetext={`${Math.round(split)} % de la version initiale visible`}
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={onPointerUp}
+        onPointerCancel={onPointerUp}
+        onKeyDown={(event) => {
+          if (event.key === "ArrowLeft") setSplit((value) => Math.max(0, value - 5));
+          if (event.key === "ArrowRight") setSplit((value) => Math.min(100, value + 5));
+        }}
+      >
+        <img
+          className="deliverable-compare-img deliverable-compare-img-after"
+          src="/projects/edissyum-apres.webp"
+          alt="Site Edissyum après refonte"
+          draggable={false}
+        />
+        <div
+          className="deliverable-compare-before-wrap"
+          style={{ clipPath: `inset(0 ${100 - split}% 0 0)` }}
+        >
+          <img
+            className="deliverable-compare-img deliverable-compare-img-before"
+            src="/projects/edissyum-avant.webp"
+            alt="Site Edissyum avant refonte"
+            draggable={false}
+          />
+        </div>
+        <span className="deliverable-compare-badge deliverable-compare-badge-before">
+          Avant
+        </span>
+        <span className="deliverable-compare-badge deliverable-compare-badge-after">
+          Après
+        </span>
+        <div
+          className="deliverable-compare-line"
+          style={{ left: `${split}%` }}
+          aria-hidden="true"
+        >
+          <span className="deliverable-compare-handle" />
+        </div>
       </div>
-      <label htmlFor="redesign-comparison">Comparer les structures avant / après</label>
-      <input id="redesign-comparison" type="range" min="0" max="100" value={split} aria-valuetext={`${split} % de la structure initiale visible`} onChange={(event) => setSplit(Number(event.target.value))} />
     </div>
   );
+}
+
+export default function ServiceDeliverableVisual({ type }) {
+  const [module, setModule] = useState(0);
+
+  if (type === "beforeAfter") return <BeforeAfterCompare />;
 
   if (type === "architecture") return (
     <div className="deliverable-modules">

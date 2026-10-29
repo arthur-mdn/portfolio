@@ -89,18 +89,38 @@
 .deliverable-browser strong { display: inline-flex; gap: .5rem; background: var(--green-dark); color: white; padding: .7rem; font-size: .75rem; border-radius: 6px; margin-top: 1rem; }
 .deliverable-phone { position: absolute; right: 0; top: 160px; display: grid; place-items: center; gap: 1rem; width: 112px; height: 180px; padding: 1rem .4rem; text-align: center; background: #e7f7ec; border: 5px solid var(--green-dark); border-radius: 20px; font-size: .75rem; }
 .deliverable-phone svg { width: 28px; height: 28px; color: var(--green); }
-.deliverable-compare-stage { position: relative; height: 280px; margin: 1rem 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
-.deliverable-after, .deliverable-before { position: absolute; inset: 0; padding: 2rem; }
-.deliverable-after { background: #e7f7ec; color: var(--green-dark); }
-.deliverable-before { background: #eaedf0; color: #555e68; }
-.deliverable-compare-stage span { font-size: .75rem; text-transform: uppercase; font-weight: 700; }
-.deliverable-compare-stage h3 { font-size: 1.5rem; margin: 1rem 0 .5rem; }
-.deliverable-compare-stage p { font-size: .9rem; margin-bottom: 1rem; }
-.deliverable-before div { border: 1px dashed #a3acb5; padding: .65rem; font-size: .8rem; }
-.deliverable-compare-stage strong { display: inline-block; font-size: .8rem; background: var(--green-dark); color: white; padding: .7rem; border-radius: 6px; }
-.deliverable-compare-line { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--green); display: grid; place-items: center; color: white; text-shadow: 0 0 3px #003f31; pointer-events: none; }
-.deliverable-comparison label { font-size: .85rem; color: var(--text-secondary); }
-.deliverable-comparison input { display: block; width: 100%; margin-top: .75rem; accent-color: var(--green); cursor: ew-resize; }
+.deliverable-comparison,
+.deliverable-compare-stage,
+.svc-ba-photos,
+.svc-ba-stage { user-select: none; -webkit-user-select: none; }
+.deliverable-compare-stage { position: relative; height: 280px; margin: 1rem 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; touch-action: none; cursor: ew-resize; }
+.deliverable-compare-stage-photos { height: auto; aspect-ratio: 16 / 10; background: #edf2ef; }
+.deliverable-compare-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; pointer-events: none; user-select: none; -webkit-user-drag: none; }
+.deliverable-compare-before-wrap { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.deliverable-compare-badge { position: absolute; top: .75rem; z-index: 2; font-size: .7rem; text-transform: uppercase; font-weight: 700; letter-spacing: .04em; background: rgba(255, 255, 255, .92); color: var(--green-dark); border-radius: 999px; padding: .3rem .65rem; pointer-events: none; }
+.deliverable-compare-badge-before { left: .75rem; }
+.deliverable-compare-badge-after { right: .75rem; }
+.deliverable-compare-line { position: absolute; top: 0; bottom: 0; width: 2px; background: #fff; box-shadow: 0 0 0 1px rgba(0, 63, 49, .25); z-index: 3; pointer-events: none; transform: translateX(-50%); }
+.deliverable-compare-handle { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 2.1rem; height: 2.1rem; border-radius: 999px; background: #fff; border: 2px solid var(--green-dark); box-shadow: 0 6px 16px rgba(8, 19, 31, .18); box-sizing: border-box; text-transform: none; font-size: 0; }
+.deliverable-compare-handle::before,
+.deliverable-compare-handle::after { content: ""; position: absolute; top: 50%; width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; transform: translateY(-50%); }
+.deliverable-compare-handle::before { left: .45rem; border-right: 6px solid var(--green-dark); }
+.deliverable-compare-handle::after { right: .45rem; border-left: 6px solid var(--green-dark); }
+
+.svc-ba-photos { display: block; padding: 0; overflow: hidden; }
+.svc-ba-stage { position: relative; width: 100%; aspect-ratio: 16 / 10; background: #edf2ef; touch-action: none; cursor: ew-resize; outline: none; }
+.svc-ba-stage:focus-visible { box-shadow: inset 0 0 0 3px var(--green); }
+.svc-ba-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; pointer-events: none; user-select: none; -webkit-user-drag: none; }
+.svc-ba-before-wrap { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.svc-ba-badge { position: absolute; top: .75rem; z-index: 2; font-size: .7rem; text-transform: uppercase; font-weight: 700; letter-spacing: .04em; background: rgba(255, 255, 255, .92); color: var(--green-dark); border-radius: 999px; padding: .3rem .65rem; pointer-events: none; }
+.svc-ba-badge-before { left: .75rem; }
+.svc-ba-badge-after { right: .75rem; }
+.svc-ba-line { position: absolute; top: 0; bottom: 0; width: 2px; background: #fff; box-shadow: 0 0 0 1px rgba(0, 63, 49, .25); z-index: 3; pointer-events: none; transform: translateX(-50%); }
+.svc-ba-handle { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 2.1rem; height: 2.1rem; border-radius: 999px; background: #fff; border: 2px solid var(--green-dark); box-shadow: 0 6px 16px rgba(8, 19, 31, .18); box-sizing: border-box; }
+.svc-ba-handle::before,
+.svc-ba-handle::after { content: ""; position: absolute; top: 50%; width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; transform: translateY(-50%); }
+.svc-ba-handle::before { left: .45rem; border-right: 6px solid var(--green-dark); }
+.svc-ba-handle::after { right: .45rem; border-left: 6px solid var(--green-dark); }
 .svc-closing-note { position: relative; transform: rotate(3deg); background: #f1f8f3; color: var(--green-dark); padding: 2rem; border-radius: 12px; box-shadow: 12px 12px 0 #ffffff15; }
 .svc-closing-note > p { font-size: .8rem; margin-bottom: .5rem; }
 .svc-closing-note > strong { display: block; font-size: 1.6rem; letter-spacing: -.03em; max-width: 16ch; line-height: 1.2; }
@@ -127,8 +147,7 @@
   .svc-benefits { gap: 1.5rem; }
   .svc-benefit-num { font-size: 3rem; margin-bottom: .8rem; }
   .deliverable-modules, .deliverable-infra, .deliverable-native { padding-left: 1.25rem; }
-  .deliverable-compare-stage { height: 310px; }
-  .deliverable-after, .deliverable-before { padding: 1.5rem; }
+  .deliverable-compare-stage-photos { aspect-ratio: 4 / 3; }
   .project-case-hero .section-label { line-height: 1.7; }
 }
 @media (prefers-reduced-motion: reduce) {
