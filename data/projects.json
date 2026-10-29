@@ -4,7 +4,7 @@
     "name": "Burger Maker",
     "slug": "burger-maker",
     "summary": "Préparer, assembler et servir des burgers à temps : un jeu de cuisine développé avec Godot, avec dix niveaux de difficulté progressive.",
-    "description": "Préparer, assembler et servir des burgers à temps : un jeu de cuisine développé avec Godot, avec dix niveaux de difficulté progressive.\n\nBurger Maker a été réalisé en solo dans le cadre d’un module de 35 heures en Master 2 à MyDigitalSchool Montpellier, le 9 avril 2026. Le brief imposait l’utilisation de Godot et la création d’une boucle de gameplay et de son expérience utilisateur, avec un choix libre du concept. J’ai proposé un jeu de cuisine où des clients attendent leur burger à la fenêtre de service.\n\nChaque commande apparaît sur un ticket avec son propre compte à rebours et une indication visuelle de l’urgence. Le joueur prend les ingrédients dans les distributeurs, surveille leur cuisson, découpe les légumes et assemble le burger sur un emplacement dédié avant de le déposer à la fenêtre de service.\nLes ingrédients se manipulent en maintenant le clic gauche, puis en le relâchant à l’emplacement souhaité. Les garnitures peuvent être empilées dans l’ordre voulu, à condition d’utiliser un pain inférieur et un pain supérieur. Les ingrédients ratés peuvent être jetés à la poubelle.\nPour réussir un niveau, il faut livrer suffisamment de commandes valides avant la fin du temps global, sans dépasser la limite d’erreurs. Les réussites débloquent le niveau suivant ; les niveaux accessibles et les meilleurs scores sont sauvegardés.",
+    "description": "Préparer, assembler et servir des burgers à temps : un jeu de cuisine développé avec Godot, avec dix niveaux de difficulté progressive.\n\nBurger Maker a été réalisé en autonomie dans le cadre d’un module de 35 heures en Master 2 à MyDigitalSchool Montpellier, le 9 avril 2026. Le brief imposait l’utilisation de Godot et la création d’une boucle de gameplay et de son expérience utilisateur, avec un choix libre du concept. J’ai proposé un jeu de cuisine où des clients attendent leur burger à la fenêtre de service.\n\nChaque commande apparaît sur un ticket avec son propre compte à rebours et une indication visuelle de l’urgence. Le joueur prend les ingrédients dans les distributeurs, surveille leur cuisson, découpe les légumes et assemble le burger sur un emplacement dédié avant de le déposer à la fenêtre de service.\nLes ingrédients se manipulent en maintenant le clic gauche, puis en le relâchant à l’emplacement souhaité. Les garnitures peuvent être empilées dans l’ordre voulu, à condition d’utiliser un pain inférieur et un pain supérieur. Les ingrédients ratés peuvent être jetés à la poubelle.\nPour réussir un niveau, il faut livrer suffisamment de commandes valides avant la fin du temps global, sans dépasser la limite d’erreurs. Les réussites débloquent le niveau suivant ; les niveaux accessibles et les meilleurs scores sont sauvegardés.",
     "image": "projects/godot-burger-maker-thumbnail.webp",
     "link": "",
     "github": "https://github.com/arthur-mdn/Godot-Burger-Maker",
@@ -33,14 +33,14 @@
       },
       {
         "label": "Intervention",
-        "value": "Conception et réalisation entièrement en solo"
+        "value": "Conception et réalisation en autonomie"
       },
       {
         "label": "Moteur",
         "value": "Godot"
       }
     ],
-    "context": "Burger Maker a été réalisé en solo dans le cadre d’un module de 35 heures en Master 2 à MyDigitalSchool Montpellier, le 9 avril 2026. Le brief imposait l’utilisation de Godot et la création d’une boucle de gameplay et de son expérience utilisateur, avec un choix libre du concept. J’ai proposé un jeu de cuisine où des clients attendent leur burger à la fenêtre de service.",
+    "context": "Burger Maker a été réalisé en autonomie dans le cadre d’un module de 35 heures en Master 2 à MyDigitalSchool Montpellier, le 9 avril 2026. Le brief imposait l’utilisation de Godot et la création d’une boucle de gameplay et de son expérience utilisateur, avec un choix libre du concept. J’ai proposé un jeu de cuisine où des clients attendent leur burger à la fenêtre de service.",
     "need": "Construire une boucle de jeu complète autour de la préparation, de l’assemblage et du service des commandes, tout en découvrant Godot dans un temps très limité. La difficulté augmente avec davantage de commandes, plus d’éléments à préparer et des délais de plus en plus courts.",
     "solution": "Chaque commande apparaît sur un ticket avec son propre compte à rebours et une indication visuelle de l’urgence. Le joueur prend les ingrédients dans les distributeurs, surveille leur cuisson, découpe les légumes et assemble le burger sur un emplacement dédié avant de le déposer à la fenêtre de service.\nLes ingrédients se manipulent en maintenant le clic gauche, puis en le relâchant à l’emplacement souhaité. Les garnitures peuvent être empilées dans l’ordre voulu, à condition d’utiliser un pain inférieur et un pain supérieur. Les ingrédients ratés peuvent être jetés à la poubelle.\nPour réussir un niveau, il faut livrer suffisamment de commandes valides avant la fin du temps global, sans dépasser la limite d’erreurs. Les réussites débloquent le niveau suivant ; les niveaux accessibles et les meilleurs scores sont sauvegardés.",
     "features": [
@@ -200,7 +200,7 @@
       },
       {
         "label": "Intervention",
-        "value": "Conception et développement en solo"
+        "value": "Conception et développement en autonomie"
       },
       {
         "label": "Disponibilité",
@@ -272,7 +272,7 @@
       },
       {
         "label": "Intervention",
-        "value": "Conception et développement en solo"
+        "value": "Conception et développement en autonomie"
       },
       {
         "label": "Terrain",
@@ -340,7 +340,7 @@
       },
       {
         "label": "Intervention",
-        "value": "Conception, développement et photographies en solo"
+        "value": "Conception, développement et photographies en autonomie"
       },
       {
         "label": "Solution",
@@ -399,7 +399,7 @@
       },
       {
         "label": "Intervention",
-        "value": "Conception et réalisation en solo"
+        "value": "Conception et réalisation en autonomie"
       },
       {
         "label": "Suivi",
@@ -469,7 +469,7 @@
       },
       {
         "label": "Intervention",
-        "value": "Conception et développement en solo"
+        "value": "Conception et développement en autonomie"
       },
       {
         "label": "Données",
@@ -545,7 +545,7 @@
       },
       {
         "label": "Intervention",
-        "value": "Conception, développement et installation en solo"
+        "value": "Conception, développement et installation en autonomie"
       },
       {
         "label": "Terrain",
@@ -606,7 +606,7 @@
       },
       {
         "label": "Intervention",
-        "value": "Application, adaptation du téléphone et installation en solo"
+        "value": "Application, adaptation du téléphone et installation en autonomie"
       },
       {
         "label": "Terrain",
@@ -672,7 +672,7 @@
       },
       {
         "label": "Intervention",
-        "value": "Conception et développement en solo"
+        "value": "Conception et développement en autonomie"
       },
       {
         "label": "Disponibilité",
@@ -800,7 +800,7 @@
       },
       {
         "label": "Intervention",
-        "value": "Conception et développement en solo"
+        "value": "Conception et développement en autonomie"
       },
       {
         "label": "Utilisateurs",
@@ -931,7 +931,7 @@
       },
       {
         "label": "Intervention",
-        "value": "Conception et développement en solo"
+        "value": "Conception et développement en autonomie"
       },
       {
         "label": "Diffusion",
@@ -1004,7 +1004,7 @@
       },
       {
         "label": "Intervention",
-        "value": "Conception et réalisation entièrement en solo"
+        "value": "Conception et réalisation en autonomie"
       },
       {
         "label": "Nouvelle version",
@@ -1087,7 +1087,7 @@
       },
       {
         "label": "Intervention",
-        "value": "Conception et réalisation entièrement en solo"
+        "value": "Conception et réalisation en autonomie"
       },
       {
         "label": "Dispositif",
@@ -1163,7 +1163,7 @@
       },
       {
         "label": "Intervention",
-        "value": "Interface, serveur, données et déploiement en solo"
+        "value": "Interface, serveur, données et déploiement en autonomie"
       },
       {
         "label": "Accès",
@@ -1225,7 +1225,7 @@
       },
       {
         "label": "Mon rôle",
-        "value": "Intégration et déploiement en solo"
+        "value": "Intégration et déploiement en autonomie"
       },
       {
         "label": "Design",
@@ -1248,16 +1248,16 @@
     "name": "Buzzer-App",
     "slug": "buzzer-app",
     "description": "Des buzzers sur smartphone pour départager les joueurs en direct, sans publicité ni compte, avec des parties testées à plus de 60 participants simultanés.\n\nLors de soirées personnelles, je cherchais un outil gratuit, sans publicité et sans inscription pour départager le premier joueur à répondre à un blind test ou à un quiz. Buzzer-App est née de ce besoin de disposer de buzzers accessibles sur les téléphones des participants, avec une gestion en temps réel.\n\nLe joueur rejoint une partie par QR code ou lien et renseigne simplement un pseudo, sans créer de compte. Les parties publiques apparaissent dans un catalogue ; les parties privées n’y sont pas listées.\nL’animateur ouvre l’accès aux buzzers. Le premier appui reçu côté serveur bloque les autres, puis l’animateur valide ou refuse la réponse et attribue les points. Une mauvaise réponse peut entraîner un malus ou une réouverture des buzzers aux autres joueurs.\nL’application utilise React/Vite, un serveur Node.js, MongoDB et Socket.io pour la synchronisation. Une connexion Internet est nécessaire, mais chaque participant peut utiliser son propre réseau. Un joueur déconnecté apparaît hors ligne ; en rechargeant la page, il est reconnu et rejoint à nouveau la partie grâce à sa session.",
-    "image": "projects/buzzer-app.png",
+    "image": "projects/buzzer-app-thumbnail.webp",
     "link": "https://buzzer-app.fr",
     "github": "https://github.com/arthur-mdn/buzzer-app",
     "youtube": [],
     "technos": [
+      105,
+      106,
       101,
       102,
       103,
-      105,
-      106,
       201,
       108,
       302,
@@ -1305,7 +1305,7 @@
       },
       {
         "label": "Intervention",
-        "value": "Conception et développement en solo"
+        "value": "Conception et développement en autonomie"
       },
       {
         "label": "Terrain",
@@ -1375,7 +1375,7 @@
       },
       {
         "label": "Intervention",
-        "value": "Conception et développement en solo"
+        "value": "Conception et développement en autonomie"
       },
       {
         "label": "État actuel",
@@ -1444,7 +1444,7 @@
       },
       {
         "label": "Suivi",
-        "value": "Développement en solo · maintenance depuis deux ans"
+        "value": "Développement en autonomie · maintenance depuis deux ans"
       }
     ],
     "role": "J’ai conçu et développé seul l’ensemble de l’application. Je la maintiens depuis environ deux ans, avec des mises à jour régulières et de nombreuses améliorations, dont une refonte de la version PHP initiale vers React et Next.js.",
@@ -1507,7 +1507,7 @@
       },
       {
         "label": "Intervention",
-        "value": "Réalisation complète en solo · prestation toujours proposée"
+        "value": "Réalisation complète en autonomie · prestation toujours proposée"
       }
     ],
     "role": "Je prends en charge seul l’ensemble de la réalisation : préparation du parcours, prises de vue avec une caméra Insta360, retouches, conception de l’interface, intégration des interactions et hébergement. Les visites sont construites avec le logiciel professionnel 3DVista Virtual Tour, complété par du code sur mesure lorsque le projet le nécessite.",
@@ -1567,7 +1567,7 @@
       },
       {
         "label": "Intervention",
-        "value": "Conception et développement en solo"
+        "value": "Conception et développement en autonomie"
       },
       {
         "label": "État actuel",
@@ -1669,7 +1669,7 @@
     "id": 14,
     "name": "Atmosph'air - PWA Qualité de l'Air",
     "slug": "atmosphair-pwa-qualite-de-l-air",
-    "description": "Une PWA étudiante pour consulter des mesures réelles de qualité de l’air, réalisée en PHP lors de ma première intégration d’API.\n\nAtmosph’Air a été réalisé dans le cadre de mon Bachelor à l’Université de Toulon, en spécialisation développement web. Le sujet étudiant et l’utilisation de l’API AtmoSud étaient imposés. L’application devait présenter des mesures réelles de qualité de l’air dans une interface web consultable sur mobile.\n\nLes fiches des villes présentent les mesures issues de l’API, le polluant majoritaire et un historique illustré avec Chart.js. La recherche permet de consulter une ville et la liste de favoris facilite l’accès aux lieux suivis.\nLes données des villes favorites sont actualisées toutes les huit heures. Lorsqu’un utilisateur recherche une ville spécifique, l’application interroge l’API au moment de la recherche, puis stocke les informations récupérées. Ce fonctionnement associe une mise à jour programmée des favoris et une actualisation à la demande.\n\nUne première expérience complète d’intégration d’API dans une PWA, réalisée en solo sur environ une semaine. Le projet n’est plus maintenu et son accès public a été supprimé.",
+    "description": "Une PWA étudiante pour consulter des mesures réelles de qualité de l’air, réalisée en PHP lors de ma première intégration d’API.\n\nAtmosph’Air a été réalisé dans le cadre de mon Bachelor à l’Université de Toulon, en spécialisation développement web. Le sujet étudiant et l’utilisation de l’API AtmoSud étaient imposés. L’application devait présenter des mesures réelles de qualité de l’air dans une interface web consultable sur mobile.\n\nLes fiches des villes présentent les mesures issues de l’API, le polluant majoritaire et un historique illustré avec Chart.js. La recherche permet de consulter une ville et la liste de favoris facilite l’accès aux lieux suivis.\nLes données des villes favorites sont actualisées toutes les huit heures. Lorsqu’un utilisateur recherche une ville spécifique, l’application interroge l’API au moment de la recherche, puis stocke les informations récupérées. Ce fonctionnement associe une mise à jour programmée des favoris et une actualisation à la demande.\n\nUne première expérience complète d’intégration d’API dans une PWA, réalisée en autonomie sur environ une semaine. Le projet n’est plus maintenu et son accès public a été supprimé.",
     "image": "projects/atmosphair.png",
     "link": "",
     "github": "",
@@ -1697,7 +1697,7 @@
       "Requête à l’API et stockage des informations lors de la recherche d’une ville",
       "Application web progressive développée en PHP, HTML, CSS et JavaScript"
     ],
-    "result": "Une première expérience complète d’intégration d’API dans une PWA, réalisée en solo sur environ une semaine. Le projet n’est plus maintenu et son accès public a été supprimé.",
+    "result": "Une première expérience complète d’intégration d’API dans une PWA, réalisée en autonomie sur environ une semaine. Le projet n’est plus maintenu et son accès public a été supprimé.",
     "summary": "Une PWA étudiante pour consulter des mesures réelles de qualité de l’air, réalisée en PHP lors de ma première intégration d’API.",
     "facts": [
       {
@@ -1710,7 +1710,7 @@
       },
       {
         "label": "Intervention",
-        "value": "Réalisation entièrement en solo"
+        "value": "Réalisation en autonomie"
       },
       {
         "label": "État actuel",
@@ -1775,7 +1775,7 @@
       },
       {
         "label": "Intervention",
-        "value": "Design et développement entièrement en solo"
+        "value": "Design et développement en autonomie"
       },
       {
         "label": "État actuel",
@@ -1847,7 +1847,7 @@
       },
       {
         "label": "Intervention",
-        "value": "Conception et développement entièrement en solo"
+        "value": "Conception et développement en autonomie"
       },
       {
         "label": "Suivi",
@@ -1919,7 +1919,7 @@
       },
       {
         "label": "Intervention",
-        "value": "Refonte entièrement réalisée en solo"
+        "value": "Refonte réalisée en autonomie"
       },
       {
         "label": "Gestion actuelle",
@@ -1993,7 +1993,7 @@
       },
       {
         "label": "Intervention",
-        "value": "Conception et développement entièrement en solo"
+        "value": "Conception et développement en autonomie"
       },
       {
         "label": "Usage",
@@ -2063,7 +2063,7 @@
       },
       {
         "label": "Intervention",
-        "value": "Conception et développement entièrement en solo"
+        "value": "Conception et développement en autonomie"
       },
       {
         "label": "Utilisation",
