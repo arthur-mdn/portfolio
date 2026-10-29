@@ -1,5 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
-@import url('https://fonts.cdnfonts.com/css/cardium-a');
+@font-face {
+    font-family: 'Manrope';
+    src: url('/fonts/manrope/manrope-latin-400-normal.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Manrope';
+    src: url('/fonts/manrope/manrope-latin-500-normal.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Manrope';
+    src: url('/fonts/manrope/manrope-latin-600-normal.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Manrope';
+    src: url('/fonts/manrope/manrope-latin-700-normal.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Manrope';
+    src: url('/fonts/manrope/manrope-latin-800-normal.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Caveat';
+    src: url('/fonts/caveat/caveat-latin-500-normal.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Caveat';
+    src: url('/fonts/caveat/caveat-latin-600-normal.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
 @font-face {
     font-family: 'FontAwesome';
     src: url('/fonts/fontawesome-webfont.eot');
@@ -238,7 +285,7 @@ textarea{
     }
 }
 .s-font{
-    font-family: 'Cardium A', sans-serif;
+    font-family: "Manrope", sans-serif;
 }
 .fs0-8{
     font-size: 0.8rem;
@@ -305,12 +352,12 @@ textarea{
 .HS .HS_title{
     color:white;
     text-shadow: 0 0 16px BLACK;
-    font-family: 'Cardium A', sans-serif;
+    font-family: "Manrope", sans-serif;
 }
 .HS .HS_txt{
     color:white;
     text-shadow: 0 0 16px BLACK;
-    font-family: 'Cardium A', sans-serif;
+    font-family: "Manrope", sans-serif;
     font-size: 1.2rem;
 }
 .HS_txt a{
@@ -603,7 +650,7 @@ textarea{
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
     position: relative;
-    font-family: 'Cardium A', sans-serif;
+    font-family: "Manrope", sans-serif;
 }
 
 .PS_card .content:before{
@@ -619,7 +666,7 @@ textarea{
 }
 
 .PS_card .content h3{
-    font-family: 'Cardium A', sans-serif;
+    font-family: "Manrope", sans-serif;
 }
 .PS_card .content p:before{
     content: '';
@@ -735,7 +782,7 @@ textarea{
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
     position: relative;
-    font-family: 'Cardium A', sans-serif;
+    font-family: "Manrope", sans-serif;
 }
 .PP .PP_content li:before {
     content: '';
@@ -748,10 +795,10 @@ textarea{
     background-color: rgb(164 199 30);
 }
 .PP .PP_content h1{
-    font-family: 'Cardium A', sans-serif;
+    font-family: "Manrope", sans-serif;
 }
 .PP .PP_title_date_type h3, .PP_title_date_type span{
-    font-family: 'Cardium A', sans-serif;
+    font-family: "Manrope", sans-serif;
 }
 
 .PP{
@@ -1065,7 +1112,7 @@ blockquote h6{
     font-size: 1.8rem;
     font-weight: bold;
     font-style: italic;
-    font-family: 'Cardium A', sans-serif;
+    font-family: "Manrope", sans-serif;
 }
 blockquote span{
     color: gray;
@@ -1139,12 +1186,12 @@ blockquote span{
     position: relative;
     padding-left: 3rem;
     color:#04622a;
-    font-family: 'Cardium A', sans-serif;
+    font-family: "Manrope", sans-serif;
     line-height: 1em;
     margin-top: 1rem;
 }
 .BP h3{
-    font-family: 'Cardium A', sans-serif;
+    font-family: "Manrope", sans-serif;
     margin-top: 1rem;
     line-height: 1.5rem;
 }
@@ -1368,13 +1415,13 @@ max-width: 900px;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
     position: relative;
-    font-family: 'Cardium A', sans-serif;
+    font-family: "Manrope", sans-serif;
 }
 
 
 
 .BS_card .content h2{
-    font-family: 'Cardium A', sans-serif;
+    font-family: "Manrope", sans-serif;
 }
 .BS_card .content p.category:before{
     content: '';
@@ -1401,7 +1448,7 @@ p.category{
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
     position: relative;
-    font-family: 'Cardium A', sans-serif;
+    font-family: "Manrope", sans-serif;
 }
 
 
