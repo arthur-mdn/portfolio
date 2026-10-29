@@ -837,11 +837,11 @@
     "github": "https://github.com/arthur-mdn/Studer",
     "youtube": [],
     "technos": [
+      105,
+      106,
       101,
       102,
       103,
-      105,
-      106,
       302,
       402,
       401
@@ -1125,11 +1125,11 @@
     "youtube": [],
     "disclaimer": "Projet personnel de <strong>démonstration, sans lien officiel avec Réseau Mistral</strong>. Paiements et tickets sont fictifs : ils ne permettent pas de voyager. Un bandeau de démonstration reste visible en permanence dans l’application. Les éléments de propriété intellectuelle appartiennent à leurs détenteurs respectifs.",
     "technos": [
+      105,
+      106,
       101,
       102,
       103,
-      105,
-      106,
       302,
       402,
       401
@@ -1187,10 +1187,10 @@
     "github": "https://github.com/arthur-mdn/dukartalaf1.com",
     "youtube": [],
     "technos": [
+      105,
       101,
       102,
       103,
-      105,
       401
     ],
     "tags": [
@@ -1333,7 +1333,6 @@
     "youtube": [],
     "technos": [
       101,
-      102,
       103,
       401
     ],
