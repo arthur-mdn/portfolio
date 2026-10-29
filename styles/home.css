@@ -2233,13 +2233,16 @@ a:hover {
   border: 1px solid var(--border-soft);
   border-radius: 14px;
   background: #fff;
-  padding: 1rem 1.15rem;
+  padding: 0;
+  overflow: hidden;
 }
 
 .svc-faq-item summary {
   cursor: pointer;
   font-weight: 700;
   list-style: none;
+  display: block;
+  padding: 1rem 1.15rem;
 }
 
 .svc-faq-item summary::-webkit-details-marker {
@@ -2247,7 +2250,8 @@ a:hover {
 }
 
 .svc-faq-item p {
-  margin-top: 0.7rem;
+  margin: 0;
+  padding: 0 1.15rem 1rem;
   color: var(--text-secondary);
   line-height: 1.6;
 }
