@@ -1506,6 +1506,12 @@ a:hover {
   cursor: not-allowed;
 }
 
+.contact-error {
+  margin: 0;
+  color: #9b1c1c;
+  font-size: 0.9rem;
+}
+
 .contact-success {
   padding: 1.75rem;
   border: 1px solid var(--border-soft);

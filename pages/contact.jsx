@@ -1,12 +1,13 @@
-import { useForm, ValidationError } from "@formspree/react";
+import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 function ContactForm() {
-  const [state, handleSubmit] = useForm("xvoepbnb");
+  const [status, setStatus] = useState("idle");
+  const [error, setError] = useState("");
 
-  if (state.succeeded) {
+  if (status === "success") {
     return (
       <div className="contact-success">
         <h2>Merci pour votre message</h2>
@@ -15,18 +16,46 @@ function ContactForm() {
     );
   }
 
+  async function handleSubmit(event) {
+    event.preventDefault();
+    setStatus("submitting");
+    setError("");
+
+    const form = event.currentTarget;
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    try {
+      const response = await fetch("/api/send-contact-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const payload = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(payload.message || "Erreur lors de l'envoi");
+      }
+
+      setStatus("success");
+      form.reset();
+    } catch (err) {
+      setStatus("idle");
+      setError("L'envoi a échoué. Réessayez dans un instant.");
+      console.error(err);
+    }
+  }
+
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
       <label htmlFor="email">
         Adresse email
         <input id="email" type="email" name="email" required />
-        <ValidationError prefix="Email" field="email" errors={state.errors} />
       </label>
 
       <label htmlFor="name">
         Nom
         <input id="name" type="text" name="name" required />
-        <ValidationError prefix="Name" field="name" errors={state.errors} />
       </label>
 
       <label htmlFor="subject">
@@ -46,19 +75,16 @@ function ContactForm() {
       <label htmlFor="message">
         Message
         <textarea id="message" name="message" rows={6} required />
-        <ValidationError
-          prefix="Message"
-          field="message"
-          errors={state.errors}
-        />
       </label>
+
+      {error ? <p className="contact-error">{error}</p> : null}
 
       <button
         type="submit"
         className="btn btn-primary"
-        disabled={state.submitting}
+        disabled={status === "submitting"}
       >
-        {state.submitting ? "Envoi..." : "Envoyer"}
+        {status === "submitting" ? "Envoi..." : "Envoyer"}
       </button>
     </form>
   );
