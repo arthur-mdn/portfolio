@@ -44,7 +44,7 @@
       }
     ],
     "context": "Pour Private Events, chaque soirée demandait souvent une nouvelle vidéo de fond à diffuser en boucle sur un écran ou un vidéoprojecteur. Ces fichiers étaient préparés dans Premiere Pro, avec des allers-retours à chaque anniversaire ou mariage pour adapter les couleurs, les textes et l’ambiance.\nL’objectif était de donner au DJ un outil autonome pour composer lui-même ces fonds, sans dépendre d’une nouvelle exportation manuelle à chaque événement.",
-    "need": "Proposer une solution capable de générer autant de variantes que nécessaire, avec un aperçu immédiat et un export simple à diffuser sur un écran externe. L’outil devait rester accessible au public tout en servant d’abord le quotidien de Private Events.",
+    "need": "Proposer une solution capable de générer autant de variantes que nécessaire, avec un aperçu immédiat et un export simple à diffuser sur un écran externe. L’outil est accessible au public tout en servant d’abord le quotidien de Private Events.",
     "solution": "L’application propose une preview en direct, une personnalisation des couleurs et du texte, le choix de la durée de boucle, puis un export vidéo MP4. La génération tourne sur la machine depuis le navigateur : pas besoin d’envoyer le rendu vers un service distant.\nCinq templates couvrent les anniversaires (Aquarelle, Nocturne, Enfance, Éclats, Tendresse) et deux les mariages (Jardin, Vœux). Les modèles existants ont été retravaillés en code pour retrouver un rendu fidèle à l’origine, tout en laissant la porte ouverte à de nouveaux templates plus tard.",
     "features": [
       "Preview en direct avant l’export",
