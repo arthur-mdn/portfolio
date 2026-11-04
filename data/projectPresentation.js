@@ -15,7 +15,7 @@ export function getProjectCategory(project) {
 
 // Explicit context, independent of the project's platform or current availability.
 const PROFESSIONAL = new Set([
-  "karaoke-and-propositions", "elevage-hitch", "private-events-dj-mika",
+  "animated-background", "karaoke-and-propositions", "elevage-hitch", "private-events-dj-mika",
   "displayhub", "mariage-videobooth", "askeo", "du-kart-a-la-f1",
   "visites-virtuelles", "eradion", "generateur-de-signatures-email",
   "calendry", "funkylike", "edissyum-wordpress",

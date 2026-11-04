@@ -1,5 +1,79 @@
 [
   {
+    "id": 42,
+    "name": "Animated Background",
+    "slug": "animated-background",
+    "summary": "Générer à l’infini des fonds d’écran animés pour un événement, avec aperçu en direct et export MP4 depuis le navigateur.",
+    "description": "Générer à l’infini des fonds d’écran animés pour un événement, avec aperçu en direct et export MP4 depuis le navigateur.\n\nPour Private Events, chaque soirée demandait souvent une nouvelle vidéo de fond à diffuser en boucle sur un écran ou un vidéoprojecteur. Ces fichiers étaient préparés dans Premiere Pro, avec des allers-retours à chaque anniversaire ou mariage pour adapter les couleurs, les textes et l’ambiance.\nL’objectif était de donner au DJ un outil autonome pour composer lui-même ces fonds, sans dépendre d’une nouvelle exportation manuelle à chaque événement.\n\nL’application propose une preview en direct, une personnalisation des couleurs et du texte, le choix de la durée de boucle, puis un export vidéo MP4. La génération tourne sur la machine depuis le navigateur : pas besoin d’envoyer le rendu vers un service distant.\nCinq templates couvrent les anniversaires (Aquarelle, Nocturne, Enfance, Éclats, Tendresse) et deux les mariages (Jardin, Vœux). Les modèles existants ont été retravaillés en code pour retrouver un rendu fidèle à l’origine, tout en laissant la porte ouverte à de nouveaux templates plus tard.",
+    "image": "projects/animated-background-thumbnail.webp",
+    "link": "https://animatedbackground.privateevents.fr",
+    "github": "https://github.com/arthur-mdn/AnimatedBackground",
+    "youtube": [],
+    "technos": [
+      105,
+      106,
+      201,
+      401
+    ],
+    "tags": [
+      "Remotion",
+      "TypeScript",
+      "Événementiel",
+      "Vidéo"
+    ],
+    "date": "2026-10-27",
+    "status": "online",
+    "type": "WebApp",
+    "interesting": true,
+    "facts": [
+      {
+        "label": "Client",
+        "value": "Private Events · diffusé aussi au public"
+      },
+      {
+        "label": "Durée",
+        "value": "3 jours"
+      },
+      {
+        "label": "Intervention",
+        "value": "Conception et développement en autonomie"
+      },
+      {
+        "label": "Sortie",
+        "value": "Export MP4 depuis le navigateur"
+      }
+    ],
+    "context": "Pour Private Events, chaque soirée demandait souvent une nouvelle vidéo de fond à diffuser en boucle sur un écran ou un vidéoprojecteur. Ces fichiers étaient préparés dans Premiere Pro, avec des allers-retours à chaque anniversaire ou mariage pour adapter les couleurs, les textes et l’ambiance.\nL’objectif était de donner au DJ un outil autonome pour composer lui-même ces fonds, sans dépendre d’une nouvelle exportation manuelle à chaque événement.",
+    "need": "Proposer une solution capable de générer autant de variantes que nécessaire, avec un aperçu immédiat et un export simple à diffuser sur un écran externe. L’outil devait rester accessible au public tout en servant d’abord le quotidien de Private Events.",
+    "solution": "L’application propose une preview en direct, une personnalisation des couleurs et du texte, le choix de la durée de boucle, puis un export vidéo MP4. La génération tourne sur la machine depuis le navigateur : pas besoin d’envoyer le rendu vers un service distant.\nCinq templates couvrent les anniversaires (Aquarelle, Nocturne, Enfance, Éclats, Tendresse) et deux les mariages (Jardin, Vœux). Les modèles existants ont été retravaillés en code pour retrouver un rendu fidèle à l’origine, tout en laissant la porte ouverte à de nouveaux templates plus tard.",
+    "features": [
+      "Preview en direct avant l’export",
+      "Personnalisation des couleurs, du texte et de la durée de boucle",
+      "Cinq templates anniversaire : Aquarelle, Nocturne, Enfance, Éclats et Tendresse",
+      "Deux templates mariage : Jardin et Vœux",
+      "Export vidéo MP4 prêt à diffuser en boucle",
+      "Génération locale depuis le navigateur",
+      "Accès public, conçu d’abord pour Private Events"
+    ],
+    "result": "Le client est extrêmement satisfait. Il gagne en autonomie et n’a plus besoin de resolliciter une retouche Premiere Pro à chaque événement. L’outil est en ligne et ouvert à tous, avec assez de templates pour se débrouiller seul ; de nouveaux modèles pourront être ajoutés plus tard si besoin.",
+    "role": "J’ai conçu et développé seul l’application en trois jours, de la reprise des ambiances existantes à la personnalisation en direct et à l’export MP4. Le travail a porté sur la fidélité visuelle des templates et sur un parcours simple à utiliser sans compétences vidéo.",
+    "challenges": "Le principal enjeu était de retranscrire en code des modèles déjà produits en montage vidéo, pour obtenir un rendu fidèle à l’origine, voire plus propre. Il fallait aussi garder une génération utilisable depuis le navigateur, avec une preview immédiate et un export MP4 adapté à une diffusion en boucle sur écran externe.",
+    "relatedProjects": [
+      {
+        "slug": "private-events-dj-mika",
+        "reason": "Le site et le parcours de devis du DJ pour lequel l’outil a été créé."
+      },
+      {
+        "slug": "karaoke-and-propositions",
+        "reason": "Un autre outil événementiel conçu pour faciliter le déroulement d’une soirée."
+      }
+    ],
+    "relatedServices": [
+      "application-web-sur-mesure"
+    ],
+    "linkLabel": "Ouvrir Animated Background"
+  },
+  {
     "id": 41,
     "name": "Burger Maker",
     "slug": "burger-maker",
@@ -409,6 +483,10 @@
     "role": "J’ai mené seul l’ensemble de la refonte, de la définition du besoin aux maquettes, à l’intégration et à la mise en ligne. La construction s’est faite main dans la main avec le client, en intégrant progressivement ses éléments graphiques et ses contenus.\nJe prends aujourd’hui en charge l’hébergement, la maintenance et les évolutions, ainsi que l’ajout de prestations et de nouveaux avis.",
     "challenges": "Le principal enjeu était de rendre une offre très variée compréhensible sans alourdir la préparation d’un événement. Le parcours distingue le contexte, l’équipement du lieu, les ambiances et les prestations pour recueillir une demande exploitable. L’optimisation des médias accompagne cette présentation plus complète.",
     "relatedProjects": [
+      {
+        "slug": "animated-background",
+        "reason": "Un générateur de fonds d’écran animés pour personnaliser l’ambiance visuelle d’un événement."
+      },
       {
         "slug": "karaoke-and-propositions",
         "reason": "Un outil pour centraliser les demandes musicales des invités pendant une soirée."
