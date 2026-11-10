@@ -393,9 +393,9 @@ export const SERVICES = [
     title: "Applications natives iOS et macOS",
     metaTitle: "Développement apps iOS et macOS | Arthur Mondon",
     metaDescription:
-      "Création d'applications natives iOS et macOS en Swift/SwiftUI, adossées à 5 ans d'expérience logicielle et à une éventuelle API web.",
+      "Création d'applications natives iOS et macOS en Swift/SwiftUI, adossées à 7 ans d'expérience logicielle et à une éventuelle API web.",
     intro:
-      "Quand le web ne suffit plus, je conçois des apps natives Apple. Cinq années de développement logiciel, et une compétence Swift/SwiftUI récente mise au service de produits concrets.",
+      "Quand le web ne suffit plus, je conçois des apps natives Apple. Sept années de développement logiciel, et une compétence Swift/SwiftUI récente mise au service de produits concrets.",
     visualType: "native",
     glyph: "SWIFT",
     audiences: [
@@ -456,7 +456,7 @@ export const SERVICES = [
       },
       {
         q: "Pouvez-vous publier sur l'App Store ?",
-        a: "Oui, je peux préparer l'application et vous accompagner dans le processus de publication. Je ne prétends pas une ancienneté équivalente à mon parcours web : mon avantage, c'est cinq ans d'expérience logicielle plus une compétence native Apple récente, déjà mise en pratique sur des apps concrètes. On avance proprement, avec des builds testés et un accompagnement clair sur les étapes Apple.",
+        a: "Oui, je peux préparer l'application et vous accompagner dans le processus de publication. Je ne prétends pas une ancienneté équivalente à mon parcours web : mon avantage, c'est sept ans d'expérience logicielle plus une compétence native Apple récente, déjà mise en pratique sur des apps concrètes. On avance proprement, avec des builds testés et un accompagnement clair sur les étapes Apple.",
       },
       {
         q: "Une app native peut-elle parler à mon site ?",

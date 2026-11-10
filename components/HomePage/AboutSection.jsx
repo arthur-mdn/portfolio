@@ -32,7 +32,7 @@ function AboutSection() {
           </p>
           <div className="about-stats">
             <div className="about-stat">
-              <strong>5 ans</strong>
+              <strong>7 ans</strong>
               <span>d&apos;expérience</span>
             </div>
             <div className="about-stat">

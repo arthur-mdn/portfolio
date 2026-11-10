@@ -5,14 +5,19 @@ import { FaArrowRight, FaDownload } from "react-icons/fa6";
 
 const TIMELINE = [
   {
-    year: "2021",
-    title: "Premiers pas professionnels",
-    text: "Début de mon parcours en alternance : développement de sites et premières applications concrètes.",
+    year: "2019",
+    title: "Premiers projets et goût pour le web",
+    text: "Découverte du développement et du multimédia. Premiers sites, expérimentations et projets personnels qui ont confirmé mon attrait pour ce domaine.",
+  },
+  {
+    year: "2021 → 2024",
+    title: "Bachelor MMI — Université de Toulon",
+    text: "Bachelor Métiers du Multimédia et de l'Internet, en 3 ans. Formation au web, au multimédia et à la conception d'applications.",
   },
   {
     year: "2021 → 2026",
-    title: "5 ans en développement full-stack",
-    text: "Chez Edissyum : applications métier, frontend, backend, bases de données et intégrations au quotidien.",
+    title: "Développement full-stack chez Edissyum",
+    text: "Alternance puis poursuite en entreprise : applications métier, frontend, backend, bases de données et intégrations au quotidien.",
   },
   {
     year: "2023 → 2026",
@@ -151,7 +156,7 @@ export default function AboutPage() {
             <div className="container" style={{ padding: 0 }}>
               <div className="svc-section-intro">
                 <p className="section-label">Parcours</p>
-                <h2>2021 → aujourd&apos;hui</h2>
+                <h2>2019 → aujourd&apos;hui</h2>
               </div>
               <div className="about-timeline">
                 {TIMELINE.map((item) => (
