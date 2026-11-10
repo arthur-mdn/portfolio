@@ -2,10 +2,18 @@ import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import TurnstileWidget from "../components/TurnstileWidget";
 
 function ContactForm() {
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [turnstileKey, setTurnstileKey] = useState(0);
+
+  function resetTurnstile() {
+    setTurnstileToken("");
+    setTurnstileKey((key) => key + 1);
+  }
 
   if (status === "success") {
     return (
@@ -24,11 +32,17 @@ function ContactForm() {
     const form = event.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
 
+    if (!turnstileToken) {
+      setStatus("idle");
+      setError("Validez le captcha avant d'envoyer.");
+      return;
+    }
+
     try {
       const response = await fetch("/api/send-contact-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, turnstileToken }),
       });
 
       const payload = await response.json().catch(() => ({}));
@@ -38,9 +52,11 @@ function ContactForm() {
       }
 
       setStatus("success");
+      resetTurnstile();
       form.reset();
     } catch (err) {
       setStatus("idle");
+      resetTurnstile();
       setError("L'envoi a échoué. Réessayez dans un instant.");
       console.error(err);
     }
@@ -77,12 +93,27 @@ function ContactForm() {
         <textarea id="message" name="message" rows={6} required />
       </label>
 
+      <div className="contact-honeypot" aria-hidden="true">
+        <label htmlFor="website">
+          Site web
+          <input
+            id="website"
+            type="text"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+        </label>
+      </div>
+
+      <TurnstileWidget key={turnstileKey} onToken={setTurnstileToken} />
+
       {error ? <p className="contact-error">{error}</p> : null}
 
       <button
         type="submit"
         className="btn btn-primary"
-        disabled={status === "submitting"}
+        disabled={status === "submitting" || !turnstileToken}
       >
         {status === "submitting" ? "Envoi..." : "Envoyer"}
       </button>
