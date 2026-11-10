@@ -165,7 +165,10 @@ export default function Projets() {
           )}
 
           <div style={{ marginTop: "2.5rem" }}>
-            <Link href="/contact" className="btn btn-primary">
+            <Link
+              href="/contact?sujet=parler-de-mon-projet"
+              className="btn btn-primary"
+            >
               Discuter d&apos;un projet
               <FaArrowRight size={14} />
             </Link>

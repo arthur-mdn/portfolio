@@ -1,14 +1,50 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import TurnstileWidget from "../components/TurnstileWidget";
 
+const SUBJECT_OPTIONS = [
+  { value: "prise de contact", label: "Prise de contact" },
+  { value: "demande de devis", label: "Demande de devis" },
+  { value: "parler de mon projet", label: "Parler de mon projet" },
+  {
+    value: "demande de renseignements",
+    label: "Demande de renseignements",
+  },
+  { value: "J'ai trouvé un bug", label: "J'ai trouvé un bug" },
+  { value: "J'ai une suggestion", label: "J'ai une suggestion" },
+  { value: "autre", label: "Autre" },
+];
+
+const SUBJECT_ALIASES = {
+  "parler-de-mon-projet": "parler de mon projet",
+  "demande-de-devis": "demande de devis",
+  "prise-de-contact": "prise de contact",
+  "demande-de-renseignements": "demande de renseignements",
+};
+
+const DEFAULT_SUBJECT = "demande de devis";
+
+function resolveSubject(raw) {
+  if (typeof raw !== "string" || !raw) return DEFAULT_SUBJECT;
+  if (SUBJECT_OPTIONS.some((option) => option.value === raw)) return raw;
+  return SUBJECT_ALIASES[raw] || DEFAULT_SUBJECT;
+}
+
 function ContactForm() {
+  const router = useRouter();
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState("");
+  const [subject, setSubject] = useState(DEFAULT_SUBJECT);
   const [turnstileToken, setTurnstileToken] = useState("");
   const [turnstileKey, setTurnstileKey] = useState(0);
+
+  useEffect(() => {
+    if (!router.isReady) return;
+    setSubject(resolveSubject(router.query.sujet));
+  }, [router.isReady, router.query.sujet]);
 
   function resetTurnstile() {
     setTurnstileToken("");
@@ -76,15 +112,18 @@ function ContactForm() {
 
       <label htmlFor="subject">
         Sujet
-        <select id="subject" name="subject" required defaultValue="demande de devis">
-          <option value="prise de contact">Prise de contact</option>
-          <option value="demande de devis">Demande de devis</option>
-          <option value="demande de renseignements">
-            Demande de renseignements
-          </option>
-          <option value="J'ai trouvé un bug">J&apos;ai trouvé un bug</option>
-          <option value="J'ai une suggestion">J&apos;ai une suggestion</option>
-          <option value="autre">Autre</option>
+        <select
+          id="subject"
+          name="subject"
+          required
+          value={subject}
+          onChange={(event) => setSubject(event.target.value)}
+        >
+          {SUBJECT_OPTIONS.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
         </select>
       </label>
 

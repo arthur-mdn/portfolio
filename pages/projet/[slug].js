@@ -378,7 +378,10 @@ function ProjectPage({ project }) {
                 </ul>
               </>
             )}
-            <Link href="/contact" className="btn btn-primary">
+            <Link
+              href="/contact?sujet=parler-de-mon-projet"
+              className="btn btn-primary"
+            >
               Un projet similaire ? Parlons-en
             </Link>
           </div>
